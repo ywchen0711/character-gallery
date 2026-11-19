@@ -39,20 +39,26 @@ Characters so far:
   - 鬼面護法 the Ghost-mask Warden: blood-red hood, white fanged ghost mask with red eye-light
   - 蒙面人 the Masked Man: purple hood, black face cloth, purple robe edged in gold
 - 怪物與野獸 (Monsters & Beasts), original creatures in `nes` only (faction `beast`, `kind: "monster"` in index.json):
-  a front-view NES battle picture (56x56 or 64x56/64x48, transparent backdrop) and a 16x16 / 16x24 field sprite
+  a front-view NES battle picture (64x64 or 64x56, transparent backdrop) and a 16x16 / 16x24 field sprite
   with one two-frame animation `move` (idle and move): 白猿 White Ape, 吊睛白額虎 White-Browed Tiger, 鎮宅石獅
   Stone Guardian Lion, 符咒殭屍 Talisman Jiangshi, 山魈 Shanxiao, 九尾狐 Nine-Tailed Fox, 江蛟 River Jiao,
   三足火鴉 Fire Crow, 毒蟾 Venom Toad. Monsters have `habitat` instead of `weapon`; people have `kind: "person"`.
 - 小怪 (Common Foes), 50 small regular monsters (faction `foe`, `kind: "monster"`, `tier` 1-5 from early to late areas,
   `habitat`, `base`): 26 base designs with NES-style palette swaps (灰狼 -> 血狼 -> 霜狼 ...), colours in
-  `src/nes_foes_art.py`; battle pictures 40x40 to 48x48 (transparent backdrop) and a 16x16 field sprite with a
-  two-frame `move`. Group picture `chars/foes/group-nes.png` (10 per row, by tier) and `group-nes-5col.png`.
-- How the monsters are drawn (all 59, redrawn 2026-11-19 to get rid of crooked, lopsided shapes): each design is a
-  small Python function in `src/mon_d1.py` .. `mon_d4.py` built with the helper `src/mondraw.py` (ellipses, limbs,
-  tubes and polygons rasterised on pixel centres, so fronts mirror exactly; one light from the top-left in three
-  tones per material; separation lines between parts; a traced 1-px black outline; hand-placed eyes and details).
-  `mondraw.famicom()` splits a picture into the background layer and a sprite overlay and finds the sub-palettes
-  that keep every 16x16 area and 8x8 sprite tile legal. Field sprites are one hand-typed frame each
+  `src/nes_foes_art.py`; battle pictures 48x48, people-like foes 48x56 like the people portraits (transparent
+  backdrop), and a 16x16 field sprite with a two-frame `move`. Higher-tier swaps also change a detail or two
+  (`src/mon_var.py`: a scar, a spiked club and eye patch, frost, a brow jewel, riveted plates, glowing eyes ...). Group picture `chars/foes/group-nes.png` (10 per row, by tier) and `group-nes-5col.png`.
+- How the monsters are drawn (all 59, redrawn 2026-11-19 to get rid of crooked shapes, then refined to the level
+  of the people portraits): each design is a Python function built with the helper `src/mondraw.py` (ellipses,
+  limbs, tubes and polygons rasterised on pixel centres, so fronts mirror exactly; one light from the top-left in
+  three tones per material; separation lines between parts; a traced 1-px black outline), then finished by hand:
+  faces with brows, eye strokes and glints, noses, teeth and fangs; fur strokes, bristles, chitin plates, bark
+  grain, rivets and cloth folds; rim light; props and costume details. `src/mon_h.py` + `mon_h2.py`: the people-like
+  foes and the undead (48x56, an 18-px face like the portraits); `mon_a1.py` .. `mon_a3.py`: animals, bugs and
+  spirits (48x48); `mon_b.py`: the beasts (drawn bigger through `mondraw.Scaled`); `mon_var.py`: stronger-kin
+  variants. `mondraw.famicom()` splits a picture into the background layer and a sprite overlay (skin, glints and
+  accents; any attribute area that would need a fourth colour has that colour lifted onto sprites) and finds the
+  sub-palettes that keep every 16x16 area and 8x8 sprite tile legal. Field sprites are one hand-typed frame each
   (`src/nes_foes_fields.py`, `SPRITES` in `src/nes_beasts_art.py`); `src/nes_walk_mon.py` makes frame 2 so only
   what should move moves (a step over planted feet, a hop, or a float). `python -P tools/lint.py` checks every
   picture for orphan pixels, broken or doubled outlines, jaggies in the silhouette and mirror symmetry.

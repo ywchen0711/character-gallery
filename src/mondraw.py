@@ -362,7 +362,52 @@ class Canvas:
 
     def line_mask(self):
         """Pixels that are outline or separation lines (not black areas drawn on purpose)."""
-        return {(x, y) for y in range(self.h) for x in range(self.w) if self.part[y][x] == 10 ** 6} |             {p for p in self.lines if self.tone[p[1]][p[0]] == 'k'}
+        ring = {(x, y) for y in range(self.h) for x in range(self.w) if self.part[y][x] == 10 ** 6}
+        return ring | {p for p in self.lines if self.tone[p[1]][p[0]] == 'k'}
+
+    # ---------------------------------------------------------------- finishing details (after finish())
+    def cells(self, part):
+        return [(x, y) for y in range(self.h) for x in range(self.w) if self.part[y][x] == part]
+
+    def rim(self, part, slot, only=None, side='ul'):
+        """Rim light: pixels of a part that touch the outline on the lit side (up / left) take `slot`.
+        only: the tones that may be replaced (default: any but black)."""
+        O = 10 ** 6
+        dirs = {'ul': ((0, -1), (-1, 0)), 'u': ((0, -1),), 'l': ((-1, 0),), 'dr': ((0, 1), (1, 0))}[side]
+        for (x, y) in self.cells(part):
+            t = self.tone[y][x]
+            if t == 'k' or (x, y) in self.locked or (only and t not in only):
+                continue
+            if any(0 <= x + dx < self.w and 0 <= y + dy < self.h and self.part[y + dy][x + dx] == O
+                   for dx, dy in dirs):
+                self.tone[y][x] = slot
+
+    def pattern(self, part, tile, ox=0, oy=0, only=None, margin=1):
+        """Tile a small hand-typed pattern over a part ('.' keeps the pixel). Pixels within `margin` of the
+        part's edge and black pixels are left alone, so the texture sits in clean clusters inside the form."""
+        rows = [r for r in tile.strip('\n').split('\n')]
+        th, tw = len(rows), len(rows[0])
+        mine = set(self.cells(part))
+        for (x, y) in mine:
+            t = self.tone[y][x]
+            if t == 'k' or (x, y) in self.locked or (only and t not in only):
+                continue
+            if margin and any((x + dx, y + dy) not in mine for dx in range(-margin, margin + 1)
+                              for dy in range(-margin, margin + 1)):
+                continue
+            c = rows[(y - oy) % th][(x - ox) % tw]
+            if c != '.':
+                self.tone[y][x] = c
+
+    def put(self, pts, slot, part=None):
+        """Paint a list of pixels (only where something is drawn, unless part is given)."""
+        for (x, y) in pts:
+            if part is not None or (0 <= x < self.w and 0 <= y < self.h and 0 <= self.part[y][x] < 10 ** 6):
+                self.paint(x, y, slot, part)
+
+    def put2(self, pts, slot, part=None):
+        self.put(pts, slot, part)
+        self.put([(self.w - 1 - x, y) for x, y in pts], slot, part)
 
     def rows(self):
         return [''.join(r) for r in self.tone]
@@ -473,6 +518,24 @@ def famicom(rows, spr=''):
             if bg[y][x] in spr:
                 sp[y][x] = bg[y][x]
                 bg[y][x] = 'k'
+    # where an attribute area still holds more than three colours, lift the least-used ones (in that area only)
+    # onto the sprite layer, the way Famicom artists overlaid sprites on busy spots
+    for ay in range(0, h, 16):
+        for ax in range(0, w, 16):
+            for _ in range(4):
+                cnt = {}
+                for y in range(ay, min(ay + 16, h)):
+                    for x in range(ax, min(ax + 16, w)):
+                        if bg[y][x] not in '.k':
+                            cnt[bg[y][x]] = cnt.get(bg[y][x], 0) + 1
+                if len(cnt) <= 3:
+                    break
+                low = min(cnt, key=lambda s: (cnt[s], s))
+                for y in range(ay, min(ay + 16, h)):
+                    for x in range(ax, min(ax + 16, w)):
+                        if bg[y][x] == low:
+                            sp[y][x] = low
+                            bg[y][x] = 'k'
     areas, tiles = [], []
     for ay in range(0, h, 16):
         for ax in range(0, w, 16):
@@ -495,3 +558,67 @@ def famicom(rows, spr=''):
     if lines and max(lines.values()) > 8:
         raise ValueError('%d sprite tiles on one row of tiles (max 8)' % max(lines.values()))
     return [''.join(r) for r in bg], [''.join(r) for r in sp], g, sg
+
+
+class Scaled:
+    """Draw old-size geometry on a bigger canvas: every shape call is scaled by s about the canvas centre
+    (horizontally) and anchored to the bottom, so mirrored pairs stay exact. Finishing stamps go on the canvas
+    itself, in the new coordinates."""
+
+    def __init__(self, c, s, oldw, oldh):
+        self.c, self.s = c, s
+        self.ox = (c.w - oldw * s) / 2
+        self.oy = c.h - oldh * s
+
+    def X(self, x):
+        return x * self.s + self.ox
+
+    def Y(self, y):
+        return y * self.s + self.oy
+
+    def P(self, pts):
+        return [(self.X(x), self.Y(y)) for x, y in pts]
+
+    def _clip(self, kw):
+        if kw.get('clip'):
+            f = kw['clip']
+            kw['clip'] = lambda x, y: f((x - self.ox) / self.s, (y - self.oy) / self.s)
+        if 'r1' in kw and kw['r1'] is not None:
+            kw['r1'] = kw['r1'] * self.s
+        return kw
+
+    def new_part(self, *a, **k):
+        return self.c.new_part(*a, **k)
+
+    def ellipse(self, cx, cy, rx, ry, mat, part=None, **kw):
+        return self.c.ellipse(self.X(cx), self.Y(cy), rx * self.s, ry * self.s, mat, part, **self._clip(kw))
+
+    def ellipse2(self, cx, cy, rx, ry, mat, part=None, **kw):
+        return self.c.ellipse2(self.X(cx), self.Y(cy), rx * self.s, ry * self.s, mat, part, **self._clip(kw))
+
+    def capsule(self, x0, y0, x1, y1, r, mat, part=None, **kw):
+        return self.c.capsule(self.X(x0), self.Y(y0), self.X(x1), self.Y(y1), r * self.s, mat, part,
+                              **self._clip(kw))
+
+    def capsule2(self, x0, y0, x1, y1, r, mat, part=None, **kw):
+        return self.c.capsule2(self.X(x0), self.Y(y0), self.X(x1), self.Y(y1), r * self.s, mat, part,
+                               **self._clip(kw))
+
+    def poly(self, pts, mat, part=None, **kw):
+        return self.c.poly(self.P(pts), mat, part, **kw)
+
+    def poly2(self, pts, mat, part=None, **kw):
+        return self.c.poly2(self.P(pts), mat, part, **kw)
+
+    def rect(self, x0, y0, x1, y1, mat, part=None, **kw):
+        return self.c.rect(round(self.X(x0)), round(self.Y(y0)), round(self.X(x1 + 1)) - 1,
+                           round(self.Y(y1 + 1)) - 1, mat, part, **kw)
+
+    def tube(self, pts, r, mat, part=None, r1=None):
+        return self.c.tube(self.P(pts), r * self.s, mat, part, r1=None if r1 is None else r1 * self.s)
+
+    def cut(self, pts, m=False):
+        return self.c.cut(self.P(pts), m)
+
+    def reshade(self, part, cx, cy, rx, ry, mat, **kw):
+        return self.c.reshade(part, self.X(cx), self.Y(cy), rx * self.s, ry * self.s, mat, **kw)

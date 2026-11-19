@@ -1,6 +1,6 @@
 """Monsters & beasts (怪物與野獸): the nine big creatures in the 8-bit `nes` style.
 
-The battle pictures are drawn by src/mon_d4.py with the mondraw helper (mirrored fronts, one light from the
+The battle pictures are drawn by src/mon_b.py with the mondraw helper (mirrored fronts, one light from the
 top-left, a traced 1-px outline; checked by tools/lint.py); mondraw.famicom() splits each one into the background
 layer and a sprite overlay and finds legal sub-palettes. The field sprites below are hand-typed.
 
@@ -10,18 +10,18 @@ SPRITES[id] = dict(pal, move=[frame 1, frame 2])
 import mon_designs
 import mondraw
 
-SPRITE_SLOTS = dict(ape='rgw', tiger='yp', lion='rw', jiangshi='yre', shanxiao='Bry', fox='rp', jiao='re',
-                    crow='We', toad='o')
+SPRITE_SLOTS = dict(ape='rgw', tiger='yp', lion='rwy', jiangshi='yrew', shanxiao='Bry', fox='rp', jiao='re',
+                    crow='We', toad='ow')
 COLOURS = {
     'ape': dict(a=0x30, b=0x10, d=0x00, w=0x30, r=0x16, g=0x1A),
     'tiger': dict(b=0x27, d=0x17, w=0x30, y=0x28, p=0x25),
-    'lion': dict(a=0x30, b=0x10, d=0x00, w=0x30, m=0x1A, r=0x16),
-    'jiangshi': dict(S=0x3A, y=0x38, b=0x13, d=0x03, r=0x16, e=0x16),
+    'lion': dict(y=0x28, a=0x30, b=0x10, d=0x00, w=0x30, m=0x1A, r=0x16),
+    'jiangshi': dict(w=0x30, S=0x3A, y=0x38, b=0x13, d=0x03, r=0x16, e=0x16),
     'shanxiao': dict(g=0x28, o=0x17, d=0x07, B=0x21, r=0x16, y=0x38),
     'fox': dict(w=0x30, b=0x28, d=0x27, p=0x35, r=0x16),
     'jiao': dict(a=0x2C, b=0x1C, d=0x0C, e=0x38, w=0x30, h=0x21, i=0x11, r=0x16),
     'crow': dict(o=0x27, r=0x16, d=0x06, W=0x30, e=0x38),
-    'toad': dict(a=0x37, b=0x18, d=0x08, o=0x16),
+    'toad': dict(w=0x30, a=0x37, b=0x18, d=0x08, o=0x16),
 }
 
 PORTRAITS = {}
@@ -30,9 +30,9 @@ for _cid, _cols in COLOURS.items():
     _spr = SPRITE_SLOTS[_cid]
     _bg, _sp, _g, _sg = mondraw.famicom(_c.rows(), _spr)
     PORTRAITS[_cid] = ('\n'.join(_bg), '\n'.join(_sp),
-                       {k: v for k, v in _cols.items() if k not in _spr},
+                       dict(_cols),
                        [tuple(_cols[s] for s in g) for g in _g],
-                       {k: v for k, v in _cols.items() if k in _spr},
+                       dict(_cols),
                        [tuple(_cols[s] for s in g) for g in _sg],
                        (_c.w, _c.h))
 

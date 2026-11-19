@@ -1,6 +1,6 @@
 """Common foes (小怪) as gallery variants in the `nes` style: 50 small regular monsters (art in nes_foes_art.py).
 
-A foe variant gives the battle picture (transparent backdrop, 32x32 to 48x48) and a 16x16 field sprite with one
+A foe variant gives the battle picture (transparent backdrop, 48x48, people-like foes 48x56) and a 16x16 field sprite with one
 two-frame animation `move` (used to idle and to move). group() draws them all as one roster, ordered by tier.
 """
 from PIL import Image
@@ -55,8 +55,11 @@ class FoeVariant(Variant):
 
 
 def group(members, cols=10):
-    """All the given foes on black: battle pictures bottom-aligned in 48x48 cells, each field sprite on a strip below."""
-    cw, chh, road, gap, pad = 48, 48, 20, 4, 6
+    """All the given foes on black: battle pictures bottom-aligned in equal cells, each field sprite on a strip below."""
+    pics = {fid: portrait(fid) for fid in members}
+    cw = max(p.width for p in pics.values())
+    chh = max(p.height for p in pics.values())
+    road, gap, pad = 20, 4, 6
     rows = (len(members) + cols - 1) // cols
     cell_h = chh + 2 + road
     W = pad * 2 + cols * cw + (cols - 1) * gap
@@ -65,7 +68,7 @@ def group(members, cols=10):
     for i, fid in enumerate(members):
         col, row = i % cols, i // cols
         x, y = pad + col * (cw + gap), pad + row * (cell_h + gap)
-        p = portrait(fid)
+        p = pics[fid]
         out.alpha_composite(p, (x + (cw - p.width) // 2, y + chh - p.height))
         if col == 0:
             out.alpha_composite(Image.new('RGBA', (W - pad * 2, road), nes.rgba(0x08)), (pad, y + chh + 2))

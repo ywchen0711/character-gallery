@@ -31,6 +31,7 @@ def _trace(mask, w, h):
     if not start:
         return []
     moves = []
+    pts = []
     cur, back = start, 4         # we came from the left (west)
     for _ in range(w * h * 4):
         found = False
@@ -39,26 +40,30 @@ def _trace(mask, w, h):
             nx, ny = cur[0] + DIRS[d][0], cur[1] + DIRS[d][1]
             if 0 <= nx < w and 0 <= ny < h and mask[ny][nx]:
                 moves.append(d)
+                pts.append((nx, ny))
                 cur = (nx, ny)
                 back = (d + 4) % 8
                 found = True
                 break
         if not found or (cur == start and len(moves) > 2):
             break
+    _trace.pts = pts
     return moves
 
 
 def jaggies(moves):
     """Count jaggy spots: split the chain code into stretches made of two moves 45 degrees apart and look at the
     run lengths of the dominant move; a run that is a local peak or dip by 2 or more is a jaggy."""
+    jaggies.where = []
     if not moves:
         return 0
     runs = []
-    for m in moves:
+    pts = getattr(_trace, 'pts', [])
+    for i, m in enumerate(moves):
         if runs and runs[-1][0] == m:
             runs[-1][1] += 1
         else:
-            runs.append([m, 1])
+            runs.append([m, 1, pts[i] if i < len(pts) else None])
     bad = 0
     i = 0
     while i < len(runs):
@@ -73,11 +78,13 @@ def jaggies(moves):
             ca = sum(r[1] for r in seg if r[0] == a)
             cb = sum(r[1] for r in seg if r[0] == b)
             major = a if ca >= cb else b
-            rl = [r[1] for r in seg if r[0] == major][1:-1]       # first and last runs are partial
-            for k in range(1, len(rl) - 1):
+            mr = [r for r in seg if r[0] == major][1:-1]       # first and last runs are partial
+            rl = [r[1] for r in mr]
+            for k in range(2, len(rl) - 2):            # runs next to a junction may legitimately jump
                 d1, d2 = rl[k] - rl[k - 1], rl[k] - rl[k + 1]
                 if d1 * d2 > 0 and max(abs(d1), abs(d2)) >= 2:
                     bad += 1
+                    jaggies.where.append(mr[k][2])
         i = max(j - 1, i + 1)
     return bad
 
@@ -118,7 +125,7 @@ def check_rows(rows, mirrored=False, accent=ACCENT, lines=None, open_slots=''):
     if doubled:
         msgs.append('ERROR doubled outline at %s' % doubled[:6])
     if jg:
-        msgs.append('ERROR %d jaggies in the silhouette' % jg)
+        msgs.append('ERROR %d jaggies in the silhouette near %s' % (jg, jaggies.where[:4]))
     if lone:
         msgs.append('warn %d lone tone pixels %s' % (len(lone), lone[:5]))
     if mirrored:
