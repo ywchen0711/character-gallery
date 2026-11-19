@@ -1,6 +1,11 @@
 """Art styles in the gallery. Every variant of a character names one of these."""
 
 STYLES = {
+    'sango': {
+        'name': {'zh': '8-bit 紅白機・霸王之路主將', 'en': '8-bit Famicom, Path of the Hegemon general'},
+        'blurb': {'zh': '《三國志 霸王之路》裡的主將造型：同一張 8-bit 臉，換上漢代將軍的冠、明光鎧與披風。',
+                  'en': 'The main-general look from Three Kingdoms: Path of the Hegemon: the same 8-bit face in a Han general\'s cap, mirror armour and cape.'},
+    },
     'nes': {
         'name': {'zh': '8-bit 紅白機（三國志 霸王の大陸風）', 'en': '8-bit Famicom (霸王の大陸-like)'},
         'blurb': {'zh': '主畫風。仿紅白機《三國志 霸王の大陸》的 8-bit 頭像：48×56、粗黑線、平塗兩三階陰影，'

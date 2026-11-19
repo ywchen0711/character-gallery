@@ -23,6 +23,18 @@ class NESVariant(Variant):
         return nes_sprites.frames(self.cid)
 
 
+class SangoVariant(NESVariant):
+    """A character's look as the main general of 三國志 霸王之路 (drawings keyed '<cid>_sango')."""
+    style = 'sango'
+    primary = False
+
+    def portrait(self):
+        return nes_portraits.portrait(self.cid + '_sango')
+
+    def frames(self):
+        return nes_sprites.frames(self.cid + '_sango')
+
+
 def window(img, border=0x30):
     """An NES text-window frame around a portrait: 1px black gap, 1px white line."""
     from PIL import Image

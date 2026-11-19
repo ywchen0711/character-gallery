@@ -23,11 +23,12 @@ from pixlib import count_colours, scale  # noqa: E402
 from roster import ROSTER  # noqa: E402
 from styles import STYLES  # noqa: E402
 
-FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8', 'longmen': '#5a6ab8', 'beast': '#6a8a3a', 'foe': '#8a6a3a'}
+FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8', 'longmen': '#5a6ab8', 'beast': '#6a8a3a', 'foe': '#8a6a3a', 'sango': '#a83a3a'}
 FACTION_NAME = {'wu': {'zh': '吳', 'en': 'Wu'}, 'shu': {'zh': '蜀', 'en': 'Shu'},
                 'wei': {'zh': '魏', 'en': 'Wei'}, 'qun': {'zh': '群', 'en': 'Other'},
                 'west': {'zh': '旅人一家', 'en': 'The travelling family'},
                 'longmen': {'zh': '龍門武林', 'en': 'Longmen Wulin'},
+                'sango': {'zh': '霸王之路', 'en': 'Path of the Hegemon'},
                 'beast': {'zh': '怪物與野獸', 'en': 'Monsters & Beasts'},
                 'foe': {'zh': '小怪', 'en': 'Common Foes'}}
 
@@ -85,7 +86,7 @@ def export(cid):
                 os.remove(p)
             elif n not in STYLES:
                 shutil.rmtree(p)
-    if cid in ('family', 'longmen', 'beasts', 'foes'):
+    if cid in ('family', 'longmen', 'beasts', 'foes', 'sango'):
         raise ValueError('family and longmen are reserved for group pictures')
     vs = [export_variant(cid, v) for v in ch.variants()]
     M = ch.META
@@ -164,6 +165,17 @@ def main():
     groups['foes'] = {'name': {'zh': '小怪', 'en': 'Common Foes'}, 'faction': 'foe', 'members': FOE_IDS, 'style': 'nes',
                       'files': {k: 'chars/foes/' + v for k, v in (('nes', 'group-nes.png'), ('nes4x', 'group-nes@4x.png'),
                                                                    ('nesTall', 'group-nes-5col.png'), ('nesTall4x', 'group-nes-5col@4x.png'))}}
+    # 三國志 霸王之路: Jeff as the main general, then each stage's enemy general
+    SANGO = ['jeff_sango', 'chengyuanzhi', 'zhangbao', 'huaxiong', 'jiling', 'yanliang', 'wenchou', 'zhangliao', 'xiahoudun', 'lubu']
+    sd = os.path.join(ROOT, 'chars', 'sango')
+    os.makedirs(sd, exist_ok=True)
+    for name, im in (('group-nes', nes_group(SANGO, cols=10)), ('group-nes-5col', nes_group(SANGO, cols=5))):
+        im.save(os.path.join(sd, name + '.png'))
+        scale(im, 4).save(os.path.join(sd, name + '@4x.png'))
+    groups['sango'] = {'name': {'zh': '三國志 霸王之路', 'en': 'Three Kingdoms: Path of the Hegemon'}, 'faction': 'sango',
+                       'members': ['jeff'] + SANGO[1:], 'style': 'nes',
+                       'files': {k: 'chars/sango/' + v for k, v in (('nes', 'group-nes.png'), ('nes4x', 'group-nes@4x.png'),
+                                                                     ('nesTall', 'group-nes-5col.png'), ('nesTall4x', 'group-nes-5col@4x.png'))}}
     groups['family']['faction'] = 'west'
     with open(os.path.join(ROOT, 'chars', 'index.json'), 'w', encoding='utf-8') as f:
         json.dump({'version': 3, 'mainStyle': 'nes', 'styles': styles, 'groups': groups, 'characters': entries},

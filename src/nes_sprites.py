@@ -389,6 +389,11 @@ import nes_longmen  # noqa: E402
 SPRITES.update(nes_longmen.SPRITES)
 HEIGHTS.update(nes_longmen.HEIGHTS)
 
+# 三國志 霸王之路 lives in nes_sango.py
+import nes_sango  # noqa: E402
+SPRITES.update(nes_sango.SPRITES)
+HEIGHTS.update(nes_sango.HEIGHTS)
+
 
 def frames(cid):
     """dict animation -> list of 16x24 RGBA images."""

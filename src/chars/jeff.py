@@ -21,6 +21,7 @@ META = dict(
               'to think of turning a whole boat into a fire dragon.',
     },
     weapon={'zh': '扳手與火龍船', 'en': 'Wrench and fire rafts'},
+    alsoIn=['sango'],
 )
 
 # ---------------------------------------------------------------- HD-2D (Octopath-like)
@@ -520,7 +521,8 @@ def variants():
     from nes_variant import NESVariant
     fam = FamilyVariant('jeff')
     fam.primary = False
-    return [NESVariant('jeff'), fam, v, KoeiVariant(koei_ns(), full=False)]
+    from nes_variant import SangoVariant
+    return [NESVariant('jeff'), SangoVariant('jeff'), fam, v, KoeiVariant(koei_ns(), full=False)]
 
 S_LEGS = {k: _taller(v, '.....kTTkkttk.......') for k, v in S_LEGS.items()}
 SD_LEGS = {k: _taller(v, '......kttTTk........') for k, v in SD_LEGS.items()}

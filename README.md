@@ -19,6 +19,9 @@ Characters so far:
   - Josh, 10 (also `family`, `gba` and `koei`)
   - Jasper, 8 (also `family`, `dq` and `koei`)
 - 關羽 Guan Yu (`nes`, also `koei`).
+- 三國志 霸王之路 (Path of the Hegemon), faction `sango`: Jeff as the main general (his `sango` style), and each stage's
+  enemy general in `nes`: 程遠志, 張寶, 華雄, 紀靈, 顏良, 文醜, 張遼, 夏侯惇, 呂布 (關羽 also shows under this filter).
+  Drawn in `src/nes_sango.py`.
 - 龍門武林 (Longmen Wulin), the cast of 龍門雙奕, in `nes` only (faction `longmen`):
   - 奕叡 Yi Rui, the elder brother: indigo robe, blue headband, ring-pommel saber on his back
   - 奕碩 Yi Shuo, his little brother: red headband, vermilion jacket, a mole, his football (shorter sprite)

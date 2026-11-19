@@ -17,6 +17,7 @@ META = dict(
               'is remembered in the tale of riding a thousand li to rejoin his brother.',
     },
     weapon={'zh': '青龍偃月刀', 'en': 'Green Dragon Crescent Blade'},
+    alsoIn=['sango'],
 )
 GREEN = dict(P='#5aa462', p='#33804a', q='#1f5c36', Q='#123c24')
 GOLD = dict(C='#f2d27a', c='#c89a40')

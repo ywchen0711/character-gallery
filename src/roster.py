@@ -1,5 +1,7 @@
 """Character registry: add a module name from src/chars here to include it in the export."""
 ROSTER = ['jeff', 'erin', 'josh', 'jasper', 'guanyu',
+          # 三國志 霸王之路 stage generals
+          'chengyuanzhi', 'zhangbao', 'huaxiong', 'jiling', 'yanliang', 'wenchou', 'zhangliao', 'xiahoudun', 'lubu',
           'yirui', 'yishuo', 'xiaotian', 'baixian', 'liuhanyan', 'kuchan',
           'heixiong', 'daoba', 'shouhou', 'tuqianqiu',
           'tiewusi', 'qianwanli', 'wenruyu', 'xiaolian', 'lihanshan', 'yuweng', 'guimian', 'masked',

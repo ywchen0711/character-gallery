@@ -636,6 +636,10 @@ PORTRAITS = {
 import nes_longmen  # noqa: E402
 PORTRAITS.update(nes_longmen.PORTRAITS)
 
+# 三國志 霸王之路: Jeff as main general + the stage generals
+import nes_sango  # noqa: E402
+PORTRAITS.update(nes_sango.PORTRAITS)
+
 
 def pic(cid):
     bg, spr, slots, pals, sslots, spals = PORTRAITS[cid]

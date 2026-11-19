@@ -2,6 +2,16 @@
   "version": 3,
   "mainStyle": "nes",
   "styles": {
+    "sango": {
+      "name": {
+        "zh": "8-bit 紅白機・霸王之路主將",
+        "en": "8-bit Famicom, Path of the Hegemon general"
+      },
+      "blurb": {
+        "zh": "《三國志 霸王之路》裡的主將造型：同一張 8-bit 臉，換上漢代將軍的冠、明光鎧與披風。",
+        "en": "The main-general look from Three Kingdoms: Path of the Hegemon: the same 8-bit face in a Han general's cap, mirror armour and cape."
+      }
+    },
     "nes": {
       "name": {
         "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
@@ -254,6 +264,32 @@
         "nesTall": "chars/foes/group-nes-5col.png",
         "nesTall4x": "chars/foes/group-nes-5col@4x.png"
       }
+    },
+    "sango": {
+      "name": {
+        "zh": "三國志 霸王之路",
+        "en": "Three Kingdoms: Path of the Hegemon"
+      },
+      "faction": "sango",
+      "members": [
+        "jeff",
+        "chengyuanzhi",
+        "zhangbao",
+        "huaxiong",
+        "jiling",
+        "yanliang",
+        "wenchou",
+        "zhangliao",
+        "xiahoudun",
+        "lubu"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/sango/group-nes.png",
+        "nes4x": "chars/sango/group-nes@4x.png",
+        "nesTall": "chars/sango/group-nes-5col.png",
+        "nesTall4x": "chars/sango/group-nes-5col@4x.png"
+      }
     }
   },
   "characters": [
@@ -279,6 +315,9 @@
         "zh": "扳手與火龍船",
         "en": "Wrench and fire rafts"
       },
+      "alsoIn": [
+        "sango"
+      ],
       "kind": "person",
       "faction": "west",
       "factionName": {
@@ -315,6 +354,42 @@
           },
           "colours": {
             "portrait": 8,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        },
+        {
+          "style": "sango",
+          "styleName": {
+            "zh": "8-bit 紅白機・霸王之路主將",
+            "en": "8-bit Famicom, Path of the Hegemon general"
+          },
+          "primary": false,
+          "files": {
+            "portrait": "chars/jeff/sango/portrait.png",
+            "portrait4x": "chars/jeff/sango/portrait@4x.png",
+            "body": "chars/jeff/sango/body.png",
+            "body4x": "chars/jeff/sango/body@4x.png",
+            "sheet": "chars/jeff/sango/sheet.png",
+            "sheet4x": "chars/jeff/sango/sheet@4x.png",
+            "sheetJson": "chars/jeff/sango/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
             "sheet": 3
           },
           "animations": [
@@ -991,6 +1066,9 @@
         "zh": "青龍偃月刀",
         "en": "Green Dragon Crescent Blade"
       },
+      "alsoIn": [
+        "sango"
+      ],
       "kind": "person",
       "faction": "shu",
       "factionName": {
@@ -1070,6 +1148,618 @@
             "walk",
             "walk_side",
             "action"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chengyuanzhi",
+      "name": {
+        "zh": "程遠志",
+        "en": "Cheng Yuanzhi"
+      },
+      "style_name": {
+        "zh": "黃巾頭目",
+        "en": "Yellow Turban captain"
+      },
+      "title": {
+        "zh": "黃巾之亂・黃巾頭目",
+        "en": "The Yellow Turban Rebellion - Yellow Turban captain"
+      },
+      "bio": {
+        "zh": "黃巾軍的頭目，頭綁黃巾、眉上一道疤，帶著一群拿長槍的農民兵。霸王之路的第一戰，新任主將的試刀石。",
+        "en": "A Yellow Turban captain with a yellow head-cloth and a scar over one brow, leading peasant spearmen. The first battle of the road, where a new general proves himself."
+      },
+      "weapon": {
+        "zh": "長槍",
+        "en": "Spear"
+      },
+      "kind": "person",
+      "faction": "sango",
+      "factionName": {
+        "zh": "霸王之路",
+        "en": "Path of the Hegemon"
+      },
+      "colour": "#a83a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/chengyuanzhi/nes/portrait.png",
+            "portrait4x": "chars/chengyuanzhi/nes/portrait@4x.png",
+            "body": "chars/chengyuanzhi/nes/body.png",
+            "body4x": "chars/chengyuanzhi/nes/body@4x.png",
+            "sheet": "chars/chengyuanzhi/nes/sheet.png",
+            "sheet4x": "chars/chengyuanzhi/nes/sheet@4x.png",
+            "sheetJson": "chars/chengyuanzhi/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zhangbao",
+      "name": {
+        "zh": "張寶",
+        "en": "Zhang Bao"
+      },
+      "style_name": {
+        "zh": "地公將軍",
+        "en": "General of the Earth"
+      },
+      "title": {
+        "zh": "廣宗之戰・地公將軍",
+        "en": "The Battle of Guangzong - General of the Earth"
+      },
+      "bio": {
+        "zh": "黃巾三兄弟之一，自稱地公將軍。黃道袍、長黑鬚，手舉紅字符紙，據說能呼風喚雨、撒豆成兵。",
+        "en": "One of the three Yellow Turban brothers, the self-styled General of the Earth. A yellow Daoist robe, a long black beard and a red-script talisman held high; they say he can call wind and rain."
+      },
+      "weapon": {
+        "zh": "符咒與妖術",
+        "en": "Talismans and sorcery"
+      },
+      "kind": "person",
+      "faction": "sango",
+      "factionName": {
+        "zh": "霸王之路",
+        "en": "Path of the Hegemon"
+      },
+      "colour": "#a83a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/zhangbao/nes/portrait.png",
+            "portrait4x": "chars/zhangbao/nes/portrait@4x.png",
+            "body": "chars/zhangbao/nes/body.png",
+            "body4x": "chars/zhangbao/nes/body@4x.png",
+            "sheet": "chars/zhangbao/nes/sheet.png",
+            "sheet4x": "chars/zhangbao/nes/sheet@4x.png",
+            "sheetJson": "chars/zhangbao/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "huaxiong",
+      "name": {
+        "zh": "華雄",
+        "en": "Hua Xiong"
+      },
+      "style_name": {
+        "zh": "董卓麾下猛將",
+        "en": "Dong Zhuo's champion"
+      },
+      "title": {
+        "zh": "汜水關・董卓麾下猛將",
+        "en": "Sishui Pass - Dong Zhuo's champion"
+      },
+      "bio": {
+        "zh": "董卓帳下的猛將，滿臉濃鬍、紅纓鐵盔、一把大刀。守在汜水關前，連斬聯軍數將。",
+        "en": "Dong Zhuo's fierce champion: a bushy beard, an iron helmet with a red plume and a broad dao. He holds Sishui Pass and has cut down several allied officers."
+      },
+      "weapon": {
+        "zh": "大刀",
+        "en": "Broad dao"
+      },
+      "kind": "person",
+      "faction": "sango",
+      "factionName": {
+        "zh": "霸王之路",
+        "en": "Path of the Hegemon"
+      },
+      "colour": "#a83a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/huaxiong/nes/portrait.png",
+            "portrait4x": "chars/huaxiong/nes/portrait@4x.png",
+            "body": "chars/huaxiong/nes/body.png",
+            "body4x": "chars/huaxiong/nes/body@4x.png",
+            "sheet": "chars/huaxiong/nes/sheet.png",
+            "sheet4x": "chars/huaxiong/nes/sheet@4x.png",
+            "sheetJson": "chars/huaxiong/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jiling",
+      "name": {
+        "zh": "紀靈",
+        "en": "Ji Ling"
+      },
+      "style_name": {
+        "zh": "袁術大將",
+        "en": "Yuan Shu's general"
+      },
+      "title": {
+        "zh": "壽春討伐・袁術大將",
+        "en": "The Shouchun Campaign - Yuan Shu's general"
+      },
+      "bio": {
+        "zh": "袁術手下第一大將，紫纓鐵盔、面色冷峻，使一把三尖兩刃刀。守著壽春，一步也不退。",
+        "en": "Yuan Shu's foremost general: a purple-plumed iron helmet, a stern clean face and a three-pointed double-edged blade. He holds Shouchun and will not give a step."
+      },
+      "weapon": {
+        "zh": "三尖兩刃刀",
+        "en": "Three-pointed blade"
+      },
+      "kind": "person",
+      "faction": "sango",
+      "factionName": {
+        "zh": "霸王之路",
+        "en": "Path of the Hegemon"
+      },
+      "colour": "#a83a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jiling/nes/portrait.png",
+            "portrait4x": "chars/jiling/nes/portrait@4x.png",
+            "body": "chars/jiling/nes/body.png",
+            "body4x": "chars/jiling/nes/body@4x.png",
+            "sheet": "chars/jiling/nes/sheet.png",
+            "sheet4x": "chars/jiling/nes/sheet@4x.png",
+            "sheetJson": "chars/jiling/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yanliang",
+      "name": {
+        "zh": "顏良",
+        "en": "Yan Liang"
+      },
+      "style_name": {
+        "zh": "河北名將",
+        "en": "Champion of Hebei"
+      },
+      "title": {
+        "zh": "白馬之圍・河北名將",
+        "en": "The Siege of Baima - Champion of Hebei"
+      },
+      "bio": {
+        "zh": "袁紹帳下的河北名將，翼盔紅纓、方正大鬍、青銅金甲，手提大刀，是袁軍兩大猛將之一。",
+        "en": "One of Yuan Shao's two great champions of Hebei: a winged helmet with a red tassel, a square heavy beard, bronze-gold armour and a great dao."
+      },
+      "weapon": {
+        "zh": "大刀",
+        "en": "Great dao"
+      },
+      "kind": "person",
+      "faction": "sango",
+      "factionName": {
+        "zh": "霸王之路",
+        "en": "Path of the Hegemon"
+      },
+      "colour": "#a83a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/yanliang/nes/portrait.png",
+            "portrait4x": "chars/yanliang/nes/portrait@4x.png",
+            "body": "chars/yanliang/nes/body.png",
+            "body4x": "chars/yanliang/nes/body@4x.png",
+            "sheet": "chars/yanliang/nes/sheet.png",
+            "sheet4x": "chars/yanliang/nes/sheet@4x.png",
+            "sheetJson": "chars/yanliang/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wenchou",
+      "name": {
+        "zh": "文醜",
+        "en": "Wen Chou"
+      },
+      "style_name": {
+        "zh": "河北名將",
+        "en": "Champion of Hebei"
+      },
+      "title": {
+        "zh": "延津之戰・河北名將",
+        "en": "The Battle of Yanjin - Champion of Hebei"
+      },
+      "bio": {
+        "zh": "與顏良齊名的袁軍猛將，尖頂鐵盔、齜牙怒目、一把長槍。性子比顏良更兇，一心要替兄弟報仇。",
+        "en": "Yan Liang's equal in Yuan Shao's army: a spiked iron helmet, bared teeth, glaring eyes and a spear. Fiercer than his comrade, and set on avenging him."
+      },
+      "weapon": {
+        "zh": "長槍",
+        "en": "Spear"
+      },
+      "kind": "person",
+      "faction": "sango",
+      "factionName": {
+        "zh": "霸王之路",
+        "en": "Path of the Hegemon"
+      },
+      "colour": "#a83a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/wenchou/nes/portrait.png",
+            "portrait4x": "chars/wenchou/nes/portrait@4x.png",
+            "body": "chars/wenchou/nes/body.png",
+            "body4x": "chars/wenchou/nes/body@4x.png",
+            "sheet": "chars/wenchou/nes/sheet.png",
+            "sheet4x": "chars/wenchou/nes/sheet@4x.png",
+            "sheetJson": "chars/wenchou/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zhangliao",
+      "name": {
+        "zh": "張遼",
+        "en": "Zhang Liao"
+      },
+      "style_name": {
+        "zh": "曹軍名將",
+        "en": "Cao Cao's great general"
+      },
+      "title": {
+        "zh": "合肥之戰・曹軍名將",
+        "en": "The Battle of Hefei - Cao Cao's great general"
+      },
+      "bio": {
+        "zh": "曹操帳下名將，白纓藍盔、短鬚沉穩。以少擊眾、臨危不亂，打得敵軍聞名喪膽。",
+        "en": "One of Cao Cao's finest generals: a blue helmet with a white plume, a neat beard and a steady gaze. Calm under pressure, he wins against the odds."
+      },
+      "weapon": {
+        "zh": "長戟",
+        "en": "Halberd"
+      },
+      "kind": "person",
+      "faction": "sango",
+      "factionName": {
+        "zh": "霸王之路",
+        "en": "Path of the Hegemon"
+      },
+      "colour": "#a83a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/zhangliao/nes/portrait.png",
+            "portrait4x": "chars/zhangliao/nes/portrait@4x.png",
+            "body": "chars/zhangliao/nes/body.png",
+            "body4x": "chars/zhangliao/nes/body@4x.png",
+            "sheet": "chars/zhangliao/nes/sheet.png",
+            "sheet4x": "chars/zhangliao/nes/sheet@4x.png",
+            "sheetJson": "chars/zhangliao/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xiahoudun",
+      "name": {
+        "zh": "夏侯惇",
+        "en": "Xiahou Dun"
+      },
+      "style_name": {
+        "zh": "獨眼將軍",
+        "en": "The one-eyed general"
+      },
+      "title": {
+        "zh": "博望坡・獨眼將軍",
+        "en": "Bowang Slope - The one-eyed general"
+      },
+      "bio": {
+        "zh": "曹操的族弟兼大將，左眼戴著黑眼罩、滿臉黑鬍，鐵甲藍纓。脾氣剛烈，衝鋒總在最前面。",
+        "en": "Cao Cao's kinsman and general, with a black patch over his left eye, a full black beard and iron armour with blue lacing. Hot-tempered, always first into the charge."
+      },
+      "weapon": {
+        "zh": "長槍",
+        "en": "Spear"
+      },
+      "kind": "person",
+      "faction": "sango",
+      "factionName": {
+        "zh": "霸王之路",
+        "en": "Path of the Hegemon"
+      },
+      "colour": "#a83a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/xiahoudun/nes/portrait.png",
+            "portrait4x": "chars/xiahoudun/nes/portrait@4x.png",
+            "body": "chars/xiahoudun/nes/body.png",
+            "body4x": "chars/xiahoudun/nes/body@4x.png",
+            "sheet": "chars/xiahoudun/nes/sheet.png",
+            "sheet4x": "chars/xiahoudun/nes/sheet@4x.png",
+            "sheetJson": "chars/xiahoudun/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lubu",
+      "name": {
+        "zh": "呂布",
+        "en": "Lü Bu"
+      },
+      "style_name": {
+        "zh": "飛將",
+        "en": "The Flying General"
+      },
+      "title": {
+        "zh": "虎牢關・飛將",
+        "en": "Hulao Pass - The Flying General"
+      },
+      "bio": {
+        "zh": "天下無雙的飛將：紫金冠插兩根雉雞翎、金甲紅袍，手持方天畫戟。霸王之路的最後一關，等在虎牢關上。",
+        "en": "The peerless Flying General: a gold crown with two pheasant feathers, gold armour, a red robe and the Sky Piercer halberd. The last battle of the road, waiting on Hulao Pass."
+      },
+      "weapon": {
+        "zh": "方天畫戟",
+        "en": "Sky Piercer halberd"
+      },
+      "kind": "person",
+      "faction": "sango",
+      "factionName": {
+        "zh": "霸王之路",
+        "en": "Path of the Hegemon"
+      },
+      "colour": "#a83a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/lubu/nes/portrait.png",
+            "portrait4x": "chars/lubu/nes/portrait@4x.png",
+            "body": "chars/lubu/nes/body.png",
+            "body4x": "chars/lubu/nes/body@4x.png",
+            "sheet": "chars/lubu/nes/sheet.png",
+            "sheet4x": "chars/lubu/nes/sheet@4x.png",
+            "sheetJson": "chars/lubu/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
           ]
         }
       ]

@@ -94,8 +94,8 @@
     const grid = $('#grid'); grid.textContent = '';
     const items = [];
     for (const c of DATA.characters) {
-      if (faction !== 'all' && c.faction !== faction) continue;
-      if (styleF === 'all') items.push([c, c.variants.find((v) => v.primary) || c.variants[0]]);
+      if (faction !== 'all' && c.faction !== faction && !(c.alsoIn || []).includes(faction)) continue;
+      if (styleF === 'all') items.push([c, (faction !== 'all' && c.variants.find((v) => v.style === faction)) || c.variants.find((v) => v.primary) || c.variants[0]]);
       else c.variants.filter((v) => v.style === styleF).forEach((v) => items.push([c, v]));
     }
     $('#empty').hidden = items.length > 0;
@@ -104,7 +104,7 @@
       b.setAttribute('aria-label', `${t(c.name)} · ${styleName(v.style)}`);
       const art = el('div', 'art');
       const pc = el('canvas'), bc = el('canvas');
-      pc.classList.toggle('nesframe', v.style === 'nes');
+      pc.classList.toggle('nesframe', v.style === 'nes' || v.style === 'sango');
       art.append(pc, bc); b.appendChild(art);
       const nm = el('div', 'nm');
       nm.append(el('b', null, t(c.name)), el('span', null, lang === 'zh' ? c.name.en : c.name.zh), el('em', 'fac', t(c.factionName)));
@@ -156,8 +156,8 @@
     $('#detail').hidden = false; document.body.classList.add('locked');
     fillDetail();
     const room = window.innerWidth < 600 ? Math.min(300, window.innerWidth - 90) : 300;
-    $('#d-por').classList.toggle('nesframe', v.style === 'nes');
-    still($('#d-por'), v._por, fitDown(v._por.height + (v.style === 'nes' ? 8 : 0), room));
+    $('#d-por').classList.toggle('nesframe', v.style === 'nes' || v.style === 'sango');
+    still($('#d-por'), v._por, fitDown(v._por.height + (v.style === 'nes' || v.style === 'sango' ? 8 : 0), room));
     players.forEach((p) => { if (p.canvas.id === 'd-chi') players.delete(p); });
     open.player = player($('#d-chi'), v, open.anim, fitDown(v._meta.frameHeight, room));
     $('#close').focus();
@@ -249,6 +249,8 @@
   };
   // group roster pictures above the grid: the one that matches the faction filter (both for 'all')
   const CAPS = {
+    sango: { zh: '三國志 霸王之路：主將傑夫，與每一關的敵將（程遠志、張寶、華雄、紀靈、顏良、文醜、張遼、夏侯惇、呂布）· 8-bit 紅白機畫風',
+      en: 'Three Kingdoms: Path of the Hegemon: Jeff as the main general and every stage\'s enemy general (Cheng Yuanzhi, Zhang Bao, Hua Xiong, Ji Ling, Yan Liang, Wen Chou, Zhang Liao, Xiahou Dun, Lü Bu) · 8-bit Famicom style' },
     family: { zh: '一家四口：傑夫（父）、艾琳（母）、喬許（10 歲）、賈斯珀（8 歲）· 主畫風 8-bit 紅白機（霸王の大陸風）',
       en: 'The family: Jeff (father), Erin (mother), Josh (10), Jasper (8) · main style: 8-bit Famicom (霸王の大陸-like)' },
     longmen: { zh: '龍門武林：奕叡、奕碩、冷笑天、白先生、柳寒煙、苦禪 · 8-bit 紅白機畫風',
@@ -264,8 +266,8 @@
   };
   function hero() {
     const box = $('#heroes'); if (!box || !DATA || !DATA.groups) return;
-    const ids = faction === 'all' ? ['family', 'longmen', 'longmenFoes', 'longmenMore', 'beasts', 'foes']
-      : faction === 'longmen' ? ['longmen', 'longmenFoes', 'longmenMore'] : faction === 'beast' ? ['beasts'] : faction === 'foe' ? ['foes']
+    const ids = faction === 'all' ? ['family', 'sango', 'longmen', 'longmenFoes', 'longmenMore', 'beasts', 'foes']
+      : faction === 'sango' ? ['sango'] : faction === 'longmen' ? ['longmen', 'longmenFoes', 'longmenMore'] : faction === 'beast' ? ['beasts'] : faction === 'foe' ? ['foes']
         : faction === 'west' ? ['family'] : [];
     box.textContent = '';
     const room = Math.max(120, (box.clientWidth || 600) - 32);
