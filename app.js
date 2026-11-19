@@ -307,7 +307,7 @@
   on('#family-pick', 'click', () => { store.set('cg-pick', 'family'); render(); });
   on('#nes-pick', 'click', () => { store.set('cg-pick', 'nes'); render(); });
 
-  fetch('chars/index.json').then((r) => r.json()).then(async (data) => {
+  fetch('chars/index.json', { cache: 'no-cache' }).then((r) => r.json()).then(async (data) => {
     DATA = data;
     const jobs = [];
     for (const c of data.characters) {
