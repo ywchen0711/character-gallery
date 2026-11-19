@@ -100,15 +100,18 @@ def main():
     from family_variant import group
     gd = os.path.join(ROOT, 'chars', 'family')
     os.makedirs(gd, exist_ok=True)
-    for name, im in (('group', group()), ('group-scene', group(scene=True))):
+    from nes_variant import group as nes_group
+    for name, im in (('group', group()), ('group-scene', group(scene=True)), ('group-nes', nes_group()), ('group-nes-2x2', nes_group(cols=2))):
         im.save(os.path.join(gd, name + '.png'))
         scale(im, 4).save(os.path.join(gd, name + '@4x.png'))
     groups = {'family': {'name': {'zh': '一家四口', 'en': 'The family'},
-                         'members': ['jeff', 'erin', 'josh', 'jasper'], 'style': 'family',
-                         'files': {k: 'chars/family/' + v for k, v in (('group', 'group.png'), ('group4x', 'group@4x.png'),
+                         'members': ['jeff', 'erin', 'josh', 'jasper'], 'style': 'nes',
+                         'files': {k: 'chars/family/' + v for k, v in (('nes', 'group-nes.png'), ('nes4x', 'group-nes@4x.png'),
+                                                                        ('nesTall', 'group-nes-2x2.png'), ('nesTall4x', 'group-nes-2x2@4x.png'),
+                                                                        ('group', 'group.png'), ('group4x', 'group@4x.png'),
                                                                         ('scene', 'group-scene.png'), ('scene4x', 'group-scene@4x.png'))}}}
     with open(os.path.join(ROOT, 'chars', 'index.json'), 'w', encoding='utf-8') as f:
-        json.dump({'version': 3, 'mainStyle': 'family', 'styles': styles, 'groups': groups, 'characters': entries},
+        json.dump({'version': 3, 'mainStyle': 'nes', 'styles': styles, 'groups': groups, 'characters': entries},
                   f, ensure_ascii=False, indent=2)
 
 

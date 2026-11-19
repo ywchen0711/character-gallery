@@ -120,3 +120,7 @@ a.chip { color: var(--ink); white-space: nowrap; }
 .hero canvas { display: block; max-width: 100%; height: auto; margin: 0 auto; border-radius: 10px; box-shadow: var(--shadow); }
 .hero-cap { text-align: center; color: var(--muted); font-size: 13px; margin: 6px 0 4px; }
 main .hero { padding: 8px 0; }
+
+/* v6: 8-bit Famicom main style: an NES text-window frame around portraits */
+canvas.nesframe { background: #000; border: 2px solid #fcfcfc; outline: 2px solid #000; box-sizing: content-box; padding: 2px; }
+.hero canvas { background: #000; }

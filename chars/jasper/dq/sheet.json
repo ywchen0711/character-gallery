@@ -1,0 +1,44 @@
+{
+  "image": "sheet.png",
+  "frameWidth": 16,
+  "frameHeight": 16,
+  "anchor": {
+    "x": 8,
+    "y": 15,
+    "note": "feet centre in each cell"
+  },
+  "animations": {
+    "idle": {
+      "row": 0,
+      "frames": 2,
+      "fps": 2,
+      "loop": true,
+      "note": "Dragon Quest-style: characters always mark time"
+    },
+    "walk_down": {
+      "row": 1,
+      "frames": 2,
+      "fps": 4,
+      "loop": true
+    },
+    "walk_up": {
+      "row": 2,
+      "frames": 2,
+      "fps": 4,
+      "loop": true
+    },
+    "walk_left": {
+      "row": 3,
+      "frames": 2,
+      "fps": 4,
+      "loop": true
+    },
+    "walk_right": {
+      "row": 4,
+      "frames": 2,
+      "fps": 4,
+      "loop": true,
+      "note": "mirror of walk_left"
+    }
+  }
+}

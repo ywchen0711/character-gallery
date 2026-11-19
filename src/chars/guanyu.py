@@ -366,4 +366,5 @@ CHIBI = dict(costume='robe', action=C_ACTION, side=C_SIDE, side_prop=C_SIDE_PROP
 
 def variants():
     from variants import KoeiVariant
-    return [KoeiVariant(sys.modules[__name__], primary=True)]
+    from nes_variant import NESVariant
+    return [NESVariant('guanyu'), KoeiVariant(sys.modules[__name__])]

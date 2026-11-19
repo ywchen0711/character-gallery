@@ -517,7 +517,10 @@ def variants():
     from family_variant import FamilyVariant
     v = HD2DVariant()
     v.primary = False
-    return [FamilyVariant('jeff'), v, KoeiVariant(koei_ns(), full=False)]
+    from nes_variant import NESVariant
+    fam = FamilyVariant('jeff')
+    fam.primary = False
+    return [NESVariant('jeff'), fam, v, KoeiVariant(koei_ns(), full=False)]
 
 S_LEGS = {k: _taller(v, '.....kTTkkttk.......') for k, v in S_LEGS.items()}
 SD_LEGS = {k: _taller(v, '......kttTTk........') for k, v in SD_LEGS.items()}

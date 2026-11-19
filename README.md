@@ -4,26 +4,27 @@ A pixel-art character library for the games in this collection. Each character c
 
 | Style id | Look (imitated, original art) | Portrait | Sprite |
 |---|---|---|---|
-| `family` (**main**) | HD-2D (Octopath-like), cuter: round faces, small dark eyes, warm soft light | 72×80 painterly, bokeh background | 40×60 cell, one baseline for everyone; idle, walk in 4 directions, signature action |
+| `nes` (**main**) | 8-bit Famicom, in the manner of 三國志 霸王の大陸 (Namco, 1992): bold black lines, flat 2-3 tone shading | 48×56 on black; only NES (2C02) palette colours, one 3-colour sub-palette per 16×16 area (max 4), sprite overlays for eye whites and lips | 16×24 NES field sprite, 3 colours + transparent, 2-frame front and side walk; Josh 20 and Jasper 16 rows tall |
+| `family` | HD-2D (Octopath-like), cuter: round faces, small dark eyes, warm soft light | 72×80 painterly, bokeh background | 40×60 cell, one baseline for everyone; idle, walk in 4 directions, signature action |
 | `koei` | 16-bit Three Kingdoms strategy portraits (霸王の大陸-like) × pixel-baseball chibis | 56×64, 3/4 view, side-lit | 56×64 cell, about 2.3 heads |
 | `hd2d` | HD-2D (Octopath-like) | 80×104 painterly, bokeh background | 40×56 cell, about 3 heads, soft ramps, tiny dark eyes |
 | `snes` | SNES JRPG (FF6-like) | 48×48 in a blue menu window | 16×24 field sprite, 4-direction walk |
 | `gba` | GBA tactics (Fire Emblem-like) | 64×64, strict 16 colours, cel-shaded | 48×48 chunky battle sprite |
-| `nes` | 8-bit NES (Dragon Quest-like) | 48×48 window, 4 colours per 16×16 block | 16×16, 3 colours per 8×8 sprite, 2-frame walk |
+| `dq` | 8-bit NES (Dragon Quest-like) | 48×48 window, 4 colours per 16×16 block | 16×16, 3 colours per 8×8 sprite, 2-frame walk |
 
 Characters so far:
-- The family from *Saga of Jiangdong*, drawn in the main `family` style, with their earlier style tests kept:
-  - Jeff, the father (also `hd2d` and `koei`)
-  - Erin, the mother (also `snes` and `koei`)
-  - Josh, 10 (also `gba` and `koei`)
-  - Jasper, 8 (also `nes` and `koei`)
-- 關羽 Guan Yu (`koei`).
+- The family from *Saga of Jiangdong*, drawn in the main 8-bit `nes` style, with their earlier styles kept as alternates:
+  - Jeff, the father (also `family`, `hd2d` and `koei`)
+  - Erin, the mother (also `family`, `snes` and `koei`)
+  - Josh, 10 (also `family`, `gba` and `koei`)
+  - Jasper, 8 (also `family`, `dq` and `koei`)
+- 關羽 Guan Yu (`nes`, also `koei`).
 
-The group picture is `chars/family/group.png` (transparent) and `group-scene.png` (with background), each also at 4x.
+Group pictures in `chars/family/`: `group-nes.png` (the main-style roster: four framed portraits with their sprites on one baseline) and `group-nes-2x2.png` for narrow screens; the older `group.png` (transparent) and `group-scene.png`. Each also at 4x.
 
 `compare.html` lays the styles side by side so you can pick one.
 
-**Style note:** all art is original, drawn *in the style of* those games. Nothing is traced, copied or downloaded from them.
+**Style note:** all art is original, drawn *in the style of* those games. Nothing is traced, copied or downloaded from them. The main style is 8-bit: the Famicom portraits are hand-typed palette-indexed grids (`src/nes_portraits.py`), and `src/nes.py` checks the Famicom colour rules on every export.
 
 ## Using the assets in a game
 
@@ -48,6 +49,7 @@ chars/<id>/<style>/sheet.json       frameWidth/Height, anchor (feet), animations
 
 The pixels live as text grids in Python under `src/`. Each character is one per pixel. `.` is transparent, and letters are colour slots.
 
+- `src/nes.py`: the NES palette table and the Famicom rule checker; `src/nes_portraits.py`: the 8-bit portraits (rows of exactly 48 pixels ending in `|`); `src/nes_sprites.py`: the 16x24 field sprites; `src/nes_variant.py`: the variant and the roster picture
 - `src/pixlib.py`: grids, run-length rows, layers, palettes, strand/stroke/rotation helpers
 - `src/paint.py`: soft per-material shading used by the HD-2D styles
 - `src/family.py`, `src/family_portraits.py`: family portraits; `src/family_sprites.py`, `src/family_members.py`: family sprites (heads, body sizes, props, actions); `src/family_variant.py`: the variant and group picture

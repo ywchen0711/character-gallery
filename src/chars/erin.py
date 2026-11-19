@@ -362,4 +362,7 @@ def variants():
     from family_variant import FamilyVariant
     v = SNESVariant()
     v.primary = False
-    return [FamilyVariant('erin'), v, KoeiVariant(koei_ns(), full=False)]
+    from nes_variant import NESVariant
+    fam = FamilyVariant('erin')
+    fam.primary = False
+    return [NESVariant('erin'), fam, v, KoeiVariant(koei_ns(), full=False)]

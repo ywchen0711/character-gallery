@@ -1,10 +1,20 @@
 """Art styles in the gallery. Every variant of a character names one of these."""
 
 STYLES = {
+    'nes': {
+        'name': {'zh': '8-bit 紅白機（三國志 霸王の大陸風）', 'en': '8-bit Famicom (霸王の大陸-like)'},
+        'blurb': {'zh': '主畫風。仿紅白機《三國志 霸王の大陸》的 8-bit 頭像：48×56、粗黑線、平塗兩三階陰影，'
+                        '只用紅白機標準色盤，每 16×16 格一組三色（全圖最多四組），眼白、唇色等小細節用精靈疊上；'
+                        '配 16×24 的紅白機小人，正面與側面兩格步行，孩子明顯比大人矮。',
+                  'en': 'The main style. 8-bit Famicom portraits in the manner of 三國志 霸王の大陸: 48×56, bold black lines, '
+                        'flat two- or three-step shading, only colours from the NES palette with one 3-colour set per 16×16 '
+                        'area (at most four sets), and small sprite overlays for eye whites and lips; plus 16×24 NES field '
+                        'sprites with a two-frame front and side walk, the children clearly shorter than their parents.'},
+    },
     'family': {
         'name': {'zh': 'HD-2D 可愛版（八方旅人風）', 'en': 'HD-2D, cuter (Octopath-like)'},
-        'blurb': {'zh': '主畫風。柔和溫暖的 HD-2D 大頭像，加上圓臉小黑眼、四方向行走的 Q 版角色；一家人同一畫布、同一條地平線，身高一看就懂。',
-                  'en': 'The main style. Warm, soft HD-2D portraits and round-faced sprites with small dark eyes that walk in four directions; the whole family shares one canvas and baseline, so heights read at a glance.'},
+        'blurb': {'zh': '前一版主畫風。柔和溫暖的 HD-2D 大頭像，加上圓臉小黑眼、四方向行走的 Q 版角色；一家人同一畫布、同一條地平線，身高一看就懂。',
+                  'en': 'The previous main style. Warm, soft HD-2D portraits and round-faced sprites with small dark eyes that walk in four directions; the whole family shares one canvas and baseline, so heights read at a glance.'},
     },
     'koei': {
         'name': {'zh': '霸王の大陸 × 像素棒球', 'en': '16-bit Three Kingdoms × pixel baseball'},
@@ -26,7 +36,7 @@ STYLES = {
         'blurb': {'zh': '明亮賽璐璐上色、銳利輪廓的 16 色頭像，加上厚實的戰鬥角色。',
                   'en': 'A bright cel-shaded 16-colour portrait with crisp outlines and a chunky battle sprite.'},
     },
-    'nes': {
+    'dq': {
         'name': {'zh': '8-bit 紅白機（勇者鬥惡龍風）', 'en': '8-bit NES (Dragon Quest-like)'},
         'blurb': {'zh': '每個角色 3 色加透明的 16×16 小人與兩格步行，配簡單的頭像視窗。',
                   'en': '16×16 sprites in 3 colours plus transparency with a two-frame walk, and a simple portrait window.'},

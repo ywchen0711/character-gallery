@@ -425,4 +425,7 @@ def variants():
     from family_variant import FamilyVariant
     v = GBAVariant()
     v.primary = False
-    return [FamilyVariant('josh'), v, KoeiVariant(koei_ns(), full=False)]
+    from nes_variant import NESVariant
+    fam = FamilyVariant('josh')
+    fam.primary = False
+    return [NESVariant('josh'), fam, v, KoeiVariant(koei_ns(), full=False)]

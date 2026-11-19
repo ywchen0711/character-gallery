@@ -1,15 +1,25 @@
 {
   "version": 3,
-  "mainStyle": "family",
+  "mainStyle": "nes",
   "styles": {
+    "nes": {
+      "name": {
+        "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+        "en": "8-bit Famicom (霸王の大陸-like)"
+      },
+      "blurb": {
+        "zh": "主畫風。仿紅白機《三國志 霸王の大陸》的 8-bit 頭像：48×56、粗黑線、平塗兩三階陰影，只用紅白機標準色盤，每 16×16 格一組三色（全圖最多四組），眼白、唇色等小細節用精靈疊上；配 16×24 的紅白機小人，正面與側面兩格步行，孩子明顯比大人矮。",
+        "en": "The main style. 8-bit Famicom portraits in the manner of 三國志 霸王の大陸: 48×56, bold black lines, flat two- or three-step shading, only colours from the NES palette with one 3-colour set per 16×16 area (at most four sets), and small sprite overlays for eye whites and lips; plus 16×24 NES field sprites with a two-frame front and side walk, the children clearly shorter than their parents."
+      }
+    },
     "family": {
       "name": {
         "zh": "HD-2D 可愛版（八方旅人風）",
         "en": "HD-2D, cuter (Octopath-like)"
       },
       "blurb": {
-        "zh": "主畫風。柔和溫暖的 HD-2D 大頭像，加上圓臉小黑眼、四方向行走的 Q 版角色；一家人同一畫布、同一條地平線，身高一看就懂。",
-        "en": "The main style. Warm, soft HD-2D portraits and round-faced sprites with small dark eyes that walk in four directions; the whole family shares one canvas and baseline, so heights read at a glance."
+        "zh": "前一版主畫風。柔和溫暖的 HD-2D 大頭像，加上圓臉小黑眼、四方向行走的 Q 版角色；一家人同一畫布、同一條地平線，身高一看就懂。",
+        "en": "The previous main style. Warm, soft HD-2D portraits and round-faced sprites with small dark eyes that walk in four directions; the whole family shares one canvas and baseline, so heights read at a glance."
       }
     },
     "koei": {
@@ -52,7 +62,7 @@
         "en": "A bright cel-shaded 16-colour portrait with crisp outlines and a chunky battle sprite."
       }
     },
-    "nes": {
+    "dq": {
       "name": {
         "zh": "8-bit 紅白機（勇者鬥惡龍風）",
         "en": "8-bit NES (Dragon Quest-like)"
@@ -75,8 +85,12 @@
         "josh",
         "jasper"
       ],
-      "style": "family",
+      "style": "nes",
       "files": {
+        "nes": "chars/family/group-nes.png",
+        "nes4x": "chars/family/group-nes@4x.png",
+        "nesTall": "chars/family/group-nes-2x2.png",
+        "nesTall4x": "chars/family/group-nes-2x2@4x.png",
         "group": "chars/family/group.png",
         "group4x": "chars/family/group@4x.png",
         "scene": "chars/family/group-scene.png",
@@ -115,12 +129,48 @@
       "colour": "#3a7ca8",
       "variants": [
         {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jeff/nes/portrait.png",
+            "portrait4x": "chars/jeff/nes/portrait@4x.png",
+            "body": "chars/jeff/nes/body.png",
+            "body4x": "chars/jeff/nes/body@4x.png",
+            "sheet": "chars/jeff/nes/sheet.png",
+            "sheet4x": "chars/jeff/nes/sheet@4x.png",
+            "sheetJson": "chars/jeff/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        },
+        {
           "style": "family",
           "styleName": {
             "zh": "HD-2D 可愛版（八方旅人風）",
             "en": "HD-2D, cuter (Octopath-like)"
           },
-          "primary": true,
+          "primary": false,
           "files": {
             "portrait": "chars/jeff/family/portrait.png",
             "portrait4x": "chars/jeff/family/portrait@4x.png",
@@ -255,12 +305,48 @@
       "colour": "#3a7ca8",
       "variants": [
         {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/erin/nes/portrait.png",
+            "portrait4x": "chars/erin/nes/portrait@4x.png",
+            "body": "chars/erin/nes/body.png",
+            "body4x": "chars/erin/nes/body@4x.png",
+            "sheet": "chars/erin/nes/sheet.png",
+            "sheet4x": "chars/erin/nes/sheet@4x.png",
+            "sheetJson": "chars/erin/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        },
+        {
           "style": "family",
           "styleName": {
             "zh": "HD-2D 可愛版（八方旅人風）",
             "en": "HD-2D, cuter (Octopath-like)"
           },
-          "primary": true,
+          "primary": false,
           "files": {
             "portrait": "chars/erin/family/portrait.png",
             "portrait4x": "chars/erin/family/portrait@4x.png",
@@ -397,12 +483,48 @@
       "colour": "#3a7ca8",
       "variants": [
         {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/josh/nes/portrait.png",
+            "portrait4x": "chars/josh/nes/portrait@4x.png",
+            "body": "chars/josh/nes/body.png",
+            "body4x": "chars/josh/nes/body@4x.png",
+            "sheet": "chars/josh/nes/sheet.png",
+            "sheet4x": "chars/josh/nes/sheet@4x.png",
+            "sheetJson": "chars/josh/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        },
+        {
           "style": "family",
           "styleName": {
             "zh": "HD-2D 可愛版（八方旅人風）",
             "en": "HD-2D, cuter (Octopath-like)"
           },
-          "primary": true,
+          "primary": false,
           "files": {
             "portrait": "chars/josh/family/portrait.png",
             "portrait4x": "chars/josh/family/portrait@4x.png",
@@ -537,12 +659,48 @@
       "colour": "#3a7ca8",
       "variants": [
         {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jasper/nes/portrait.png",
+            "portrait4x": "chars/jasper/nes/portrait@4x.png",
+            "body": "chars/jasper/nes/body.png",
+            "body4x": "chars/jasper/nes/body@4x.png",
+            "sheet": "chars/jasper/nes/sheet.png",
+            "sheet4x": "chars/jasper/nes/sheet@4x.png",
+            "sheetJson": "chars/jasper/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        },
+        {
           "style": "family",
           "styleName": {
             "zh": "HD-2D 可愛版（八方旅人風）",
             "en": "HD-2D, cuter (Octopath-like)"
           },
-          "primary": true,
+          "primary": false,
           "files": {
             "portrait": "chars/jasper/family/portrait.png",
             "portrait4x": "chars/jasper/family/portrait@4x.png",
@@ -576,20 +734,20 @@
           ]
         },
         {
-          "style": "nes",
+          "style": "dq",
           "styleName": {
             "zh": "8-bit 紅白機（勇者鬥惡龍風）",
             "en": "8-bit NES (Dragon Quest-like)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/jasper/nes/portrait.png",
-            "portrait4x": "chars/jasper/nes/portrait@4x.png",
-            "body": "chars/jasper/nes/body.png",
-            "body4x": "chars/jasper/nes/body@4x.png",
-            "sheet": "chars/jasper/nes/sheet.png",
-            "sheet4x": "chars/jasper/nes/sheet@4x.png",
-            "sheetJson": "chars/jasper/nes/sheet.json"
+            "portrait": "chars/jasper/dq/portrait.png",
+            "portrait4x": "chars/jasper/dq/portrait@4x.png",
+            "body": "chars/jasper/dq/body.png",
+            "body4x": "chars/jasper/dq/body@4x.png",
+            "sheet": "chars/jasper/dq/sheet.png",
+            "sheet4x": "chars/jasper/dq/sheet@4x.png",
+            "sheetJson": "chars/jasper/dq/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -679,12 +837,48 @@
       "colour": "#3f8f4e",
       "variants": [
         {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/guanyu/nes/portrait.png",
+            "portrait4x": "chars/guanyu/nes/portrait@4x.png",
+            "body": "chars/guanyu/nes/body.png",
+            "body4x": "chars/guanyu/nes/body@4x.png",
+            "sheet": "chars/guanyu/nes/sheet.png",
+            "sheet4x": "chars/guanyu/nes/sheet@4x.png",
+            "sheetJson": "chars/guanyu/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        },
+        {
           "style": "koei",
           "styleName": {
             "zh": "霸王の大陸 × 像素棒球",
             "en": "16-bit Three Kingdoms × pixel baseball"
           },
-          "primary": true,
+          "primary": false,
           "files": {
             "portrait": "chars/guanyu/koei/portrait.png",
             "portrait4x": "chars/guanyu/koei/portrait@4x.png",

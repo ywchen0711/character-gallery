@@ -104,6 +104,7 @@
       b.setAttribute('aria-label', `${t(c.name)} · ${styleName(v.style)}`);
       const art = el('div', 'art');
       const pc = el('canvas'), bc = el('canvas');
+      pc.classList.toggle('nesframe', v.style === 'nes');
       art.append(pc, bc); b.appendChild(art);
       const nm = el('div', 'nm');
       nm.append(el('b', null, t(c.name)), el('span', null, lang === 'zh' ? c.name.en : c.name.zh), el('em', 'fac', t(c.factionName)));
@@ -150,7 +151,8 @@
     $('#detail').hidden = false; document.body.classList.add('locked');
     fillDetail();
     const room = window.innerWidth < 600 ? Math.min(300, window.innerWidth - 90) : 300;
-    still($('#d-por'), v._por, fitDown(v._por.height, room));
+    $('#d-por').classList.toggle('nesframe', v.style === 'nes');
+    still($('#d-por'), v._por, fitDown(v._por.height + (v.style === 'nes' ? 8 : 0), room));
     players.forEach((p) => { if (p.canvas.id === 'd-chi') players.delete(p); });
     open.player = player($('#d-chi'), v, open.anim, fitDown(v._meta.frameHeight, room));
     $('#close').focus();
@@ -163,6 +165,24 @@
     own.textContent = ''; koei.textContent = '';
     const picked = store.get('cg-pick', '');
     const travellers = DATA.characters.filter((c) => c.faction === 'west');
+    const nesBox = $('#cmp-nes');
+    if (nesBox) {
+      nesBox.textContent = '';
+      for (const c of DATA.characters) {
+        const v = c.variants.find((x) => x.style === 'nes'); if (!v) continue;
+        const col = el('article', 'cmp'); col.style.setProperty('--fc', c.colour);
+        const art = el('div', 'cmp-art');
+        const pc = el('canvas', 'nesframe'), a1 = el('canvas'), a2 = el('canvas');
+        const spr = el('div', 'cmp-spr'); spr.append(a1, a2);
+        art.append(pc, spr); col.append(art, el('div', 'cmp-name', `${t(c.name)} · ${t(c.style_name)}`));
+        nesBox.appendChild(col);
+        still(pc, v._por, fitDown(v._por.height + 8, 200));
+        const k = fitDown(v._meta.frameHeight, 96);
+        player(a1, v, 'walk', k); player(a2, v, 'walk_side', k);
+      }
+      const np = $('#nes-pick');
+      if (np) { np.className = 'chip pick' + (picked === 'nes' ? ' on' : ''); np.textContent = pickLabel(picked === 'nes'); }
+    }
     const fam = $('#cmp-family');
     if (fam) {
       fam.textContent = '';
@@ -183,7 +203,7 @@
       fp.textContent = pickLabel(picked === 'family');
     }
     for (const c of travellers) {
-      const v = c.variants.find((x) => !['family', 'koei'].includes(x.style)) || c.variants[0];
+      const v = c.variants.find((x) => !['nes', 'family', 'koei'].includes(x.style)) || c.variants[0];
       const col = el('article', 'cmp'); col.style.setProperty('--fc', c.colour);
       col.append(el('div', 'cmp-style', styleName(v.style)), el('p', 'cmp-blurb', t(DATA.styles[v.style].blurb)));
       const art = el('div', 'cmp-art');
@@ -221,11 +241,14 @@
   function hero() {
     const cv = $('#hero-canvas'); if (!cv || !DATA.groups || !DATA._group) return;
     const box = cv.parentElement;
-    const k = Math.max(1, Math.min(6, Math.floor((box.clientWidth || 600) / DATA._group.width)));
-    still(cv, DATA._group, k);
+    const room = Math.max(120, (box.clientWidth || 600) - 32);
+    const wide = DATA._group, tall = DATA._groupTall || wide;
+    const kw = Math.floor(room / wide.width), kt = Math.floor(room / tall.width);
+    if (kw >= 2 || kt < 2) still(cv, wide, Math.max(1, Math.min(5, kw)));
+    else still(cv, tall, Math.min(3, kt));
     const cap = $('#hero-cap');
-    if (cap) cap.textContent = lang === 'zh' ? '一家四口：傑夫（父）、喬許（10 歲）、賈斯珀（8 歲）、艾琳（母）· 主畫風 HD-2D 可愛版'
-      : 'The family: Jeff (father), Josh (10), Jasper (8), Erin (mother) · main style: HD-2D, cuter';
+    if (cap) cap.textContent = lang === 'zh' ? '一家四口：傑夫（父）、艾琳（母）、喬許（10 歲）、賈斯珀（8 歲）· 主畫風 8-bit 紅白機（霸王の大陸風）'
+      : 'The family: Jeff (father), Erin (mother), Josh (10), Jasper (8) · main style: 8-bit Famicom (霸王の大陸-like)';
   }
 
   function render() {
@@ -249,6 +272,7 @@
   });
   on('#koei-pick', 'click', () => { store.set('cg-pick', 'koei'); render(); });
   on('#family-pick', 'click', () => { store.set('cg-pick', 'family'); render(); });
+  on('#nes-pick', 'click', () => { store.set('cg-pick', 'nes'); render(); });
 
   fetch('chars/index.json').then((r) => r.json()).then(async (data) => {
     DATA = data;
@@ -259,7 +283,11 @@
           .then(([p, s, m]) => { v._por = p; v._sheet = s; v._meta = m; }));
       }
     }
-    if (data.groups && data.groups.family) jobs.push(img(data.groups.family.files.scene).then((i) => { data._group = i; }));
+    if (data.groups && data.groups.family) {
+      const gf = data.groups.family.files;
+      jobs.push(img(gf.nes || gf.scene).then((i) => { data._group = i; }));
+      if (gf.nesTall) jobs.push(img(gf.nesTall).then((i) => { data._groupTall = i; }));
+    }
     await Promise.all(jobs);
     applyLang();
     window.addEventListener('resize', hero);

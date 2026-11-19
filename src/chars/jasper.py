@@ -118,7 +118,7 @@ for _n, _r in (('down', DOWN), ('up', UP), ('left_a', LEFT_A), ('left_b', LEFT_B
 
 
 class NESVariant(Variant):
-    style = 'nes'
+    style = 'dq'
     primary = True
     fps = {'idle': 2, 'walk_down': 4, 'walk_up': 4, 'walk_left': 4, 'walk_right': 4}
     anchor = (8, 15)
@@ -331,4 +331,7 @@ def variants():
     from family_variant import FamilyVariant
     v = NESVariant()
     v.primary = False
-    return [FamilyVariant('jasper'), v, KoeiVariant(koei_ns(), full=False)]
+    from nes_variant import NESVariant as FamicomVariant
+    fam = FamilyVariant('jasper')
+    fam.primary = False
+    return [FamicomVariant('jasper'), fam, v, KoeiVariant(koei_ns(), full=False)]
