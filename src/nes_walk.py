@@ -45,26 +45,17 @@ def check_same_body(a, b, keep=5):
 # Hand-set leg rows for frame 2 where the automatic reflection is not right (props in the leg rows, robes to the
 # floor, figures that stand above the bottom row). 'front' / 'side' replace that many bottom rows of frame 1.
 LEGS = {
-    'erin': dict(front=['....kk...kkk....'],
-                 side=['...kccccccck....', '...kcccccccck...', '...kcccccccck...', '...kkkkkkkkkk...', '.....kkkkkk.....']),
-    'josh': dict(front=['....kcckcccck...', '....kkk.kkkkk...', '...kkk...kkkk...'],
-                 side=['....kccccck.....', '.....kkkkkk.....', '.....kkkkk......']),
-    'jasper': dict(front=['....kkk.kkkk....', '...kkk...kkk....'],
-                   side=['....kkkkkk......', '....kkkkk.......']),
+    'erin': dict(front=['....kk...kkk....']),
+    'josh': dict(front=['....kcckcccck...', '....kkk.kkkkk...', '...kkk...kkkk...']),
+    'jasper': dict(front=['....kkk.kkkk....', '...kkk...kkk....']),
     'guanyu': dict(front=['..kkkkk.kkkkkkk.', '...kkk....kkkk..']),
-    'yishuo': dict(front=['....kcckcccck...', '....kkk.kkkkk.kk', '...kkkk...kkkkSk', '...kkk........kk'],
-                   side=['....kccccck.....', '....kkkkkk...kk.', '....kkkkk...kSSk', '.............kkk']),
-    'baixian': dict(front=['..kccccckcccccck', '..kkkkkkkkkkkkk.'],
-                    side=['...kccccccck....', '...kcccccccck...', '...kcccccccck...', '...kkkkkkkkkk...', '....kkkkkkk.....']),
-    'liuhanyan': dict(front=['....kk...kkk....'],
-                      side=['...kccccccck....', '...kkkkkkkkk....', '.....kkkkk......']),
-    'kuchan': dict(front=['..k...kkk..kkkk.', '..k........kkkk.'],
-                   side=['..k.kccccccck...', '..k.kccccccck...', '..k.kkkkkkkkk...', '..k..kkkkkkk....', '..k.............']),
+    'yishuo': dict(front=['....kcckcccck...', '....kkk.kkkkk.kk', '...kkkk...kkkkSk', '...kkk........kk']),
+    'baixian': dict(front=['..kccccckcccccck', '..kkkkkkkkkkkkk.']),
+    'liuhanyan': dict(front=['....kk...kkk....']),
+    'kuchan': dict(front=['..k...kkk..kkkk.', '..k........kkkk.']),
     'heixiong': dict(front=['.....kkkkk.kkkk.', '....kkkkkk......']),
-    'shouhou': dict(front=['....kkkk.kkkk...', '....kkk...kkk...', '...kkk..........'],
-                    side=['....kcckccck....', '.....kkkkkk.....', '.....kkkkk......', '................', '................']),
-    'tuqianqiu': dict(front=['...kkkkk...kkk..'],
-                      side=['...kccccccck....', '...kkkkkkkkk....', '.....kkkkk......', '................', '................']),
+    'shouhou': dict(front=['....kkkk.kkkk...', '....kkk...kkk...', '...kkk..........']),
+    'tuqianqiu': dict(front=['...kkkkk...kkk..']),
 }
 
 
