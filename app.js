@@ -238,17 +238,29 @@
       : `Your pick: ${styleName(picked)}. Tell Claude, and more characters can be drawn in this style.`) : '';
   }
 
+  // group roster pictures above the grid: the one that matches the faction filter (both for 'all')
+  const CAPS = {
+    family: { zh: '一家四口：傑夫（父）、艾琳（母）、喬許（10 歲）、賈斯珀（8 歲）· 主畫風 8-bit 紅白機（霸王の大陸風）',
+      en: 'The family: Jeff (father), Erin (mother), Josh (10), Jasper (8) · main style: 8-bit Famicom (霸王の大陸-like)' },
+    longmen: { zh: '龍門武林：奕叡、奕碩、冷笑天、白先生、柳寒煙、苦禪 · 8-bit 紅白機畫風',
+      en: 'Longmen Wulin: Yi Rui, Yi Shuo, Leng Xiaotian, Mr Bai, Liu Hanyan, Kuchan · 8-bit Famicom style' },
+  };
   function hero() {
-    const cv = $('#hero-canvas'); if (!cv || !DATA.groups || !DATA._group) return;
-    const box = cv.parentElement;
+    const box = $('#heroes'); if (!box || !DATA || !DATA.groups) return;
+    const ids = faction === 'all' ? ['family', 'longmen'] : faction === 'longmen' ? ['longmen'] : ['family'];
+    box.textContent = '';
     const room = Math.max(120, (box.clientWidth || 600) - 32);
-    const wide = DATA._group, tall = DATA._groupTall || wide;
-    const kw = Math.floor(room / wide.width), kt = Math.floor(room / tall.width);
-    if (kw >= 2 || kt < 2) still(cv, wide, Math.max(1, Math.min(5, kw)));
-    else still(cv, tall, Math.min(3, kt));
-    const cap = $('#hero-cap');
-    if (cap) cap.textContent = lang === 'zh' ? '一家四口：傑夫（父）、艾琳（母）、喬許（10 歲）、賈斯珀（8 歲）· 主畫風 8-bit 紅白機（霸王の大陸風）'
-      : 'The family: Jeff (father), Erin (mother), Josh (10), Jasper (8) · main style: 8-bit Famicom (霸王の大陸-like)';
+    for (const id of ids) {
+      const g = DATA.groups[id]; if (!g || !g._img) continue;
+      const fig = el('figure', 'hero-fig'); const cv = el('canvas');
+      cv.setAttribute('role', 'img'); cv.setAttribute('aria-label', t(g.name));
+      fig.append(cv, el('figcaption', 'hero-cap', t(CAPS[id]) || t(g.name)));
+      box.appendChild(fig);
+      const wide = g._img, tall = g._tall || wide;
+      const kw = Math.floor(room / wide.width), kt = Math.floor(room / tall.width);
+      if (kw >= 2 || kt < 2) still(cv, wide, Math.max(1, Math.min(5, kw)));
+      else still(cv, tall, Math.min(3, kt));
+    }
   }
 
   function render() {
@@ -283,10 +295,10 @@
           .then(([p, s, m]) => { v._por = p; v._sheet = s; v._meta = m; }));
       }
     }
-    if (data.groups && data.groups.family) {
-      const gf = data.groups.family.files;
-      jobs.push(img(gf.nes || gf.scene).then((i) => { data._group = i; }));
-      if (gf.nesTall) jobs.push(img(gf.nesTall).then((i) => { data._groupTall = i; }));
+    for (const g of Object.values(data.groups || {})) {
+      const gf = g.files; if (!gf.nes) continue;
+      jobs.push(img(gf.nes).then((i) => { g._img = i; }));
+      if (gf.nesTall) jobs.push(img(gf.nesTall).then((i) => { g._tall = i; }));
     }
     await Promise.all(jobs);
     applyLang();

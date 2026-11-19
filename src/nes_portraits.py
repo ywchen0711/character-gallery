@@ -632,6 +632,10 @@ PORTRAITS = {
     'guanyu': (GUANYU, GUANYU_SPR, GUANYU_SLOTS, GUANYU_PALETTES, GUANYU_SPR_SLOTS, GUANYU_SPR_PALETTES),
 }
 
+# the 龍門武林 cast lives in its own file
+import nes_longmen  # noqa: E402
+PORTRAITS.update(nes_longmen.PORTRAITS)
+
 
 def pic(cid):
     bg, spr, slots, pals, sslots, spals = PORTRAITS[cid]

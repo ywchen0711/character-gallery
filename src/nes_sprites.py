@@ -381,6 +381,11 @@ SPRITES['guanyu'] = dict(pal=dict(k=0x0F, S=0x16, c=0x1A), front=G('''
 
 HEIGHTS = {'jeff': 24, 'erin': 23, 'josh': 20, 'jasper': 16, 'guanyu': 24}
 
+# the 龍門武林 cast lives in nes_longmen.py
+import nes_longmen  # noqa: E402
+SPRITES.update(nes_longmen.SPRITES)
+HEIGHTS.update(nes_longmen.HEIGHTS)
+
 
 def frames(cid):
     """dict animation -> list of 16x24 RGBA images."""

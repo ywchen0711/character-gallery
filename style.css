@@ -124,3 +124,5 @@ main .hero { padding: 8px 0; }
 /* v6: 8-bit Famicom main style: an NES text-window frame around portraits */
 canvas.nesframe { background: #000; border: 2px solid #fcfcfc; outline: 2px solid #000; box-sizing: content-box; padding: 2px; }
 .hero canvas { background: #000; }
+/* v7: one roster picture per group */
+.hero-fig { margin: 0 0 10px; }

@@ -23,10 +23,11 @@ from pixlib import count_colours, scale  # noqa: E402
 from roster import ROSTER  # noqa: E402
 from styles import STYLES  # noqa: E402
 
-FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8'}
+FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8', 'longmen': '#5a6ab8'}
 FACTION_NAME = {'wu': {'zh': '吳', 'en': 'Wu'}, 'shu': {'zh': '蜀', 'en': 'Shu'},
                 'wei': {'zh': '魏', 'en': 'Wei'}, 'qun': {'zh': '群', 'en': 'Other'},
-                'west': {'zh': '旅人一家', 'en': 'The travelling family'}}
+                'west': {'zh': '旅人一家', 'en': 'The travelling family'},
+                'longmen': {'zh': '龍門武林', 'en': 'Longmen Wulin'}}
 
 
 def export_variant(cid, v):
@@ -82,8 +83,8 @@ def export(cid):
                 os.remove(p)
             elif n not in STYLES:
                 shutil.rmtree(p)
-    if cid == 'family':
-        raise ValueError('family is reserved for the group picture')
+    if cid in ('family', 'longmen'):
+        raise ValueError('family and longmen are reserved for group pictures')
     vs = [export_variant(cid, v) for v in ch.variants()]
     M = ch.META
     return dict(M, faction=ch.FACTION, factionName=FACTION_NAME[ch.FACTION],
@@ -110,6 +111,18 @@ def main():
                                                                         ('nesTall', 'group-nes-2x2.png'), ('nesTall4x', 'group-nes-2x2@4x.png'),
                                                                         ('group', 'group.png'), ('group4x', 'group@4x.png'),
                                                                         ('scene', 'group-scene.png'), ('scene4x', 'group-scene@4x.png'))}}}
+    # the 龍門武林 cast as one roster screen: six in a row (desktop) or 3x2 (phones)
+    LONGMEN = ['yirui', 'yishuo', 'xiaotian', 'baixian', 'liuhanyan', 'kuchan']
+    ld = os.path.join(ROOT, 'chars', 'longmen')
+    os.makedirs(ld, exist_ok=True)
+    for name, im in (('group-nes', nes_group(LONGMEN, cols=6)), ('group-nes-3x2', nes_group(LONGMEN, cols=3))):
+        im.save(os.path.join(ld, name + '.png'))
+        scale(im, 4).save(os.path.join(ld, name + '@4x.png'))
+    groups['longmen'] = {'name': {'zh': '龍門武林', 'en': 'Longmen Wulin'}, 'faction': 'longmen',
+                         'members': LONGMEN, 'style': 'nes',
+                         'files': {k: 'chars/longmen/' + v for k, v in (('nes', 'group-nes.png'), ('nes4x', 'group-nes@4x.png'),
+                                                                         ('nesTall', 'group-nes-3x2.png'), ('nesTall4x', 'group-nes-3x2@4x.png'))}}
+    groups['family']['faction'] = 'west'
     with open(os.path.join(ROOT, 'chars', 'index.json'), 'w', encoding='utf-8') as f:
         json.dump({'version': 3, 'mainStyle': 'nes', 'styles': styles, 'groups': groups, 'characters': entries},
                   f, ensure_ascii=False, indent=2)

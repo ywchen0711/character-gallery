@@ -95,6 +95,29 @@
         "group4x": "chars/family/group@4x.png",
         "scene": "chars/family/group-scene.png",
         "scene4x": "chars/family/group-scene@4x.png"
+      },
+      "faction": "west"
+    },
+    "longmen": {
+      "name": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "faction": "longmen",
+      "members": [
+        "yirui",
+        "yishuo",
+        "xiaotian",
+        "baixian",
+        "liuhanyan",
+        "kuchan"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/longmen/group-nes.png",
+        "nes4x": "chars/longmen/group-nes@4x.png",
+        "nesTall": "chars/longmen/group-nes-3x2.png",
+        "nesTall4x": "chars/longmen/group-nes-3x2@4x.png"
       }
     }
   },
@@ -907,6 +930,408 @@
             "walk",
             "walk_side",
             "action"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yirui",
+      "name": {
+        "zh": "奕叡",
+        "en": "Yi Rui"
+      },
+      "style_name": {
+        "zh": "刀客",
+        "en": "Swordsman"
+      },
+      "title": {
+        "zh": "啟程刀客",
+        "en": "The Departing Blade"
+      },
+      "bio": {
+        "zh": "龍門刀莊的長子，背著一把舊環首刀離家闖蕩。話不多，眉眼總是往前看；深藍長袍、藍色頭帶，頭帶的尾巴在風裡飛。他相信再遠的路，都是從第一刀開始的。",
+        "en": "Elder son of the Longmen Saber Manor, who left home with an old ring-pommel saber on his back. He says little and always looks ahead, in an indigo robe with a blue headband whose ties fly in the wind. However long the road, he believes it begins with the first cut."
+      },
+      "weapon": {
+        "zh": "環首刀",
+        "en": "Ring-pommel saber"
+      },
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/yirui/nes/portrait.png",
+            "portrait4x": "chars/yirui/nes/portrait@4x.png",
+            "body": "chars/yirui/nes/body.png",
+            "body4x": "chars/yirui/nes/body@4x.png",
+            "sheet": "chars/yirui/nes/sheet.png",
+            "sheet4x": "chars/yirui/nes/sheet@4x.png",
+            "sheetJson": "chars/yirui/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yishuo",
+      "name": {
+        "zh": "奕碩",
+        "en": "Yi Shuo"
+      },
+      "style_name": {
+        "zh": "弟弟",
+        "en": "Little brother"
+      },
+      "title": {
+        "zh": "旋風少俠",
+        "en": "The Whirlwind Kid"
+      },
+      "bio": {
+        "zh": "奕叡的弟弟，從小不愛拿刀，只愛踢球。紅頭帶、朱紅短褂，右嘴角上方有一顆痣，球從不離腳。看到不公平的事，總是先衝再想。",
+        "en": "Yi Rui’s little brother, who never cared for blades, only for kicking a ball. Red headband, vermilion jacket, a mole above the right corner of his mouth, and the ball never far from his feet. When he sees something unfair he charges first and thinks later."
+      },
+      "weapon": {
+        "zh": "足球",
+        "en": "Football"
+      },
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/yishuo/nes/portrait.png",
+            "portrait4x": "chars/yishuo/nes/portrait@4x.png",
+            "body": "chars/yishuo/nes/body.png",
+            "body4x": "chars/yishuo/nes/body@4x.png",
+            "sheet": "chars/yishuo/nes/sheet.png",
+            "sheet4x": "chars/yishuo/nes/sheet@4x.png",
+            "sheetJson": "chars/yishuo/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xiaotian",
+      "name": {
+        "zh": "冷笑天",
+        "en": "Leng Xiaotian"
+      },
+      "style_name": {
+        "zh": "暴龍",
+        "en": "Tyrant Dragon"
+      },
+      "title": {
+        "zh": "暴龍崖之主",
+        "en": "Master of Tyrant Dragon Cliff"
+      },
+      "bio": {
+        "zh": "江湖人稱「暴龍」。銀髮金角，黑金龍鱗袍外披猩紅披風，嘴角總掛著一絲冷笑。不用兵器，只用一雙手掌；出手之前，總要先冷笑三聲。",
+        "en": "Known on the rivers and lakes as the Tyrant Dragon. Silver hair and golden horns, a black robe worked with gold scales under a crimson cape, and a sneer at one corner of his mouth. He carries no weapon but his palms, and before he strikes he always laughs three cold laughs."
+      },
+      "weapon": {
+        "zh": "雙掌",
+        "en": "Bare palms"
+      },
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/xiaotian/nes/portrait.png",
+            "portrait4x": "chars/xiaotian/nes/portrait@4x.png",
+            "body": "chars/xiaotian/nes/body.png",
+            "body4x": "chars/xiaotian/nes/body@4x.png",
+            "sheet": "chars/xiaotian/nes/sheet.png",
+            "sheet4x": "chars/xiaotian/nes/sheet@4x.png",
+            "sheetJson": "chars/xiaotian/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baixian",
+      "name": {
+        "zh": "白先生",
+        "en": "Mr Bai"
+      },
+      "style_name": {
+        "zh": "說書人",
+        "en": "Storyteller"
+      },
+      "title": {
+        "zh": "聽雨樓說書人",
+        "en": "Storyteller of the Listening-to-Rain"
+      },
+      "bio": {
+        "zh": "十字路口聽雨樓的說書先生。方巾長袖，山羊鬍，醒木一拍，古今江湖的大小消息就從他嘴裡說出來——沒有他不知道的事。",
+        "en": "The storyteller of the Listening-to-Rain teahouse at the crossroads. Square cap, long sleeves, a little goatee: one clap of his wooden block and every tale of the rivers and lakes, old and new, comes out of his mouth. There is no news he has not heard."
+      },
+      "weapon": {
+        "zh": "醒木",
+        "en": "Clapper block"
+      },
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/baixian/nes/portrait.png",
+            "portrait4x": "chars/baixian/nes/portrait@4x.png",
+            "body": "chars/baixian/nes/body.png",
+            "body4x": "chars/baixian/nes/body@4x.png",
+            "sheet": "chars/baixian/nes/sheet.png",
+            "sheet4x": "chars/baixian/nes/sheet@4x.png",
+            "sheetJson": "chars/baixian/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liuhanyan",
+      "name": {
+        "zh": "柳寒煙",
+        "en": "Liu Hanyan"
+      },
+      "style_name": {
+        "zh": "寒江閣主",
+        "en": "Pavilion mistress"
+      },
+      "title": {
+        "zh": "寒江閣主",
+        "en": "Mistress of the Cold River Pavilion"
+      },
+      "bio": {
+        "zh": "寒江閣的閣主。高髻銀簪，白衣淡藍，一柄細劍。待人冷淡、疑心很重，劍出時霜飛雪落；但欠下的人情，她一定會還。",
+        "en": "Mistress of the Cold River Pavilion. A high knot of hair with a silver pin, white over pale blue, and a slender sword. Cool and slow to trust, her sword brings frost and snow when it is drawn; but a debt she owes, she always repays."
+      },
+      "weapon": {
+        "zh": "細劍",
+        "en": "Slender sword"
+      },
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/liuhanyan/nes/portrait.png",
+            "portrait4x": "chars/liuhanyan/nes/portrait@4x.png",
+            "body": "chars/liuhanyan/nes/body.png",
+            "body4x": "chars/liuhanyan/nes/body@4x.png",
+            "sheet": "chars/liuhanyan/nes/sheet.png",
+            "sheet4x": "chars/liuhanyan/nes/sheet@4x.png",
+            "sheetJson": "chars/liuhanyan/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kuchan",
+      "name": {
+        "zh": "苦禪",
+        "en": "Kuchan"
+      },
+      "style_name": {
+        "zh": "大師",
+        "en": "Master"
+      },
+      "title": {
+        "zh": "千佛寺住持",
+        "en": "Abbot of the Thousand Buddhas"
+      },
+      "bio": {
+        "zh": "千佛寺的住持，白眉長鬚，杏黃僧袍外披紅色袈裟，手持禪杖。總是笑瞇瞇的，說起話來慢條斯理；記性卻好得驚人。",
+        "en": "Abbot of the Thousand Buddhas Temple: white brows and a long white beard, a saffron robe under a red kasaya, a monk’s staff in hand. Always smiling and slow of speech, with a remarkably long memory."
+      },
+      "weapon": {
+        "zh": "禪杖",
+        "en": "Monk’s staff"
+      },
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/kuchan/nes/portrait.png",
+            "portrait4x": "chars/kuchan/nes/portrait@4x.png",
+            "body": "chars/kuchan/nes/body.png",
+            "body4x": "chars/kuchan/nes/body@4x.png",
+            "sheet": "chars/kuchan/nes/sheet.png",
+            "sheet4x": "chars/kuchan/nes/sheet@4x.png",
+            "sheetJson": "chars/kuchan/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
           ]
         }
       ]

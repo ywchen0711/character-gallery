@@ -19,8 +19,17 @@ Characters so far:
   - Josh, 10 (also `family`, `gba` and `koei`)
   - Jasper, 8 (also `family`, `dq` and `koei`)
 - 關羽 Guan Yu (`nes`, also `koei`).
+- 龍門武林 (Longmen Wulin), the cast of 龍門雙奕, in `nes` only (faction `longmen`):
+  - 奕叡 Yi Rui, the elder brother: indigo robe, blue headband, ring-pommel saber on his back
+  - 奕碩 Yi Shuo, his little brother: red headband, vermilion jacket, a mole, his football (shorter sprite)
+  - 冷笑天 Leng Xiaotian, the Tyrant Dragon: silver hair, gold dragon horns, black-and-gold robe, crimson cape
+  - 白先生 Mr Bai, the storyteller: square scholar's cap, goatee, grey robe, clapper block
+  - 柳寒煙 Liu Hanyan, Mistress of the Cold River Pavilion: high bun with a pin, white over pale blue, a slim sword
+  - 苦禪 Kuchan, abbot of the Thousand Buddhas: white brows and beard, saffron robe, red kasaya, beads, staff
 
 Group pictures in `chars/family/`: `group-nes.png` (the main-style roster: four framed portraits with their sprites on one baseline) and `group-nes-2x2.png` for narrow screens; the older `group.png` (transparent) and `group-scene.png`. Each also at 4x.
+
+Longmen group pictures in `chars/longmen/`: `group-nes.png` (six in a row) and `group-nes-3x2.png` for narrow screens, each also at 4x. The gallery shows the roster that matches the faction filter.
 
 `compare.html` lays the styles side by side so you can pick one.
 
@@ -49,7 +58,7 @@ chars/<id>/<style>/sheet.json       frameWidth/Height, anchor (feet), animations
 
 The pixels live as text grids in Python under `src/`. Each character is one per pixel. `.` is transparent, and letters are colour slots.
 
-- `src/nes.py`: the NES palette table and the Famicom rule checker; `src/nes_portraits.py`: the 8-bit portraits (rows of exactly 48 pixels ending in `|`); `src/nes_sprites.py`: the 16x24 field sprites; `src/nes_variant.py`: the variant and the roster picture
+- `src/nes.py`: the NES palette table and the Famicom rule checker; `src/nes_portraits.py`: the 8-bit portraits (rows of exactly 48 pixels ending in `|`); `src/nes_sprites.py`: the 16x24 field sprites; `src/nes_longmen.py`: the 龍門武林 portraits and sprites (merged into both); `src/nes_variant.py`: the variant and the roster picture
 - `src/pixlib.py`: grids, run-length rows, layers, palettes, strand/stroke/rotation helpers
 - `src/paint.py`: soft per-material shading used by the HD-2D styles
 - `src/family.py`, `src/family_portraits.py`: family portraits; `src/family_sprites.py`, `src/family_members.py`: family sprites (heads, body sizes, props, actions); `src/family_variant.py`: the variant and group picture
@@ -61,7 +70,7 @@ The pixels live as text grids in Python under `src/`. Each character is one per 
 
 To add a character:
 1. Copy the file of the character whose style you want, e.g. `src/chars/guanyu.py` for `koei`.
-2. Change `META`, `FACTION` (`wu`, `shu`, `wei`, `qun` or `west`), the palettes and the grids.
+2. Change `META`, `FACTION` (`wu`, `shu`, `wei`, `qun`, `west` or `longmen`), the palettes and the grids.
 3. Add the id to `ROSTER` in `src/roster.py`.
 4. Run `python tools/export.py`. It writes `chars/<id>/<style>/` and rebuilds `chars/index.json`.
 
