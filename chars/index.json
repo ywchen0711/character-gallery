@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "characters": [
+    {
+      "id": "guanyu",
+      "name": {
+        "zh": "關羽",
+        "en": "Guan Yu"
+      },
+      "style_name": {
+        "zh": "雲長",
+        "en": "Yunchang"
+      },
+      "title": {
+        "zh": "美髯公",
+        "en": "Lord of the Beautiful Beard"
+      },
+      "bio": {
+        "zh": "河東解良人，與劉備、張飛結為兄弟。赤面長髯，綠巾綠袍，手持青龍偃月刀。重義守信，千里尋兄的故事流傳至今。",
+        "en": "A man of Xieliang in Hedong, sworn brother of Liu Bei and Zhang Fei. Red-faced and long-bearded, in a green headscarf and robe, he carries the Green Dragon Crescent Blade. His loyalty is remembered in the tale of riding a thousand li to rejoin his brother."
+      },
+      "weapon": {
+        "zh": "青龍偃月刀",
+        "en": "Green Dragon Crescent Blade"
+      },
+      "faction": "shu",
+      "factionName": {
+        "zh": "蜀",
+        "en": "Shu"
+      },
+      "colour": "#3f8f4e",
+      "files": {
+        "portrait": "chars/guanyu/portrait.png",
+        "portrait4x": "chars/guanyu/portrait@4x.png",
+        "body": "chars/guanyu/body.png",
+        "body4x": "chars/guanyu/body@4x.png",
+        "sheet": "chars/guanyu/sheet.png",
+        "sheet4x": "chars/guanyu/sheet@4x.png",
+        "sheetJson": "chars/guanyu/sheet.json"
+      },
+      "sizes": {
+        "portrait": [
+          56,
+          64
+        ],
+        "body": [
+          56,
+          64
+        ]
+      },
+      "colours": {
+        "portrait": 29,
+        "body": 28
+      }
+    }
+  ]
+}

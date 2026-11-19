@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14201a">
+<meta name="description" content="三國人物像素圖庫：16-bit 風格頭像與像素棒球風格 Q 版全身像。">
+<title>人物圖庫 Character Gallery</title>
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1 data-zh="人物圖庫" data-en="Character Gallery">人物圖庫</h1>
+    <p class="sub" data-zh="三國人物 · 16-bit 頭像 × 像素棒球風 Q 版全身" data-en="Three Kingdoms cast · 16-bit portraits × pixel-baseball chibis">三國人物 · 16-bit 頭像 × 像素棒球風 Q 版全身</p>
+  </div>
+  <button id="lang" class="chip" type="button" aria-label="Language">EN</button>
+</header>
+
+<nav class="filters" id="filters" aria-label="faction filter">
+  <button class="chip on" data-f="all" data-zh="全部" data-en="All">全部</button>
+  <button class="chip" data-f="wu" data-zh="吳" data-en="Wu">吳</button>
+  <button class="chip" data-f="shu" data-zh="蜀" data-en="Shu">蜀</button>
+  <button class="chip" data-f="wei" data-zh="魏" data-en="Wei">魏</button>
+  <button class="chip" data-f="qun" data-zh="群" data-en="Other">群</button>
+</nav>
+
+<main>
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="empty" hidden data-zh="這個陣營還沒有人物，敬請期待。" data-en="No characters in this faction yet.">這個陣營還沒有人物，敬請期待。</p>
+</main>
+
+<div id="detail" class="detail" hidden role="dialog" aria-modal="true" aria-labelledby="d-name">
+  <div class="sheet">
+    <button id="close" class="close" type="button" aria-label="close">×</button>
+    <div class="d-head">
+      <span class="badge" id="d-faction"></span>
+      <h2 id="d-name"></h2>
+      <p class="d-title" id="d-title"></p>
+    </div>
+    <div class="d-art">
+      <figure class="frame por"><canvas id="d-por" width="56" height="64"></canvas>
+        <figcaption data-zh="頭像" data-en="Portrait">頭像</figcaption></figure>
+      <figure class="frame chi"><canvas id="d-chi" width="56" height="64"></canvas>
+        <figcaption data-zh="全身" data-en="Full body">全身</figcaption></figure>
+    </div>
+    <div class="anims" id="d-anims"></div>
+    <p class="bio" id="d-bio"></p>
+    <p class="meta" id="d-meta"></p>
+    <h3 data-zh="下載" data-en="Downloads">下載</h3>
+    <div class="dl" id="d-dl"></div>
+  </div>
+</div>
+
+<footer class="foot">
+  <p data-zh="原創像素畫，風格致敬 16-bit 三國策略遊戲頭像與像素棒球遊戲。CC BY 4.0。" data-en="Original pixel art in the style of 16-bit Three Kingdoms strategy portraits and pixel baseball games. CC BY 4.0.">原創像素畫，風格致敬 16-bit 三國策略遊戲頭像與像素棒球遊戲。CC BY 4.0。</p>
+</footer>
+<script src="app.js?v=2"></script>
+</body>
+</html>
