@@ -11,13 +11,13 @@ META = dict(
     style_name={'zh': '斥候', 'en': 'Scout'},
     title={'zh': '眼尖的斥候', 'en': 'The sharp-eyed scout'},
     bio={
-        'zh': '四位西洋旅人中最年輕的一個，船難後在江東跟著孫權。腳快、眼尖、手也快：'
-              '地圖上的祕密總是他先發現，短弓與箭袋從不離身，脖子上的圍巾是在建業市集換來的。',
-        'en': 'The youngest of the four western travellers, who followed Sun Quan after the wreck. Quick feet, sharp eyes '
-              'and quicker fingers: he finds the map\'s secrets first, never parts with his short bow and quiver, '
-              'and traded for the scarf at his neck in a Jianye market.',
+        'zh': '八歲的弟弟，一家人裡最小也最快。眼尖手巧，背著小布包、拿著彈弓，'
+              '地圖上的祕密總是他先發現；頭上兩個小髻是媽媽每天早上替他綁的。',
+        'en': 'The eight-year-old little brother, smallest and quickest of the family. Sharp eyes, quick hands, a '
+              'satchel and a slingshot: he finds the map\'s secrets first. Mum ties his two little hair buns every '
+              'morning.',
     },
-    weapon={'zh': '短弓', 'en': 'Short bow'},
+    weapon={'zh': '彈弓', 'en': 'Slingshot'},
 )
 
 # ---------------------------------------------------------------- NES (Dragon Quest-like)
@@ -328,4 +328,7 @@ kk................kk..
 
 def variants():
     from variants import KoeiVariant
-    return [NESVariant(), KoeiVariant(koei_ns(), full=False)]
+    from family_variant import FamilyVariant
+    v = NESVariant()
+    v.primary = False
+    return [FamilyVariant('jasper'), v, KoeiVariant(koei_ns(), full=False)]

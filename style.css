@@ -114,3 +114,9 @@ a.chip { text-decoration: none; display: inline-flex; align-items: center; }
 
 a.chip { color: var(--ink); white-space: nowrap; }
 .chip.strong { color: var(--chip-on-ink); }
+
+/* v5: family hero */
+.hero { max-width: 1100px; margin: 0 auto; padding: 0 16px 8px; }
+.hero canvas { display: block; max-width: 100%; height: auto; margin: 0 auto; border-radius: 10px; box-shadow: var(--shadow); }
+.hero-cap { text-align: center; color: var(--muted); font-size: 13px; margin: 6px 0 4px; }
+main .hero { padding: 8px 0; }

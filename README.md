@@ -4,6 +4,7 @@ A pixel-art character library for the games in this collection. Each character c
 
 | Style id | Look (imitated, original art) | Portrait | Sprite |
 |---|---|---|---|
+| `family` (**main**) | HD-2D (Octopath-like), cuter: round faces, small dark eyes, warm soft light | 72×80 painterly, bokeh background | 40×60 cell, one baseline for everyone; idle, walk in 4 directions, signature action |
 | `koei` | 16-bit Three Kingdoms strategy portraits (霸王の大陸-like) × pixel-baseball chibis | 56×64, 3/4 view, side-lit | 56×64 cell, about 2.3 heads |
 | `hd2d` | HD-2D (Octopath-like) | 80×104 painterly, bokeh background | 40×56 cell, about 3 heads, soft ramps, tiny dark eyes |
 | `snes` | SNES JRPG (FF6-like) | 48×48 in a blue menu window | 16×24 field sprite, 4-direction walk |
@@ -11,12 +12,14 @@ A pixel-art character library for the games in this collection. Each character c
 | `nes` | 8-bit NES (Dragon Quest-like) | 48×48 window, 4 colours per 16×16 block | 16×16, 3 colours per 8×8 sprite, 2-frame walk |
 
 Characters so far:
+- The family from *Saga of Jiangdong*, drawn in the main `family` style, with their earlier style tests kept:
+  - Jeff, the father (also `hd2d` and `koei`)
+  - Erin, the mother (also `snes` and `koei`)
+  - Josh, 10 (also `gba` and `koei`)
+  - Jasper, 8 (also `nes` and `koei`)
 - 關羽 Guan Yu (`koei`).
-- The four western travellers from *Saga of Jiangdong*, each in their own style plus `koei`:
-  - Jeff (`hd2d`)
-  - Erin (`snes`)
-  - Josh (`gba`)
-  - Jasper (`nes`)
+
+The group picture is `chars/family/group.png` (transparent) and `group-scene.png` (with background), each also at 4x.
 
 `compare.html` lays the styles side by side so you can pick one.
 
@@ -46,7 +49,8 @@ chars/<id>/<style>/sheet.json       frameWidth/Height, anchor (feet), animations
 The pixels live as text grids in Python under `src/`. Each character is one per pixel. `.` is transparent, and letters are colour slots.
 
 - `src/pixlib.py`: grids, run-length rows, layers, palettes, strand/stroke/rotation helpers
-- `src/paint.py`: soft per-material shading used by the HD-2D style
+- `src/paint.py`: soft per-material shading used by the HD-2D styles
+- `src/family.py`, `src/family_portraits.py`: family portraits; `src/family_sprites.py`, `src/family_members.py`: family sprites (heads, body sizes, props, actions); `src/family_variant.py`: the variant and group picture
 - `src/faces.py`: the hand-drawn portrait heads (male and female templates, jaw/age overlays)
 - `src/portrait.py`, `src/chibi.py`: the `koei` portrait and chibi builders
 - `src/variants.py`: what a variant provides; `src/styles.py`: style names and descriptions

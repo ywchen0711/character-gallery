@@ -1,5 +1,5 @@
 """Contact sheet of every exported variant at 4x: portrait, then each animation's frames.
-python tools/contact.py out.png"""
+python tools/contact.py out.png [style]"""
 import json, os, sys
 from PIL import Image, ImageDraw
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -8,6 +8,8 @@ K, GAP = 4, 8
 rows = []
 for c in data['characters']:
     for v in c['variants']:
+        if len(sys.argv) > 2 and v['style'] != sys.argv[2]:
+            continue
         por = Image.open(os.path.join(ROOT, v['files']['portrait'])).convert('RGBA')
         sheet = Image.open(os.path.join(ROOT, v['files']['sheet'])).convert('RGBA')
         meta = json.load(open(os.path.join(ROOT, v['files']['sheetJson']), encoding='utf-8'))
@@ -16,9 +18,9 @@ for c in data['characters']:
         for n, a in meta['animations'].items():
             for i in range(a['frames']):
                 frames.append(sheet.crop((i * fw, a['row'] * fh, (i + 1) * fw, (a['row'] + 1) * fh)))
-            if len(frames) >= 12:
+            if len(frames) >= 24:
                 break
-        rows.append((f"{c['id']} / {v['style']}", por, frames[:12]))
+        rows.append((f"{c['id']} / {v['style']}", por, frames[:24]))
 W = max(r[1].width * K + sum(f.width * K + GAP for f in r[2]) + 3 * GAP for r in rows)
 H = sum(max(r[1].height, max(f.height for f in r[2])) * K + 3 * GAP + 14 for r in rows)
 S = Image.new('RGBA', (W, H), (84, 92, 88, 255))

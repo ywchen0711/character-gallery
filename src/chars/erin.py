@@ -11,11 +11,10 @@ META = dict(
     style_name={'zh': '領航員', 'en': 'Navigator'},
     title={'zh': '觀星的醫者', 'en': 'The star-reading healer'},
     bio={
-        'zh': '船上的領航員，也是醫者。看星象、讀天氣、包紮傷口，樣樣在行。'
-              '船難後她把紅髮編成一條長辮，用江東的竹杖代替遺失的六分儀，照樣能說出明天會不會下雨。',
-        'en': 'The ship\'s navigator and its healer: stars, weather and wounds are all hers to read. After the wreck she '
-              'wears her red hair in one long braid and carries a Jiangdong bamboo staff in place of her lost sextant, '
-              'and she can still tell you whether it will rain tomorrow.',
+        'zh': '兩個孩子的母親，船上的領航員，也是醫者。看星象、讀天氣、包紮傷口，樣樣在行。'
+              '腰間的藥草袋總是鼓鼓的，她說明天會下雨，明天就會下雨。',
+        'en': 'Mother of the two boys, the ship\'s navigator and its healer: stars, weather and wounds are all hers to '
+              'read. Her herb pouch is always full, and when she says it will rain tomorrow, it rains.',
     },
     weapon={'zh': '竹杖', 'en': 'Bamboo staff'},
 )
@@ -360,4 +359,7 @@ kxzzk
 
 def variants():
     from variants import KoeiVariant
-    return [SNESVariant(), KoeiVariant(koei_ns(), full=False)]
+    from family_variant import FamilyVariant
+    v = SNESVariant()
+    v.primary = False
+    return [FamilyVariant('erin'), v, KoeiVariant(koei_ns(), full=False)]

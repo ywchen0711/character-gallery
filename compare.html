@@ -9,13 +9,13 @@
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <header class="top">
   <div class="brand">
     <h1 data-zh="畫風比較" data-en="Style comparison">畫風比較</h1>
-    <p class="sub" data-zh="傑夫、艾琳、喬許、賈斯珀各用一種畫風，下方再用關羽的畫風畫一次，方便你挑選。" data-en="Jeff, Erin, Josh and Jasper each in a different style, and below, all of them again in Guan Yu's style, so you can choose.">傑夫、艾琳、喬許、賈斯珀各用一種畫風，下方再用關羽的畫風畫一次，方便你挑選。</p>
+    <p class="sub" data-zh="最上面是新的主畫風（一家四口）；下面保留先前的四種畫風和關羽的畫風，方便比較。" data-en="On top, the new main style (the family); below, the earlier four styles and Guan Yu's style for comparison.">最上面是新的主畫風（一家四口）；下面保留先前的四種畫風和關羽的畫風，方便比較。</p>
   </div>
   <div class="tools">
     <a class="chip" href="index.html" data-zh="← 圖庫" data-en="← Gallery">← 圖庫</a>
@@ -24,7 +24,15 @@
 </header>
 
 <main>
-  <h2 class="sec" data-zh="四種畫風" data-en="Four styles">四種畫風</h2>
+  <section class="hero" aria-label="family"><canvas id="hero-canvas" width="128" height="72"></canvas><p id="hero-cap" class="hero-cap"></p></section>
+  <div class="sec-row">
+    <h2 class="sec" data-zh="新的主畫風：HD-2D 可愛版（一家四口）" data-en="New main style: HD-2D, cuter (the family)">新的主畫風：HD-2D 可愛版（一家四口）</h2>
+    <button id="family-pick" class="chip pick" type="button">選這個畫風</button>
+  </div>
+  <p class="cmp-blurb" data-zh="待機、正面行走、招式；同一畫布與地平線，大人與孩子的身高差一目了然。" data-en="Idle, front walk and signature move; one canvas and baseline, so the adults' and children's heights compare directly.">待機、正面行走、招式；同一畫布與地平線，大人與孩子的身高差一目了然。</p>
+  <div id="cmp-family" class="cmp-grid"></div>
+
+  <h2 class="sec" data-zh="先前的四種畫風" data-en="The earlier four styles">先前的四種畫風</h2>
   <div id="cmp-own" class="cmp-grid"></div>
 
   <div class="sec-row">
@@ -38,6 +46,6 @@
 <footer class="foot">
   <p data-zh="全部為原創像素畫，只模仿各遊戲的畫風，沒有描摹或複製。CC BY 4.0。" data-en="All original pixel art that imitates each game's look only; nothing traced or copied. CC BY 4.0.">全部為原創像素畫，只模仿各遊戲的畫風，沒有描摹或複製。CC BY 4.0。</p>
 </footer>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

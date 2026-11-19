@@ -26,7 +26,7 @@ from styles import STYLES  # noqa: E402
 FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8'}
 FACTION_NAME = {'wu': {'zh': '吳', 'en': 'Wu'}, 'shu': {'zh': '蜀', 'en': 'Shu'},
                 'wei': {'zh': '魏', 'en': 'Wei'}, 'qun': {'zh': '群', 'en': 'Other'},
-                'west': {'zh': '西洋旅人', 'en': 'Western travellers'}}
+                'west': {'zh': '旅人一家', 'en': 'The travelling family'}}
 
 
 def export_variant(cid, v):
@@ -82,6 +82,8 @@ def export(cid):
                 os.remove(p)
             elif n not in STYLES:
                 shutil.rmtree(p)
+    if cid == 'family':
+        raise ValueError('family is reserved for the group picture')
     vs = [export_variant(cid, v) for v in ch.variants()]
     M = ch.META
     return dict(M, faction=ch.FACTION, factionName=FACTION_NAME[ch.FACTION],
@@ -94,8 +96,20 @@ def main():
         print(c)
         entries.append(export(c))
     styles = {k: {'name': s['name'], 'blurb': s['blurb']} for k, s in STYLES.items()}
+    # the family group picture
+    from family_variant import group
+    gd = os.path.join(ROOT, 'chars', 'family')
+    os.makedirs(gd, exist_ok=True)
+    for name, im in (('group', group()), ('group-scene', group(scene=True))):
+        im.save(os.path.join(gd, name + '.png'))
+        scale(im, 4).save(os.path.join(gd, name + '@4x.png'))
+    groups = {'family': {'name': {'zh': '一家四口', 'en': 'The family'},
+                         'members': ['jeff', 'erin', 'josh', 'jasper'], 'style': 'family',
+                         'files': {k: 'chars/family/' + v for k, v in (('group', 'group.png'), ('group4x', 'group@4x.png'),
+                                                                        ('scene', 'group-scene.png'), ('scene4x', 'group-scene@4x.png'))}}}
     with open(os.path.join(ROOT, 'chars', 'index.json'), 'w', encoding='utf-8') as f:
-        json.dump({'version': 2, 'styles': styles, 'characters': entries}, f, ensure_ascii=False, indent=2)
+        json.dump({'version': 3, 'mainStyle': 'family', 'styles': styles, 'groups': groups, 'characters': entries},
+                  f, ensure_ascii=False, indent=2)
 
 
 if __name__ == '__main__':

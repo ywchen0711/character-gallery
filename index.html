@@ -9,13 +9,13 @@
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <header class="top">
   <div class="brand">
     <h1 data-zh="人物圖庫" data-en="Character Gallery">人物圖庫</h1>
-    <p class="sub" data-zh="三國人物與西洋旅人 · 多種像素畫風的頭像與全身動畫" data-en="Three Kingdoms cast and the western travellers · portraits and animated sprites in several pixel styles">三國人物與西洋旅人 · 多種像素畫風的頭像與全身動畫</p>
+    <p class="sub" data-zh="旅人一家與三國人物 · 像素畫風的頭像與全身動畫" data-en="The travelling family and the Three Kingdoms cast · pixel portraits and animated sprites">旅人一家與三國人物 · 像素畫風的頭像與全身動畫</p>
   </div>
   <div class="tools">
     <a class="chip strong" href="compare.html" data-zh="畫風比較 →" data-en="Compare styles →">畫風比較 →</a>
@@ -23,13 +23,15 @@
   </div>
 </header>
 
+<section class="hero" aria-label="family"><canvas id="hero-canvas" width="128" height="72"></canvas><p id="hero-cap" class="hero-cap"></p></section>
+
 <nav class="filters" id="filters" aria-label="faction filter">
   <button class="chip on" data-f="all" data-zh="全部" data-en="All">全部</button>
   <button class="chip" data-f="wu" data-zh="吳" data-en="Wu">吳</button>
   <button class="chip" data-f="shu" data-zh="蜀" data-en="Shu">蜀</button>
   <button class="chip" data-f="wei" data-zh="魏" data-en="Wei">魏</button>
   <button class="chip" data-f="qun" data-zh="群" data-en="Other">群</button>
-  <button class="chip" data-f="west" data-zh="西洋旅人" data-en="Travellers">西洋旅人</button>
+  <button class="chip" data-f="west" data-zh="旅人一家" data-en="The family">旅人一家</button>
 </nav>
 <nav class="filters styles" id="stylef" aria-label="style filter"></nav>
 
@@ -65,6 +67,6 @@
 <footer class="foot">
   <p data-zh="全部為原創像素畫，只模仿各遊戲的畫風，沒有描摹或複製。CC BY 4.0。" data-en="All original pixel art that imitates each game's look only; nothing traced or copied. CC BY 4.0.">全部為原創像素畫，只模仿各遊戲的畫風，沒有描摹或複製。CC BY 4.0。</p>
 </footer>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

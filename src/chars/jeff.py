@@ -14,11 +14,11 @@ META = dict(
     style_name={'zh': '船匠', 'en': 'Shipwright'},
     title={'zh': '造火船的軍師', 'en': 'The strategist who builds fire rafts'},
     bio={
-        'zh': '船匠兼工程師，四人之中的軍師。眼鏡在船難裡裂了一角，扳手卻一直插在腰間。'
+        'zh': '一家之主，船匠兼工程師，也是隊伍裡的軍師。圓眼鏡在船難裡裂了一角，扳手卻一直插在腰間。'
               '他看得懂江東的船，也看得懂風向，第一個想到把整條船變成火龍衝進敵陣。',
-        'en': 'Shipwright, engineer and the strategist of the four. His glasses cracked in the wreck, but the wrench '
-              'never left his belt. He reads Jiangdong hulls as well as the wind, and was the first to think of turning '
-              'a whole boat into a fire dragon and sailing it into the enemy line.',
+        'en': 'Father of the family: shipwright, engineer and the party\'s strategist. His round glasses cracked in the '
+              'wreck, but the wrench never left his belt. He reads Jiangdong hulls as well as the wind, and was the first '
+              'to think of turning a whole boat into a fire dragon.',
     },
     weapon={'zh': '扳手與火龍船', 'en': 'Wrench and fire rafts'},
 )
@@ -514,7 +514,10 @@ kmmk
 
 def variants():
     from variants import KoeiVariant
-    return [HD2DVariant(), KoeiVariant(koei_ns(), full=False)]
+    from family_variant import FamilyVariant
+    v = HD2DVariant()
+    v.primary = False
+    return [FamilyVariant('jeff'), v, KoeiVariant(koei_ns(), full=False)]
 
 S_LEGS = {k: _taller(v, '.....kTTkkttk.......') for k, v in S_LEGS.items()}
 SD_LEGS = {k: _taller(v, '......kttTTk........') for k, v in SD_LEGS.items()}

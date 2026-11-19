@@ -1,6 +1,11 @@
 """Art styles in the gallery. Every variant of a character names one of these."""
 
 STYLES = {
+    'family': {
+        'name': {'zh': 'HD-2D 可愛版（八方旅人風）', 'en': 'HD-2D, cuter (Octopath-like)'},
+        'blurb': {'zh': '主畫風。柔和溫暖的 HD-2D 大頭像，加上圓臉小黑眼、四方向行走的 Q 版角色；一家人同一畫布、同一條地平線，身高一看就懂。',
+                  'en': 'The main style. Warm, soft HD-2D portraits and round-faced sprites with small dark eyes that walk in four directions; the whole family shares one canvas and baseline, so heights read at a glance.'},
+    },
     'koei': {
         'name': {'zh': '霸王の大陸 × 像素棒球', 'en': '16-bit Three Kingdoms × pixel baseball'},
         'blurb': {'zh': '16-bit 三國策略遊戲式的寫實側光半身頭像，配像素棒球遊戲式的 Q 版全身。',

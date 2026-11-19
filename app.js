@@ -86,8 +86,8 @@
       const b = el('button', 'chip' + (styleF === k ? ' on' : ''), label); b.type = 'button';
       b.addEventListener('click', () => { styleF = k; render(); }); box.appendChild(b);
     };
-    mk('all', lang === 'zh' ? '全部畫風（各自主畫風）' : 'All (main style each)');
-    Object.keys(DATA.styles).forEach((k) => mk(k, styleName(k)));
+    mk('all', lang === 'zh' ? '主畫風' : 'Main style');
+    Object.keys(DATA.styles).forEach((k) => mk(k, styleName(k) + (k === DATA.mainStyle ? (lang === 'zh' ? '（主）' : ' (main)') : '')));
   }
 
   function cards() {
@@ -163,8 +163,27 @@
     own.textContent = ''; koei.textContent = '';
     const picked = store.get('cg-pick', '');
     const travellers = DATA.characters.filter((c) => c.faction === 'west');
+    const fam = $('#cmp-family');
+    if (fam) {
+      fam.textContent = '';
+      for (const c of travellers) {
+        const v = c.variants.find((x) => x.style === 'family'); if (!v) continue;
+        const col = el('article', 'cmp'); col.style.setProperty('--fc', c.colour);
+        const art = el('div', 'cmp-art');
+        const pc = el('canvas'), a1 = el('canvas'), a2 = el('canvas'), a3 = el('canvas');
+        const spr = el('div', 'cmp-spr'); spr.append(a1, a2, a3);
+        art.append(pc, spr); col.append(art, el('div', 'cmp-name', `${t(c.name)} · ${t(c.style_name)}`));
+        fam.appendChild(col);
+        still(pc, v._por, fitDown(v._por.height, 208));
+        const k = fitDown(v._meta.frameHeight, 120);
+        player(a1, v, 'idle', k); player(a2, v, 'walk_down', k); player(a3, v, 'action', k);
+      }
+      const fp = $('#family-pick');
+      fp.className = 'chip pick' + (picked === 'family' ? ' on' : '');
+      fp.textContent = pickLabel(picked === 'family');
+    }
     for (const c of travellers) {
-      const v = c.variants.find((x) => x.primary) || c.variants[0];
+      const v = c.variants.find((x) => !['family', 'koei'].includes(x.style)) || c.variants[0];
       const col = el('article', 'cmp'); col.style.setProperty('--fc', c.colour);
       col.append(el('div', 'cmp-style', styleName(v.style)), el('p', 'cmp-blurb', t(DATA.styles[v.style].blurb)));
       const art = el('div', 'cmp-art');
@@ -199,8 +218,19 @@
       : `Your pick: ${styleName(picked)}. Tell Claude, and more characters can be drawn in this style.`) : '';
   }
 
+  function hero() {
+    const cv = $('#hero-canvas'); if (!cv || !DATA.groups || !DATA._group) return;
+    const box = cv.parentElement;
+    const k = Math.max(1, Math.min(6, Math.floor((box.clientWidth || 600) / DATA._group.width)));
+    still(cv, DATA._group, k);
+    const cap = $('#hero-cap');
+    if (cap) cap.textContent = lang === 'zh' ? '一家四口：傑夫（父）、喬許（10 歲）、賈斯珀（8 歲）、艾琳（母）· 主畫風 HD-2D 可愛版'
+      : 'The family: Jeff (father), Josh (10), Jasper (8), Erin (mother) · main style: HD-2D, cuter';
+  }
+
   function render() {
     if (!DATA) return;
+    hero();
     if ($('#grid')) { styleChips(); cards(); if (open) fillDetail(); }
     if ($('#cmp-own')) compare();
   }
@@ -218,6 +248,7 @@
     render();
   });
   on('#koei-pick', 'click', () => { store.set('cg-pick', 'koei'); render(); });
+  on('#family-pick', 'click', () => { store.set('cg-pick', 'family'); render(); });
 
   fetch('chars/index.json').then((r) => r.json()).then(async (data) => {
     DATA = data;
@@ -228,8 +259,10 @@
           .then(([p, s, m]) => { v._por = p; v._sheet = s; v._meta = m; }));
       }
     }
+    if (data.groups && data.groups.family) jobs.push(img(data.groups.family.files.scene).then((i) => { data._group = i; }));
     await Promise.all(jobs);
     applyLang();
+    window.addEventListener('resize', hero);
     requestAnimationFrame(loop);
   }).catch((e) => { const m = $('#empty') || $('#pick-note') || document.body; m.hidden = false; m.textContent = 'Failed to load characters: ' + e.message; });
 })();

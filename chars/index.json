@@ -1,6 +1,17 @@
 {
-  "version": 2,
+  "version": 3,
+  "mainStyle": "family",
   "styles": {
+    "family": {
+      "name": {
+        "zh": "HD-2D 可愛版（八方旅人風）",
+        "en": "HD-2D, cuter (Octopath-like)"
+      },
+      "blurb": {
+        "zh": "主畫風。柔和溫暖的 HD-2D 大頭像，加上圓臉小黑眼、四方向行走的 Q 版角色；一家人同一畫布、同一條地平線，身高一看就懂。",
+        "en": "The main style. Warm, soft HD-2D portraits and round-faced sprites with small dark eyes that walk in four directions; the whole family shares one canvas and baseline, so heights read at a glance."
+      }
+    },
     "koei": {
       "name": {
         "zh": "霸王の大陸 × 像素棒球",
@@ -52,75 +63,28 @@
       }
     }
   },
-  "characters": [
-    {
-      "id": "guanyu",
+  "groups": {
+    "family": {
       "name": {
-        "zh": "關羽",
-        "en": "Guan Yu"
+        "zh": "一家四口",
+        "en": "The family"
       },
-      "style_name": {
-        "zh": "雲長",
-        "en": "Yunchang"
-      },
-      "title": {
-        "zh": "美髯公",
-        "en": "Lord of the Beautiful Beard"
-      },
-      "bio": {
-        "zh": "河東解良人，與劉備、張飛結為兄弟。赤面長髯，綠巾綠袍，手持青龍偃月刀。重義守信，千里尋兄的故事流傳至今。",
-        "en": "A man of Xieliang in Hedong, sworn brother of Liu Bei and Zhang Fei. Red-faced and long-bearded, in a green headscarf and robe, he carries the Green Dragon Crescent Blade. His loyalty is remembered in the tale of riding a thousand li to rejoin his brother."
-      },
-      "weapon": {
-        "zh": "青龍偃月刀",
-        "en": "Green Dragon Crescent Blade"
-      },
-      "faction": "shu",
-      "factionName": {
-        "zh": "蜀",
-        "en": "Shu"
-      },
-      "colour": "#3f8f4e",
-      "variants": [
-        {
-          "style": "koei",
-          "styleName": {
-            "zh": "霸王の大陸 × 像素棒球",
-            "en": "16-bit Three Kingdoms × pixel baseball"
-          },
-          "primary": true,
-          "files": {
-            "portrait": "chars/guanyu/koei/portrait.png",
-            "portrait4x": "chars/guanyu/koei/portrait@4x.png",
-            "body": "chars/guanyu/koei/body.png",
-            "body4x": "chars/guanyu/koei/body@4x.png",
-            "sheet": "chars/guanyu/koei/sheet.png",
-            "sheet4x": "chars/guanyu/koei/sheet@4x.png",
-            "sheetJson": "chars/guanyu/koei/sheet.json"
-          },
-          "sizes": {
-            "portrait": [
-              56,
-              64
-            ],
-            "frame": [
-              56,
-              64
-            ]
-          },
-          "colours": {
-            "portrait": 29,
-            "sheet": 28
-          },
-          "animations": [
-            "idle",
-            "walk",
-            "walk_side",
-            "action"
-          ]
-        }
-      ]
-    },
+      "members": [
+        "jeff",
+        "erin",
+        "josh",
+        "jasper"
+      ],
+      "style": "family",
+      "files": {
+        "group": "chars/family/group.png",
+        "group4x": "chars/family/group@4x.png",
+        "scene": "chars/family/group-scene.png",
+        "scene4x": "chars/family/group-scene@4x.png"
+      }
+    }
+  },
+  "characters": [
     {
       "id": "jeff",
       "name": {
@@ -136,8 +100,8 @@
         "en": "The strategist who builds fire rafts"
       },
       "bio": {
-        "zh": "船匠兼工程師，四人之中的軍師。眼鏡在船難裡裂了一角，扳手卻一直插在腰間。他看得懂江東的船，也看得懂風向，第一個想到把整條船變成火龍衝進敵陣。",
-        "en": "Shipwright, engineer and the strategist of the four. His glasses cracked in the wreck, but the wrench never left his belt. He reads Jiangdong hulls as well as the wind, and was the first to think of turning a whole boat into a fire dragon and sailing it into the enemy line."
+        "zh": "一家之主，船匠兼工程師，也是隊伍裡的軍師。圓眼鏡在船難裡裂了一角，扳手卻一直插在腰間。他看得懂江東的船，也看得懂風向，第一個想到把整條船變成火龍衝進敵陣。",
+        "en": "Father of the family: shipwright, engineer and the party's strategist. His round glasses cracked in the wreck, but the wrench never left his belt. He reads Jiangdong hulls as well as the wind, and was the first to think of turning a whole boat into a fire dragon."
       },
       "weapon": {
         "zh": "扳手與火龍船",
@@ -145,18 +109,57 @@
       },
       "faction": "west",
       "factionName": {
-        "zh": "西洋旅人",
-        "en": "Western travellers"
+        "zh": "旅人一家",
+        "en": "The travelling family"
       },
       "colour": "#3a7ca8",
       "variants": [
+        {
+          "style": "family",
+          "styleName": {
+            "zh": "HD-2D 可愛版（八方旅人風）",
+            "en": "HD-2D, cuter (Octopath-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jeff/family/portrait.png",
+            "portrait4x": "chars/jeff/family/portrait@4x.png",
+            "body": "chars/jeff/family/body.png",
+            "body4x": "chars/jeff/family/body@4x.png",
+            "sheet": "chars/jeff/family/sheet.png",
+            "sheet4x": "chars/jeff/family/sheet@4x.png",
+            "sheetJson": "chars/jeff/family/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              72,
+              80
+            ],
+            "frame": [
+              40,
+              60
+            ]
+          },
+          "colours": {
+            "portrait": 188,
+            "sheet": 34
+          },
+          "animations": [
+            "idle",
+            "walk_down",
+            "walk_up",
+            "walk_left",
+            "walk_right",
+            "action"
+          ]
+        },
         {
           "style": "hd2d",
           "styleName": {
             "zh": "HD-2D（八方旅人風）",
             "en": "HD-2D (Octopath-like)"
           },
-          "primary": true,
+          "primary": false,
           "files": {
             "portrait": "chars/jeff/hd2d/portrait.png",
             "portrait4x": "chars/jeff/hd2d/portrait@4x.png",
@@ -237,8 +240,8 @@
         "en": "The star-reading healer"
       },
       "bio": {
-        "zh": "船上的領航員，也是醫者。看星象、讀天氣、包紮傷口，樣樣在行。船難後她把紅髮編成一條長辮，用江東的竹杖代替遺失的六分儀，照樣能說出明天會不會下雨。",
-        "en": "The ship's navigator and its healer: stars, weather and wounds are all hers to read. After the wreck she wears her red hair in one long braid and carries a Jiangdong bamboo staff in place of her lost sextant, and she can still tell you whether it will rain tomorrow."
+        "zh": "兩個孩子的母親，船上的領航員，也是醫者。看星象、讀天氣、包紮傷口，樣樣在行。腰間的藥草袋總是鼓鼓的，她說明天會下雨，明天就會下雨。",
+        "en": "Mother of the two boys, the ship's navigator and its healer: stars, weather and wounds are all hers to read. Her herb pouch is always full, and when she says it will rain tomorrow, it rains."
       },
       "weapon": {
         "zh": "竹杖",
@@ -246,18 +249,57 @@
       },
       "faction": "west",
       "factionName": {
-        "zh": "西洋旅人",
-        "en": "Western travellers"
+        "zh": "旅人一家",
+        "en": "The travelling family"
       },
       "colour": "#3a7ca8",
       "variants": [
+        {
+          "style": "family",
+          "styleName": {
+            "zh": "HD-2D 可愛版（八方旅人風）",
+            "en": "HD-2D, cuter (Octopath-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/erin/family/portrait.png",
+            "portrait4x": "chars/erin/family/portrait@4x.png",
+            "body": "chars/erin/family/body.png",
+            "body4x": "chars/erin/family/body@4x.png",
+            "sheet": "chars/erin/family/sheet.png",
+            "sheet4x": "chars/erin/family/sheet@4x.png",
+            "sheetJson": "chars/erin/family/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              72,
+              80
+            ],
+            "frame": [
+              40,
+              60
+            ]
+          },
+          "colours": {
+            "portrait": 215,
+            "sheet": 36
+          },
+          "animations": [
+            "idle",
+            "walk_down",
+            "walk_up",
+            "walk_left",
+            "walk_right",
+            "action"
+          ]
+        },
         {
           "style": "snes",
           "styleName": {
             "zh": "SNES JRPG（FF6 風）",
             "en": "SNES JRPG (FF6-like)"
           },
-          "primary": true,
+          "primary": false,
           "files": {
             "portrait": "chars/erin/snes/portrait.png",
             "portrait4x": "chars/erin/snes/portrait@4x.png",
@@ -340,27 +382,66 @@
         "en": "The big-hearted shield"
       },
       "bio": {
-        "zh": "個子最大、心腸最軟的水手。打仗時他舉著那面從船上拆下來的圓盾站在最前面，大聲挑釁把敵人引到自己身上，好讓同伴喘口氣。愛笑，也愛吃江東的魚。",
-        "en": "The biggest sailor with the softest heart. In battle he stands in front behind the round shield he pried off the wreck, shouting to pull every enemy onto himself so his friends can breathe. Laughs easily and loves Jiangdong fish."
+        "zh": "十歲的哥哥，勇敢又熱心。背著小木盾、拿著木棍，總是站在弟弟前面，大聲喊話把壞人引到自己身上。笑起來露出缺了一顆的門牙。",
+        "en": "The ten-year-old big brother, brave and warm-hearted. With his little wooden shield and stick he always stands in front of his brother, shouting to draw trouble onto himself. His grin shows a missing tooth."
       },
       "weapon": {
-        "zh": "鐵槍與圓盾",
-        "en": "Iron spear and round shield"
+        "zh": "小木盾與木棍",
+        "en": "Little wooden shield and stick"
       },
       "faction": "west",
       "factionName": {
-        "zh": "西洋旅人",
-        "en": "Western travellers"
+        "zh": "旅人一家",
+        "en": "The travelling family"
       },
       "colour": "#3a7ca8",
       "variants": [
+        {
+          "style": "family",
+          "styleName": {
+            "zh": "HD-2D 可愛版（八方旅人風）",
+            "en": "HD-2D, cuter (Octopath-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/josh/family/portrait.png",
+            "portrait4x": "chars/josh/family/portrait@4x.png",
+            "body": "chars/josh/family/body.png",
+            "body4x": "chars/josh/family/body@4x.png",
+            "sheet": "chars/josh/family/sheet.png",
+            "sheet4x": "chars/josh/family/sheet@4x.png",
+            "sheetJson": "chars/josh/family/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              72,
+              80
+            ],
+            "frame": [
+              40,
+              60
+            ]
+          },
+          "colours": {
+            "portrait": 215,
+            "sheet": 37
+          },
+          "animations": [
+            "idle",
+            "walk_down",
+            "walk_up",
+            "walk_left",
+            "walk_right",
+            "action"
+          ]
+        },
         {
           "style": "gba",
           "styleName": {
             "zh": "GBA 戰棋（聖火降魔錄風）",
             "en": "GBA tactics (Fire Emblem-like)"
           },
-          "primary": true,
+          "primary": false,
           "files": {
             "portrait": "chars/josh/gba/portrait.png",
             "portrait4x": "chars/josh/gba/portrait@4x.png",
@@ -441,27 +522,66 @@
         "en": "The sharp-eyed scout"
       },
       "bio": {
-        "zh": "四位西洋旅人中最年輕的一個，船難後在江東跟著孫權。腳快、眼尖、手也快：地圖上的祕密總是他先發現，短弓與箭袋從不離身，脖子上的圍巾是在建業市集換來的。",
-        "en": "The youngest of the four western travellers, who followed Sun Quan after the wreck. Quick feet, sharp eyes and quicker fingers: he finds the map's secrets first, never parts with his short bow and quiver, and traded for the scarf at his neck in a Jianye market."
+        "zh": "八歲的弟弟，一家人裡最小也最快。眼尖手巧，背著小布包、拿著彈弓，地圖上的祕密總是他先發現；頭上兩個小髻是媽媽每天早上替他綁的。",
+        "en": "The eight-year-old little brother, smallest and quickest of the family. Sharp eyes, quick hands, a satchel and a slingshot: he finds the map's secrets first. Mum ties his two little hair buns every morning."
       },
       "weapon": {
-        "zh": "短弓",
-        "en": "Short bow"
+        "zh": "彈弓",
+        "en": "Slingshot"
       },
       "faction": "west",
       "factionName": {
-        "zh": "西洋旅人",
-        "en": "Western travellers"
+        "zh": "旅人一家",
+        "en": "The travelling family"
       },
       "colour": "#3a7ca8",
       "variants": [
+        {
+          "style": "family",
+          "styleName": {
+            "zh": "HD-2D 可愛版（八方旅人風）",
+            "en": "HD-2D, cuter (Octopath-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jasper/family/portrait.png",
+            "portrait4x": "chars/jasper/family/portrait@4x.png",
+            "body": "chars/jasper/family/body.png",
+            "body4x": "chars/jasper/family/body@4x.png",
+            "sheet": "chars/jasper/family/sheet.png",
+            "sheet4x": "chars/jasper/family/sheet@4x.png",
+            "sheetJson": "chars/jasper/family/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              72,
+              80
+            ],
+            "frame": [
+              40,
+              60
+            ]
+          },
+          "colours": {
+            "portrait": 191,
+            "sheet": 34
+          },
+          "animations": [
+            "idle",
+            "walk_down",
+            "walk_up",
+            "walk_left",
+            "walk_right",
+            "action"
+          ]
+        },
         {
           "style": "nes",
           "styleName": {
             "zh": "8-bit 紅白機（勇者鬥惡龍風）",
             "en": "8-bit NES (Dragon Quest-like)"
           },
-          "primary": true,
+          "primary": false,
           "files": {
             "portrait": "chars/jasper/nes/portrait.png",
             "portrait4x": "chars/jasper/nes/portrait@4x.png",
@@ -525,6 +645,74 @@
           },
           "animations": [
             "idle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guanyu",
+      "name": {
+        "zh": "關羽",
+        "en": "Guan Yu"
+      },
+      "style_name": {
+        "zh": "雲長",
+        "en": "Yunchang"
+      },
+      "title": {
+        "zh": "美髯公",
+        "en": "Lord of the Beautiful Beard"
+      },
+      "bio": {
+        "zh": "河東解良人，與劉備、張飛結為兄弟。赤面長髯，綠巾綠袍，手持青龍偃月刀。重義守信，千里尋兄的故事流傳至今。",
+        "en": "A man of Xieliang in Hedong, sworn brother of Liu Bei and Zhang Fei. Red-faced and long-bearded, in a green headscarf and robe, he carries the Green Dragon Crescent Blade. His loyalty is remembered in the tale of riding a thousand li to rejoin his brother."
+      },
+      "weapon": {
+        "zh": "青龍偃月刀",
+        "en": "Green Dragon Crescent Blade"
+      },
+      "faction": "shu",
+      "factionName": {
+        "zh": "蜀",
+        "en": "Shu"
+      },
+      "colour": "#3f8f4e",
+      "variants": [
+        {
+          "style": "koei",
+          "styleName": {
+            "zh": "霸王の大陸 × 像素棒球",
+            "en": "16-bit Three Kingdoms × pixel baseball"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/guanyu/koei/portrait.png",
+            "portrait4x": "chars/guanyu/koei/portrait@4x.png",
+            "body": "chars/guanyu/koei/body.png",
+            "body4x": "chars/guanyu/koei/body@4x.png",
+            "sheet": "chars/guanyu/koei/sheet.png",
+            "sheet4x": "chars/guanyu/koei/sheet@4x.png",
+            "sheetJson": "chars/guanyu/koei/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              64
+            ],
+            "frame": [
+              56,
+              64
+            ]
+          },
+          "colours": {
+            "portrait": 29,
+            "sheet": 28
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "action"
           ]
         }
       ]

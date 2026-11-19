@@ -73,3 +73,16 @@ class Soft:
             if 0 <= x < self.w and 0 <= y < self.h:
                 P[x, y] = hex2rgba(c)
         return im
+
+
+def tint_image(im, tints):
+    """Blend colours onto an image: tints = {(x, y): ('#rrggbb', alpha)}."""
+    P = im.load()
+    for (x, y), (col, a) in tints.items():
+        if 0 <= x < im.width and 0 <= y < im.height:
+            r, g, b, al = P[x, y]
+            if al == 0:
+                continue
+            c = hex2rgba(col)
+            P[x, y] = (round(r + (c[0] - r) * a), round(g + (c[1] - g) * a), round(b + (c[2] - b) * a), al)
+    return im

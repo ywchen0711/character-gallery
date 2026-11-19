@@ -1,0 +1,51 @@
+{
+  "image": "sheet.png",
+  "frameWidth": 40,
+  "frameHeight": 60,
+  "anchor": {
+    "x": 20,
+    "y": 57,
+    "note": "feet centre in each cell"
+  },
+  "animations": {
+    "idle": {
+      "row": 0,
+      "frames": 4,
+      "fps": 3,
+      "loop": true,
+      "note": "all four share the 40x60 cell and the y=57 baseline, so heights compare directly"
+    },
+    "walk_down": {
+      "row": 1,
+      "frames": 4,
+      "fps": 7,
+      "loop": true
+    },
+    "walk_up": {
+      "row": 2,
+      "frames": 4,
+      "fps": 7,
+      "loop": true
+    },
+    "walk_left": {
+      "row": 3,
+      "frames": 4,
+      "fps": 7,
+      "loop": true
+    },
+    "walk_right": {
+      "row": 4,
+      "frames": 4,
+      "fps": 7,
+      "loop": true,
+      "note": "mirror of walk_left"
+    },
+    "action": {
+      "row": 5,
+      "frames": 4,
+      "fps": 6,
+      "loop": false,
+      "note": "signature move"
+    }
+  }
+}

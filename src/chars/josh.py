@@ -11,13 +11,12 @@ META = dict(
     style_name={'zh': '盾手', 'en': 'Shieldbearer'},
     title={'zh': '熱心腸的盾牌', 'en': 'The big-hearted shield'},
     bio={
-        'zh': '個子最大、心腸最軟的水手。打仗時他舉著那面從船上拆下來的圓盾站在最前面，'
-              '大聲挑釁把敵人引到自己身上，好讓同伴喘口氣。愛笑，也愛吃江東的魚。',
-        'en': 'The biggest sailor with the softest heart. In battle he stands in front behind the round shield he pried off '
-              'the wreck, shouting to pull every enemy onto himself so his friends can breathe. Laughs easily and loves '
-              'Jiangdong fish.',
+        'zh': '十歲的哥哥，勇敢又熱心。背著小木盾、拿著木棍，總是站在弟弟前面，'
+              '大聲喊話把壞人引到自己身上。笑起來露出缺了一顆的門牙。',
+        'en': 'The ten-year-old big brother, brave and warm-hearted. With his little wooden shield and stick he always '
+              'stands in front of his brother, shouting to draw trouble onto himself. His grin shows a missing tooth.',
     },
-    weapon={'zh': '鐵槍與圓盾', 'en': 'Iron spear and round shield'},
+    weapon={'zh': '小木盾與木棍', 'en': 'Little wooden shield and stick'},
 )
 
 # ---------------------------------------------------------------- GBA (Fire Emblem-like)
@@ -423,4 +422,7 @@ kxXxxkrrrrkxxxzk
 
 def variants():
     from variants import KoeiVariant
-    return [GBAVariant(), KoeiVariant(koei_ns(), full=False)]
+    from family_variant import FamilyVariant
+    v = GBAVariant()
+    v.primary = False
+    return [FamilyVariant('josh'), v, KoeiVariant(koei_ns(), full=False)]
