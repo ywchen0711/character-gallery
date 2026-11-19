@@ -139,6 +139,55 @@
         "nesTall": "chars/longmen/group-nes-foes-2x2.png",
         "nesTall4x": "chars/longmen/group-nes-foes-2x2@4x.png"
       }
+    },
+    "longmenMore": {
+      "name": {
+        "zh": "龍門江湖眾生",
+        "en": "More of the Longmen jianghu"
+      },
+      "faction": "longmen",
+      "members": [
+        "tiewusi",
+        "qianwanli",
+        "wenruyu",
+        "xiaolian",
+        "lihanshan",
+        "yuweng",
+        "guimian",
+        "masked"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/longmen/group-nes-more.png",
+        "nes4x": "chars/longmen/group-nes-more@4x.png",
+        "nesTall": "chars/longmen/group-nes-more-4x2.png",
+        "nesTall4x": "chars/longmen/group-nes-more-4x2@4x.png"
+      }
+    },
+    "beasts": {
+      "name": {
+        "zh": "怪物與野獸",
+        "en": "Monsters & Beasts"
+      },
+      "faction": "beast",
+      "members": [
+        "ape",
+        "tiger",
+        "lion",
+        "jiangshi",
+        "shanxiao",
+        "fox",
+        "jiao",
+        "crow",
+        "toad"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/beasts/group-nes.png",
+        "nes4x": "chars/beasts/group-nes@4x.png",
+        "nesTall": "chars/beasts/group-nes-3x3.png",
+        "nesTall4x": "chars/beasts/group-nes-3x3@4x.png"
+      }
     }
   },
   "characters": [
@@ -164,6 +213,7 @@
         "zh": "扳手與火龍船",
         "en": "Wrench and fire rafts"
       },
+      "kind": "person",
       "faction": "west",
       "factionName": {
         "zh": "旅人一家",
@@ -340,6 +390,7 @@
         "zh": "竹杖",
         "en": "Bamboo staff"
       },
+      "kind": "person",
       "faction": "west",
       "factionName": {
         "zh": "旅人一家",
@@ -518,6 +569,7 @@
         "zh": "小木盾與木棍",
         "en": "Little wooden shield and stick"
       },
+      "kind": "person",
       "faction": "west",
       "factionName": {
         "zh": "旅人一家",
@@ -694,6 +746,7 @@
         "zh": "彈弓",
         "en": "Slingshot"
       },
+      "kind": "person",
       "faction": "west",
       "factionName": {
         "zh": "旅人一家",
@@ -872,6 +925,7 @@
         "zh": "青龍偃月刀",
         "en": "Green Dragon Crescent Blade"
       },
+      "kind": "person",
       "faction": "shu",
       "factionName": {
         "zh": "蜀",
@@ -976,6 +1030,7 @@
         "zh": "環首刀",
         "en": "Ring-pommel saber"
       },
+      "kind": "person",
       "faction": "longmen",
       "factionName": {
         "zh": "龍門武林",
@@ -1043,6 +1098,7 @@
         "zh": "足球",
         "en": "Football"
       },
+      "kind": "person",
       "faction": "longmen",
       "factionName": {
         "zh": "龍門武林",
@@ -1110,6 +1166,7 @@
         "zh": "雙掌",
         "en": "Bare palms"
       },
+      "kind": "person",
       "faction": "longmen",
       "factionName": {
         "zh": "龍門武林",
@@ -1177,6 +1234,7 @@
         "zh": "醒木",
         "en": "Clapper block"
       },
+      "kind": "person",
       "faction": "longmen",
       "factionName": {
         "zh": "龍門武林",
@@ -1244,6 +1302,7 @@
         "zh": "細劍",
         "en": "Slender sword"
       },
+      "kind": "person",
       "faction": "longmen",
       "factionName": {
         "zh": "龍門武林",
@@ -1311,6 +1370,7 @@
         "zh": "禪杖",
         "en": "Monk’s staff"
       },
+      "kind": "person",
       "faction": "longmen",
       "factionName": {
         "zh": "龍門武林",
@@ -1378,6 +1438,7 @@
         "zh": "狼牙棒",
         "en": "Spiked club"
       },
+      "kind": "person",
       "faction": "longmen",
       "factionName": {
         "zh": "龍門武林",
@@ -1445,6 +1506,7 @@
         "zh": "大刀",
         "en": "Broad dao"
       },
+      "kind": "person",
       "faction": "longmen",
       "factionName": {
         "zh": "龍門武林",
@@ -1512,6 +1574,7 @@
         "zh": "短刀",
         "en": "Short knife"
       },
+      "kind": "person",
       "faction": "longmen",
       "factionName": {
         "zh": "龍門武林",
@@ -1579,6 +1642,7 @@
         "zh": "白骨扇",
         "en": "Bone fan"
       },
+      "kind": "person",
       "faction": "longmen",
       "factionName": {
         "zh": "龍門武林",
@@ -1620,6 +1684,1144 @@
             "idle",
             "walk",
             "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tiewusi",
+      "name": {
+        "zh": "鐵無私",
+        "en": "Tie Wusi"
+      },
+      "style_name": {
+        "zh": "執法堂主",
+        "en": "Law Master"
+      },
+      "title": {
+        "zh": "武林盟副盟主・執法堂主",
+        "en": "Deputy of the Martial Alliance, Master of the Law Hall"
+      },
+      "bio": {
+        "zh": "武林盟的副盟主，執掌執法堂。頭戴烏紗、兩撇濃黑八字鬍，一張臉像鐵鑄的，從來不笑；只認證據，不認交情。腰間一條鐵鍊，「鐵鎖連環」一出，沒幾個人走得掉。",
+        "en": "Deputy of the Martial Alliance and master of its Law Hall. A black official cap, a heavy black moustache and a face like cast iron that never smiles; he trusts proof, never friendship. Few get away once his Iron Lock Chain comes out."
+      },
+      "weapon": {
+        "zh": "鐵鍊",
+        "en": "Iron chain"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tiewusi/nes/portrait.png",
+            "portrait4x": "chars/tiewusi/nes/portrait@4x.png",
+            "body": "chars/tiewusi/nes/body.png",
+            "body4x": "chars/tiewusi/nes/body@4x.png",
+            "sheet": "chars/tiewusi/nes/sheet.png",
+            "sheet4x": "chars/tiewusi/nes/sheet@4x.png",
+            "sheetJson": "chars/tiewusi/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qianwanli",
+      "name": {
+        "zh": "錢萬里",
+        "en": "Qian Wanli"
+      },
+      "style_name": {
+        "zh": "金算盤",
+        "en": "Golden Abacus"
+      },
+      "title": {
+        "zh": "武林盟司庫",
+        "en": "Treasurer of the Martial Alliance"
+      },
+      "bio": {
+        "zh": "武林盟的司庫，人稱「金算盤」。圓臉肚子大，瓜皮帽頂一顆紅珠，金珠算盤從不離手，一文一釐都算得清清楚楚。笑起來和氣，談起帳來寸步不讓。",
+        "en": "Treasurer of the Martial Alliance, known as the Golden Abacus. Round of face and belly, a red bead on top of his melon-skin cap, the gold-beaded abacus always in hand; he accounts for every last copper. Genial when he smiles, immovable when it comes to the books."
+      },
+      "weapon": {
+        "zh": "金珠算盤",
+        "en": "Gold-beaded abacus"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/qianwanli/nes/portrait.png",
+            "portrait4x": "chars/qianwanli/nes/portrait@4x.png",
+            "body": "chars/qianwanli/nes/body.png",
+            "body4x": "chars/qianwanli/nes/body@4x.png",
+            "sheet": "chars/qianwanli/nes/sheet.png",
+            "sheet4x": "chars/qianwanli/nes/sheet@4x.png",
+            "sheetJson": "chars/qianwanli/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wenruyu",
+      "name": {
+        "zh": "溫如玉",
+        "en": "Wen Ruyu"
+      },
+      "style_name": {
+        "zh": "書辦",
+        "en": "Clerk"
+      },
+      "title": {
+        "zh": "盟庫書辦",
+        "en": "Clerk of the Alliance Treasury"
+      },
+      "bio": {
+        "zh": "錢萬里身邊的書辦，青衫一領，衣領上總沾著一點墨。說話輕聲細語，開口前先道一聲「失禮了」；帳本抱在胸前，字寫得比誰都工整。",
+        "en": "Qian Wanli's clerk, in a plain green gown with a spot of ink always on the collar. He speaks softly and begins with “pardon me”; the ledger is always held to his chest, and his hand is the neatest of anyone's."
+      },
+      "weapon": {
+        "zh": "帳本與毛筆",
+        "en": "Ledger and brush"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/wenruyu/nes/portrait.png",
+            "portrait4x": "chars/wenruyu/nes/portrait@4x.png",
+            "body": "chars/wenruyu/nes/body.png",
+            "body4x": "chars/wenruyu/nes/body@4x.png",
+            "sheet": "chars/wenruyu/nes/sheet.png",
+            "sheet4x": "chars/wenruyu/nes/sheet@4x.png",
+            "sheetJson": "chars/wenruyu/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xiaolian",
+      "name": {
+        "zh": "小蓮",
+        "en": "Xiaolian"
+      },
+      "style_name": {
+        "zh": "小徒弟",
+        "en": "Apprentice"
+      },
+      "title": {
+        "zh": "寒江閣小徒弟",
+        "en": "Apprentice of the Cold River Pavilion"
+      },
+      "bio": {
+        "zh": "柳寒煙的小徒弟，兩個圓圓的髮髻綁著紅繩，粉紅衣裳配白領。好奇心比膽子還大，什麼門道都想偷學；也是奕碩在江湖上交到的第一個朋友，兩人一見面就踢起球來。",
+        "en": "Liu Hanyan's little disciple, two round buns tied with red ribbon, a pink robe with a white collar. Her curiosity is even bigger than her nerve and she wants to learn every trick she sees. Yi Shuo's first friend in the jianghu: the moment they met, they were kicking a ball together."
+      },
+      "weapon": {
+        "zh": "（練劍中）",
+        "en": "(still learning the sword)"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/xiaolian/nes/portrait.png",
+            "portrait4x": "chars/xiaolian/nes/portrait@4x.png",
+            "body": "chars/xiaolian/nes/body.png",
+            "body4x": "chars/xiaolian/nes/body@4x.png",
+            "sheet": "chars/xiaolian/nes/sheet.png",
+            "sheet4x": "chars/xiaolian/nes/sheet@4x.png",
+            "sheetJson": "chars/xiaolian/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lihanshan",
+      "name": {
+        "zh": "厲寒山",
+        "en": "Li Hanshan"
+      },
+      "style_name": {
+        "zh": "斷魂刀",
+        "en": "Soul-Severing Blade"
+      },
+      "title": {
+        "zh": "血刀門門主",
+        "en": "Master of the Blood Saber Sect"
+      },
+      "bio": {
+        "zh": "血刀門的門主，人稱「斷魂刀」。高瘦，白髮向後束起，暗紅長袍，手上一柄血紅的長彎刀。九斬之下不留人，平生最恨一個「輸」字。",
+        "en": "Master of the Blood Saber Sect, called the Soul-Severing Blade. Tall and gaunt, white hair tied back, a dark red robe and a long curved blade the colour of blood. Nobody is left standing after his nine cuts, and the word he hates most is “lose”."
+      },
+      "weapon": {
+        "zh": "血色長彎刀",
+        "en": "Blood-red curved blade"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/lihanshan/nes/portrait.png",
+            "portrait4x": "chars/lihanshan/nes/portrait@4x.png",
+            "body": "chars/lihanshan/nes/body.png",
+            "body4x": "chars/lihanshan/nes/body@4x.png",
+            "sheet": "chars/lihanshan/nes/sheet.png",
+            "sheet4x": "chars/lihanshan/nes/sheet@4x.png",
+            "sheetJson": "chars/lihanshan/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yuweng",
+      "name": {
+        "zh": "獨臂漁翁",
+        "en": "The One-Armed Fisherman"
+      },
+      "style_name": {
+        "zh": "漁翁",
+        "en": "Fisherman"
+      },
+      "title": {
+        "zh": "江邊隱者",
+        "en": "Recluse of the River"
+      },
+      "bio": {
+        "zh": "住在斷崖下江邊的老漁翁，一頂斗笠、一部白鬍子，左袖空蕩蕩地打了個結。整天只是釣魚，不問名姓；可他看人出刀的眼光，比刀還快。",
+        "en": "An old fisherman living by the river under the broken cliff: a straw hat, a long white beard, the empty left sleeve tied in a knot. He only fishes and gives no name, yet his eye for a man drawing a blade is quicker than the blade."
+      },
+      "weapon": {
+        "zh": "釣竿",
+        "en": "Fishing rod"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/yuweng/nes/portrait.png",
+            "portrait4x": "chars/yuweng/nes/portrait@4x.png",
+            "body": "chars/yuweng/nes/body.png",
+            "body4x": "chars/yuweng/nes/body@4x.png",
+            "sheet": "chars/yuweng/nes/sheet.png",
+            "sheet4x": "chars/yuweng/nes/sheet@4x.png",
+            "sheetJson": "chars/yuweng/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guimian",
+      "name": {
+        "zh": "鬼面護法",
+        "en": "Ghost-mask Warden"
+      },
+      "style_name": {
+        "zh": "護法",
+        "en": "Warden"
+      },
+      "title": {
+        "zh": "幽冥教護法",
+        "en": "Warden of the Netherworld Sect"
+      },
+      "bio": {
+        "zh": "幽冥教的護法，身披血紅尖帽斗篷，臉藏在一張畫著獠牙的白色鬼面後，面具的眼洞裡透著紅光。擋在路中央時一句話也不說。",
+        "en": "A warden of the Netherworld Sect in a pointed blood-red hood and cloak, his face hidden behind a white ghost mask painted with fangs, red light in its eye holes. When he blocks the road he says nothing at all."
+      },
+      "weapon": {
+        "zh": "幽冥掌",
+        "en": "Netherworld palm"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/guimian/nes/portrait.png",
+            "portrait4x": "chars/guimian/nes/portrait@4x.png",
+            "body": "chars/guimian/nes/body.png",
+            "body4x": "chars/guimian/nes/body@4x.png",
+            "sheet": "chars/guimian/nes/sheet.png",
+            "sheet4x": "chars/guimian/nes/sheet@4x.png",
+            "sheetJson": "chars/guimian/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "masked",
+      "name": {
+        "zh": "蒙面人",
+        "en": "The Masked Man"
+      },
+      "style_name": {
+        "zh": "蒙面人",
+        "en": "Masked Man"
+      },
+      "title": {
+        "zh": "天機閣中人",
+        "en": "In the Stratagem Pavilion"
+      },
+      "bio": {
+        "zh": "在天機閣裡等候的人。深紫兜帽，黑布蒙臉，只露出一雙劍眉和眼睛；紫袍滾金邊，出手時掌心泛起紫光。沒有人見過他的真面目。",
+        "en": "The one who waits in the Stratagem Pavilion: a deep purple hood, black cloth over everything but his sword brows and eyes, a purple robe edged in gold, and a violet glow in his palms when he strikes. Nobody has seen his face."
+      },
+      "weapon": {
+        "zh": "掌法",
+        "en": "Palm arts"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/masked/nes/portrait.png",
+            "portrait4x": "chars/masked/nes/portrait@4x.png",
+            "body": "chars/masked/nes/body.png",
+            "body4x": "chars/masked/nes/body@4x.png",
+            "sheet": "chars/masked/nes/sheet.png",
+            "sheet4x": "chars/masked/nes/sheet@4x.png",
+            "sheetJson": "chars/masked/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ape",
+      "name": {
+        "zh": "白猿",
+        "en": "White Ape"
+      },
+      "style_name": {
+        "zh": "靈獸",
+        "en": "Spirit beast"
+      },
+      "title": {
+        "zh": "斷崖守果靈猿",
+        "en": "Guardian of the Cliff Fruit"
+      },
+      "bio": {
+        "zh": "斷崖深谷裡的白猿，一身白毛，灰黑的皮臉，雙臂長過膝蓋。守著崖上的朱果，誰伸手就一掌拍下去；認可的人，牠會親手把果子遞過去。",
+        "en": "A white ape of the gorge under the broken cliff: white fur, a dark leathery face, arms longer than its legs. It guards the red fruit on the cliff and swats any hand that reaches for it; to someone it accepts, it hands the fruit over itself."
+      },
+      "habitat": {
+        "zh": "斷崖下的深谷與瀑布",
+        "en": "The gorge and falls under the broken cliff"
+      },
+      "kind": "monster",
+      "faction": "beast",
+      "factionName": {
+        "zh": "怪物與野獸",
+        "en": "Monsters & Beasts"
+      },
+      "colour": "#6a8a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/ape/nes/portrait.png",
+            "portrait4x": "chars/ape/nes/portrait@4x.png",
+            "body": "chars/ape/nes/body.png",
+            "body4x": "chars/ape/nes/body@4x.png",
+            "sheet": "chars/ape/nes/sheet.png",
+            "sheet4x": "chars/ape/nes/sheet@4x.png",
+            "sheetJson": "chars/ape/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tiger",
+      "name": {
+        "zh": "吊睛白額虎",
+        "en": "White-Browed Tiger"
+      },
+      "style_name": {
+        "zh": "猛獸",
+        "en": "Beast"
+      },
+      "title": {
+        "zh": "山中虎王",
+        "en": "King of the Mountain"
+      },
+      "bio": {
+        "zh": "額頭一個「王」字、雙眼吊梢的大老虎。白天伏在山崗上曬太陽，黃昏才下山找吃的；一聲吼，整片林子的鳥都飛走了。",
+        "en": "A great tiger with the character for “king” on its brow and slanting eyes. It suns itself on the ridge by day and comes down at dusk to hunt; one roar and every bird in the forest takes flight."
+      },
+      "habitat": {
+        "zh": "山崗與松林",
+        "en": "Mountain ridges and pine woods"
+      },
+      "kind": "monster",
+      "faction": "beast",
+      "factionName": {
+        "zh": "怪物與野獸",
+        "en": "Monsters & Beasts"
+      },
+      "colour": "#6a8a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tiger/nes/portrait.png",
+            "portrait4x": "chars/tiger/nes/portrait@4x.png",
+            "body": "chars/tiger/nes/body.png",
+            "body4x": "chars/tiger/nes/body@4x.png",
+            "sheet": "chars/tiger/nes/sheet.png",
+            "sheet4x": "chars/tiger/nes/sheet@4x.png",
+            "sheetJson": "chars/tiger/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lion",
+      "name": {
+        "zh": "鎮宅石獅",
+        "en": "Stone Guardian Lion"
+      },
+      "style_name": {
+        "zh": "石怪",
+        "en": "Living stone"
+      },
+      "title": {
+        "zh": "古宅門前的守護",
+        "en": "Guardian at the Old Gate"
+      },
+      "bio": {
+        "zh": "荒廢古宅門口的石獅子，捲毛鬃、銅鈴眼，口含石珠，座上長滿青苔。白天一動也不動；夜裡有人擅闖，眼睛就亮起紅光。",
+        "en": "The stone lion at the gate of a ruined mansion: curled mane, bulging eyes, a stone ball in its mouth, moss on its plinth. By day it never moves; when someone trespasses at night, its eyes glow red."
+      },
+      "habitat": {
+        "zh": "荒廢古宅與廟門",
+        "en": "Ruined mansions and temple gates"
+      },
+      "kind": "monster",
+      "faction": "beast",
+      "factionName": {
+        "zh": "怪物與野獸",
+        "en": "Monsters & Beasts"
+      },
+      "colour": "#6a8a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/lion/nes/portrait.png",
+            "portrait4x": "chars/lion/nes/portrait@4x.png",
+            "body": "chars/lion/nes/body.png",
+            "body4x": "chars/lion/nes/body@4x.png",
+            "sheet": "chars/lion/nes/sheet.png",
+            "sheet4x": "chars/lion/nes/sheet@4x.png",
+            "sheetJson": "chars/lion/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jiangshi",
+      "name": {
+        "zh": "符咒殭屍",
+        "en": "Talisman Jiangshi"
+      },
+      "style_name": {
+        "zh": "殭屍",
+        "en": "Undead"
+      },
+      "title": {
+        "zh": "義莊的跳屍",
+        "en": "Hopper of the Coffin House"
+      },
+      "bio": {
+        "zh": "穿著紫色官服、頭戴官帽的殭屍，額前貼著一張黃符，雙臂直直伸向前，一跳一跳地走。符一掉下來，就再也停不住了。",
+        "en": "A corpse in a purple official robe and cap with a yellow talisman stuck to its brow, arms stretched straight out, moving in hops. If the talisman falls off, nothing can stop it."
+      },
+      "habitat": {
+        "zh": "義莊、古墓與夜路",
+        "en": "Coffin houses, old tombs and night roads"
+      },
+      "kind": "monster",
+      "faction": "beast",
+      "factionName": {
+        "zh": "怪物與野獸",
+        "en": "Monsters & Beasts"
+      },
+      "colour": "#6a8a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jiangshi/nes/portrait.png",
+            "portrait4x": "chars/jiangshi/nes/portrait@4x.png",
+            "body": "chars/jiangshi/nes/body.png",
+            "body4x": "chars/jiangshi/nes/body@4x.png",
+            "sheet": "chars/jiangshi/nes/sheet.png",
+            "sheet4x": "chars/jiangshi/nes/sheet@4x.png",
+            "sheetJson": "chars/jiangshi/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shanxiao",
+      "name": {
+        "zh": "山魈",
+        "en": "Shanxiao"
+      },
+      "style_name": {
+        "zh": "山精",
+        "en": "Mountain imp"
+      },
+      "title": {
+        "zh": "一足山精",
+        "en": "One-Footed Imp"
+      },
+      "bio": {
+        "zh": "深山裡的山精：一圈金色鬃毛，紅鼻樑、藍色的皺紋臉頰，只有一隻大腳，跳起來卻比人跑得還快。愛偷旅人的鹽和火種，被叫出名字就會逃走。",
+        "en": "An imp of the deep mountains: a ring of golden mane, a red nose ridge and blue ribbed cheeks, and only one big foot, yet it hops faster than a man can run. It steals travellers' salt and tinder, and flees when called by its name."
+      },
+      "habitat": {
+        "zh": "深山密林",
+        "en": "Deep mountain forest"
+      },
+      "kind": "monster",
+      "faction": "beast",
+      "factionName": {
+        "zh": "怪物與野獸",
+        "en": "Monsters & Beasts"
+      },
+      "colour": "#6a8a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/shanxiao/nes/portrait.png",
+            "portrait4x": "chars/shanxiao/nes/portrait@4x.png",
+            "body": "chars/shanxiao/nes/body.png",
+            "body4x": "chars/shanxiao/nes/body@4x.png",
+            "sheet": "chars/shanxiao/nes/sheet.png",
+            "sheet4x": "chars/shanxiao/nes/sheet@4x.png",
+            "sheetJson": "chars/shanxiao/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fox",
+      "name": {
+        "zh": "九尾狐",
+        "en": "Nine-Tailed Fox"
+      },
+      "style_name": {
+        "zh": "妖狐",
+        "en": "Fox spirit"
+      },
+      "title": {
+        "zh": "千年狐仙",
+        "en": "Thousand-Year Fox"
+      },
+      "bio": {
+        "zh": "修行千年的金毛狐狸，身後九條尾巴像扇子一樣展開，尾尖燃著藍色狐火。眼睛細長帶紅，會讓迷路的旅人一直在原地打轉。",
+        "en": "A golden fox with a thousand years of cultivation, nine tails fanned out behind it, blue fox-fire burning at their tips. Its long red eyes can keep a lost traveller walking in circles all night."
+      },
+      "habitat": {
+        "zh": "月夜的竹林與古墳",
+        "en": "Bamboo groves and old graves on moonlit nights"
+      },
+      "kind": "monster",
+      "faction": "beast",
+      "factionName": {
+        "zh": "怪物與野獸",
+        "en": "Monsters & Beasts"
+      },
+      "colour": "#6a8a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/fox/nes/portrait.png",
+            "portrait4x": "chars/fox/nes/portrait@4x.png",
+            "body": "chars/fox/nes/body.png",
+            "body4x": "chars/fox/nes/body@4x.png",
+            "sheet": "chars/fox/nes/sheet.png",
+            "sheet4x": "chars/fox/nes/sheet@4x.png",
+            "sheetJson": "chars/fox/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jiao",
+      "name": {
+        "zh": "江蛟",
+        "en": "River Jiao"
+      },
+      "style_name": {
+        "zh": "水妖",
+        "en": "Water serpent"
+      },
+      "title": {
+        "zh": "寒江深潭之主",
+        "en": "Lord of the Deep Pool"
+      },
+      "bio": {
+        "zh": "還沒化成龍的蛟，青綠鱗甲、淡黃腹甲，頭上一對短角和長鬚。藏在江心最深的潭底，一翻身就掀起大浪，渡船常被牠攪翻。",
+        "en": "A jiao that has not yet become a dragon: green-teal scales, a pale yellow belly, two short horns and long whiskers. It hides in the deepest pool mid-river, and when it turns over the waves rise and ferries capsize."
+      },
+      "habitat": {
+        "zh": "大江的深潭與急流",
+        "en": "Deep pools and rapids of the great river"
+      },
+      "kind": "monster",
+      "faction": "beast",
+      "factionName": {
+        "zh": "怪物與野獸",
+        "en": "Monsters & Beasts"
+      },
+      "colour": "#6a8a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jiao/nes/portrait.png",
+            "portrait4x": "chars/jiao/nes/portrait@4x.png",
+            "body": "chars/jiao/nes/body.png",
+            "body4x": "chars/jiao/nes/body@4x.png",
+            "sheet": "chars/jiao/nes/sheet.png",
+            "sheet4x": "chars/jiao/nes/sheet@4x.png",
+            "sheetJson": "chars/jiao/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              64,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crow",
+      "name": {
+        "zh": "三足火鴉",
+        "en": "Fire Crow"
+      },
+      "style_name": {
+        "zh": "火鳥",
+        "en": "Fire bird"
+      },
+      "title": {
+        "zh": "烈日下的凶鳥",
+        "en": "Bird of the Blazing Sun"
+      },
+      "bio": {
+        "zh": "三隻腳的大火鴉，暗紅羽毛的翅尖燒著火焰，眼睛像燒紅的炭。飛過的地方草木焦黃，乾旱的年頭最常見到牠。",
+        "en": "A great three-legged crow with dark red plumage and flames at its wingtips, eyes like glowing coals. Grass browns where it flies, and it is seen most in years of drought."
+      },
+      "habitat": {
+        "zh": "火山口與旱地",
+        "en": "Volcano rims and drought lands"
+      },
+      "kind": "monster",
+      "faction": "beast",
+      "factionName": {
+        "zh": "怪物與野獸",
+        "en": "Monsters & Beasts"
+      },
+      "colour": "#6a8a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/crow/nes/portrait.png",
+            "portrait4x": "chars/crow/nes/portrait@4x.png",
+            "body": "chars/crow/nes/body.png",
+            "body4x": "chars/crow/nes/body@4x.png",
+            "sheet": "chars/crow/nes/sheet.png",
+            "sheet4x": "chars/crow/nes/sheet@4x.png",
+            "sheetJson": "chars/crow/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              64,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toad",
+      "name": {
+        "zh": "毒蟾",
+        "en": "Venom Toad"
+      },
+      "style_name": {
+        "zh": "毒物",
+        "en": "Poison beast"
+      },
+      "title": {
+        "zh": "沼澤毒王",
+        "en": "Poison King of the Marsh"
+      },
+      "bio": {
+        "zh": "蹲在沼澤爛泥裡的大毒蟾，比水牛還寬，背上長滿冒綠光的毒疣，一雙紅眼睛。嘴角滴著毒涎，噴一口毒霧，十步內的草全枯了。",
+        "en": "A huge toad squatting in the marsh mud, wider than a water buffalo, its back covered in glowing green poison warts, its eyes red. Venom drips from its mouth, and one breath of its poison mist withers the grass for ten paces."
+      },
+      "habitat": {
+        "zh": "沼澤與毒瘴林",
+        "en": "Marshes and miasma forests"
+      },
+      "kind": "monster",
+      "faction": "beast",
+      "factionName": {
+        "zh": "怪物與野獸",
+        "en": "Monsters & Beasts"
+      },
+      "colour": "#6a8a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/toad/nes/portrait.png",
+            "portrait4x": "chars/toad/nes/portrait@4x.png",
+            "body": "chars/toad/nes/body.png",
+            "body4x": "chars/toad/nes/body@4x.png",
+            "sheet": "chars/toad/nes/sheet.png",
+            "sheet4x": "chars/toad/nes/sheet@4x.png",
+            "sheetJson": "chars/toad/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              64,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
           ]
         }
       ]

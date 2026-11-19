@@ -987,3 +987,9 @@ import nes_longmen2  # noqa: E402
 PORTRAITS.update(nes_longmen2.PORTRAITS)
 SPRITES.update(nes_longmen2.SPRITES)
 HEIGHTS.update(nes_longmen2.HEIGHTS)
+
+# the third group (more of the cast from the Longmen stories) lives in nes_longmen3.py
+import nes_longmen3  # noqa: E402
+PORTRAITS.update(nes_longmen3.PORTRAITS)
+SPRITES.update(nes_longmen3.SPRITES)
+HEIGHTS.update(nes_longmen3.HEIGHTS)

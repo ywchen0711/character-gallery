@@ -3,9 +3,12 @@
 One sprite sub-palette per character: 'k' black, 'S' skin, 'c' cloth (3 colours + transparent '.').
 Every figure stands on the bottom row. Adults fill the 24 rows; Josh (10) is 20 rows tall and
 Jasper (8) 17, so the children read clearly smaller beside their parents.
-Frames: front walk A (B is A mirrored, the usual NES trick) and two side frames facing right.
+Frames: front walk A and B, two side frames facing right. B keeps A's body and only moves the legs (nes_walk.py);
+an optional 'legs' dict per sprite (or nes_walk.LEGS) gives frame 2's bottom rows: 'front' (the other foot
+forward) and 'side' (the passing pose); without it the leg rows are reflected / taken from 'side2'.
 """
 import nes
+import nes_walk
 
 
 def G(t, h=24):
@@ -392,9 +395,11 @@ def frames(cid):
     d = SPRITES[cid]
     pal = d['pal']
     im = lambda rows: nes.sprite_image(rows, pal)
-    fa = d['front']
+    fa, sd = d['front'], d['side']
+    f2, s2 = nes_walk.legs_for(cid, d)
+    assert nes_walk.check_same_body(fa, f2) and nes_walk.check_same_body(sd, s2), cid
     return {
         'idle': [im(fa), im(fa)],
-        'walk': [im(fa), im(fliph(fa))],
-        'walk_side': [im(d['side']), im(d['side2'])],
+        'walk': [im(fa), im(f2)],
+        'walk_side': [im(sd), im(s2)],
     }

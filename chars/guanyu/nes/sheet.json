@@ -19,14 +19,14 @@
       "frames": 2,
       "fps": 4,
       "loop": true,
-      "note": "front; the second frame is the first mirrored, the usual NES trick"
+      "note": "front; frame 2 has the same body as frame 1, only the legs step (the bottom rows)"
     },
     "walk_side": {
       "row": 2,
       "frames": 2,
       "fps": 4,
       "loop": true,
-      "note": "faces right; mirror horizontally for left"
+      "note": "faces right (stride, then legs together; same body); mirror horizontally for left"
     }
   }
 }

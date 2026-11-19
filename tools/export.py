@@ -23,11 +23,12 @@ from pixlib import count_colours, scale  # noqa: E402
 from roster import ROSTER  # noqa: E402
 from styles import STYLES  # noqa: E402
 
-FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8', 'longmen': '#5a6ab8'}
+FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8', 'longmen': '#5a6ab8', 'beast': '#6a8a3a'}
 FACTION_NAME = {'wu': {'zh': '吳', 'en': 'Wu'}, 'shu': {'zh': '蜀', 'en': 'Shu'},
                 'wei': {'zh': '魏', 'en': 'Wei'}, 'qun': {'zh': '群', 'en': 'Other'},
                 'west': {'zh': '旅人一家', 'en': 'The travelling family'},
-                'longmen': {'zh': '龍門武林', 'en': 'Longmen Wulin'}}
+                'longmen': {'zh': '龍門武林', 'en': 'Longmen Wulin'},
+                'beast': {'zh': '怪物與野獸', 'en': 'Monsters & Beasts'}}
 
 
 def export_variant(cid, v):
@@ -83,11 +84,11 @@ def export(cid):
                 os.remove(p)
             elif n not in STYLES:
                 shutil.rmtree(p)
-    if cid in ('family', 'longmen'):
+    if cid in ('family', 'longmen', 'beasts'):
         raise ValueError('family and longmen are reserved for group pictures')
     vs = [export_variant(cid, v) for v in ch.variants()]
     M = ch.META
-    return dict(M, faction=ch.FACTION, factionName=FACTION_NAME[ch.FACTION],
+    return dict(M, kind=getattr(ch, 'KIND', 'person'), faction=ch.FACTION, factionName=FACTION_NAME[ch.FACTION],
                 colour=FACTION_COLOUR[ch.FACTION], variants=vs)
 
 
@@ -131,6 +132,26 @@ def main():
                              'faction': 'longmen', 'members': FOES, 'style': 'nes',
                              'files': {k: 'chars/longmen/' + v for k, v in (('nes', 'group-nes-foes.png'), ('nes4x', 'group-nes-foes@4x.png'),
                                                                              ('nesTall', 'group-nes-foes-2x2.png'), ('nesTall4x', 'group-nes-foes-2x2@4x.png'))}}
+    # the third Longmen group: more of the cast from the Longmen stories
+    MORE = ['tiewusi', 'qianwanli', 'wenruyu', 'xiaolian', 'lihanshan', 'yuweng', 'guimian', 'masked']
+    for name, im in (('group-nes-more', nes_group(MORE, cols=8)), ('group-nes-more-4x2', nes_group(MORE, cols=4))):
+        im.save(os.path.join(ld, name + '.png'))
+        scale(im, 4).save(os.path.join(ld, name + '@4x.png'))
+    groups['longmenMore'] = {'name': {'zh': '龍門江湖眾生', 'en': 'More of the Longmen jianghu'},
+                             'faction': 'longmen', 'members': MORE, 'style': 'nes',
+                             'files': {k: 'chars/longmen/' + v for k, v in (('nes', 'group-nes-more.png'), ('nes4x', 'group-nes-more@4x.png'),
+                                                                             ('nesTall', 'group-nes-more-4x2.png'), ('nesTall4x', 'group-nes-more-4x2@4x.png'))}}
+    # monsters & beasts as one NES encounter screen
+    from nes_beasts import BEASTS, group as beast_group
+    bd = os.path.join(ROOT, 'chars', 'beasts')
+    os.makedirs(bd, exist_ok=True)
+    for name, im in (('group-nes', beast_group(BEASTS)), ('group-nes-3x3', beast_group(BEASTS, cols=3))):
+        im.save(os.path.join(bd, name + '.png'))
+        scale(im, 4).save(os.path.join(bd, name + '@4x.png'))
+    groups['beasts'] = {'name': {'zh': '怪物與野獸', 'en': 'Monsters & Beasts'}, 'faction': 'beast',
+                        'members': BEASTS, 'style': 'nes',
+                        'files': {k: 'chars/beasts/' + v for k, v in (('nes', 'group-nes.png'), ('nes4x', 'group-nes@4x.png'),
+                                                                       ('nesTall', 'group-nes-3x3.png'), ('nesTall4x', 'group-nes-3x3@4x.png'))}}
     groups['family']['faction'] = 'west'
     with open(os.path.join(ROOT, 'chars', 'index.json'), 'w', encoding='utf-8') as f:
         json.dump({'version': 3, 'mainStyle': 'nes', 'styles': styles, 'groups': groups, 'characters': entries},

@@ -9,7 +9,7 @@
     walk_side: { zh: '行走（側面）', en: 'Walk (side)' }, action: { zh: '招式', en: 'Signature move' },
     walk_down: { zh: '行走（下）', en: 'Walk (down)' }, walk_up: { zh: '行走（上）', en: 'Walk (up)' },
     walk_left: { zh: '行走（左）', en: 'Walk (left)' }, walk_right: { zh: '行走（右）', en: 'Walk (right)' },
-    guard: { zh: '舉盾挑釁', en: 'Shield taunt' },
+    guard: { zh: '舉盾挑釁', en: 'Shield taunt' }, move: { zh: '待機／移動', en: 'Idle / move' },
   };
   const DL = [
     ['portrait', { zh: '頭像', en: 'Portrait' }], ['portrait4x', { zh: '頭像 4x', en: 'Portrait 4x' }],
@@ -111,7 +111,7 @@
       b.append(nm, el('div', 'stylelab', styleName(v.style)));
       b.addEventListener('click', () => showDetail(c, v.style));
       grid.appendChild(b);
-      still(pc, v._por, fit(v._por.height, 128));
+      still(pc, v._por, fit(Math.max(v._por.height, v._por.width * 0.875), 128));
       player(bc, v, firstAnim(v), fit(v._meta.frameHeight, 128));
     }
   }
@@ -123,15 +123,19 @@
     $('#d-name').textContent = lang === 'zh' ? `${c.name.zh}　${c.name.en}` : `${c.name.en}  ${c.name.zh}`;
     $('#d-title').textContent = `${t(c.title)} · ${t(c.style_name)}`;
     $('#d-bio').textContent = t(c.bio);
-    $('#d-meta').textContent = (lang === 'zh' ? '兵器：' : 'Weapon: ') + t(c.weapon) + ' · ' +
-      (lang === 'zh' ? `頭像 ${v.sizes.portrait.join('×')}，${v.colours.portrait} 色；角色格 ${v.sizes.frame.join('×')}`
-        : `portrait ${v.sizes.portrait.join('×')}, ${v.colours.portrait} colours; sprite cell ${v.sizes.frame.join('×')}`);
+    const monster = c.kind === 'monster';
+    const what = monster ? (lang === 'zh' ? '棲地：' : 'Habitat: ') + t(c.habitat) : (lang === 'zh' ? '兵器：' : 'Weapon: ') + t(c.weapon);
+    $('#d-meta').textContent = what + ' · ' +
+      (lang === 'zh' ? `${monster ? '戰鬥圖' : '頭像'} ${v.sizes.portrait.join('×')}，${v.colours.portrait} 色；角色格 ${v.sizes.frame.join('×')}`
+        : `${monster ? 'battle picture' : 'portrait'} ${v.sizes.portrait.join('×')}, ${v.colours.portrait} colours; sprite cell ${v.sizes.frame.join('×')}`);
+    $('#d-por').closest('figure').querySelector('figcaption').textContent = monster ? (lang === 'zh' ? '戰鬥圖' : 'Battle picture') : (lang === 'zh' ? '頭像' : 'Portrait');
+    $('#d-chi').closest('figure').querySelector('figcaption').textContent = monster ? (lang === 'zh' ? '地圖小圖' : 'Field sprite') : (lang === 'zh' ? '全身' : 'Full body');
     const vs = $('#d-styles'); vs.textContent = '';
     c.variants.forEach((x) => {
       const b = el('button', 'chip' + (x.style === v.style ? ' on' : ''), styleName(x.style)); b.type = 'button';
       b.addEventListener('click', () => showDetail(c, x.style)); vs.appendChild(b);
     });
-    $('#d-blurb').textContent = t(DATA.styles[v.style].blurb);
+    $('#d-blurb').textContent = monster ? t(BEAST_BLURB) : t(DATA.styles[v.style].blurb);
     const box = $('#d-anims'); box.textContent = '';
     v.animations.forEach((n) => {
       const b = el('button', 'chip' + (n === open.anim ? ' on' : ''), t(ANIM_NAMES[n]) || n); b.type = 'button';
@@ -169,7 +173,7 @@
     if (nesBox) {
       nesBox.textContent = '';
       for (const c of DATA.characters) {
-        const v = c.variants.find((x) => x.style === 'nes'); if (!v) continue;
+        const v = c.variants.find((x) => x.style === 'nes'); if (!v || c.kind === 'monster') continue;
         const col = el('article', 'cmp'); col.style.setProperty('--fc', c.colour);
         const art = el('div', 'cmp-art');
         const pc = el('canvas', 'nesframe'), a1 = el('canvas'), a2 = el('canvas');
@@ -238,6 +242,10 @@
       : `Your pick: ${styleName(picked)}. Tell Claude, and more characters can be drawn in this style.`) : '';
   }
 
+  const BEAST_BLURB = {
+    zh: '原創怪物，紅白機前視角戰鬥圖：最大 64×64，粗黑線、只用紅白機標準色盤，每 16×16 格一組三色（全圖最多四組），眼光、火焰等小亮點用精靈疊上；配 16×16 或 16×24 的地圖小圖，兩格動畫兼作待機與移動。',
+    en: 'Original monsters as NES front-view battle pictures: at most 64×64, bold black lines, only NES palette colours with one 3-colour set per 16×16 area (at most four sets), and sprite overlays for glowing eyes and sparks; plus a 16×16 or 16×24 field sprite whose two frames serve to idle and to move.',
+  };
   // group roster pictures above the grid: the one that matches the faction filter (both for 'all')
   const CAPS = {
     family: { zh: '一家四口：傑夫（父）、艾琳（母）、喬許（10 歲）、賈斯珀（8 歲）· 主畫風 8-bit 紅白機（霸王の大陸風）',
@@ -246,10 +254,15 @@
       en: 'Longmen Wulin: Yi Rui, Yi Shuo, Leng Xiaotian, Mr Bai, Liu Hanyan, Kuchan · 8-bit Famicom style' },
     longmenFoes: { zh: '黑風寨與幽冥教：黑熊、刀疤、瘦猴、屠千秋 · 8-bit 紅白機畫風',
       en: 'Black Wind Fort and the Netherworld Sect: Black Bear, Scar, Skinny Monkey, Tu Qianqiu · 8-bit Famicom style' },
+    longmenMore: { zh: '龍門江湖眾生：鐵無私、錢萬里、溫如玉、小蓮、厲寒山、獨臂漁翁、鬼面護法、蒙面人 · 8-bit 紅白機畫風',
+      en: 'More of the Longmen jianghu: Tie Wusi, Qian Wanli, Wen Ruyu, Xiaolian, Li Hanshan, the One-Armed Fisherman, the Ghost-mask Warden, the Masked Man · 8-bit Famicom style' },
+    beasts: { zh: '怪物與野獸：白猿、吊睛白額虎、鎮宅石獅、符咒殭屍、山魈、九尾狐、江蛟、三足火鴉、毒蟾 · 紅白機戰鬥圖與地圖小圖',
+      en: 'Monsters & Beasts: White Ape, White-Browed Tiger, Stone Guardian Lion, Talisman Jiangshi, Shanxiao, Nine-Tailed Fox, River Jiao, Fire Crow, Venom Toad · NES battle pictures and field sprites' },
   };
   function hero() {
     const box = $('#heroes'); if (!box || !DATA || !DATA.groups) return;
-    const ids = faction === 'all' ? ['family', 'longmen', 'longmenFoes'] : faction === 'longmen' ? ['longmen', 'longmenFoes'] : ['family'];
+    const ids = faction === 'all' ? ['family', 'longmen', 'longmenFoes', 'longmenMore', 'beasts']
+      : faction === 'longmen' ? ['longmen', 'longmenFoes', 'longmenMore'] : faction === 'beast' ? ['beasts'] : faction === 'west' ? ['family'] : [];
     box.textContent = '';
     const room = Math.max(120, (box.clientWidth || 600) - 32);
     for (const id of ids) {

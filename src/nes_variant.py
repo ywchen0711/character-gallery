@@ -10,8 +10,8 @@ class NESVariant(Variant):
     primary = True
     fps = {'idle': 2, 'walk': 4, 'walk_side': 4}
     anchor = (8, 23)
-    notes = {'walk': 'front; the second frame is the first mirrored, the usual NES trick',
-             'walk_side': 'faces right; mirror horizontally for left'}
+    notes = {'walk': 'front; frame 2 has the same body as frame 1, only the legs step (the bottom rows)',
+             'walk_side': 'faces right (stride, then legs together; same body); mirror horizontally for left'}
 
     def __init__(self, cid):
         self.cid = cid

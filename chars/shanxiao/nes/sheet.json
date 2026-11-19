@@ -1,0 +1,19 @@
+{
+  "image": "sheet.png",
+  "frameWidth": 16,
+  "frameHeight": 16,
+  "anchor": {
+    "x": 8,
+    "y": 15,
+    "note": "feet centre in each cell"
+  },
+  "animations": {
+    "move": {
+      "row": 0,
+      "frames": 2,
+      "fps": 3,
+      "loop": true,
+      "note": "two frames, used both to idle and to move; faces the viewer"
+    }
+  }
+}
