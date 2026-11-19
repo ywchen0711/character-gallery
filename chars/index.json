@@ -2355,7 +2355,7 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -2421,7 +2421,7 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -2487,7 +2487,7 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -2619,7 +2619,7 @@
             ]
           },
           "colours": {
-            "portrait": 6,
+            "portrait": 7,
             "sheet": 3
           },
           "animations": [
@@ -2643,8 +2643,8 @@
         "en": "Thousand-Year Fox"
       },
       "bio": {
-        "zh": "修行千年的金毛狐狸，身後九條尾巴像扇子一樣展開，尾尖燃著藍色狐火。眼睛細長帶紅，會讓迷路的旅人一直在原地打轉。",
-        "en": "A golden fox with a thousand years of cultivation, nine tails fanned out behind it, blue fox-fire burning at their tips. Its long red eyes can keep a lost traveller walking in circles all night."
+        "zh": "修行千年的金毛狐狸，身後九條尾巴像扇子一樣展開，尾尖燃著雪白的狐火。眼睛細長帶紅，會讓迷路的旅人一直在原地打轉。",
+        "en": "A golden fox with a thousand years of cultivation, nine tails fanned out behind it, pale fox-fire burning at their tips. Its long red eyes can keep a lost traveller walking in circles all night."
       },
       "habitat": {
         "zh": "月夜的竹林與古墳",
@@ -2685,7 +2685,7 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -2751,7 +2751,7 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 9,
             "sheet": 3
           },
           "animations": [
@@ -2841,8 +2841,8 @@
         "en": "Poison King of the Marsh"
       },
       "bio": {
-        "zh": "蹲在沼澤爛泥裡的大毒蟾，比水牛還寬，背上長滿冒綠光的毒疣，一雙紅眼睛。嘴角滴著毒涎，噴一口毒霧，十步內的草全枯了。",
-        "en": "A huge toad squatting in the marsh mud, wider than a water buffalo, its back covered in glowing green poison warts, its eyes red. Venom drips from its mouth, and one breath of its poison mist withers the grass for ten paces."
+        "zh": "蹲在沼澤爛泥裡的大毒蟾，比水牛還寬，背上長滿冒著毒漿的黃疣，一雙紅眼睛。嘴角滴著毒涎，噴一口毒霧，十步內的草全枯了。",
+        "en": "A huge toad squatting in the marsh mud, wider than a water buffalo, its back covered in oozing yellow poison warts, its eyes red. Venom drips from its mouth, and one breath of its poison mist withers the grass for ten paces."
       },
       "habitat": {
         "zh": "沼澤與毒瘴林",
@@ -2883,7 +2883,7 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 5,
             "sheet": 3
           },
           "animations": [
@@ -2942,8 +2942,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -3010,8 +3010,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -3019,7 +3019,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -3078,8 +3078,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              32
+              44,
+              44
             ],
             "frame": [
               16,
@@ -3087,7 +3087,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -3146,8 +3146,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -3155,7 +3155,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -3214,8 +3214,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -3282,8 +3282,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              40
+              40,
+              44
             ],
             "frame": [
               16,
@@ -3350,8 +3350,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              32
+              40,
+              40
             ],
             "frame": [
               16,
@@ -3418,7 +3418,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -3427,7 +3427,7 @@
             ]
           },
           "colours": {
-            "portrait": 6,
+            "portrait": 5,
             "sheet": 3
           },
           "animations": [
@@ -3486,7 +3486,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -3554,8 +3554,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              32
+              44,
+              44
             ],
             "frame": [
               16,
@@ -3563,7 +3563,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -3622,8 +3622,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              32
+              44,
+              40
             ],
             "frame": [
               16,
@@ -3631,7 +3631,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 4,
             "sheet": 3
           },
           "animations": [
@@ -3690,8 +3690,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              44,
+              44
             ],
             "frame": [
               16,
@@ -3699,7 +3699,7 @@
             ]
           },
           "colours": {
-            "portrait": 6,
+            "portrait": 5,
             "sheet": 3
           },
           "animations": [
@@ -3758,8 +3758,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -3767,7 +3767,7 @@
             ]
           },
           "colours": {
-            "portrait": 6,
+            "portrait": 5,
             "sheet": 3
           },
           "animations": [
@@ -3826,8 +3826,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              40
+              40,
+              48
             ],
             "frame": [
               16,
@@ -3835,7 +3835,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -3859,8 +3859,8 @@
         "en": "Tier 2 common foe"
       },
       "bio": {
-        "zh": "紅傘白點的毒菇成了精，一跺腳就噴毒粉。",
-        "en": "A red, white-spotted toadstool turned imp; it stamps and puffs out poison spores."
+        "zh": "紫色尖傘的毒菇成了精，傘下垂著一圈菌褶，一跺腳就噴毒粉。",
+        "en": "A violet, ridged ink-cap mushroom turned imp, a frill of gills under its cap; it stamps and puffs out poison spores."
       },
       "habitat": {
         "zh": "丘陵、河岸與山寨",
@@ -3894,8 +3894,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              32
+              40,
+              44
             ],
             "frame": [
               16,
@@ -3903,7 +3903,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -3962,8 +3962,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              40
+              40,
+              48
             ],
             "frame": [
               16,
@@ -4030,8 +4030,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              32
+              40,
+              40
             ],
             "frame": [
               16,
@@ -4039,7 +4039,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 4,
             "sheet": 3
           },
           "animations": [
@@ -4098,8 +4098,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -4107,7 +4107,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -4166,7 +4166,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -4234,7 +4234,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -4302,7 +4302,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -4370,8 +4370,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -4438,8 +4438,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -4447,7 +4447,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -4506,8 +4506,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -4515,7 +4515,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -4574,8 +4574,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              40
+              40,
+              44
             ],
             "frame": [
               16,
@@ -4642,8 +4642,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              40
+              40,
+              48
             ],
             "frame": [
               16,
@@ -4710,8 +4710,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              32
+              40,
+              40
             ],
             "frame": [
               16,
@@ -4778,7 +4778,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -4846,7 +4846,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -4914,7 +4914,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -4982,7 +4982,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -5050,7 +5050,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -5118,8 +5118,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -5186,8 +5186,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              32
+              44,
+              40
             ],
             "frame": [
               16,
@@ -5195,7 +5195,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 4,
             "sheet": 3
           },
           "animations": [
@@ -5254,8 +5254,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              44,
+              44
             ],
             "frame": [
               16,
@@ -5263,7 +5263,7 @@
             ]
           },
           "colours": {
-            "portrait": 6,
+            "portrait": 5,
             "sheet": 3
           },
           "animations": [
@@ -5322,8 +5322,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              32
+              40,
+              40
             ],
             "frame": [
               16,
@@ -5390,8 +5390,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              40
+              40,
+              48
             ],
             "frame": [
               16,
@@ -5399,7 +5399,7 @@
             ]
           },
           "colours": {
-            "portrait": 5,
+            "portrait": 6,
             "sheet": 3
           },
           "animations": [
@@ -5458,8 +5458,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              32
+              40,
+              40
             ],
             "frame": [
               16,
@@ -5526,7 +5526,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -5535,7 +5535,7 @@
             ]
           },
           "colours": {
-            "portrait": 6,
+            "portrait": 5,
             "sheet": 3
           },
           "animations": [
@@ -5594,7 +5594,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -5603,7 +5603,7 @@
             ]
           },
           "colours": {
-            "portrait": 4,
+            "portrait": 5,
             "sheet": 3
           },
           "animations": [
@@ -5662,7 +5662,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -5730,8 +5730,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -5798,8 +5798,8 @@
           },
           "sizes": {
             "portrait": [
-              40,
-              32
+              48,
+              40
             ],
             "frame": [
               16,
@@ -5807,7 +5807,7 @@
             ]
           },
           "colours": {
-            "portrait": 6,
+            "portrait": 5,
             "sheet": 3
           },
           "animations": [
@@ -5866,7 +5866,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -5934,7 +5934,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -6002,8 +6002,8 @@
           },
           "sizes": {
             "portrait": [
-              32,
-              40
+              40,
+              48
             ],
             "frame": [
               16,
@@ -6070,7 +6070,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -6138,7 +6138,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -6206,7 +6206,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [
@@ -6274,7 +6274,7 @@
           },
           "sizes": {
             "portrait": [
-              32,
+              40,
               48
             ],
             "frame": [

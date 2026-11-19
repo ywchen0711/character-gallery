@@ -44,9 +44,18 @@ Characters so far:
   Stone Guardian Lion, 符咒殭屍 Talisman Jiangshi, 山魈 Shanxiao, 九尾狐 Nine-Tailed Fox, 江蛟 River Jiao,
   三足火鴉 Fire Crow, 毒蟾 Venom Toad. Monsters have `habitat` instead of `weapon`; people have `kind: "person"`.
 - 小怪 (Common Foes), 50 small regular monsters (faction `foe`, `kind: "monster"`, `tier` 1-5 from early to late areas,
-  `habitat`, `base`): 26 base designs in `src/nes_foes_art.py` with NES-style palette swaps (灰狼 -> 血狼 -> 霜狼 ...);
-  battle pictures 32x32 to 40x48 (transparent backdrop) and a 16x16 field sprite with a two-frame `move`.
-  Group picture `chars/foes/group-nes.png` (10 per row, by tier) and `group-nes-5col.png`.
+  `habitat`, `base`): 26 base designs with NES-style palette swaps (灰狼 -> 血狼 -> 霜狼 ...), colours in
+  `src/nes_foes_art.py`; battle pictures 40x40 to 48x48 (transparent backdrop) and a 16x16 field sprite with a
+  two-frame `move`. Group picture `chars/foes/group-nes.png` (10 per row, by tier) and `group-nes-5col.png`.
+- How the monsters are drawn (all 59, redrawn 2026-11-19 to get rid of crooked, lopsided shapes): each design is a
+  small Python function in `src/mon_d1.py` .. `mon_d4.py` built with the helper `src/mondraw.py` (ellipses, limbs,
+  tubes and polygons rasterised on pixel centres, so fronts mirror exactly; one light from the top-left in three
+  tones per material; separation lines between parts; a traced 1-px black outline; hand-placed eyes and details).
+  `mondraw.famicom()` splits a picture into the background layer and a sprite overlay and finds the sub-palettes
+  that keep every 16x16 area and 8x8 sprite tile legal. Field sprites are one hand-typed frame each
+  (`src/nes_foes_fields.py`, `SPRITES` in `src/nes_beasts_art.py`); `src/nes_walk_mon.py` makes frame 2 so only
+  what should move moves (a step over planted feet, a hop, or a float). `python -P tools/lint.py` checks every
+  picture for orphan pixels, broken or doubled outlines, jaggies in the silhouette and mirror symmetry.
 
 Group pictures in `chars/family/`: `group-nes.png` (the main-style roster: four framed portraits with their sprites on one baseline) and `group-nes-2x2.png` for narrow screens; the older `group.png` (transparent) and `group-scene.png`. Each also at 4x.
 
