@@ -188,6 +188,72 @@
         "nesTall": "chars/beasts/group-nes-3x3.png",
         "nesTall4x": "chars/beasts/group-nes-3x3@4x.png"
       }
+    },
+    "foes": {
+      "name": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "faction": "foe",
+      "members": [
+        "greywolf",
+        "wildboar",
+        "bambooviper",
+        "cavebat",
+        "rivercrab",
+        "mountainmonkey",
+        "wisp",
+        "dummy",
+        "lackey",
+        "redsnake",
+        "tigerhornet",
+        "centipede",
+        "sandscorpion",
+        "treesprite",
+        "toadstool",
+        "littlejiangshi",
+        "windsprite",
+        "stonetoad",
+        "cudgeler",
+        "archer",
+        "roguemonk",
+        "bloodwolf",
+        "ironboar",
+        "bloodbat",
+        "goldmonkey",
+        "papereffigy",
+        "inkspirit",
+        "skeleton",
+        "drowned",
+        "bronzeman",
+        "assassin",
+        "daoist",
+        "ironcrab",
+        "ghosthornet",
+        "goldcentipede",
+        "netherflame",
+        "deadwood",
+        "thundersprite",
+        "irondummy",
+        "bloodthug",
+        "ironmonk",
+        "frostwolf",
+        "inkscorpion",
+        "blackbone",
+        "coldpool",
+        "bronzejiangshi",
+        "vajraguardian",
+        "netherarcher",
+        "netherassassin",
+        "blackdaoist"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/foes/group-nes.png",
+        "nes4x": "chars/foes/group-nes@4x.png",
+        "nesTall": "chars/foes/group-nes-5col.png",
+        "nesTall4x": "chars/foes/group-nes-5col@4x.png"
+      }
     }
   },
   "characters": [
@@ -2809,6 +2875,3406 @@
           "sizes": {
             "portrait": [
               64,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greywolf",
+      "name": {
+        "zh": "灰狼",
+        "en": "Grey Wolf"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 1 階小怪",
+        "en": "Tier 1 common foe"
+      },
+      "bio": {
+        "zh": "成群在山林小徑邊游蕩的灰狼，餓了就敢圍住落單的旅人。",
+        "en": "Grey wolves roam the forest paths in packs and will circle a lone traveller when hungry."
+      },
+      "habitat": {
+        "zh": "村外田野與山林小徑",
+        "en": "Fields and forest paths outside the villages"
+      },
+      "tier": 1,
+      "base": "wolf",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/greywolf/nes/portrait.png",
+            "portrait4x": "chars/greywolf/nes/portrait@4x.png",
+            "body": "chars/greywolf/nes/body.png",
+            "body4x": "chars/greywolf/nes/body@4x.png",
+            "sheet": "chars/greywolf/nes/sheet.png",
+            "sheet4x": "chars/greywolf/nes/sheet@4x.png",
+            "sheetJson": "chars/greywolf/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wildboar",
+      "name": {
+        "zh": "山豬",
+        "en": "Wild Boar"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 1 階小怪",
+        "en": "Tier 1 common foe"
+      },
+      "bio": {
+        "zh": "低頭就衝的山豬，獠牙能把籬笆整排挑翻。",
+        "en": "A boar that charges head-down; its tusks can toss a whole fence aside."
+      },
+      "habitat": {
+        "zh": "村外田野與山林小徑",
+        "en": "Fields and forest paths outside the villages"
+      },
+      "tier": 1,
+      "base": "boar",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/wildboar/nes/portrait.png",
+            "portrait4x": "chars/wildboar/nes/portrait@4x.png",
+            "body": "chars/wildboar/nes/body.png",
+            "body4x": "chars/wildboar/nes/body@4x.png",
+            "sheet": "chars/wildboar/nes/sheet.png",
+            "sheet4x": "chars/wildboar/nes/sheet@4x.png",
+            "sheetJson": "chars/wildboar/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bambooviper",
+      "name": {
+        "zh": "竹葉青",
+        "en": "Bamboo Viper"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 1 階小怪",
+        "en": "Tier 1 common foe"
+      },
+      "bio": {
+        "zh": "藏在竹林裡的小青蛇，綠得跟竹葉分不出來。",
+        "en": "A small green snake that hides in bamboo, the same colour as the leaves."
+      },
+      "habitat": {
+        "zh": "村外田野與山林小徑",
+        "en": "Fields and forest paths outside the villages"
+      },
+      "tier": 1,
+      "base": "snake",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/bambooviper/nes/portrait.png",
+            "portrait4x": "chars/bambooviper/nes/portrait@4x.png",
+            "body": "chars/bambooviper/nes/body.png",
+            "body4x": "chars/bambooviper/nes/body@4x.png",
+            "sheet": "chars/bambooviper/nes/sheet.png",
+            "sheet4x": "chars/bambooviper/nes/sheet@4x.png",
+            "sheetJson": "chars/bambooviper/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cavebat",
+      "name": {
+        "zh": "洞蝠",
+        "en": "Cave Bat"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 1 階小怪",
+        "en": "Tier 1 common foe"
+      },
+      "bio": {
+        "zh": "山洞裡倒掛的蝙蝠，一有火光就整群撲出來。",
+        "en": "Bats that hang in caves and burst out in a swarm at the first light of a torch."
+      },
+      "habitat": {
+        "zh": "村外田野與山林小徑",
+        "en": "Fields and forest paths outside the villages"
+      },
+      "tier": 1,
+      "base": "bat",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/cavebat/nes/portrait.png",
+            "portrait4x": "chars/cavebat/nes/portrait@4x.png",
+            "body": "chars/cavebat/nes/body.png",
+            "body4x": "chars/cavebat/nes/body@4x.png",
+            "sheet": "chars/cavebat/nes/sheet.png",
+            "sheet4x": "chars/cavebat/nes/sheet@4x.png",
+            "sheetJson": "chars/cavebat/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rivercrab",
+      "name": {
+        "zh": "河蟹",
+        "en": "River Crab"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 1 階小怪",
+        "en": "Tier 1 common foe"
+      },
+      "bio": {
+        "zh": "河岸邊橫著走的大螃蟹，鉗子能夾斷竹竿。",
+        "en": "A big crab that sidles along the riverbank; its claws can snap a bamboo pole."
+      },
+      "habitat": {
+        "zh": "村外田野與山林小徑",
+        "en": "Fields and forest paths outside the villages"
+      },
+      "tier": 1,
+      "base": "crab",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/rivercrab/nes/portrait.png",
+            "portrait4x": "chars/rivercrab/nes/portrait@4x.png",
+            "body": "chars/rivercrab/nes/body.png",
+            "body4x": "chars/rivercrab/nes/body@4x.png",
+            "sheet": "chars/rivercrab/nes/sheet.png",
+            "sheet4x": "chars/rivercrab/nes/sheet@4x.png",
+            "sheetJson": "chars/rivercrab/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mountainmonkey",
+      "name": {
+        "zh": "山猴",
+        "en": "Mountain Monkey"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 1 階小怪",
+        "en": "Tier 1 common foe"
+      },
+      "bio": {
+        "zh": "拿樹枝當棍子的山猴，最愛搶旅人的乾糧。",
+        "en": "A mountain monkey with a stick for a club that loves to snatch travellers' food."
+      },
+      "habitat": {
+        "zh": "村外田野與山林小徑",
+        "en": "Fields and forest paths outside the villages"
+      },
+      "tier": 1,
+      "base": "monkey",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/mountainmonkey/nes/portrait.png",
+            "portrait4x": "chars/mountainmonkey/nes/portrait@4x.png",
+            "body": "chars/mountainmonkey/nes/body.png",
+            "body4x": "chars/mountainmonkey/nes/body@4x.png",
+            "sheet": "chars/mountainmonkey/nes/sheet.png",
+            "sheet4x": "chars/mountainmonkey/nes/sheet@4x.png",
+            "sheetJson": "chars/mountainmonkey/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              40
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wisp",
+      "name": {
+        "zh": "鬼火",
+        "en": "Will-o'-wisp"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 1 階小怪",
+        "en": "Tier 1 common foe"
+      },
+      "bio": {
+        "zh": "墳地上飄的藍色鬼火，會跟著人走。",
+        "en": "A blue ghost-flame over the graves that follows people home."
+      },
+      "habitat": {
+        "zh": "村外田野與山林小徑",
+        "en": "Fields and forest paths outside the villages"
+      },
+      "tier": 1,
+      "base": "wisp",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/wisp/nes/portrait.png",
+            "portrait4x": "chars/wisp/nes/portrait@4x.png",
+            "body": "chars/wisp/nes/body.png",
+            "body4x": "chars/wisp/nes/body@4x.png",
+            "sheet": "chars/wisp/nes/sheet.png",
+            "sheet4x": "chars/wisp/nes/sheet@4x.png",
+            "sheetJson": "chars/wisp/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dummy",
+      "name": {
+        "zh": "木人樁",
+        "en": "Living Training Dummy"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 1 階小怪",
+        "en": "Tier 1 common foe"
+      },
+      "bio": {
+        "zh": "武館裡被打了一萬次的木人樁，終於決定還手。",
+        "en": "A training dummy struck ten thousand times in the martial hall that has finally decided to hit back."
+      },
+      "habitat": {
+        "zh": "村外田野與山林小徑",
+        "en": "Fields and forest paths outside the villages"
+      },
+      "tier": 1,
+      "base": "dummy",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/dummy/nes/portrait.png",
+            "portrait4x": "chars/dummy/nes/portrait@4x.png",
+            "body": "chars/dummy/nes/body.png",
+            "body4x": "chars/dummy/nes/body@4x.png",
+            "sheet": "chars/dummy/nes/sheet.png",
+            "sheet4x": "chars/dummy/nes/sheet@4x.png",
+            "sheetJson": "chars/dummy/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lackey",
+      "name": {
+        "zh": "黑風嘍囉",
+        "en": "Black Wind Lackey"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 1 階小怪",
+        "en": "Tier 1 common foe"
+      },
+      "bio": {
+        "zh": "黑風寨最底層的嘍囉，扛著木棍，嗓門比本事大。",
+        "en": "The lowest of the Black Wind Fort: a cudgel on his shoulder and a voice bigger than his skill."
+      },
+      "habitat": {
+        "zh": "村外田野與山林小徑",
+        "en": "Fields and forest paths outside the villages"
+      },
+      "tier": 1,
+      "base": "lackey",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/lackey/nes/portrait.png",
+            "portrait4x": "chars/lackey/nes/portrait@4x.png",
+            "body": "chars/lackey/nes/body.png",
+            "body4x": "chars/lackey/nes/body@4x.png",
+            "sheet": "chars/lackey/nes/sheet.png",
+            "sheet4x": "chars/lackey/nes/sheet@4x.png",
+            "sheetJson": "chars/lackey/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "redsnake",
+      "name": {
+        "zh": "赤鍊蛇",
+        "en": "Red Chain Snake"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "身上一節一節紅黑相間的蛇，咬一口麻半天。",
+        "en": "A snake banded red and black like a chain; one bite numbs you for half a day."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "snake",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/redsnake/nes/portrait.png",
+            "portrait4x": "chars/redsnake/nes/portrait@4x.png",
+            "body": "chars/redsnake/nes/body.png",
+            "body4x": "chars/redsnake/nes/body@4x.png",
+            "sheet": "chars/redsnake/nes/sheet.png",
+            "sheet4x": "chars/redsnake/nes/sheet@4x.png",
+            "sheetJson": "chars/redsnake/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tigerhornet",
+      "name": {
+        "zh": "虎頭蜂",
+        "en": "Tiger Hornet"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "拳頭大的虎頭蜂，嗡嗡聲一響，山路上的人都趴下。",
+        "en": "A hornet as big as a fist; when its buzz comes up the path, everyone drops flat."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "hornet",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tigerhornet/nes/portrait.png",
+            "portrait4x": "chars/tigerhornet/nes/portrait@4x.png",
+            "body": "chars/tigerhornet/nes/body.png",
+            "body4x": "chars/tigerhornet/nes/body@4x.png",
+            "sheet": "chars/tigerhornet/nes/sheet.png",
+            "sheet4x": "chars/tigerhornet/nes/sheet@4x.png",
+            "sheetJson": "chars/tigerhornet/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "centipede",
+      "name": {
+        "zh": "蜈蚣",
+        "en": "Centipede"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "一尺長的紅蜈蚣，從石縫裡直立起來咬人。",
+        "en": "A red centipede a foot long that rears up out of the rock cracks to bite."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "centipede",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/centipede/nes/portrait.png",
+            "portrait4x": "chars/centipede/nes/portrait@4x.png",
+            "body": "chars/centipede/nes/body.png",
+            "body4x": "chars/centipede/nes/body@4x.png",
+            "sheet": "chars/centipede/nes/sheet.png",
+            "sheet4x": "chars/centipede/nes/sheet@4x.png",
+            "sheetJson": "chars/centipede/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sandscorpion",
+      "name": {
+        "zh": "沙蠍",
+        "en": "Sand Scorpion"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "躲在沙裡只露出尾鉤的蠍子。",
+        "en": "A scorpion that hides in the sand with only its stinger showing."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "scorpion",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sandscorpion/nes/portrait.png",
+            "portrait4x": "chars/sandscorpion/nes/portrait@4x.png",
+            "body": "chars/sandscorpion/nes/body.png",
+            "body4x": "chars/sandscorpion/nes/body@4x.png",
+            "sheet": "chars/sandscorpion/nes/sheet.png",
+            "sheet4x": "chars/sandscorpion/nes/sheet@4x.png",
+            "sheetJson": "chars/sandscorpion/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "treesprite",
+      "name": {
+        "zh": "樹精",
+        "en": "Tree Sprite"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "老樹樁成了精，用樹根走路，枝葉一甩就打人。",
+        "en": "An old stump come alive; it walks on its roots and swats with its branches."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "treesprite",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/treesprite/nes/portrait.png",
+            "portrait4x": "chars/treesprite/nes/portrait@4x.png",
+            "body": "chars/treesprite/nes/body.png",
+            "body4x": "chars/treesprite/nes/body@4x.png",
+            "sheet": "chars/treesprite/nes/sheet.png",
+            "sheet4x": "chars/treesprite/nes/sheet@4x.png",
+            "sheetJson": "chars/treesprite/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              40
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toadstool",
+      "name": {
+        "zh": "毒菇妖",
+        "en": "Toadstool Imp"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "紅傘白點的毒菇成了精，一跺腳就噴毒粉。",
+        "en": "A red, white-spotted toadstool turned imp; it stamps and puffs out poison spores."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "mushroom",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/toadstool/nes/portrait.png",
+            "portrait4x": "chars/toadstool/nes/portrait@4x.png",
+            "body": "chars/toadstool/nes/body.png",
+            "body4x": "chars/toadstool/nes/body@4x.png",
+            "sheet": "chars/toadstool/nes/sheet.png",
+            "sheet4x": "chars/toadstool/nes/sheet@4x.png",
+            "sheetJson": "chars/toadstool/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "littlejiangshi",
+      "name": {
+        "zh": "小殭屍",
+        "en": "Little Jiangshi"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "還沒長大就入了土的小殭屍，跳起來比大人還快。",
+        "en": "A jiangshi buried before it could grow up; it hops faster than the grown ones."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "littlejiangshi",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/littlejiangshi/nes/portrait.png",
+            "portrait4x": "chars/littlejiangshi/nes/portrait@4x.png",
+            "body": "chars/littlejiangshi/nes/body.png",
+            "body4x": "chars/littlejiangshi/nes/body@4x.png",
+            "sheet": "chars/littlejiangshi/nes/sheet.png",
+            "sheet4x": "chars/littlejiangshi/nes/sheet@4x.png",
+            "sheetJson": "chars/littlejiangshi/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              40
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "windsprite",
+      "name": {
+        "zh": "風精",
+        "en": "Wind Sprite"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "山口的一陣旋風，捲著落葉，笑嘻嘻地掀人帽子。",
+        "en": "A whirlwind in the mountain pass full of leaves that giggles and steals hats."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "windsprite",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/windsprite/nes/portrait.png",
+            "portrait4x": "chars/windsprite/nes/portrait@4x.png",
+            "body": "chars/windsprite/nes/body.png",
+            "body4x": "chars/windsprite/nes/body@4x.png",
+            "sheet": "chars/windsprite/nes/sheet.png",
+            "sheet4x": "chars/windsprite/nes/sheet@4x.png",
+            "sheetJson": "chars/windsprite/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stonetoad",
+      "name": {
+        "zh": "石蟾",
+        "en": "Stone Toad"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "廟門口的三足石蟾，嘴裡含著銅錢，有人偷錢就跳起來。",
+        "en": "The three-legged stone toad at the temple gate with a coin in its mouth; it leaps at coin thieves."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "stonetoad",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/stonetoad/nes/portrait.png",
+            "portrait4x": "chars/stonetoad/nes/portrait@4x.png",
+            "body": "chars/stonetoad/nes/body.png",
+            "body4x": "chars/stonetoad/nes/body@4x.png",
+            "sheet": "chars/stonetoad/nes/sheet.png",
+            "sheet4x": "chars/stonetoad/nes/sheet@4x.png",
+            "sheetJson": "chars/stonetoad/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cudgeler",
+      "name": {
+        "zh": "黑風棍手",
+        "en": "Black Wind Cudgeler"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "黑風寨的老手，棍子上纏著鐵釘。",
+        "en": "A seasoned Black Wind bandit whose cudgel is wrapped with iron nails."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "lackey",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/cudgeler/nes/portrait.png",
+            "portrait4x": "chars/cudgeler/nes/portrait@4x.png",
+            "body": "chars/cudgeler/nes/body.png",
+            "body4x": "chars/cudgeler/nes/body@4x.png",
+            "sheet": "chars/cudgeler/nes/sheet.png",
+            "sheet4x": "chars/cudgeler/nes/sheet@4x.png",
+            "sheetJson": "chars/cudgeler/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "archer",
+      "name": {
+        "zh": "山賊弓手",
+        "en": "Bandit Archer"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "躲在山壁上放冷箭的弓手。",
+        "en": "An archer who hides on the cliff face and looses arrows from cover."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "archer",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/archer/nes/portrait.png",
+            "portrait4x": "chars/archer/nes/portrait@4x.png",
+            "body": "chars/archer/nes/body.png",
+            "body4x": "chars/archer/nes/body@4x.png",
+            "sheet": "chars/archer/nes/sheet.png",
+            "sheet4x": "chars/archer/nes/sheet@4x.png",
+            "sheetJson": "chars/archer/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roguemonk",
+      "name": {
+        "zh": "惡僧",
+        "en": "Rogue Monk"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "被逐出寺門的和尚，念珠還掛著，心早就不在了。",
+        "en": "A monk driven out of his temple; he still wears his beads, but his heart left long ago."
+      },
+      "habitat": {
+        "zh": "丘陵、河岸與山寨",
+        "en": "Hills, riverbanks and bandit forts"
+      },
+      "tier": 2,
+      "base": "roguemonk",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/roguemonk/nes/portrait.png",
+            "portrait4x": "chars/roguemonk/nes/portrait@4x.png",
+            "body": "chars/roguemonk/nes/body.png",
+            "body4x": "chars/roguemonk/nes/body@4x.png",
+            "sheet": "chars/roguemonk/nes/sheet.png",
+            "sheet4x": "chars/roguemonk/nes/sheet@4x.png",
+            "sheetJson": "chars/roguemonk/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bloodwolf",
+      "name": {
+        "zh": "血狼",
+        "en": "Blood Wolf"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "吃過人血的狼，毛色轉成暗紅，眼睛發黃光，比灰狼凶十倍。",
+        "en": "A wolf that has tasted human blood; its coat has turned dark red and its eyes glow yellow."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "wolf",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/bloodwolf/nes/portrait.png",
+            "portrait4x": "chars/bloodwolf/nes/portrait@4x.png",
+            "body": "chars/bloodwolf/nes/body.png",
+            "body4x": "chars/bloodwolf/nes/body@4x.png",
+            "sheet": "chars/bloodwolf/nes/sheet.png",
+            "sheet4x": "chars/bloodwolf/nes/sheet@4x.png",
+            "sheetJson": "chars/bloodwolf/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ironboar",
+      "name": {
+        "zh": "鐵鬃豬",
+        "en": "Ironbristle Boar"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "背上的鬃毛硬得像鐵釘，刀砍下去會冒火星。",
+        "en": "Its back bristles are as hard as iron nails; a blade striking them throws sparks."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "boar",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/ironboar/nes/portrait.png",
+            "portrait4x": "chars/ironboar/nes/portrait@4x.png",
+            "body": "chars/ironboar/nes/body.png",
+            "body4x": "chars/ironboar/nes/body@4x.png",
+            "sheet": "chars/ironboar/nes/sheet.png",
+            "sheet4x": "chars/ironboar/nes/sheet@4x.png",
+            "sheetJson": "chars/ironboar/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bloodbat",
+      "name": {
+        "zh": "吸血蝠",
+        "en": "Blood Bat"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "翅膀泛紅的大蝙蝠，專挑睡著的人下口。",
+        "en": "A big red-winged bat that only bites people who are asleep."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "bat",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/bloodbat/nes/portrait.png",
+            "portrait4x": "chars/bloodbat/nes/portrait@4x.png",
+            "body": "chars/bloodbat/nes/body.png",
+            "body4x": "chars/bloodbat/nes/body@4x.png",
+            "sheet": "chars/bloodbat/nes/sheet.png",
+            "sheet4x": "chars/bloodbat/nes/sheet@4x.png",
+            "sheetJson": "chars/bloodbat/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goldmonkey",
+      "name": {
+        "zh": "金毛猴",
+        "en": "Golden Monkey"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "金毛發亮的猴王手下，棍法居然有幾分章法。",
+        "en": "A golden-furred monkey from the ape king's band; its stick work is oddly disciplined."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "monkey",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/goldmonkey/nes/portrait.png",
+            "portrait4x": "chars/goldmonkey/nes/portrait@4x.png",
+            "body": "chars/goldmonkey/nes/body.png",
+            "body4x": "chars/goldmonkey/nes/body@4x.png",
+            "sheet": "chars/goldmonkey/nes/sheet.png",
+            "sheet4x": "chars/goldmonkey/nes/sheet@4x.png",
+            "sheetJson": "chars/goldmonkey/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              40
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papereffigy",
+      "name": {
+        "zh": "紙人",
+        "en": "Paper Effigy"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "出殯用的紙紮人，畫上眼睛以後自己站了起來。",
+        "en": "A paper funeral effigy that stood up by itself once its eyes were painted on."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "paperghost",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/papereffigy/nes/portrait.png",
+            "portrait4x": "chars/papereffigy/nes/portrait@4x.png",
+            "body": "chars/papereffigy/nes/body.png",
+            "body4x": "chars/papereffigy/nes/body@4x.png",
+            "sheet": "chars/papereffigy/nes/sheet.png",
+            "sheet4x": "chars/papereffigy/nes/sheet@4x.png",
+            "sheetJson": "chars/papereffigy/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              40
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inkspirit",
+      "name": {
+        "zh": "墨靈",
+        "en": "Ink Spirit"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "書齋裡打翻的一灘墨，吸了書生的怨氣，到處亂爬。",
+        "en": "A spilt pool of ink in a study that soaked up a scholar's grudge and now crawls about."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "inkblot",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/inkspirit/nes/portrait.png",
+            "portrait4x": "chars/inkspirit/nes/portrait@4x.png",
+            "body": "chars/inkspirit/nes/body.png",
+            "body4x": "chars/inkspirit/nes/body@4x.png",
+            "sheet": "chars/inkspirit/nes/sheet.png",
+            "sheet4x": "chars/inkspirit/nes/sheet@4x.png",
+            "sheetJson": "chars/inkspirit/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skeleton",
+      "name": {
+        "zh": "骷髏劍客",
+        "en": "Skeleton Swordsman"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "死在斷崖下的劍客，骨頭還記得怎麼出劍。",
+        "en": "A swordsman who died under the cliff; his bones still remember how to strike."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "skeleton",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/skeleton/nes/portrait.png",
+            "portrait4x": "chars/skeleton/nes/portrait@4x.png",
+            "body": "chars/skeleton/nes/body.png",
+            "body4x": "chars/skeleton/nes/body@4x.png",
+            "sheet": "chars/skeleton/nes/sheet.png",
+            "sheet4x": "chars/skeleton/nes/sheet@4x.png",
+            "sheetJson": "chars/skeleton/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drowned",
+      "name": {
+        "zh": "水鬼",
+        "en": "Drowned Ghost"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "長髮蓋臉、渾身滴水的水鬼，在渡口抓人的腳。",
+        "en": "A dripping ghost with long hair over its face that grabs ankles at the ferry landing."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "drowned",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/drowned/nes/portrait.png",
+            "portrait4x": "chars/drowned/nes/portrait@4x.png",
+            "body": "chars/drowned/nes/body.png",
+            "body4x": "chars/drowned/nes/body@4x.png",
+            "sheet": "chars/drowned/nes/sheet.png",
+            "sheet4x": "chars/drowned/nes/sheet@4x.png",
+            "sheetJson": "chars/drowned/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bronzeman",
+      "name": {
+        "zh": "銅人",
+        "en": "Bronze Guardian"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "寺裡試武用的銅人，機關一開就擺出拳架。",
+        "en": "A temple bronze man for testing fighters; trip its mechanism and it takes a stance."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "bronze",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/bronzeman/nes/portrait.png",
+            "portrait4x": "chars/bronzeman/nes/portrait@4x.png",
+            "body": "chars/bronzeman/nes/body.png",
+            "body4x": "chars/bronzeman/nes/body@4x.png",
+            "sheet": "chars/bronzeman/nes/sheet.png",
+            "sheet4x": "chars/bronzeman/nes/sheet@4x.png",
+            "sheetJson": "chars/bronzeman/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "assassin",
+      "name": {
+        "zh": "斗笠刺客",
+        "en": "Bamboo-hat Assassin"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "斗笠垂紗遮住臉的刺客，反手握著短刀。",
+        "en": "An assassin with a veil hanging from his bamboo hat and a short blade held reversed."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "assassin",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/assassin/nes/portrait.png",
+            "portrait4x": "chars/assassin/nes/portrait@4x.png",
+            "body": "chars/assassin/nes/body.png",
+            "body4x": "chars/assassin/nes/body@4x.png",
+            "sheet": "chars/assassin/nes/sheet.png",
+            "sheet4x": "chars/assassin/nes/sheet@4x.png",
+            "sheetJson": "chars/assassin/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "daoist",
+      "name": {
+        "zh": "妖道",
+        "en": "Rogue Daoist"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "畫符招鬼的妖道，長鬚飄飄，一臉仙氣，滿肚子壞水。",
+        "en": "A rogue Daoist who draws charms to summon ghosts: flowing beard, saintly face, a bellyful of mischief."
+      },
+      "habitat": {
+        "zh": "山洞、古廟與斷崖",
+        "en": "Caves, old temples and cliffs"
+      },
+      "tier": 3,
+      "base": "sorcerer",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/daoist/nes/portrait.png",
+            "portrait4x": "chars/daoist/nes/portrait@4x.png",
+            "body": "chars/daoist/nes/body.png",
+            "body4x": "chars/daoist/nes/body@4x.png",
+            "sheet": "chars/daoist/nes/sheet.png",
+            "sheet4x": "chars/daoist/nes/sheet@4x.png",
+            "sheetJson": "chars/daoist/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ironcrab",
+      "name": {
+        "zh": "鐵甲蟹",
+        "en": "Iron Crab"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "殼像鐵甲一樣灰亮的老螃蟹，躲在沼澤的爛泥裡。",
+        "en": "An old crab whose shell shines grey like armour; it lurks in the marsh mud."
+      },
+      "habitat": {
+        "zh": "古墓、沼澤與高塔",
+        "en": "Old tombs, marshes and towers"
+      },
+      "tier": 4,
+      "base": "crab",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/ironcrab/nes/portrait.png",
+            "portrait4x": "chars/ironcrab/nes/portrait@4x.png",
+            "body": "chars/ironcrab/nes/body.png",
+            "body4x": "chars/ironcrab/nes/body@4x.png",
+            "sheet": "chars/ironcrab/nes/sheet.png",
+            "sheet4x": "chars/ironcrab/nes/sheet@4x.png",
+            "sheetJson": "chars/ironcrab/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ghosthornet",
+      "name": {
+        "zh": "鬼面蜂",
+        "en": "Ghostface Hornet"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "背上花紋像一張鬼臉的毒蜂，養在古墓的蜂窩裡。",
+        "en": "A poison hornet whose back is patterned like a ghost face; it nests in old tombs."
+      },
+      "habitat": {
+        "zh": "古墓、沼澤與高塔",
+        "en": "Old tombs, marshes and towers"
+      },
+      "tier": 4,
+      "base": "hornet",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/ghosthornet/nes/portrait.png",
+            "portrait4x": "chars/ghosthornet/nes/portrait@4x.png",
+            "body": "chars/ghosthornet/nes/body.png",
+            "body4x": "chars/ghosthornet/nes/body@4x.png",
+            "sheet": "chars/ghosthornet/nes/sheet.png",
+            "sheet4x": "chars/ghosthornet/nes/sheet@4x.png",
+            "sheetJson": "chars/ghosthornet/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goldcentipede",
+      "name": {
+        "zh": "金頭蜈蚣",
+        "en": "Golden Centipede"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "金黃色的大蜈蚣，練毒的人拿牠泡酒。",
+        "en": "A great golden centipede that poison-masters steep in wine."
+      },
+      "habitat": {
+        "zh": "古墓、沼澤與高塔",
+        "en": "Old tombs, marshes and towers"
+      },
+      "tier": 4,
+      "base": "centipede",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/goldcentipede/nes/portrait.png",
+            "portrait4x": "chars/goldcentipede/nes/portrait@4x.png",
+            "body": "chars/goldcentipede/nes/body.png",
+            "body4x": "chars/goldcentipede/nes/body@4x.png",
+            "sheet": "chars/goldcentipede/nes/sheet.png",
+            "sheet4x": "chars/goldcentipede/nes/sheet@4x.png",
+            "sheetJson": "chars/goldcentipede/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "netherflame",
+      "name": {
+        "zh": "冥火",
+        "en": "Nether Flame"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "幽冥殿裡點不滅的紫火，碰到就渾身發冷。",
+        "en": "A purple flame of the Netherworld Hall that never goes out; its touch chills to the bone."
+      },
+      "habitat": {
+        "zh": "古墓、沼澤與高塔",
+        "en": "Old tombs, marshes and towers"
+      },
+      "tier": 4,
+      "base": "wisp",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/netherflame/nes/portrait.png",
+            "portrait4x": "chars/netherflame/nes/portrait@4x.png",
+            "body": "chars/netherflame/nes/body.png",
+            "body4x": "chars/netherflame/nes/body@4x.png",
+            "sheet": "chars/netherflame/nes/sheet.png",
+            "sheet4x": "chars/netherflame/nes/sheet@4x.png",
+            "sheetJson": "chars/netherflame/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadwood",
+      "name": {
+        "zh": "枯木精",
+        "en": "Deadwood Sprite"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "吸乾了整片林子的枯樹精，葉子全是枯黃色。",
+        "en": "A withered tree sprite that has drained a whole wood dry; every leaf is dead brown."
+      },
+      "habitat": {
+        "zh": "古墓、沼澤與高塔",
+        "en": "Old tombs, marshes and towers"
+      },
+      "tier": 4,
+      "base": "treesprite",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/deadwood/nes/portrait.png",
+            "portrait4x": "chars/deadwood/nes/portrait@4x.png",
+            "body": "chars/deadwood/nes/body.png",
+            "body4x": "chars/deadwood/nes/body@4x.png",
+            "sheet": "chars/deadwood/nes/sheet.png",
+            "sheet4x": "chars/deadwood/nes/sheet@4x.png",
+            "sheetJson": "chars/deadwood/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              40
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thundersprite",
+      "name": {
+        "zh": "雷精",
+        "en": "Thunder Sprite"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "暴雨夜裡打轉的小雷團，碰一下渾身發麻。",
+        "en": "A little ball of thunder that spins on stormy nights; one touch leaves you numb."
+      },
+      "habitat": {
+        "zh": "古墓、沼澤與高塔",
+        "en": "Old tombs, marshes and towers"
+      },
+      "tier": 4,
+      "base": "windsprite",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/thundersprite/nes/portrait.png",
+            "portrait4x": "chars/thundersprite/nes/portrait@4x.png",
+            "body": "chars/thundersprite/nes/body.png",
+            "body4x": "chars/thundersprite/nes/body@4x.png",
+            "sheet": "chars/thundersprite/nes/sheet.png",
+            "sheet4x": "chars/thundersprite/nes/sheet@4x.png",
+            "sheetJson": "chars/thundersprite/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "irondummy",
+      "name": {
+        "zh": "鐵木人",
+        "en": "Iron-bound Dummy"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "包了鐵皮的木人，守在高塔的練功房。",
+        "en": "A dummy sheathed in iron that guards the practice room of the tower."
+      },
+      "habitat": {
+        "zh": "古墓、沼澤與高塔",
+        "en": "Old tombs, marshes and towers"
+      },
+      "tier": 4,
+      "base": "dummy",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/irondummy/nes/portrait.png",
+            "portrait4x": "chars/irondummy/nes/portrait@4x.png",
+            "body": "chars/irondummy/nes/body.png",
+            "body4x": "chars/irondummy/nes/body@4x.png",
+            "sheet": "chars/irondummy/nes/sheet.png",
+            "sheet4x": "chars/irondummy/nes/sheet@4x.png",
+            "sheetJson": "chars/irondummy/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bloodthug",
+      "name": {
+        "zh": "血刀門打手",
+        "en": "Blood Saber Thug"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "血刀門雇來的打手，紅衣黑巾，下手不留情。",
+        "en": "A thug hired by the Blood Saber Sect, red clothes and black scarf, merciless."
+      },
+      "habitat": {
+        "zh": "古墓、沼澤與高塔",
+        "en": "Old tombs, marshes and towers"
+      },
+      "tier": 4,
+      "base": "lackey",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/bloodthug/nes/portrait.png",
+            "portrait4x": "chars/bloodthug/nes/portrait@4x.png",
+            "body": "chars/bloodthug/nes/body.png",
+            "body4x": "chars/bloodthug/nes/body@4x.png",
+            "sheet": "chars/bloodthug/nes/sheet.png",
+            "sheet4x": "chars/bloodthug/nes/sheet@4x.png",
+            "sheetJson": "chars/bloodthug/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ironmonk",
+      "name": {
+        "zh": "鐵頭惡僧",
+        "en": "Iron-head Monk"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "練鐵頭功練到頭皮發青的惡僧，用頭撞門。",
+        "en": "A rogue monk who trained his iron-head skill until his scalp turned grey; he opens doors with his head."
+      },
+      "habitat": {
+        "zh": "古墓、沼澤與高塔",
+        "en": "Old tombs, marshes and towers"
+      },
+      "tier": 4,
+      "base": "roguemonk",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/ironmonk/nes/portrait.png",
+            "portrait4x": "chars/ironmonk/nes/portrait@4x.png",
+            "body": "chars/ironmonk/nes/body.png",
+            "body4x": "chars/ironmonk/nes/body@4x.png",
+            "sheet": "chars/ironmonk/nes/sheet.png",
+            "sheet4x": "chars/ironmonk/nes/sheet@4x.png",
+            "sheetJson": "chars/ironmonk/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frostwolf",
+      "name": {
+        "zh": "霜狼",
+        "en": "Frost Wolf"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "雪峰上的白狼，呼出的氣會結成霜，腳步聲輕得聽不見。",
+        "en": "A white wolf of the snow peaks whose breath turns to frost and whose steps make no sound."
+      },
+      "habitat": {
+        "zh": "幽冥殿與雪峰",
+        "en": "The Netherworld Hall and the snow peaks"
+      },
+      "tier": 5,
+      "base": "wolf",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/frostwolf/nes/portrait.png",
+            "portrait4x": "chars/frostwolf/nes/portrait@4x.png",
+            "body": "chars/frostwolf/nes/body.png",
+            "body4x": "chars/frostwolf/nes/body@4x.png",
+            "sheet": "chars/frostwolf/nes/sheet.png",
+            "sheet4x": "chars/frostwolf/nes/sheet@4x.png",
+            "sheetJson": "chars/frostwolf/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inkscorpion",
+      "name": {
+        "zh": "墨蠍",
+        "en": "Ink Scorpion"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "漆黑發藍的蠍子，毒一進血就變成墨色。",
+        "en": "A blue-black scorpion; its venom turns the blood the colour of ink."
+      },
+      "habitat": {
+        "zh": "幽冥殿與雪峰",
+        "en": "The Netherworld Hall and the snow peaks"
+      },
+      "tier": 5,
+      "base": "scorpion",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/inkscorpion/nes/portrait.png",
+            "portrait4x": "chars/inkscorpion/nes/portrait@4x.png",
+            "body": "chars/inkscorpion/nes/body.png",
+            "body4x": "chars/inkscorpion/nes/body@4x.png",
+            "sheet": "chars/inkscorpion/nes/sheet.png",
+            "sheet4x": "chars/inkscorpion/nes/sheet@4x.png",
+            "sheetJson": "chars/inkscorpion/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              40,
+              32
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blackbone",
+      "name": {
+        "zh": "黑骨劍客",
+        "en": "Black-bone Swordsman"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "被幽冥教煉過的骷髏，骨頭黑得發亮。",
+        "en": "A skeleton refined by the Netherworld Sect; its bones shine black."
+      },
+      "habitat": {
+        "zh": "幽冥殿與雪峰",
+        "en": "The Netherworld Hall and the snow peaks"
+      },
+      "tier": 5,
+      "base": "skeleton",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/blackbone/nes/portrait.png",
+            "portrait4x": "chars/blackbone/nes/portrait@4x.png",
+            "body": "chars/blackbone/nes/body.png",
+            "body4x": "chars/blackbone/nes/body@4x.png",
+            "sheet": "chars/blackbone/nes/sheet.png",
+            "sheet4x": "chars/blackbone/nes/sheet@4x.png",
+            "sheetJson": "chars/blackbone/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coldpool",
+      "name": {
+        "zh": "寒潭鬼",
+        "en": "Cold Pool Ghost"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "寒潭底下的女鬼，經過的水面都會結一層薄冰。",
+        "en": "A ghost from the bottom of the cold pool; the water she passes skins over with ice."
+      },
+      "habitat": {
+        "zh": "幽冥殿與雪峰",
+        "en": "The Netherworld Hall and the snow peaks"
+      },
+      "tier": 5,
+      "base": "drowned",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/coldpool/nes/portrait.png",
+            "portrait4x": "chars/coldpool/nes/portrait@4x.png",
+            "body": "chars/coldpool/nes/body.png",
+            "body4x": "chars/coldpool/nes/body@4x.png",
+            "sheet": "chars/coldpool/nes/sheet.png",
+            "sheet4x": "chars/coldpool/nes/sheet@4x.png",
+            "sheetJson": "chars/coldpool/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bronzejiangshi",
+      "name": {
+        "zh": "銅甲小殭屍",
+        "en": "Bronze-armoured Jiangshi"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "穿著陪葬銅甲的小殭屍，刀槍都砍不進。",
+        "en": "A little jiangshi in the bronze armour it was buried with; blades glance off."
+      },
+      "habitat": {
+        "zh": "幽冥殿與雪峰",
+        "en": "The Netherworld Hall and the snow peaks"
+      },
+      "tier": 5,
+      "base": "littlejiangshi",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/bronzejiangshi/nes/portrait.png",
+            "portrait4x": "chars/bronzejiangshi/nes/portrait@4x.png",
+            "body": "chars/bronzejiangshi/nes/body.png",
+            "body4x": "chars/bronzejiangshi/nes/body@4x.png",
+            "sheet": "chars/bronzejiangshi/nes/sheet.png",
+            "sheet4x": "chars/bronzejiangshi/nes/sheet@4x.png",
+            "sheetJson": "chars/bronzejiangshi/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              40
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vajraguardian",
+      "name": {
+        "zh": "金剛銅人",
+        "en": "Vajra Guardian"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "鍍金的銅人，一拳能把石碑打斷。",
+        "en": "A gilded bronze man whose fist can break a stone tablet."
+      },
+      "habitat": {
+        "zh": "幽冥殿與雪峰",
+        "en": "The Netherworld Hall and the snow peaks"
+      },
+      "tier": 5,
+      "base": "bronze",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/vajraguardian/nes/portrait.png",
+            "portrait4x": "chars/vajraguardian/nes/portrait@4x.png",
+            "body": "chars/vajraguardian/nes/body.png",
+            "body4x": "chars/vajraguardian/nes/body@4x.png",
+            "sheet": "chars/vajraguardian/nes/sheet.png",
+            "sheet4x": "chars/vajraguardian/nes/sheet@4x.png",
+            "sheetJson": "chars/vajraguardian/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "netherarcher",
+      "name": {
+        "zh": "幽冥弓手",
+        "en": "Netherworld Archer"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "幽冥教的弓手，箭頭塗著冥火。",
+        "en": "A Netherworld Sect archer whose arrowheads are smeared with nether-fire."
+      },
+      "habitat": {
+        "zh": "幽冥殿與雪峰",
+        "en": "The Netherworld Hall and the snow peaks"
+      },
+      "tier": 5,
+      "base": "archer",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/netherarcher/nes/portrait.png",
+            "portrait4x": "chars/netherarcher/nes/portrait@4x.png",
+            "body": "chars/netherarcher/nes/body.png",
+            "body4x": "chars/netherarcher/nes/body@4x.png",
+            "sheet": "chars/netherarcher/nes/sheet.png",
+            "sheet4x": "chars/netherarcher/nes/sheet@4x.png",
+            "sheetJson": "chars/netherarcher/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "netherassassin",
+      "name": {
+        "zh": "幽冥刺客",
+        "en": "Netherworld Assassin"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "幽冥教的刺客，紫紗下的眼睛泛著紅光。",
+        "en": "A Netherworld Sect assassin whose eyes glow red under the violet veil."
+      },
+      "habitat": {
+        "zh": "幽冥殿與雪峰",
+        "en": "The Netherworld Hall and the snow peaks"
+      },
+      "tier": 5,
+      "base": "assassin",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/netherassassin/nes/portrait.png",
+            "portrait4x": "chars/netherassassin/nes/portrait@4x.png",
+            "body": "chars/netherassassin/nes/body.png",
+            "body4x": "chars/netherassassin/nes/body@4x.png",
+            "sheet": "chars/netherassassin/nes/sheet.png",
+            "sheet4x": "chars/netherassassin/nes/sheet@4x.png",
+            "sheetJson": "chars/netherassassin/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blackdaoist",
+      "name": {
+        "zh": "黑袍妖道",
+        "en": "Black-robed Daoist"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "投靠幽冥教的妖道，符紙上畫的全是死人的名字。",
+        "en": "A rogue Daoist who joined the Netherworld Sect; the charms he draws bear dead men's names."
+      },
+      "habitat": {
+        "zh": "幽冥殿與雪峰",
+        "en": "The Netherworld Hall and the snow peaks"
+      },
+      "tier": 5,
+      "base": "sorcerer",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/blackdaoist/nes/portrait.png",
+            "portrait4x": "chars/blackdaoist/nes/portrait@4x.png",
+            "body": "chars/blackdaoist/nes/body.png",
+            "body4x": "chars/blackdaoist/nes/body@4x.png",
+            "sheet": "chars/blackdaoist/nes/sheet.png",
+            "sheet4x": "chars/blackdaoist/nes/sheet@4x.png",
+            "sheetJson": "chars/blackdaoist/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              32,
               48
             ],
             "frame": [

@@ -43,6 +43,10 @@ Characters so far:
   with one two-frame animation `move` (idle and move): 白猿 White Ape, 吊睛白額虎 White-Browed Tiger, 鎮宅石獅
   Stone Guardian Lion, 符咒殭屍 Talisman Jiangshi, 山魈 Shanxiao, 九尾狐 Nine-Tailed Fox, 江蛟 River Jiao,
   三足火鴉 Fire Crow, 毒蟾 Venom Toad. Monsters have `habitat` instead of `weapon`; people have `kind: "person"`.
+- 小怪 (Common Foes), 50 small regular monsters (faction `foe`, `kind: "monster"`, `tier` 1-5 from early to late areas,
+  `habitat`, `base`): 26 base designs in `src/nes_foes_art.py` with NES-style palette swaps (灰狼 -> 血狼 -> 霜狼 ...);
+  battle pictures 32x32 to 40x48 (transparent backdrop) and a 16x16 field sprite with a two-frame `move`.
+  Group picture `chars/foes/group-nes.png` (10 per row, by tier) and `group-nes-5col.png`.
 
 Group pictures in `chars/family/`: `group-nes.png` (the main-style roster: four framed portraits with their sprites on one baseline) and `group-nes-2x2.png` for narrow screens; the older `group.png` (transparent) and `group-scene.png`. Each also at 4x.
 

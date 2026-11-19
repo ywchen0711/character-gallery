@@ -124,7 +124,8 @@
     $('#d-title').textContent = `${t(c.title)} · ${t(c.style_name)}`;
     $('#d-bio').textContent = t(c.bio);
     const monster = c.kind === 'monster';
-    const what = monster ? (lang === 'zh' ? '棲地：' : 'Habitat: ') + t(c.habitat) : (lang === 'zh' ? '兵器：' : 'Weapon: ') + t(c.weapon);
+    const tierTxt = c.tier ? (lang === 'zh' ? `第 ${c.tier} 階 · ` : `Tier ${c.tier} · `) : '';
+    const what = monster ? tierTxt + (lang === 'zh' ? '棲地：' : 'Habitat: ') + t(c.habitat) : (lang === 'zh' ? '兵器：' : 'Weapon: ') + t(c.weapon);
     $('#d-meta').textContent = what + ' · ' +
       (lang === 'zh' ? `${monster ? '戰鬥圖' : '頭像'} ${v.sizes.portrait.join('×')}，${v.colours.portrait} 色；角色格 ${v.sizes.frame.join('×')}`
         : `${monster ? 'battle picture' : 'portrait'} ${v.sizes.portrait.join('×')}, ${v.colours.portrait} colours; sprite cell ${v.sizes.frame.join('×')}`);
@@ -256,13 +257,16 @@
       en: 'Black Wind Fort and the Netherworld Sect: Black Bear, Scar, Skinny Monkey, Tu Qianqiu · 8-bit Famicom style' },
     longmenMore: { zh: '龍門江湖眾生：鐵無私、錢萬里、溫如玉、小蓮、厲寒山、獨臂漁翁、鬼面護法、蒙面人 · 8-bit 紅白機畫風',
       en: 'More of the Longmen jianghu: Tie Wusi, Qian Wanli, Wen Ruyu, Xiaolian, Li Hanshan, the One-Armed Fisherman, the Ghost-mask Warden, the Masked Man · 8-bit Famicom style' },
+    foes: { zh: '小怪：50 種一般敵人，依第 1～5 階排列（早期→後期區域），同一造型的換色版本越後面越強 · 紅白機戰鬥圖與地圖小圖',
+      en: 'Common Foes: 50 regular enemies ordered by tier 1-5 (early to late areas); palette-swapped kin get stronger further on · NES battle pictures and field sprites' },
     beasts: { zh: '怪物與野獸：白猿、吊睛白額虎、鎮宅石獅、符咒殭屍、山魈、九尾狐、江蛟、三足火鴉、毒蟾 · 紅白機戰鬥圖與地圖小圖',
       en: 'Monsters & Beasts: White Ape, White-Browed Tiger, Stone Guardian Lion, Talisman Jiangshi, Shanxiao, Nine-Tailed Fox, River Jiao, Fire Crow, Venom Toad · NES battle pictures and field sprites' },
   };
   function hero() {
     const box = $('#heroes'); if (!box || !DATA || !DATA.groups) return;
-    const ids = faction === 'all' ? ['family', 'longmen', 'longmenFoes', 'longmenMore', 'beasts']
-      : faction === 'longmen' ? ['longmen', 'longmenFoes', 'longmenMore'] : faction === 'beast' ? ['beasts'] : faction === 'west' ? ['family'] : [];
+    const ids = faction === 'all' ? ['family', 'longmen', 'longmenFoes', 'longmenMore', 'beasts', 'foes']
+      : faction === 'longmen' ? ['longmen', 'longmenFoes', 'longmenMore'] : faction === 'beast' ? ['beasts'] : faction === 'foe' ? ['foes']
+        : faction === 'west' ? ['family'] : [];
     box.textContent = '';
     const room = Math.max(120, (box.clientWidth || 600) - 32);
     for (const id of ids) {

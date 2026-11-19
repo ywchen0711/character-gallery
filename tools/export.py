@@ -23,12 +23,13 @@ from pixlib import count_colours, scale  # noqa: E402
 from roster import ROSTER  # noqa: E402
 from styles import STYLES  # noqa: E402
 
-FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8', 'longmen': '#5a6ab8', 'beast': '#6a8a3a'}
+FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8', 'longmen': '#5a6ab8', 'beast': '#6a8a3a', 'foe': '#8a6a3a'}
 FACTION_NAME = {'wu': {'zh': '吳', 'en': 'Wu'}, 'shu': {'zh': '蜀', 'en': 'Shu'},
                 'wei': {'zh': '魏', 'en': 'Wei'}, 'qun': {'zh': '群', 'en': 'Other'},
                 'west': {'zh': '旅人一家', 'en': 'The travelling family'},
                 'longmen': {'zh': '龍門武林', 'en': 'Longmen Wulin'},
-                'beast': {'zh': '怪物與野獸', 'en': 'Monsters & Beasts'}}
+                'beast': {'zh': '怪物與野獸', 'en': 'Monsters & Beasts'},
+                'foe': {'zh': '小怪', 'en': 'Common Foes'}}
 
 
 def export_variant(cid, v):
@@ -84,7 +85,7 @@ def export(cid):
                 os.remove(p)
             elif n not in STYLES:
                 shutil.rmtree(p)
-    if cid in ('family', 'longmen', 'beasts'):
+    if cid in ('family', 'longmen', 'beasts', 'foes'):
         raise ValueError('family and longmen are reserved for group pictures')
     vs = [export_variant(cid, v) for v in ch.variants()]
     M = ch.META
@@ -152,6 +153,17 @@ def main():
                         'members': BEASTS, 'style': 'nes',
                         'files': {k: 'chars/beasts/' + v for k, v in (('nes', 'group-nes.png'), ('nes4x', 'group-nes@4x.png'),
                                                                        ('nesTall', 'group-nes-3x3.png'), ('nesTall4x', 'group-nes-3x3@4x.png'))}}
+    # the common foes (小怪), ordered by tier
+    from nes_foes import group as foe_group
+    FOE_IDS = [c for c in ROSTER if importlib.import_module(c).FACTION == 'foe']
+    fd = os.path.join(ROOT, 'chars', 'foes')
+    os.makedirs(fd, exist_ok=True)
+    for name, im in (('group-nes', foe_group(FOE_IDS, cols=10)), ('group-nes-5col', foe_group(FOE_IDS, cols=5))):
+        im.save(os.path.join(fd, name + '.png'))
+        scale(im, 4).save(os.path.join(fd, name + '@4x.png'))
+    groups['foes'] = {'name': {'zh': '小怪', 'en': 'Common Foes'}, 'faction': 'foe', 'members': FOE_IDS, 'style': 'nes',
+                      'files': {k: 'chars/foes/' + v for k, v in (('nes', 'group-nes.png'), ('nes4x', 'group-nes@4x.png'),
+                                                                   ('nesTall', 'group-nes-5col.png'), ('nesTall4x', 'group-nes-5col@4x.png'))}}
     groups['family']['faction'] = 'west'
     with open(os.path.join(ROOT, 'chars', 'index.json'), 'w', encoding='utf-8') as f:
         json.dump({'version': 3, 'mainStyle': 'nes', 'styles': styles, 'groups': groups, 'characters': entries},
