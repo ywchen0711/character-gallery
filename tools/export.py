@@ -122,6 +122,15 @@ def main():
                          'members': LONGMEN, 'style': 'nes',
                          'files': {k: 'chars/longmen/' + v for k, v in (('nes', 'group-nes.png'), ('nes4x', 'group-nes@4x.png'),
                                                                          ('nesTall', 'group-nes-3x2.png'), ('nesTall4x', 'group-nes-3x2@4x.png'))}}
+    # the second Longmen group: the Black Wind Fort bandits and the master of the Netherworld Sect
+    FOES = ['heixiong', 'daoba', 'shouhou', 'tuqianqiu']
+    for name, im in (('group-nes-foes', nes_group(FOES, cols=4)), ('group-nes-foes-2x2', nes_group(FOES, cols=2))):
+        im.save(os.path.join(ld, name + '.png'))
+        scale(im, 4).save(os.path.join(ld, name + '@4x.png'))
+    groups['longmenFoes'] = {'name': {'zh': '黑風寨與幽冥教', 'en': 'Black Wind Fort and the Netherworld Sect'},
+                             'faction': 'longmen', 'members': FOES, 'style': 'nes',
+                             'files': {k: 'chars/longmen/' + v for k, v in (('nes', 'group-nes-foes.png'), ('nes4x', 'group-nes-foes@4x.png'),
+                                                                             ('nesTall', 'group-nes-foes-2x2.png'), ('nesTall4x', 'group-nes-foes-2x2@4x.png'))}}
     groups['family']['faction'] = 'west'
     with open(os.path.join(ROOT, 'chars', 'index.json'), 'w', encoding='utf-8') as f:
         json.dump({'version': 3, 'mainStyle': 'nes', 'styles': styles, 'groups': groups, 'characters': entries},

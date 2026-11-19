@@ -119,6 +119,26 @@
         "nesTall": "chars/longmen/group-nes-3x2.png",
         "nesTall4x": "chars/longmen/group-nes-3x2@4x.png"
       }
+    },
+    "longmenFoes": {
+      "name": {
+        "zh": "黑風寨與幽冥教",
+        "en": "Black Wind Fort and the Netherworld Sect"
+      },
+      "faction": "longmen",
+      "members": [
+        "heixiong",
+        "daoba",
+        "shouhou",
+        "tuqianqiu"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/longmen/group-nes-foes.png",
+        "nes4x": "chars/longmen/group-nes-foes@4x.png",
+        "nesTall": "chars/longmen/group-nes-foes-2x2.png",
+        "nesTall4x": "chars/longmen/group-nes-foes-2x2@4x.png"
+      }
     }
   },
   "characters": [
@@ -1326,6 +1346,274 @@
           },
           "colours": {
             "portrait": 6,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heixiong",
+      "name": {
+        "zh": "黑熊",
+        "en": "Black Bear"
+      },
+      "style_name": {
+        "zh": "寨主",
+        "en": "Bandit Chief"
+      },
+      "title": {
+        "zh": "黑風寨寨主",
+        "en": "Chief of the Black Wind Fort"
+      },
+      "bio": {
+        "zh": "黑風寨的寨主，虎背熊腰，一臉濃密黑鬍，肩上披著自己獵來的熊皮，手提一根狼牙棒。嗓門大、脾氣粗，可別被他騙了：寨子能在官府眼皮底下撐這麼多年，靠的不只是蠻力。",
+        "en": "Chief of the Black Wind Fort: broad as a bear, a thick black beard, the hide of a bear he hunted himself over one shoulder and a spiked club in his fist. He is loud and rough, but do not be fooled: a fort does not hold out under the magistrate's nose for so many years on muscle alone."
+      },
+      "weapon": {
+        "zh": "狼牙棒",
+        "en": "Spiked club"
+      },
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/heixiong/nes/portrait.png",
+            "portrait4x": "chars/heixiong/nes/portrait@4x.png",
+            "body": "chars/heixiong/nes/body.png",
+            "body4x": "chars/heixiong/nes/body@4x.png",
+            "sheet": "chars/heixiong/nes/sheet.png",
+            "sheet4x": "chars/heixiong/nes/sheet@4x.png",
+            "sheetJson": "chars/heixiong/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "daoba",
+      "name": {
+        "zh": "刀疤",
+        "en": "Scar"
+      },
+      "style_name": {
+        "zh": "二當家",
+        "en": "Second Chief"
+      },
+      "title": {
+        "zh": "黑風寨二當家",
+        "en": "Second of the Black Wind Fort"
+      },
+      "bio": {
+        "zh": "黑風寨的二當家，兩鬢剃得精光，頭頂紮個髮髻；一道長疤從眉梢斜劈到下巴，誰問起來歷，他就把大刀往地上一頓。話少，下手狠，寨裡的規矩都由他來管。",
+        "en": "Second chief of the Black Wind Fort, his temples shaved bare and a topknot on his crown. A long scar runs from his brow down to his jaw; ask him where it came from and he only sets his broad dao down hard on the ground. He says little, strikes hard, and keeps the fort's rules."
+      },
+      "weapon": {
+        "zh": "大刀",
+        "en": "Broad dao"
+      },
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/daoba/nes/portrait.png",
+            "portrait4x": "chars/daoba/nes/portrait@4x.png",
+            "body": "chars/daoba/nes/body.png",
+            "body4x": "chars/daoba/nes/body@4x.png",
+            "sheet": "chars/daoba/nes/sheet.png",
+            "sheet4x": "chars/daoba/nes/sheet@4x.png",
+            "sheetJson": "chars/daoba/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shouhou",
+      "name": {
+        "zh": "瘦猴",
+        "en": "Skinny Monkey"
+      },
+      "style_name": {
+        "zh": "嘍囉",
+        "en": "Lackey"
+      },
+      "title": {
+        "zh": "黑風寨的跑腿",
+        "en": "Errand Boy of the Black Wind Fort"
+      },
+      "bio": {
+        "zh": "黑風寨的小嘍囉，瘦得像根竹竿，一笑就露出兩顆大門牙。衣服補了又補，腰間別一把短刀；眼珠子滴溜溜地轉，哪邊有便宜就往哪邊靠。跑得比誰都快，逃得也比誰都快。",
+        "en": "A lackey of the Black Wind Fort, thin as a bamboo pole, who shows two big front teeth whenever he grins. His clothes are patch on patch and a short knife sits at his belt; his eyes dart about for whatever is going cheap. Nobody runs errands faster, and nobody runs away faster either."
+      },
+      "weapon": {
+        "zh": "短刀",
+        "en": "Short knife"
+      },
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/shouhou/nes/portrait.png",
+            "portrait4x": "chars/shouhou/nes/portrait@4x.png",
+            "body": "chars/shouhou/nes/body.png",
+            "body4x": "chars/shouhou/nes/body@4x.png",
+            "sheet": "chars/shouhou/nes/sheet.png",
+            "sheet4x": "chars/shouhou/nes/sheet@4x.png",
+            "sheetJson": "chars/shouhou/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 3
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tuqianqiu",
+      "name": {
+        "zh": "屠千秋",
+        "en": "Tu Qianqiu"
+      },
+      "style_name": {
+        "zh": "教主",
+        "en": "Sect Master"
+      },
+      "title": {
+        "zh": "幽冥教教主",
+        "en": "Master of the Netherworld Sect"
+      },
+      "bio": {
+        "zh": "幽冥教的教主，身形清瘦，臉色蒼白，一頭長髮黑如墨，只有一綹雪白。半張臉藏在銀色鬼面之下，深紫長袍，頸上一串白骨念珠，手中白骨扇輕搖。說話總是不急不徐，客客氣氣；聽過他說話的人，大多再也沒說過話。",
+        "en": "Master of the Netherworld Sect: lean and pale, his long hair ink-black but for one snow-white lock. Half his face is hidden under a silver ghost mask; he wears a deep violet robe and a string of bone beads, and idly waves a fan of white bone. He speaks unhurried and always politely. Most who have heard him speak never spoke again."
+      },
+      "weapon": {
+        "zh": "白骨扇",
+        "en": "Bone fan"
+      },
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tuqianqiu/nes/portrait.png",
+            "portrait4x": "chars/tuqianqiu/nes/portrait@4x.png",
+            "body": "chars/tuqianqiu/nes/body.png",
+            "body4x": "chars/tuqianqiu/nes/body@4x.png",
+            "sheet": "chars/tuqianqiu/nes/sheet.png",
+            "sheet4x": "chars/tuqianqiu/nes/sheet@4x.png",
+            "sheetJson": "chars/tuqianqiu/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
             "sheet": 3
           },
           "animations": [

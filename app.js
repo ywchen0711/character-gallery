@@ -244,10 +244,12 @@
       en: 'The family: Jeff (father), Erin (mother), Josh (10), Jasper (8) · main style: 8-bit Famicom (霸王の大陸-like)' },
     longmen: { zh: '龍門武林：奕叡、奕碩、冷笑天、白先生、柳寒煙、苦禪 · 8-bit 紅白機畫風',
       en: 'Longmen Wulin: Yi Rui, Yi Shuo, Leng Xiaotian, Mr Bai, Liu Hanyan, Kuchan · 8-bit Famicom style' },
+    longmenFoes: { zh: '黑風寨與幽冥教：黑熊、刀疤、瘦猴、屠千秋 · 8-bit 紅白機畫風',
+      en: 'Black Wind Fort and the Netherworld Sect: Black Bear, Scar, Skinny Monkey, Tu Qianqiu · 8-bit Famicom style' },
   };
   function hero() {
     const box = $('#heroes'); if (!box || !DATA || !DATA.groups) return;
-    const ids = faction === 'all' ? ['family', 'longmen'] : faction === 'longmen' ? ['longmen'] : ['family'];
+    const ids = faction === 'all' ? ['family', 'longmen', 'longmenFoes'] : faction === 'longmen' ? ['longmen', 'longmenFoes'] : ['family'];
     box.textContent = '';
     const room = Math.max(120, (box.clientWidth || 600) - 32);
     for (const id of ids) {

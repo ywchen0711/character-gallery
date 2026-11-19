@@ -26,10 +26,14 @@ Characters so far:
   - 白先生 Mr Bai, the storyteller: square scholar's cap, goatee, grey robe, clapper block
   - 柳寒煙 Liu Hanyan, Mistress of the Cold River Pavilion: high bun with a pin, white over pale blue, a slim sword
   - 苦禪 Kuchan, abbot of the Thousand Buddhas: white brows and beard, saffron robe, red kasaya, beads, staff
+  - 黑熊 Black Bear, chief of the Black Wind Fort bandits: wild hair, full black beard, bear-fur mantle, spiked club
+  - 刀疤 Scar, the fort's second: shaved sides and a topknot, a long scar across his face, a broad dao
+  - 瘦猴 Skinny Monkey, the fort's lackey: thin, buck-toothed grin, patched clothes, a short knife
+  - 屠千秋 Tu Qianqiu, master of the Netherworld Sect: pale, long black hair with a white streak, silver ghost half-mask, violet robe, bone beads, bone fan
 
 Group pictures in `chars/family/`: `group-nes.png` (the main-style roster: four framed portraits with their sprites on one baseline) and `group-nes-2x2.png` for narrow screens; the older `group.png` (transparent) and `group-scene.png`. Each also at 4x.
 
-Longmen group pictures in `chars/longmen/`: `group-nes.png` (six in a row) and `group-nes-3x2.png` for narrow screens, each also at 4x. The gallery shows the roster that matches the faction filter.
+Longmen group pictures in `chars/longmen/`: `group-nes.png` (the six heroes in a row) and `group-nes-3x2.png` for narrow screens; `group-nes-foes.png` (Black Bear, Scar, Skinny Monkey, Tu Qianqiu) and `group-nes-foes-2x2.png`; each also at 4x. The gallery shows the roster that matches the faction filter.
 
 `compare.html` lays the styles side by side so you can pick one.
 
@@ -58,7 +62,7 @@ chars/<id>/<style>/sheet.json       frameWidth/Height, anchor (feet), animations
 
 The pixels live as text grids in Python under `src/`. Each character is one per pixel. `.` is transparent, and letters are colour slots.
 
-- `src/nes.py`: the NES palette table and the Famicom rule checker; `src/nes_portraits.py`: the 8-bit portraits (rows of exactly 48 pixels ending in `|`); `src/nes_sprites.py`: the 16x24 field sprites; `src/nes_longmen.py`: the 龍門武林 portraits and sprites (merged into both); `src/nes_variant.py`: the variant and the roster picture
+- `src/nes.py`: the NES palette table and the Famicom rule checker; `src/nes_portraits.py`: the 8-bit portraits (rows of exactly 48 pixels ending in `|`); `src/nes_sprites.py`: the 16x24 field sprites; `src/nes_longmen.py`: the 龍門武林 portraits and sprites (merged into both), with the bandits and the sect master in `src/nes_longmen2.py` (merged into nes_longmen); `src/nes_variant.py`: the variant and the roster picture
 - `src/pixlib.py`: grids, run-length rows, layers, palettes, strand/stroke/rotation helpers
 - `src/paint.py`: soft per-material shading used by the HD-2D styles
 - `src/family.py`, `src/family_portraits.py`: family portraits; `src/family_sprites.py`, `src/family_members.py`: family sprites (heads, body sizes, props, actions); `src/family_variant.py`: the variant and group picture

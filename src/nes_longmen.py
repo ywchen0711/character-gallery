@@ -981,3 +981,9 @@ kSkSk..kkkkk....
 ..k.............
 '''))
 HEIGHTS.update({'yirui': 24, 'yishuo': 19, 'xiaotian': 24, 'baixian': 24, 'liuhanyan': 24, 'kuchan': 24})
+
+# the second group (the Black Wind Fort bandits and the master of the Netherworld Sect) lives in nes_longmen2.py
+import nes_longmen2  # noqa: E402
+PORTRAITS.update(nes_longmen2.PORTRAITS)
+SPRITES.update(nes_longmen2.SPRITES)
+HEIGHTS.update(nes_longmen2.HEIGHTS)
