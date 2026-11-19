@@ -9,6 +9,9 @@ light, mid and dark slots. finish() then
   * traces a 1-px black outline ('k') around the whole silhouette using 4-neighbours (no doubled corners).
 rows() returns the picture as rows of slot letters ('.' empty), the format nes.Pic takes.
 
+Every tie (the most common neighbour tone, the order of colour groups) is broken by sorting, so a picture comes out
+the same on every run whatever Python's string-hash seed is.
+
 Designs that face the viewer are drawn on the left half (or across the middle) and mirrored with mirror();
 deliberate asymmetric details (a weapon, a tilted tail) are drawn after the mirror.
 """
@@ -299,7 +302,7 @@ class Canvas:
                             continue
                         fills = [self.tone[q][p] for p, q in n4 if self.tone[q][p] not in '.k']
                         if fills:
-                            self.tone[b][a] = max(set(fills), key=fills.count)
+                            self.tone[b][a] = max(sorted(set(fills)), key=fills.count)
                             src = next((p, q) for p, q in n4 if self.tone[q][p] == self.tone[b][a])
                             self.part[b][a] = self.part[src[1]][src[0]]
                             changed = True
@@ -355,7 +358,7 @@ class Canvas:
                           if 0 <= x + dx < w and 0 <= y + dy < h and self.part[y + dy][x + dx] == self.part[y][x]]
                     if not nb or t in nb:
                         continue
-                    best = max(set(nb), key=nb.count)
+                    best = max(sorted(set(nb)), key=nb.count)
                     changes.append((x, y, best))
             for x, y, b in changes:
                 self.tone[y][x] = b
@@ -473,7 +476,7 @@ def cover(sets, maxg=4, size=3):
     """The fewest groups of at most `size` slots (at most maxg groups) such that every set is inside one group.
     Returns a list of tuples, or None when it cannot be done."""
     sets = [frozenset(s) for s in sets if s]
-    sets = sorted({s for s in sets if not any(s < t for t in sets)}, key=lambda s: -len(s))
+    sets = sorted({s for s in sets if not any(s < t for t in sets)}, key=lambda s: (-len(s), sorted(s)))
     if any(len(s) > size for s in sets):
         return None
     universe = sorted(set().union(*sets)) if sets else []

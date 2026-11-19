@@ -1,6 +1,7 @@
 """Hand-typed 16x24 NES field sprites for the `nes` style.
 
-One sprite sub-palette per character: 'k' black, 'S' skin, 'c' cloth (3 colours + transparent '.').
+One sprite sub-palette per character: 'k' black, 'S' skin, 'c' cloth (3 colours + transparent '.'); the 霸王之路
+generals (nes_sango.py) add a second overlay layer `pal2` (3 more colours: headgear, beard, weapon).
 Every figure stands on the bottom row. Adults fill the 24 rows; Josh (10) is 20 rows tall and
 Jasper (8) 17, so the children read clearly smaller beside their parents.
 Frames: front walk A and B, two side frames facing right. B keeps A's body and only moves the legs (nes_walk.py);
@@ -398,8 +399,8 @@ HEIGHTS.update(nes_sango.HEIGHTS)
 def frames(cid):
     """dict animation -> list of 16x24 RGBA images."""
     d = SPRITES[cid]
-    pal = d['pal']
-    im = lambda rows: nes.sprite_image(rows, pal)
+    pal, pal2 = d['pal'], d.get('pal2')
+    im = lambda rows: nes.sprite_image(rows, pal, pal2)
     fa, sd = d['front'], d['side']
     f2, s2 = nes_walk.legs_for(cid, d)
     assert nes_walk.check_same_body(fa, f2) and nes_walk.check_same_body(sd, s2), cid

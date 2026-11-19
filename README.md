@@ -21,7 +21,11 @@ Characters so far:
 - 關羽 Guan Yu (`nes`, also `koei`).
 - 三國志 霸王之路 (Path of the Hegemon), faction `sango`: Jeff as the main general (his `sango` style), and each stage's
   enemy general in `nes`: 程遠志, 張寶, 華雄, 紀靈, 顏良, 文醜, 張遼, 夏侯惇, 呂布 (關羽 also shows under this filter).
-  Drawn in `src/nes_sango.py`.
+  Drawn in `src/nes_sango.py`. Each general's 16x24 field sprite matches his portrait: the same helmet, crown or
+  head cloth, plume or pheasant feathers, beard, eye patch or glasses, armour colours and his weapon in hand (dao,
+  spear, 三尖刀, 方天畫戟, talisman, jian). The sprites use two stacked NES sprite layers, the way Famicom games
+  layered a second sprite over a figure: `pal` (black, skin, main colour) and `pal2` (three more colours), each
+  layer at most 3 colours + transparent (checked by `nes.sprite_image`).
 - 龍門武林 (Longmen Wulin), the cast of 龍門雙奕, in `nes` only (faction `longmen`):
   - 奕叡 Yi Rui, the elder brother: indigo robe, blue headband, ring-pommel saber on his back
   - 奕碩 Yi Shuo, his little brother: red headband, vermilion jacket, a mole, his football (shorter sprite)
@@ -48,23 +52,30 @@ Characters so far:
   三足火鴉 Fire Crow, 毒蟾 Venom Toad. Monsters have `habitat` instead of `weapon`; people have `kind: "person"`.
 - 小怪 (Common Foes), 50 small regular monsters (faction `foe`, `kind: "monster"`, `tier` 1-5 from early to late areas,
   `habitat`, `base`): 26 base designs with NES-style palette swaps (灰狼 -> 血狼 -> 霜狼 ...), colours in
-  `src/nes_foes_art.py`; battle pictures 48x48, people-like foes 48x56 like the people portraits (transparent
-  backdrop), and a 16x16 field sprite with a two-frame `move`. Higher-tier swaps also change a detail or two
-  (`src/mon_var.py`: a scar, a spiked club and eye patch, frost, a brow jewel, riveted plates, glowing eyes ...). Group picture `chars/foes/group-nes.png` (10 per row, by tier) and `group-nes-5col.png`.
-- How the monsters are drawn (all 59, redrawn 2026-11-19 to get rid of crooked shapes, then refined to the level
+  `src/nes_foes_art.py`. Since 2026-11-19 they are drawn in the 霸王之路 style (`src/foe_busts.py`,
+  `foe_busts_people.py`, `foe_busts_animals.py`): 48x56 busts on the black NES panel like the generals - people
+  and the undead as head-and-shoulders busts with the generals' robe and armour shapes, hand-typed faces and
+  iconic gear; animals, bugs and spirits as head-and-forequarters close-ups. The bust is also the battle picture
+  in Longmen Quest. Higher-tier swaps change a detail or two (a scar, nails in the club and an eye patch, frost,
+  a brow jewel, riveted plates, glowing eyes, a skull rosary ...). The 16x16 field sprite (`src/nes_foes_fields.py`)
+  uses the bust's slot letters, so it has the same colours, spread over two stacked sprite layers
+  (`field_pals()`), with a two-frame `move`. Group picture `chars/foes/group-nes.png` (10 per row, by tier, in NES
+  window frames) and `group-nes-5col.png`.
+- How the beasts are drawn (redrawn 2026-11-19 to get rid of crooked shapes, then refined to the level
   of the people portraits): each design is a Python function built with the helper `src/mondraw.py` (ellipses,
   limbs, tubes and polygons rasterised on pixel centres, so fronts mirror exactly; one light from the top-left in
   three tones per material; separation lines between parts; a traced 1-px black outline), then finished by hand:
   faces with brows, eye strokes and glints, noses, teeth and fangs; fur strokes, bristles, chitin plates, bark
-  grain, rivets and cloth folds; rim light; props and costume details. `src/mon_h.py` + `mon_h2.py`: the people-like
-  foes and the undead (48x56, an 18-px face like the portraits); `mon_a1.py` .. `mon_a3.py`: animals, bugs and
-  spirits (48x48); `mon_b.py`: the beasts (drawn bigger through `mondraw.Scaled`); `mon_var.py`: stronger-kin
-  variants. `mondraw.famicom()` splits a picture into the background layer and a sprite overlay (skin, glints and
+  grain, rivets and cloth folds; rim light; props and costume details. `mon_b.py`: the beasts (drawn bigger
+  through `mondraw.Scaled`; `nes_beasts_art.APPROVED` pins the few pixels that moved when mondraw's ties became
+  sorted, so the beasts stay exactly as approved). mondraw breaks every tie by sorting, so all pictures come out
+  the same on every run and re-exports are stable. `mondraw.famicom()` splits a picture into the background layer and a sprite overlay (skin, glints and
   accents; any attribute area that would need a fourth colour has that colour lifted onto sprites) and finds the
   sub-palettes that keep every 16x16 area and 8x8 sprite tile legal. Field sprites are one hand-typed frame each
   (`src/nes_foes_fields.py`, `SPRITES` in `src/nes_beasts_art.py`); `src/nes_walk_mon.py` makes frame 2 so only
   what should move moves (a step over planted feet, a hop, or a float). `python -P tools/lint.py` checks every
-  picture for orphan pixels, broken or doubled outlines, jaggies in the silhouette and mirror symmetry.
+  picture for orphan pixels, broken or doubled outlines, jaggies in the silhouette and mirror symmetry (busts are
+  cut by their panel, so pixels beyond the picture edge count as filled).
 
 Group pictures in `chars/family/`: `group-nes.png` (the main-style roster: four framed portraits with their sprites on one baseline) and `group-nes-2x2.png` for narrow screens; the older `group.png` (transparent) and `group-scene.png`. Each also at 4x.
 

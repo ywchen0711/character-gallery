@@ -158,16 +158,22 @@ class Pic:
         return im
 
 
-def sprite_image(rows, slots):
-    """A small NES sprite: '.' transparent, other chars -> NES index (at most 3 of them)."""
-    used = {slots[c] for r in rows for c in r if c != '.'}
-    if len(used) > 3:
-        raise ValueError('sprite uses %d colours (max 3 + transparent)' % len(used))
+def sprite_image(rows, slots, slots2=None):
+    """A small NES sprite: '.' transparent, other chars -> NES index (at most 3 of them).
+    slots2: an optional second sprite layer stacked over the first (a figure + its overlay, as Famicom games did);
+    each letter belongs to one layer and each layer has at most 3 colours + transparent."""
+    slots2 = slots2 or {}
+    if set(slots) & set(slots2):
+        raise ValueError('a letter is in both sprite layers: %s' % sorted(set(slots) & set(slots2)))
+    for name, sl in (('sprite', slots), ('overlay', slots2)):
+        used = {sl[c] for r in rows for c in r if c in sl}
+        if len(used) > 3:
+            raise ValueError('%s layer uses %d colours (max 3 + transparent)' % (name, len(used)))
     h, w = len(rows), len(rows[0])
     im = Image.new('RGBA', (w, h), (0, 0, 0, 0))
     P = im.load()
     for y, r in enumerate(rows):
         for x, c in enumerate(r):
             if c != '.':
-                P[x, y] = rgba(slots[c])
+                P[x, y] = rgba(slots[c] if c in slots else slots2[c])
     return im

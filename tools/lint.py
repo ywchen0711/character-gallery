@@ -1,7 +1,10 @@
-"""Pixel-art lint for the monster pictures (src/mon_designs.py): flags the things that make pixel art look crooked.
+"""Pixel-art lint for the monster pictures: the foe busts (src/foe_busts.py, after the slot-level Famicom fit) and
+the big beasts (src/mon_designs.py). Flags the things that make pixel art look crooked.
 
     python -P tools/lint.py            lint every design, one line per problem, exit 1 if any error
     python -P tools/lint.py wolf bat   only these
+
+Busts are cut by their 48x56 panel, so pixels beyond the picture edge count as filled (edge=True).
 
 Errors (must be fixed): orphan pixels (an opaque pixel with no opaque neighbour), broken outline (a filled pixel
 touching the transparent outside without a black edge), doubled outline (a 2x2 black block on the silhouette),
@@ -89,13 +92,14 @@ def jaggies(moves):
     return bad
 
 
-def check_rows(rows, mirrored=False, accent=ACCENT, lines=None, open_slots=''):
+def check_rows(rows, mirrored=False, accent=ACCENT, lines=None, open_slots='', edge=False):
+    """edge=True: a bust cut by its panel - pixels beyond the picture edge count as filled, not as outside."""
     h, w = len(rows), len(rows[0])
     op = [[c != '.' for c in r] for r in rows]
     msgs = []
 
     def at(x, y):
-        return rows[y][x] if 0 <= x < w and 0 <= y < h else '.'
+        return rows[y][x] if 0 <= x < w and 0 <= y < h else ('#' if edge else '.')
 
     orphans, broken, lone = [], [], []
     for y in range(h):
@@ -136,15 +140,25 @@ def check_rows(rows, mirrored=False, accent=ACCENT, lines=None, open_slots=''):
 
 def main(names):
     import mon_designs as M
-    names = names or list(M.DESIGNS)
+    import foe_busts as B
+    import nes_foes_art as FA
+    designs = [(n, 'bust') for n in B.BUSTS] + [(n, 'beast') for n in M.DESIGNS]
+    if names:
+        designs = [d for d in designs if d[0] in names]
     errors = 0
-    for n in names:
-        c = M.build(n)
-        for m in check_rows(c.rows(), M.DESIGNS[n]['mirrored'], lines=c.line_mask(), open_slots=M.DESIGNS[n]['open_slots']):
+    for n, kind in designs:
+        if kind == 'bust':
+            c = B.build(n)
+            rows, _ = B.autofit(c.rows(), FA.SPRITE_SLOTS[n])
+            msgs = check_rows(rows, B.BUSTS[n]['mirrored'], lines=c.line_mask(), open_slots=B.BUSTS[n]['open_slots'],
+                              edge=True)
+        else:
+            c = M.build(n)
+            msgs = check_rows(c.rows(), M.DESIGNS[n]['mirrored'], lines=c.line_mask(), open_slots=M.DESIGNS[n]['open_slots'])
+        for m in msgs:
             print('%-14s %s' % (n, m))
             errors += m.startswith('ERROR')
     # the 16x16 field sprites: 1-px limbs may stay open at this size, so broken outlines are only warnings
-    import nes_foes_art as FA
     import nes_beasts_art as BA
     fields = [(b, [t.strip('\n').split('\n') for t in v[2]]) for b, v in FA.BASES.items()]
     fields += [(c, d['move']) for c, d in BA.SPRITES.items() if c in BA.FIELD_MODE]
@@ -157,7 +171,7 @@ def main(names):
                     m = m.replace('ERROR', 'warn')
                 print('%-14s field %d %s' % (n, i + 1, m))
                 errors += m.startswith('ERROR')
-    print('%d designs, %d errors' % (len(names), errors))
+    print('%d designs, %d errors' % (len(designs), errors))
     return errors
 
 

@@ -136,7 +136,7 @@
       const b = el('button', 'chip' + (x.style === v.style ? ' on' : ''), styleName(x.style)); b.type = 'button';
       b.addEventListener('click', () => showDetail(c, x.style)); vs.appendChild(b);
     });
-    $('#d-blurb').textContent = monster ? t(BEAST_BLURB) : t(DATA.styles[v.style].blurb);
+    $('#d-blurb').textContent = monster ? t(c.faction === 'foe' ? FOE_BLURB : BEAST_BLURB) : t(DATA.styles[v.style].blurb);
     const box = $('#d-anims'); box.textContent = '';
     v.animations.forEach((n) => {
       const b = el('button', 'chip' + (n === open.anim ? ' on' : ''), t(ANIM_NAMES[n]) || n); b.type = 'button';
@@ -246,6 +246,10 @@
   const BEAST_BLURB = {
     zh: '原創怪物，紅白機前視角戰鬥圖：最大 64×64，粗黑線、只用紅白機標準色盤，每 16×16 格一組三色（全圖最多四組），眼光、火焰等小亮點用精靈疊上；配 16×16 或 16×24 的地圖小圖，兩格動畫兼作待機與移動。',
     en: 'Original monsters as NES front-view battle pictures: at most 64×64, bold black lines, only NES palette colours with one 3-colour set per 16×16 area (at most four sets), and sprite overlays for glowing eyes and sparks; plus a 16×16 or 16×24 field sprite whose two frames serve to idle and to move.',
+  };
+  const FOE_BLURB = {
+    zh: '小怪，霸王之路畫風的半身戰鬥圖：48×56 的紅白機黑底窗框，和武將頭像一樣；人形敵人畫頭與肩，鳥獸蟲妖畫頭部特寫。只用紅白機標準色盤，每 16×16 格一組三色（最多四組），兵器、眼光用精靈疊上；配 16×16 地圖小圖（兩層精靈），兩格動畫兼作待機與移動。',
+    en: 'Common foes as 霸王之路-style busts: 48×56 pictures in the black NES window, like the generals’ portraits - people as head-and-shoulders busts, beasts, bugs and spirits as head close-ups. Only NES palette colours, one 3-colour set per 16×16 area (at most four), weapons and glints as sprite overlays; plus a 16×16 field sprite (two sprite layers) whose two frames serve to idle and to move.',
   };
   // group roster pictures above the grid: the one that matches the faction filter (both for 'all')
   const CAPS = {

@@ -24,11 +24,26 @@ COLOURS = {
     'toad': dict(w=0x30, a=0x37, b=0x18, d=0x08, o=0x16),
 }
 
+# the pictures exactly as approved (0b5e91f): mondraw breaks its ties by sorting since then, which moves these few
+# line / tone pixels; they are put back here so the beasts never change on a re-export
+APPROVED = {
+    'ape': [(23, 23, 'k'), (51, 23, 'k'), (22, 24, 'a'), (23, 24, 'k'), (24, 24, 'd'), (10, 25, 'k')],
+    'tiger': [(20, 33, 'k'), (21, 33, 'b'), (20, 34, 'k'), (21, 34, 'k'), (23, 35, 'k'), (41, 37, 'k')],
+    'lion': [(35, 3, 'k'), (11, 24, 'k'), (23, 31, 'k'), (41, 37, 'k')],
+    'shanxiao': [(15, 25, 'g'), (50, 29, 'k'), (27, 34, 'k'), (36, 34, 'k')],
+    'fox': [(41, 15, 'k'), (45, 36, 'k'), (47, 43, 'k'), (20, 44, 'k'), (21, 44, 'b'), (23, 53, 'k'), (24, 53, 'b')],
+    'jiao': [(47, 32, 'k')],
+    'crow': [(11, 5, 'r')],
+}
+
 PORTRAITS = {}
 for _cid, _cols in COLOURS.items():
     _c = mon_designs.build(_cid)
     _spr = SPRITE_SLOTS[_cid]
-    _bg, _sp, _g, _sg = mondraw.famicom(_c.rows(), _spr)
+    _rows = [list(_r) for _r in _c.rows()]
+    for _x, _y, _s in APPROVED.get(_cid, ()):
+        _rows[_y][_x] = _s
+    _bg, _sp, _g, _sg = mondraw.famicom([''.join(_r) for _r in _rows], _spr)
     PORTRAITS[_cid] = ('\n'.join(_bg), '\n'.join(_sp),
                        dict(_cols),
                        [tuple(_cols[s] for s in g) for g in _g],

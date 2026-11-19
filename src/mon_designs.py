@@ -1,6 +1,7 @@
-"""Monster designs drawn with mondraw: one function per base design, returning a finished Canvas.
+"""Monster designs drawn with mondraw: the nine big beasts (mon_b.py), one function per design, returning a finished
+Canvas. (The common foes are 霸王之路-style busts in foe_busts.py.)
 
-Slot letters (each foe / beast maps them to NES colours, see nes_foes_art.py and nes_beasts_art.py):
+Slot letters (each beast maps them to NES colours, see nes_beasts_art.py):
   a b d   main material: light, mid, dark
   e f g   second material: light, mid, dark
   h i j   third material: light, mid, dark
@@ -34,10 +35,4 @@ def build(name):
 
 WHITE = flat('w')
 
-import mon_h  # noqa: E402,F401  (registers the designs)
-import mon_h2  # noqa: E402,F401
-import mon_a1  # noqa: E402,F401
-import mon_a2  # noqa: E402,F401
-import mon_a3  # noqa: E402,F401
-import mon_b  # noqa: E402,F401
-import mon_var  # noqa: E402,F401  (stronger-kin variants of the bases)
+import mon_b  # noqa: E402,F401  (registers the designs; the common foes are busts now, see foe_busts.py)
