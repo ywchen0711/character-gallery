@@ -1,5 +1,57 @@
 {
-  "version": 1,
+  "version": 2,
+  "styles": {
+    "koei": {
+      "name": {
+        "zh": "霸王の大陸 × 像素棒球",
+        "en": "16-bit Three Kingdoms × pixel baseball"
+      },
+      "blurb": {
+        "zh": "16-bit 三國策略遊戲式的寫實側光半身頭像，配像素棒球遊戲式的 Q 版全身。",
+        "en": "Side-lit 16-bit Three Kingdoms strategy bust portraits with pixel-baseball chibis."
+      }
+    },
+    "hd2d": {
+      "name": {
+        "zh": "HD-2D（八方旅人風）",
+        "en": "HD-2D (Octopath-like)"
+      },
+      "blurb": {
+        "zh": "細緻柔和的大頭像，加上約三頭身、柔和陰影、小黑眼的角色點陣。",
+        "en": "A detailed painterly portrait and a soft-shaded sprite about three heads tall with tiny dark eyes."
+      }
+    },
+    "snes": {
+      "name": {
+        "zh": "SNES JRPG（FF6 風）",
+        "en": "SNES JRPG (FF6-like)"
+      },
+      "blurb": {
+        "zh": "柔和漸層的 48×48 選單頭像，加上 16×24 四方向行走的地圖角色。",
+        "en": "A soft-shaded 48×48 menu portrait and a 16×24 field sprite walking in four directions."
+      }
+    },
+    "gba": {
+      "name": {
+        "zh": "GBA 戰棋（聖火降魔錄風）",
+        "en": "GBA tactics (Fire Emblem-like)"
+      },
+      "blurb": {
+        "zh": "明亮賽璐璐上色、銳利輪廓的 16 色頭像，加上厚實的戰鬥角色。",
+        "en": "A bright cel-shaded 16-colour portrait with crisp outlines and a chunky battle sprite."
+      }
+    },
+    "nes": {
+      "name": {
+        "zh": "8-bit 紅白機（勇者鬥惡龍風）",
+        "en": "8-bit NES (Dragon Quest-like)"
+      },
+      "blurb": {
+        "zh": "每個角色 3 色加透明的 16×16 小人與兩格步行，配簡單的頭像視窗。",
+        "en": "16×16 sprites in 3 colours plus transparency with a two-frame walk, and a simple portrait window."
+      }
+    }
+  },
   "characters": [
     {
       "id": "guanyu",
@@ -29,29 +81,453 @@
         "en": "Shu"
       },
       "colour": "#3f8f4e",
-      "files": {
-        "portrait": "chars/guanyu/portrait.png",
-        "portrait4x": "chars/guanyu/portrait@4x.png",
-        "body": "chars/guanyu/body.png",
-        "body4x": "chars/guanyu/body@4x.png",
-        "sheet": "chars/guanyu/sheet.png",
-        "sheet4x": "chars/guanyu/sheet@4x.png",
-        "sheetJson": "chars/guanyu/sheet.json"
+      "variants": [
+        {
+          "style": "koei",
+          "styleName": {
+            "zh": "霸王の大陸 × 像素棒球",
+            "en": "16-bit Three Kingdoms × pixel baseball"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/guanyu/koei/portrait.png",
+            "portrait4x": "chars/guanyu/koei/portrait@4x.png",
+            "body": "chars/guanyu/koei/body.png",
+            "body4x": "chars/guanyu/koei/body@4x.png",
+            "sheet": "chars/guanyu/koei/sheet.png",
+            "sheet4x": "chars/guanyu/koei/sheet@4x.png",
+            "sheetJson": "chars/guanyu/koei/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              64
+            ],
+            "frame": [
+              56,
+              64
+            ]
+          },
+          "colours": {
+            "portrait": 29,
+            "sheet": 28
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "action"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jeff",
+      "name": {
+        "zh": "傑夫",
+        "en": "Jeff"
       },
-      "sizes": {
-        "portrait": [
-          56,
-          64
-        ],
-        "body": [
-          56,
-          64
-        ]
+      "style_name": {
+        "zh": "船匠",
+        "en": "Shipwright"
       },
-      "colours": {
-        "portrait": 29,
-        "body": 28
-      }
+      "title": {
+        "zh": "造火船的軍師",
+        "en": "The strategist who builds fire rafts"
+      },
+      "bio": {
+        "zh": "船匠兼工程師，四人之中的軍師。眼鏡在船難裡裂了一角，扳手卻一直插在腰間。他看得懂江東的船，也看得懂風向，第一個想到把整條船變成火龍衝進敵陣。",
+        "en": "Shipwright, engineer and the strategist of the four. His glasses cracked in the wreck, but the wrench never left his belt. He reads Jiangdong hulls as well as the wind, and was the first to think of turning a whole boat into a fire dragon and sailing it into the enemy line."
+      },
+      "weapon": {
+        "zh": "扳手與火龍船",
+        "en": "Wrench and fire rafts"
+      },
+      "faction": "west",
+      "factionName": {
+        "zh": "西洋旅人",
+        "en": "Western travellers"
+      },
+      "colour": "#3a7ca8",
+      "variants": [
+        {
+          "style": "hd2d",
+          "styleName": {
+            "zh": "HD-2D（八方旅人風）",
+            "en": "HD-2D (Octopath-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jeff/hd2d/portrait.png",
+            "portrait4x": "chars/jeff/hd2d/portrait@4x.png",
+            "body": "chars/jeff/hd2d/body.png",
+            "body4x": "chars/jeff/hd2d/body@4x.png",
+            "sheet": "chars/jeff/hd2d/sheet.png",
+            "sheet4x": "chars/jeff/hd2d/sheet@4x.png",
+            "sheetJson": "chars/jeff/hd2d/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              80,
+              104
+            ],
+            "frame": [
+              40,
+              56
+            ]
+          },
+          "colours": {
+            "portrait": 93,
+            "sheet": 27
+          },
+          "animations": [
+            "idle",
+            "walk_down",
+            "walk_side"
+          ]
+        },
+        {
+          "style": "koei",
+          "styleName": {
+            "zh": "霸王の大陸 × 像素棒球",
+            "en": "16-bit Three Kingdoms × pixel baseball"
+          },
+          "primary": false,
+          "files": {
+            "portrait": "chars/jeff/koei/portrait.png",
+            "portrait4x": "chars/jeff/koei/portrait@4x.png",
+            "body": "chars/jeff/koei/body.png",
+            "body4x": "chars/jeff/koei/body@4x.png",
+            "sheet": "chars/jeff/koei/sheet.png",
+            "sheet4x": "chars/jeff/koei/sheet@4x.png",
+            "sheetJson": "chars/jeff/koei/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              64
+            ],
+            "frame": [
+              56,
+              64
+            ]
+          },
+          "colours": {
+            "portrait": 25,
+            "sheet": 23
+          },
+          "animations": [
+            "idle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "erin",
+      "name": {
+        "zh": "艾琳",
+        "en": "Erin"
+      },
+      "style_name": {
+        "zh": "領航員",
+        "en": "Navigator"
+      },
+      "title": {
+        "zh": "觀星的醫者",
+        "en": "The star-reading healer"
+      },
+      "bio": {
+        "zh": "船上的領航員，也是醫者。看星象、讀天氣、包紮傷口，樣樣在行。船難後她把紅髮編成一條長辮，用江東的竹杖代替遺失的六分儀，照樣能說出明天會不會下雨。",
+        "en": "The ship's navigator and its healer: stars, weather and wounds are all hers to read. After the wreck she wears her red hair in one long braid and carries a Jiangdong bamboo staff in place of her lost sextant, and she can still tell you whether it will rain tomorrow."
+      },
+      "weapon": {
+        "zh": "竹杖",
+        "en": "Bamboo staff"
+      },
+      "faction": "west",
+      "factionName": {
+        "zh": "西洋旅人",
+        "en": "Western travellers"
+      },
+      "colour": "#3a7ca8",
+      "variants": [
+        {
+          "style": "snes",
+          "styleName": {
+            "zh": "SNES JRPG（FF6 風）",
+            "en": "SNES JRPG (FF6-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/erin/snes/portrait.png",
+            "portrait4x": "chars/erin/snes/portrait@4x.png",
+            "body": "chars/erin/snes/body.png",
+            "body4x": "chars/erin/snes/body@4x.png",
+            "sheet": "chars/erin/snes/sheet.png",
+            "sheet4x": "chars/erin/snes/sheet@4x.png",
+            "sheetJson": "chars/erin/snes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 30,
+            "sheet": 15
+          },
+          "animations": [
+            "idle",
+            "walk_down",
+            "walk_up",
+            "walk_left",
+            "walk_right"
+          ]
+        },
+        {
+          "style": "koei",
+          "styleName": {
+            "zh": "霸王の大陸 × 像素棒球",
+            "en": "16-bit Three Kingdoms × pixel baseball"
+          },
+          "primary": false,
+          "files": {
+            "portrait": "chars/erin/koei/portrait.png",
+            "portrait4x": "chars/erin/koei/portrait@4x.png",
+            "body": "chars/erin/koei/body.png",
+            "body4x": "chars/erin/koei/body@4x.png",
+            "sheet": "chars/erin/koei/sheet.png",
+            "sheet4x": "chars/erin/koei/sheet@4x.png",
+            "sheetJson": "chars/erin/koei/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              64
+            ],
+            "frame": [
+              56,
+              64
+            ]
+          },
+          "colours": {
+            "portrait": 27,
+            "sheet": 19
+          },
+          "animations": [
+            "idle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "josh",
+      "name": {
+        "zh": "喬許",
+        "en": "Josh"
+      },
+      "style_name": {
+        "zh": "盾手",
+        "en": "Shieldbearer"
+      },
+      "title": {
+        "zh": "熱心腸的盾牌",
+        "en": "The big-hearted shield"
+      },
+      "bio": {
+        "zh": "個子最大、心腸最軟的水手。打仗時他舉著那面從船上拆下來的圓盾站在最前面，大聲挑釁把敵人引到自己身上，好讓同伴喘口氣。愛笑，也愛吃江東的魚。",
+        "en": "The biggest sailor with the softest heart. In battle he stands in front behind the round shield he pried off the wreck, shouting to pull every enemy onto himself so his friends can breathe. Laughs easily and loves Jiangdong fish."
+      },
+      "weapon": {
+        "zh": "鐵槍與圓盾",
+        "en": "Iron spear and round shield"
+      },
+      "faction": "west",
+      "factionName": {
+        "zh": "西洋旅人",
+        "en": "Western travellers"
+      },
+      "colour": "#3a7ca8",
+      "variants": [
+        {
+          "style": "gba",
+          "styleName": {
+            "zh": "GBA 戰棋（聖火降魔錄風）",
+            "en": "GBA tactics (Fire Emblem-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/josh/gba/portrait.png",
+            "portrait4x": "chars/josh/gba/portrait@4x.png",
+            "body": "chars/josh/gba/body.png",
+            "body4x": "chars/josh/gba/body@4x.png",
+            "sheet": "chars/josh/gba/sheet.png",
+            "sheet4x": "chars/josh/gba/sheet@4x.png",
+            "sheetJson": "chars/josh/gba/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              64,
+              64
+            ],
+            "frame": [
+              48,
+              48
+            ]
+          },
+          "colours": {
+            "portrait": 16,
+            "sheet": 14
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "guard"
+          ]
+        },
+        {
+          "style": "koei",
+          "styleName": {
+            "zh": "霸王の大陸 × 像素棒球",
+            "en": "16-bit Three Kingdoms × pixel baseball"
+          },
+          "primary": false,
+          "files": {
+            "portrait": "chars/josh/koei/portrait.png",
+            "portrait4x": "chars/josh/koei/portrait@4x.png",
+            "body": "chars/josh/koei/body.png",
+            "body4x": "chars/josh/koei/body@4x.png",
+            "sheet": "chars/josh/koei/sheet.png",
+            "sheet4x": "chars/josh/koei/sheet@4x.png",
+            "sheetJson": "chars/josh/koei/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              64
+            ],
+            "frame": [
+              56,
+              64
+            ]
+          },
+          "colours": {
+            "portrait": 27,
+            "sheet": 20
+          },
+          "animations": [
+            "idle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jasper",
+      "name": {
+        "zh": "賈斯珀",
+        "en": "Jasper"
+      },
+      "style_name": {
+        "zh": "斥候",
+        "en": "Scout"
+      },
+      "title": {
+        "zh": "眼尖的斥候",
+        "en": "The sharp-eyed scout"
+      },
+      "bio": {
+        "zh": "四位西洋旅人中最年輕的一個，船難後在江東跟著孫權。腳快、眼尖、手也快：地圖上的祕密總是他先發現，短弓與箭袋從不離身，脖子上的圍巾是在建業市集換來的。",
+        "en": "The youngest of the four western travellers, who followed Sun Quan after the wreck. Quick feet, sharp eyes and quicker fingers: he finds the map's secrets first, never parts with his short bow and quiver, and traded for the scarf at his neck in a Jianye market."
+      },
+      "weapon": {
+        "zh": "短弓",
+        "en": "Short bow"
+      },
+      "faction": "west",
+      "factionName": {
+        "zh": "西洋旅人",
+        "en": "Western travellers"
+      },
+      "colour": "#3a7ca8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（勇者鬥惡龍風）",
+            "en": "8-bit NES (Dragon Quest-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jasper/nes/portrait.png",
+            "portrait4x": "chars/jasper/nes/portrait@4x.png",
+            "body": "chars/jasper/nes/body.png",
+            "body4x": "chars/jasper/nes/body@4x.png",
+            "sheet": "chars/jasper/nes/sheet.png",
+            "sheet4x": "chars/jasper/nes/sheet@4x.png",
+            "sheetJson": "chars/jasper/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              48
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk_down",
+            "walk_up",
+            "walk_left",
+            "walk_right"
+          ]
+        },
+        {
+          "style": "koei",
+          "styleName": {
+            "zh": "霸王の大陸 × 像素棒球",
+            "en": "16-bit Three Kingdoms × pixel baseball"
+          },
+          "primary": false,
+          "files": {
+            "portrait": "chars/jasper/koei/portrait.png",
+            "portrait4x": "chars/jasper/koei/portrait@4x.png",
+            "body": "chars/jasper/koei/body.png",
+            "body4x": "chars/jasper/koei/body@4x.png",
+            "sheet": "chars/jasper/koei/sheet.png",
+            "sheet4x": "chars/jasper/koei/sheet@4x.png",
+            "sheetJson": "chars/jasper/koei/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              56,
+              64
+            ],
+            "frame": [
+              56,
+              64
+            ]
+          },
+          "colours": {
+            "portrait": 28,
+            "sheet": 20
+          },
+          "animations": [
+            "idle"
+          ]
+        }
+      ]
     }
   ]
 }

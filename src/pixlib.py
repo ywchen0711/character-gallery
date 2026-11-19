@@ -210,3 +210,21 @@ def flipv(rows):
 def fliph(rows):
     w = max(len(r) for r in rows)
     return [r.ljust(w, CLEAR)[::-1] for r in rows]
+
+
+def RLE(text, width=None):
+    """Run-length rows: each line is tokens like '4. 2k 3S' (count + char); a token
+    without a number counts 1. Checks every row against width when given."""
+    rows = []
+    for ln in text.strip().split('\n'):
+        ln = ln.strip()
+        if not ln:
+            continue
+        out = ''
+        for tok in ln.split():
+            n = ''.join(ch for ch in tok[:-1] if ch.isdigit())
+            out += tok[-1] * (int(n) if n else 1)
+        if width is not None and len(out) != width:
+            raise ValueError('RLE row %d is %d wide, want %d: %s' % (len(rows), len(out), width, ln))
+        rows.append(out)
+    return rows

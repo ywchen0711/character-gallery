@@ -125,6 +125,7 @@ FACTION_BG = {
     'shu': ('#1c2e1e', '#0a120c'),
     'wei': ('#1a2236', '#0a0c16'),
     'qun': ('#2e2416', '#100c08'),
+    'west': ('#1c2c3a', '#0a1018'),
 }
 
 
@@ -148,7 +149,8 @@ def build(ch):
     head = getattr(ch, 'HEAD', faces.MALE)
     L.stamp(head, HEAD_X, HEAD_Y)
     for item in getattr(ch, 'FACE', []):       # hair, beard, feature tweaks in head coords
-        L.stamp(item[0], HEAD_X + item[1], HEAD_Y + item[2], remap=item[3] if len(item) > 3 else None)
+        L.stamp(item[0], HEAD_X + item[1], HEAD_Y + item[2], remap=item[3] if len(item) > 3 else None,
+                only=item[4] if len(item) > 4 else None)
     for item in getattr(ch, 'FRONT', []):
         if callable(item):
             item(L)

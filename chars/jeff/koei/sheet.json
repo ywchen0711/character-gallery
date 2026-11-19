@@ -1,0 +1,18 @@
+{
+  "image": "sheet.png",
+  "frameWidth": 56,
+  "frameHeight": 64,
+  "anchor": {
+    "x": 28,
+    "y": 62,
+    "note": "feet centre in each cell"
+  },
+  "animations": {
+    "idle": {
+      "row": 0,
+      "frames": 2,
+      "fps": 3,
+      "loop": true
+    }
+  }
+}

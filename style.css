@@ -84,3 +84,33 @@ body.locked { overflow: hidden; }
   .grid { grid-template-columns: 1fr; }
   .top h1 { font-size: 22px; }
 }
+
+/* v3: styles, variants and the comparison page */
+.tools { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+a.chip { text-decoration: none; display: inline-flex; align-items: center; }
+.chip.strong { background: var(--chip-on); color: var(--chip-on-ink); border-color: var(--chip-on); }
+.filters.styles { padding-top: 0; }
+.filters.styles .chip { font-size: 13px; }
+.card .art { align-items: flex-end; min-height: 144px; }
+.card canvas { width: auto; height: auto; max-width: 100%; }
+.stylelab { margin-top: 4px; font-size: 12px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 4px; }
+.blurb { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
+.frame canvas { max-width: 100%; height: auto; }
+.sec { font-size: 18px; margin: 18px 0 10px; }
+.sec-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: space-between; }
+.cmp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+.cmp-grid.koei { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.cmp { background: var(--panel); border: 1px solid var(--line); border-top: 4px solid var(--fc); border-radius: 10px; padding: 12px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: 8px; }
+.cmp-style { font-weight: 700; font-size: 16px; }
+.cmp-blurb { margin: 0; color: var(--muted); font-size: 13px; min-height: 3.2em; }
+.cmp-art { background: var(--art); border-radius: 8px; padding: 10px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.cmp.small .cmp-art { flex-direction: row; justify-content: center; align-items: flex-end; flex-wrap: wrap; }
+.cmp-spr { display: flex; gap: 12px; align-items: flex-end; justify-content: center; min-height: 112px; }
+.cmp canvas { max-width: 100%; height: auto; }
+.cmp-name { font-size: 14px; }
+.chip.pick { align-self: flex-start; }
+.pick-note { margin: 16px 0; font-weight: 600; }
+
+a.chip { color: var(--ink); white-space: nowrap; }
+.chip.strong { color: var(--chip-on-ink); }

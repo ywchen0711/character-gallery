@@ -362,3 +362,8 @@ CHIBI = dict(costume='robe', action=C_ACTION, side=C_SIDE, side_prop=C_SIDE_PROP
              side_back=[(C_TAILS_SIDE, -2, 3)],
              side_face=[(C_BROW_SIDE, 1, 8), (C_HAT_SIDE, -1, -7), (C_BEARD_SIDE, 8, 11)], back=[(C_TAILS, 18, 2)],
              face=[(C_BROWS, 1, 8), (C_HAT, -1, -7), (C_BEARD, 2, 12)], prop=C_PROP)
+
+
+def variants():
+    from variants import KoeiVariant
+    return [KoeiVariant(sys.modules[__name__], primary=True)]

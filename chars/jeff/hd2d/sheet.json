@@ -1,0 +1,31 @@
+{
+  "image": "sheet.png",
+  "frameWidth": 40,
+  "frameHeight": 56,
+  "anchor": {
+    "x": 20,
+    "y": 50,
+    "note": "feet centre in each cell"
+  },
+  "animations": {
+    "idle": {
+      "row": 0,
+      "frames": 4,
+      "fps": 3,
+      "loop": true
+    },
+    "walk_down": {
+      "row": 1,
+      "frames": 4,
+      "fps": 7,
+      "loop": true
+    },
+    "walk_side": {
+      "row": 2,
+      "frames": 4,
+      "fps": 7,
+      "loop": true,
+      "note": "faces right; mirror horizontally for left"
+    }
+  }
+}

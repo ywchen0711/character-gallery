@@ -1,0 +1,43 @@
+{
+  "image": "sheet.png",
+  "frameWidth": 16,
+  "frameHeight": 24,
+  "anchor": {
+    "x": 8,
+    "y": 23,
+    "note": "feet centre in each cell"
+  },
+  "animations": {
+    "idle": {
+      "row": 0,
+      "frames": 4,
+      "fps": 3,
+      "loop": true
+    },
+    "walk_down": {
+      "row": 1,
+      "frames": 4,
+      "fps": 6,
+      "loop": true
+    },
+    "walk_up": {
+      "row": 2,
+      "frames": 4,
+      "fps": 6,
+      "loop": true
+    },
+    "walk_left": {
+      "row": 3,
+      "frames": 4,
+      "fps": 6,
+      "loop": true
+    },
+    "walk_right": {
+      "row": 4,
+      "frames": 4,
+      "fps": 6,
+      "loop": true,
+      "note": "mirror of walk_left"
+    }
+  }
+}

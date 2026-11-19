@@ -1,0 +1,32 @@
+{
+  "image": "sheet.png",
+  "frameWidth": 48,
+  "frameHeight": 48,
+  "anchor": {
+    "x": 24,
+    "y": 45,
+    "note": "feet centre in each cell"
+  },
+  "animations": {
+    "idle": {
+      "row": 0,
+      "frames": 2,
+      "fps": 3,
+      "loop": true
+    },
+    "walk": {
+      "row": 1,
+      "frames": 4,
+      "fps": 8,
+      "loop": true,
+      "note": "faces left; mirror horizontally for right"
+    },
+    "guard": {
+      "row": 2,
+      "frames": 5,
+      "fps": 6,
+      "loop": false,
+      "note": "taunt: raises the shield and plants his feet"
+    }
+  }
+}
