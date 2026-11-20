@@ -187,3 +187,4 @@ def centre_fix(c, light_map=None, x0=16, x1=32, y0=32, y1=48, sx0=10, sx1=38):
 
 import foe_busts_people  # noqa: E402,F401  (registers the designs)
 import foe_busts_animals  # noqa: E402,F401
+import foe_busts_longmen2  # noqa: E402,F401

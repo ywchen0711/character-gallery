@@ -174,6 +174,72 @@
         "nesTall4x": "chars/longmen/group-nes-more-4x2@4x.png"
       }
     },
+    "longmen2": {
+      "name": {
+        "zh": "龍門刀客傳 貳 登場人物",
+        "en": "People of Longmen Quest II"
+      },
+      "faction": "longmen",
+      "members": [
+        "hubanxian",
+        "jiabafang",
+        "wudadan",
+        "wenduizhang",
+        "suxiaowan",
+        "chutiankuo",
+        "niubaobao",
+        "mojide",
+        "huotianxia",
+        "mowuya",
+        "aman"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/longmen/group-nes-l2.png",
+        "nes4x": "chars/longmen/group-nes-l2@4x.png",
+        "nesTall": "chars/longmen/group-nes-l2-4col.png",
+        "nesTall4x": "chars/longmen/group-nes-l2-4col@4x.png"
+      }
+    },
+    "longmen2Foes": {
+      "name": {
+        "zh": "龍門刀客傳 貳 的妖物",
+        "en": "Creatures of Longmen Quest II"
+      },
+      "faction": "foe",
+      "members": [
+        "acolyte",
+        "pirate",
+        "mudspirit",
+        "glowcap",
+        "lotusghost",
+        "redpaper",
+        "goldsnake",
+        "bamboosprite",
+        "firehornet",
+        "lavacrab",
+        "lavawolf",
+        "lavascorpion",
+        "bellguard",
+        "icebat",
+        "snowmonkey",
+        "snowsprite",
+        "iceboar",
+        "icejiangshi",
+        "bellfire",
+        "bellpuppet",
+        "goldbone",
+        "jadetoad",
+        "greatbell"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/foes/group-nes-l2.png",
+        "nes4x": "chars/foes/group-nes-l2@4x.png",
+        "nesTall": "chars/foes/group-nes-l2-4col.png",
+        "nesTall4x": "chars/foes/group-nes-l2-4col@4x.png"
+      }
+    },
     "yiruiDoll": {
       "name": {
         "zh": "奕叡的紙娃娃",
@@ -275,7 +341,30 @@
         "vajraguardian",
         "netherarcher",
         "netherassassin",
-        "blackdaoist"
+        "blackdaoist",
+        "acolyte",
+        "pirate",
+        "mudspirit",
+        "glowcap",
+        "lotusghost",
+        "redpaper",
+        "goldsnake",
+        "bamboosprite",
+        "firehornet",
+        "lavacrab",
+        "lavawolf",
+        "lavascorpion",
+        "bellguard",
+        "icebat",
+        "snowmonkey",
+        "snowsprite",
+        "iceboar",
+        "icejiangshi",
+        "bellfire",
+        "bellpuppet",
+        "goldbone",
+        "jadetoad",
+        "greatbell"
       ],
       "style": "nes",
       "files": {
@@ -6995,6 +7084,2329 @@
           "colours": {
             "portrait": 9,
             "sheet": 5
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hubanxian",
+      "name": {
+        "zh": "胡半仙",
+        "en": "Hu Banxian"
+      },
+      "style_name": {
+        "zh": "鐵口直斷",
+        "en": "The Infallible"
+      },
+      "title": {
+        "zh": "算命先生",
+        "en": "Fortune-teller"
+      },
+      "bio": {
+        "zh": "擺攤算命的胡半仙，招牌寫著「鐵口直斷，不準不要錢」。他說的話，從來沒有一句準過——所以從來沒收過錢。",
+        "en": "Hu Banxian tells fortunes under a banner reading \"An iron mouth, a sure word, no charge if I'm wrong\". Not one of his prophecies has ever come true, so he has never been paid."
+      },
+      "weapon": {
+        "zh": "算命幡",
+        "en": "Fortune banner"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/hubanxian/nes/portrait.png",
+            "portrait4x": "chars/hubanxian/nes/portrait@4x.png",
+            "body": "chars/hubanxian/nes/body.png",
+            "body4x": "chars/hubanxian/nes/body@4x.png",
+            "sheet": "chars/hubanxian/nes/sheet.png",
+            "sheet4x": "chars/hubanxian/nes/sheet@4x.png",
+            "sheetJson": "chars/hubanxian/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jiabafang",
+      "name": {
+        "zh": "賈八方",
+        "en": "Jia Bafang"
+      },
+      "style_name": {
+        "zh": "八方通",
+        "en": "Jia of the Eight Directions"
+      },
+      "title": {
+        "zh": "行商",
+        "en": "Peddler"
+      },
+      "bio": {
+        "zh": "天底下沒有他不賣的東西，連自己的鞋、帽子和外衣都賣了。每次見面，他身上的東西就少一件。",
+        "en": "There is nothing under heaven he won't sell, his own shoes, hat and coat included. Each time you meet him he is wearing a little less."
+      },
+      "weapon": {
+        "zh": "貨箱",
+        "en": "His pack"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jiabafang/nes/portrait.png",
+            "portrait4x": "chars/jiabafang/nes/portrait@4x.png",
+            "body": "chars/jiabafang/nes/body.png",
+            "body4x": "chars/jiabafang/nes/body@4x.png",
+            "sheet": "chars/jiabafang/nes/sheet.png",
+            "sheet4x": "chars/jiabafang/nes/sheet@4x.png",
+            "sheetJson": "chars/jiabafang/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 12,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wudadan",
+      "name": {
+        "zh": "武大膽",
+        "en": "Wu Dadan"
+      },
+      "style_name": {
+        "zh": "膽小鏢頭",
+        "en": "The Timid Escort"
+      },
+      "title": {
+        "zh": "鏢師",
+        "en": "Caravan escort"
+      },
+      "bio": {
+        "zh": "名叫「大膽」，身高八尺、滿臉鬍子，卻是全江湖最膽小的鏢師。一害怕就躲進酒罈，可真到了要緊關頭，總會擋在同伴前面。",
+        "en": "His name means \"Great Courage\", he is eight feet tall and bearded, and he is the most timid escort in the jianghu. Frightened, he hides in a wine jar; yet when it matters most he always stands in front of his friends."
+      },
+      "weapon": {
+        "zh": "鐵頭哨棒",
+        "en": "Iron-shod staff"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/wudadan/nes/portrait.png",
+            "portrait4x": "chars/wudadan/nes/portrait@4x.png",
+            "body": "chars/wudadan/nes/body.png",
+            "body4x": "chars/wudadan/nes/body@4x.png",
+            "sheet": "chars/wudadan/nes/sheet.png",
+            "sheet4x": "chars/wudadan/nes/sheet@4x.png",
+            "sheetJson": "chars/wudadan/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wenduizhang",
+      "name": {
+        "zh": "文對仗",
+        "en": "Wen Duizhang"
+      },
+      "style_name": {
+        "zh": "對聯書生",
+        "en": "The Couplet Scholar"
+      },
+      "title": {
+        "zh": "書生",
+        "en": "Scholar"
+      },
+      "bio": {
+        "zh": "蘇河城的書生，只用對聯說話，一句上聯一句下聯，從不落單。手裡的大毛筆寫得出驚雷。",
+        "en": "A scholar of Suhe who speaks only in couplets, a first line and a second, never one alone. His great brush can write thunder."
+      },
+      "weapon": {
+        "zh": "如椽大筆",
+        "en": "Rafter-sized brush"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/wenduizhang/nes/portrait.png",
+            "portrait4x": "chars/wenduizhang/nes/portrait@4x.png",
+            "body": "chars/wenduizhang/nes/body.png",
+            "body4x": "chars/wenduizhang/nes/body@4x.png",
+            "sheet": "chars/wenduizhang/nes/sheet.png",
+            "sheet4x": "chars/wenduizhang/nes/sheet@4x.png",
+            "sheetJson": "chars/wenduizhang/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suxiaowan",
+      "name": {
+        "zh": "蘇小婉",
+        "en": "Su Xiaowan"
+      },
+      "style_name": {
+        "zh": "不知己逝的小姐",
+        "en": "The Lady Who Forgot She Died"
+      },
+      "title": {
+        "zh": "蘇家小姐",
+        "en": "Daughter of the Su family"
+      },
+      "bio": {
+        "zh": "二十年前死於妖禍的蘇家小姐。她不知道自己已經死了，每天在舊宅裡泡茶，等去京城學馴獸的哥哥回來。",
+        "en": "The Su daughter, killed in a beast raid twenty years ago. She does not know she is dead; every day she makes tea in the old mansion and waits for her brother, who went to the capital to learn beast-taming."
+      },
+      "weapon": {
+        "zh": "團扇與青瓷杯",
+        "en": "A round fan and a celadon cup"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/suxiaowan/nes/portrait.png",
+            "portrait4x": "chars/suxiaowan/nes/portrait@4x.png",
+            "body": "chars/suxiaowan/nes/body.png",
+            "body4x": "chars/suxiaowan/nes/body@4x.png",
+            "sheet": "chars/suxiaowan/nes/sheet.png",
+            "sheet4x": "chars/suxiaowan/nes/sheet@4x.png",
+            "sheetJson": "chars/suxiaowan/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chutiankuo",
+      "name": {
+        "zh": "楚天闊",
+        "en": "Chu Tiankuo"
+      },
+      "style_name": {
+        "zh": "屢敗屢戰",
+        "en": "The Undefeated Loser"
+      },
+      "title": {
+        "zh": "劍客",
+        "en": "Swordsman"
+      },
+      "bio": {
+        "zh": "立志要當天下第一劍客的年輕人，在每一座城鎮向奕叡挑戰，每輸一次就在小冊子上記一筆。他不知道自己的父親是誰。",
+        "en": "A young man set on becoming the greatest swordsman under heaven. He challenges Yi Rui in every town and writes each defeat in a little book. He does not know who his father really is."
+      },
+      "weapon": {
+        "zh": "天闊劍",
+        "en": "Sky-wide sword"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/chutiankuo/nes/portrait.png",
+            "portrait4x": "chars/chutiankuo/nes/portrait@4x.png",
+            "body": "chars/chutiankuo/nes/body.png",
+            "body4x": "chars/chutiankuo/nes/body@4x.png",
+            "sheet": "chars/chutiankuo/nes/sheet.png",
+            "sheet4x": "chars/chutiankuo/nes/sheet@4x.png",
+            "sheetJson": "chars/chutiankuo/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "niubaobao",
+      "name": {
+        "zh": "牛飽飽",
+        "en": "Niu Baobao"
+      },
+      "style_name": {
+        "zh": "百獸山寨主",
+        "en": "Master of the Hundred Beasts Camp"
+      },
+      "title": {
+        "zh": "寨主",
+        "en": "Camp master"
+      },
+      "bio": {
+        "zh": "百獸山寨的寨主，收留被打醒的妖物。最愛吃肉包，送人四個肉包，到手只剩三個。他的表親在各地客棧當夥計。",
+        "en": "Master of the Hundred Beasts Camp, where creatures come to their senses. He loves meat buns: he gives you four and you get three. His cousins work at inns everywhere."
+      },
+      "weapon": {
+        "zh": "肉包",
+        "en": "Meat buns"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/niubaobao/nes/portrait.png",
+            "portrait4x": "chars/niubaobao/nes/portrait@4x.png",
+            "body": "chars/niubaobao/nes/body.png",
+            "body4x": "chars/niubaobao/nes/body@4x.png",
+            "sheet": "chars/niubaobao/nes/sheet.png",
+            "sheet4x": "chars/niubaobao/nes/sheet@4x.png",
+            "sheetJson": "chars/niubaobao/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mojide",
+      "name": {
+        "zh": "莫記得",
+        "en": "Mo Jide"
+      },
+      "style_name": {
+        "zh": "藥王鬼手",
+        "en": "The Ghost-handed Healer"
+      },
+      "title": {
+        "zh": "大夫",
+        "en": "Doctor"
+      },
+      "bio": {
+        "zh": "蘇河城的大夫，看病不收錢，說收了也會忘。其實他什麼都記得——他是馭妖宗的藥王鬼手。",
+        "en": "The doctor of Suhe who treats for free, saying he would only forget the fee. In truth he remembers everything: he is the Beastbinder Sect's Ghost-handed Healer."
+      },
+      "weapon": {
+        "zh": "藥箱",
+        "en": "Medicine box"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/mojide/nes/portrait.png",
+            "portrait4x": "chars/mojide/nes/portrait@4x.png",
+            "body": "chars/mojide/nes/body.png",
+            "body4x": "chars/mojide/nes/body@4x.png",
+            "sheet": "chars/mojide/nes/sheet.png",
+            "sheet4x": "chars/mojide/nes/sheet@4x.png",
+            "sheetJson": "chars/mojide/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "huotianxia",
+      "name": {
+        "zh": "霍天下",
+        "en": "Huo Tianxia"
+      },
+      "style_name": {
+        "zh": "天下第一吹",
+        "en": "The Greatest Boaster"
+      },
+      "title": {
+        "zh": "江湖客",
+        "en": "Wanderer"
+      },
+      "bio": {
+        "zh": "自稱天下第一的大俠，誰做了什麼大事，他就說是自己做的。真打起來，總是被人綁著。",
+        "en": "A self-styled great hero who claims every deed anyone does. When there is real fighting, he usually ends up tied up."
+      },
+      "weapon": {
+        "zh": "紅披風",
+        "en": "Red cape"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/huotianxia/nes/portrait.png",
+            "portrait4x": "chars/huotianxia/nes/portrait@4x.png",
+            "body": "chars/huotianxia/nes/body.png",
+            "body4x": "chars/huotianxia/nes/body@4x.png",
+            "sheet": "chars/huotianxia/nes/sheet.png",
+            "sheet4x": "chars/huotianxia/nes/sheet@4x.png",
+            "sheetJson": "chars/huotianxia/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mowuya",
+      "name": {
+        "zh": "墨無涯",
+        "en": "Mo Wuya"
+      },
+      "style_name": {
+        "zh": "馭妖宗主",
+        "en": "Master of the Beastbinder Sect"
+      },
+      "title": {
+        "zh": "宗主",
+        "en": "Sect master"
+      },
+      "bio": {
+        "zh": "馭妖宗的宗主，手持萬妖鈴。二十年前妖禍奪走了他的妹妹，他發誓要讓天下的妖物都聽話。",
+        "en": "Master of the Beastbinder Sect, bearer of the Bell of Ten Thousand Beasts. A beast raid took his sister twenty years ago, and he swore every creature would obey."
+      },
+      "weapon": {
+        "zh": "鈴杖",
+        "en": "Bell staff"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/mowuya/nes/portrait.png",
+            "portrait4x": "chars/mowuya/nes/portrait@4x.png",
+            "body": "chars/mowuya/nes/body.png",
+            "body4x": "chars/mowuya/nes/body@4x.png",
+            "sheet": "chars/mowuya/nes/sheet.png",
+            "sheet4x": "chars/mowuya/nes/sheet@4x.png",
+            "sheetJson": "chars/mowuya/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aman",
+      "name": {
+        "zh": "阿蠻",
+        "en": "A-Man"
+      },
+      "style_name": {
+        "zh": "聽獸語的姑娘",
+        "en": "The Girl Who Talks to Beasts"
+      },
+      "title": {
+        "zh": "苗女",
+        "en": "Miao girl"
+      },
+      "bio": {
+        "zh": "青竹寨的苗家姑娘，從小跟狼一起長大，聽得懂妖物說話，卻不太會說人話。",
+        "en": "A Miao girl of Green Bamboo village who grew up among wolves. She understands creatures, but hardly speaks the human tongue."
+      },
+      "weapon": {
+        "zh": "骨哨",
+        "en": "Bone whistle"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/aman/nes/portrait.png",
+            "portrait4x": "chars/aman/nes/portrait@4x.png",
+            "body": "chars/aman/nes/body.png",
+            "body4x": "chars/aman/nes/body@4x.png",
+            "sheet": "chars/aman/nes/sheet.png",
+            "sheet4x": "chars/aman/nes/sheet@4x.png",
+            "sheetJson": "chars/aman/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acolyte",
+      "name": {
+        "zh": "馭妖宗徒",
+        "en": "Beastbinder Acolyte"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "馭妖宗的門徒，腰掛銅鈴，搖一下鈴，身邊的妖物就紅了眼。",
+        "en": "A disciple of the Beastbinder Sect. One shake of the bell at his belt and every creature nearby sees red."
+      },
+      "habitat": {
+        "zh": "鈴音寺與馭妖宗的據點",
+        "en": "The Bell Temple and the sect's strongholds"
+      },
+      "tier": 2,
+      "base": "sorcerer",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/acolyte/nes/portrait.png",
+            "portrait4x": "chars/acolyte/nes/portrait@4x.png",
+            "body": "chars/acolyte/nes/body.png",
+            "body4x": "chars/acolyte/nes/body@4x.png",
+            "sheet": "chars/acolyte/nes/sheet.png",
+            "sheet4x": "chars/acolyte/nes/sheet@4x.png",
+            "sheetJson": "chars/acolyte/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 5
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pirate",
+      "name": {
+        "zh": "水寇",
+        "en": "River Pirate"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 2 階小怪",
+        "en": "Tier 2 common foe"
+      },
+      "bio": {
+        "zh": "在蘇河水道上打劫的水寇，頭綁白巾，扛著船槳當棍子。",
+        "en": "A river pirate of the Suhe canals: white head cloth, an oar for a club."
+      },
+      "habitat": {
+        "zh": "水鄉的河道與碧波洞",
+        "en": "The canal country and Green Wave Cave"
+      },
+      "tier": 2,
+      "base": "lackey",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/pirate/nes/portrait.png",
+            "portrait4x": "chars/pirate/nes/portrait@4x.png",
+            "body": "chars/pirate/nes/body.png",
+            "body4x": "chars/pirate/nes/body@4x.png",
+            "sheet": "chars/pirate/nes/sheet.png",
+            "sheet4x": "chars/pirate/nes/sheet@4x.png",
+            "sheetJson": "chars/pirate/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mudspirit",
+      "name": {
+        "zh": "泥靈",
+        "en": "Mud Spirit"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "沼澤裡的泥巴聚成了形，一甩身子就濺得人滿頭泥漿。",
+        "en": "Swamp mud that has taken a shape. One shake and you're covered head to foot."
+      },
+      "habitat": {
+        "zh": "水鄉的沼澤與毒龍沼",
+        "en": "The marshes of the canal country and Poison Dragon Marsh"
+      },
+      "tier": 3,
+      "base": "inkblot",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/mudspirit/nes/portrait.png",
+            "portrait4x": "chars/mudspirit/nes/portrait@4x.png",
+            "body": "chars/mudspirit/nes/body.png",
+            "body4x": "chars/mudspirit/nes/body@4x.png",
+            "sheet": "chars/mudspirit/nes/sheet.png",
+            "sheet4x": "chars/mudspirit/nes/sheet@4x.png",
+            "sheetJson": "chars/mudspirit/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 3
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glowcap",
+      "name": {
+        "zh": "熒光菇",
+        "en": "Glowcap"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "在洞穴深處發光的菇妖，孢子讓人昏昏欲睡。",
+        "en": "A mushroom imp that glows deep in caves; its spores make you drowsy."
+      },
+      "habitat": {
+        "zh": "碧波洞與南疆的濕地",
+        "en": "Green Wave Cave and the southern wetlands"
+      },
+      "tier": 3,
+      "base": "mushroom",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/glowcap/nes/portrait.png",
+            "portrait4x": "chars/glowcap/nes/portrait@4x.png",
+            "body": "chars/glowcap/nes/body.png",
+            "body4x": "chars/glowcap/nes/body@4x.png",
+            "sheet": "chars/glowcap/nes/sheet.png",
+            "sheet4x": "chars/glowcap/nes/sheet@4x.png",
+            "sheetJson": "chars/glowcap/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 4
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lotusghost",
+      "name": {
+        "zh": "蓮池鬼",
+        "en": "Lotus Pond Ghost"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "舊宅蓮池裡的女鬼，頭頂荷葉，會唱一首誰也聽不懂的歌。",
+        "en": "A ghost of an old mansion's lotus pond, a leaf on her head, singing a song no one understands."
+      },
+      "habitat": {
+        "zh": "蘇家舊宅與碧波湖",
+        "en": "The old Su mansion and Green Wave Lake"
+      },
+      "tier": 3,
+      "base": "drowned",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/lotusghost/nes/portrait.png",
+            "portrait4x": "chars/lotusghost/nes/portrait@4x.png",
+            "body": "chars/lotusghost/nes/body.png",
+            "body4x": "chars/lotusghost/nes/body@4x.png",
+            "sheet": "chars/lotusghost/nes/sheet.png",
+            "sheet4x": "chars/lotusghost/nes/sheet@4x.png",
+            "sheetJson": "chars/lotusghost/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 5
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "redpaper",
+      "name": {
+        "zh": "紅紙人",
+        "en": "Red Paper Effigy"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 3 階小怪",
+        "en": "Tier 3 common foe"
+      },
+      "bio": {
+        "zh": "冥婚喜宴上燒剩的紅紙人，咧著嘴笑，跟著鈴聲跳舞。",
+        "en": "A red paper figure left over from a ghost wedding, grinning and dancing to the bell."
+      },
+      "habitat": {
+        "zh": "蘇家舊宅",
+        "en": "The old Su mansion"
+      },
+      "tier": 3,
+      "base": "paperghost",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/redpaper/nes/portrait.png",
+            "portrait4x": "chars/redpaper/nes/portrait@4x.png",
+            "body": "chars/redpaper/nes/body.png",
+            "body4x": "chars/redpaper/nes/body@4x.png",
+            "sheet": "chars/redpaper/nes/sheet.png",
+            "sheet4x": "chars/redpaper/nes/sheet@4x.png",
+            "sheetJson": "chars/redpaper/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 4
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goldsnake",
+      "name": {
+        "zh": "金環蛇",
+        "en": "Gold-ring Snake"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "南疆竹林裡的毒蛇，一圈黑一圈金，咬一口半天走不動。",
+        "en": "A poisonous snake of the southern bamboo, ringed black and gold."
+      },
+      "habitat": {
+        "zh": "南疆的竹林與海島",
+        "en": "The southern bamboo and isles"
+      },
+      "tier": 4,
+      "base": "snake",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/goldsnake/nes/portrait.png",
+            "portrait4x": "chars/goldsnake/nes/portrait@4x.png",
+            "body": "chars/goldsnake/nes/body.png",
+            "body4x": "chars/goldsnake/nes/body@4x.png",
+            "sheet": "chars/goldsnake/nes/sheet.png",
+            "sheet4x": "chars/goldsnake/nes/sheet@4x.png",
+            "sheetJson": "chars/goldsnake/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 5
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bamboosprite",
+      "name": {
+        "zh": "竹精",
+        "en": "Bamboo Sprite"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "竹林裡長了靈性的竹子，會替受傷的妖物療傷。",
+        "en": "A bamboo stalk that came to life; it tends wounded creatures."
+      },
+      "habitat": {
+        "zh": "青竹寨外的竹海",
+        "en": "The Bamboo Sea outside Green Bamboo village"
+      },
+      "tier": 4,
+      "base": "treesprite",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/bamboosprite/nes/portrait.png",
+            "portrait4x": "chars/bamboosprite/nes/portrait@4x.png",
+            "body": "chars/bamboosprite/nes/body.png",
+            "body4x": "chars/bamboosprite/nes/body@4x.png",
+            "sheet": "chars/bamboosprite/nes/sheet.png",
+            "sheet4x": "chars/bamboosprite/nes/sheet@4x.png",
+            "sheetJson": "chars/bamboosprite/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 6
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "firehornet",
+      "name": {
+        "zh": "火蜂",
+        "en": "Fire Hornet"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "火山口飛出的紅蜂，翅膀一振就冒火星。",
+        "en": "Red hornets from the crater; sparks fly when they beat their wings."
+      },
+      "habitat": {
+        "zh": "焰口村與赤焰窟",
+        "en": "Yankou and the Red Flame Caves"
+      },
+      "tier": 4,
+      "base": "hornet",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/firehornet/nes/portrait.png",
+            "portrait4x": "chars/firehornet/nes/portrait@4x.png",
+            "body": "chars/firehornet/nes/body.png",
+            "body4x": "chars/firehornet/nes/body@4x.png",
+            "sheet": "chars/firehornet/nes/sheet.png",
+            "sheet4x": "chars/firehornet/nes/sheet@4x.png",
+            "sheetJson": "chars/firehornet/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 4
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lavacrab",
+      "name": {
+        "zh": "火蟹",
+        "en": "Lava Crab"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "在熔岩裡爬的螃蟹，殼燒得通紅，會往人身上噴火。",
+        "en": "A crab that crawls in lava, its shell red-hot; it spits fire."
+      },
+      "habitat": {
+        "zh": "赤焰窟",
+        "en": "The Red Flame Caves"
+      },
+      "tier": 4,
+      "base": "crab",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/lavacrab/nes/portrait.png",
+            "portrait4x": "chars/lavacrab/nes/portrait@4x.png",
+            "body": "chars/lavacrab/nes/body.png",
+            "body4x": "chars/lavacrab/nes/body@4x.png",
+            "sheet": "chars/lavacrab/nes/sheet.png",
+            "sheet4x": "chars/lavacrab/nes/sheet@4x.png",
+            "sheetJson": "chars/lavacrab/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 4
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lavawolf",
+      "name": {
+        "zh": "熔岩狼",
+        "en": "Lava Wolf"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "毛色像冷掉的熔岩，一張嘴就吐出熱氣。",
+        "en": "Its coat looks like cooled lava; it breathes out hot air."
+      },
+      "habitat": {
+        "zh": "赤焰窟",
+        "en": "The Red Flame Caves"
+      },
+      "tier": 4,
+      "base": "wolf_scar",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/lavawolf/nes/portrait.png",
+            "portrait4x": "chars/lavawolf/nes/portrait@4x.png",
+            "body": "chars/lavawolf/nes/body.png",
+            "body4x": "chars/lavawolf/nes/body@4x.png",
+            "sheet": "chars/lavawolf/nes/sheet.png",
+            "sheet4x": "chars/lavawolf/nes/sheet@4x.png",
+            "sheetJson": "chars/lavawolf/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 6
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lavascorpion",
+      "name": {
+        "zh": "火蠍",
+        "en": "Lava Scorpion"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 4 階小怪",
+        "en": "Tier 4 common foe"
+      },
+      "bio": {
+        "zh": "赤焰窟裡的紅蠍，尾針燒得發亮。",
+        "en": "A red scorpion of the Red Flame Caves; its sting glows."
+      },
+      "habitat": {
+        "zh": "赤焰窟",
+        "en": "The Red Flame Caves"
+      },
+      "tier": 4,
+      "base": "scorpion",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/lavascorpion/nes/portrait.png",
+            "portrait4x": "chars/lavascorpion/nes/portrait@4x.png",
+            "body": "chars/lavascorpion/nes/body.png",
+            "body4x": "chars/lavascorpion/nes/body@4x.png",
+            "sheet": "chars/lavascorpion/nes/sheet.png",
+            "sheet4x": "chars/lavascorpion/nes/sheet@4x.png",
+            "sheetJson": "chars/lavascorpion/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 5
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bellguard",
+      "name": {
+        "zh": "鈴衛",
+        "en": "Bell Guard"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "馭妖宗的護衛，金邊斗笠下戴著面罩，出手又快又狠。",
+        "en": "A guard of the Beastbinder Sect: a gold-rimmed hat, a mask, quick and merciless."
+      },
+      "habitat": {
+        "zh": "赤焰窟、冰魄窟與萬妖塔",
+        "en": "The Red Flame Caves, the Ice Soul Caves and the tower"
+      },
+      "tier": 5,
+      "base": "assassin",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/bellguard/nes/portrait.png",
+            "portrait4x": "chars/bellguard/nes/portrait@4x.png",
+            "body": "chars/bellguard/nes/body.png",
+            "body4x": "chars/bellguard/nes/body@4x.png",
+            "sheet": "chars/bellguard/nes/sheet.png",
+            "sheet4x": "chars/bellguard/nes/sheet@4x.png",
+            "sheetJson": "chars/bellguard/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "icebat",
+      "name": {
+        "zh": "冰蝠",
+        "en": "Ice Bat"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "冰窟裡的蝙蝠，牙齒像冰錐。",
+        "en": "A bat of the ice caves, teeth like icicles."
+      },
+      "habitat": {
+        "zh": "北地雪原與冰魄窟",
+        "en": "The northern snowfields and the Ice Soul Caves"
+      },
+      "tier": 5,
+      "base": "bat",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/icebat/nes/portrait.png",
+            "portrait4x": "chars/icebat/nes/portrait@4x.png",
+            "body": "chars/icebat/nes/body.png",
+            "body4x": "chars/icebat/nes/body@4x.png",
+            "sheet": "chars/icebat/nes/sheet.png",
+            "sheet4x": "chars/icebat/nes/sheet@4x.png",
+            "sheetJson": "chars/icebat/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 4
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snowmonkey",
+      "name": {
+        "zh": "雪猴",
+        "en": "Snow Monkey"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "北地的白毛猴，最愛偷旅人的乾糧。",
+        "en": "A white-furred monkey of the north that loves to steal travellers' rations."
+      },
+      "habitat": {
+        "zh": "北地雪原",
+        "en": "The northern snowfields"
+      },
+      "tier": 5,
+      "base": "monkey",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/snowmonkey/nes/portrait.png",
+            "portrait4x": "chars/snowmonkey/nes/portrait@4x.png",
+            "body": "chars/snowmonkey/nes/body.png",
+            "body4x": "chars/snowmonkey/nes/body@4x.png",
+            "sheet": "chars/snowmonkey/nes/sheet.png",
+            "sheet4x": "chars/snowmonkey/nes/sheet@4x.png",
+            "sheetJson": "chars/snowmonkey/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 4
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snowsprite",
+      "name": {
+        "zh": "雪精",
+        "en": "Snow Sprite"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "暴風雪裡凝出的精怪，一轉身就捲起一陣雪。",
+        "en": "A sprite born in a blizzard; it whirls up snow when it turns."
+      },
+      "habitat": {
+        "zh": "北地雪原與冰魄窟",
+        "en": "The northern snowfields and the Ice Soul Caves"
+      },
+      "tier": 5,
+      "base": "windsprite",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/snowsprite/nes/portrait.png",
+            "portrait4x": "chars/snowsprite/nes/portrait@4x.png",
+            "body": "chars/snowsprite/nes/body.png",
+            "body4x": "chars/snowsprite/nes/body@4x.png",
+            "sheet": "chars/snowsprite/nes/sheet.png",
+            "sheet4x": "chars/snowsprite/nes/sheet@4x.png",
+            "sheetJson": "chars/snowsprite/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 3,
+            "sheet": 2
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iceboar",
+      "name": {
+        "zh": "雪鬃豬",
+        "en": "Snowbristle Boar"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "鬃毛結滿冰霜的野豬，衝起來像一座小冰山。",
+        "en": "A boar whose bristles are thick with frost; it charges like a small iceberg."
+      },
+      "habitat": {
+        "zh": "北地雪原",
+        "en": "The northern snowfields"
+      },
+      "tier": 5,
+      "base": "boar_iron",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/iceboar/nes/portrait.png",
+            "portrait4x": "chars/iceboar/nes/portrait@4x.png",
+            "body": "chars/iceboar/nes/body.png",
+            "body4x": "chars/iceboar/nes/body@4x.png",
+            "sheet": "chars/iceboar/nes/sheet.png",
+            "sheet4x": "chars/iceboar/nes/sheet@4x.png",
+            "sheetJson": "chars/iceboar/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 6
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "icejiangshi",
+      "name": {
+        "zh": "冰屍",
+        "en": "Frozen Jiangshi"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "凍在冰窟裡百年的殭屍，被鈴聲吵醒了。",
+        "en": "A jiangshi frozen in the caves for a century, woken by the bell."
+      },
+      "habitat": {
+        "zh": "冰魄窟",
+        "en": "The Ice Soul Caves"
+      },
+      "tier": 5,
+      "base": "jiangshi_bronze",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/icejiangshi/nes/portrait.png",
+            "portrait4x": "chars/icejiangshi/nes/portrait@4x.png",
+            "body": "chars/icejiangshi/nes/body.png",
+            "body4x": "chars/icejiangshi/nes/body@4x.png",
+            "sheet": "chars/icejiangshi/nes/sheet.png",
+            "sheet4x": "chars/icejiangshi/nes/sheet@4x.png",
+            "sheetJson": "chars/icejiangshi/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 4
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bellfire",
+      "name": {
+        "zh": "鈴火",
+        "en": "Bellfire"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 6 階小怪",
+        "en": "Tier 6 common foe"
+      },
+      "bio": {
+        "zh": "萬妖塔裡飄蕩的鬼火，隨著鈴聲忽明忽暗。",
+        "en": "A ghost flame drifting in the tower, flickering with every peal."
+      },
+      "habitat": {
+        "zh": "萬妖塔",
+        "en": "The Tower of Ten Thousand Beasts"
+      },
+      "tier": 6,
+      "base": "wisp_nether",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/bellfire/nes/portrait.png",
+            "portrait4x": "chars/bellfire/nes/portrait@4x.png",
+            "body": "chars/bellfire/nes/body.png",
+            "body4x": "chars/bellfire/nes/body@4x.png",
+            "sheet": "chars/bellfire/nes/sheet.png",
+            "sheet4x": "chars/bellfire/nes/sheet@4x.png",
+            "sheetJson": "chars/bellfire/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 4,
+            "sheet": 4
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bellpuppet",
+      "name": {
+        "zh": "鈴偶",
+        "en": "Bell Puppet"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 6 階小怪",
+        "en": "Tier 6 common foe"
+      },
+      "bio": {
+        "zh": "掛滿銅鈴的木偶，由鈴聲牽著動。",
+        "en": "A wooden puppet hung with brass bells, moved by their ringing."
+      },
+      "habitat": {
+        "zh": "萬妖塔",
+        "en": "The Tower of Ten Thousand Beasts"
+      },
+      "tier": 6,
+      "base": "dummy_iron",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/bellpuppet/nes/portrait.png",
+            "portrait4x": "chars/bellpuppet/nes/portrait@4x.png",
+            "body": "chars/bellpuppet/nes/body.png",
+            "body4x": "chars/bellpuppet/nes/body@4x.png",
+            "sheet": "chars/bellpuppet/nes/sheet.png",
+            "sheet4x": "chars/bellpuppet/nes/sheet@4x.png",
+            "sheetJson": "chars/bellpuppet/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 5
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goldbone",
+      "name": {
+        "zh": "金骨將",
+        "en": "Golden-bone General"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 6 階小怪",
+        "en": "Tier 6 common foe"
+      },
+      "bio": {
+        "zh": "骨頭鍍了金的骷髏將軍，守在萬妖塔頂層。",
+        "en": "A skeleton general with gilded bones, guarding the tower's upper floors."
+      },
+      "habitat": {
+        "zh": "萬妖塔",
+        "en": "The Tower of Ten Thousand Beasts"
+      },
+      "tier": 6,
+      "base": "skeleton_black",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/goldbone/nes/portrait.png",
+            "portrait4x": "chars/goldbone/nes/portrait@4x.png",
+            "body": "chars/goldbone/nes/body.png",
+            "body4x": "chars/goldbone/nes/body@4x.png",
+            "sheet": "chars/goldbone/nes/sheet.png",
+            "sheet4x": "chars/goldbone/nes/sheet@4x.png",
+            "sheetJson": "chars/goldbone/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 5
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jadetoad",
+      "name": {
+        "zh": "玉蟾",
+        "en": "Jade Toad"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 5 階小怪",
+        "en": "Tier 5 common foe"
+      },
+      "bio": {
+        "zh": "通體碧綠的玉蟾，肚子裡全是銀子，一見人就跑。",
+        "en": "A toad of green jade with a belly full of silver; it runs from anyone."
+      },
+      "habitat": {
+        "zh": "南疆與北地，偶爾出沒",
+        "en": "Now and then in the south and the north"
+      },
+      "tier": 5,
+      "base": "stonetoad",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jadetoad/nes/portrait.png",
+            "portrait4x": "chars/jadetoad/nes/portrait@4x.png",
+            "body": "chars/jadetoad/nes/body.png",
+            "body4x": "chars/jadetoad/nes/body@4x.png",
+            "sheet": "chars/jadetoad/nes/sheet.png",
+            "sheet4x": "chars/jadetoad/nes/sheet@4x.png",
+            "sheetJson": "chars/jadetoad/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 5,
+            "sheet": 4
+          },
+          "animations": [
+            "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greatbell",
+      "name": {
+        "zh": "萬妖鈴",
+        "en": "Bell of Ten Thousand Beasts"
+      },
+      "style_name": {
+        "zh": "小怪",
+        "en": "Common foe"
+      },
+      "title": {
+        "zh": "第 6 階小怪",
+        "en": "Tier 6 common foe"
+      },
+      "bio": {
+        "zh": "馭妖宗的至寶。三魄歸位時，一響能讓天下妖物發狂。",
+        "en": "The Beastbinder Sect's treasure. With its three souls in place, one peal drives every creature mad."
+      },
+      "habitat": {
+        "zh": "萬妖塔頂・鈴心殿",
+        "en": "The Hall of the Bell's Heart, atop the tower"
+      },
+      "tier": 6,
+      "base": "greatbell",
+      "kind": "monster",
+      "faction": "foe",
+      "factionName": {
+        "zh": "小怪",
+        "en": "Common Foes"
+      },
+      "colour": "#8a6a3a",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/greatbell/nes/portrait.png",
+            "portrait4x": "chars/greatbell/nes/portrait@4x.png",
+            "body": "chars/greatbell/nes/body.png",
+            "body4x": "chars/greatbell/nes/body@4x.png",
+            "sheet": "chars/greatbell/nes/sheet.png",
+            "sheet4x": "chars/greatbell/nes/sheet@4x.png",
+            "sheetJson": "chars/greatbell/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              16
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
           },
           "animations": [
             "move"

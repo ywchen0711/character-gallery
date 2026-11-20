@@ -995,3 +995,9 @@ import nes_longmen3  # noqa: E402
 PORTRAITS.update(nes_longmen3.PORTRAITS)
 SPRITES.update(nes_longmen3.SPRITES)
 HEIGHTS.update(nes_longmen3.HEIGHTS)
+
+
+import nes_longmen4  # noqa: E402
+PORTRAITS.update(nes_longmen4.PORTRAITS)
+SPRITES.update(nes_longmen4.SPRITES)
+HEIGHTS.update(nes_longmen4.HEIGHTS)

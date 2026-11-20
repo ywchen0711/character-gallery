@@ -16,7 +16,7 @@ from nes_foes_fields import FRAME, MODE, field_pals
 from nes_walk_mon import field_frames
 
 # the slots each base puts on the sprite layer
-SPRITE_SLOTS = {'archer': 'nowr', 'archer_nether': 'nowr', 'assassin': 'ow', 'bat': 'rw', 'boar': 'rw', 'boar_iron': 'rw', 'bronze': 'yr', 'bronze_jewel': 'yr', 'centipede': 'yw', 'crab': 'w', 'daoist_black': 'yrw', 'drowned': 'e', 'drowned_ice': 'e', 'dummy': 'rw', 'dummy_iron': 'rw', 'hornet': 'w', 'hornet_ghost': 'w', 'inkblot': '', 'jiangshi_bronze': 'yrw', 'lackey': 'now', 'lackey_spiked': 'now', 'littlejiangshi': 'yrw', 'monk_iron': 'noyw', 'monkey': 'w', 'mushroom': 'y', 'paperghost': 'r', 'roguemonk': 'noyw', 'scorpion': 'rw', 'skeleton': 'nor', 'skeleton_black': 'nore', 'snake': 'yrw', 'sorcerer': 'yr', 'stonetoad': 'wy', 'treesprite': 'y', 'windsprite': '', 'wisp': '', 'wisp_nether': '', 'wolf': 'rw', 'wolf_frost': 'rw', 'wolf_scar': 'rw'}
+SPRITE_SLOTS = {'archer': 'nowr', 'archer_nether': 'nowr', 'assassin': 'ow', 'bat': 'rw', 'boar': 'rw', 'boar_iron': 'rw', 'bronze': 'yr', 'bronze_jewel': 'yr', 'centipede': 'yw', 'crab': 'w', 'daoist_black': 'yrw', 'drowned': 'e', 'drowned_ice': 'e', 'dummy': 'rw', 'dummy_iron': 'rw', 'hornet': 'w', 'hornet_ghost': 'w', 'inkblot': '', 'jiangshi_bronze': 'yrw', 'lackey': 'now', 'lackey_spiked': 'now', 'littlejiangshi': 'yrw', 'monk_iron': 'noyw', 'monkey': 'w', 'mushroom': 'y', 'paperghost': 'r', 'roguemonk': 'noyw', 'scorpion': 'rw', 'skeleton': 'nor', 'skeleton_black': 'nore', 'snake': 'yrw', 'sorcerer': 'yr', 'greatbell': 'erw', 'stonetoad': 'wy', 'treesprite': 'y', 'windsprite': '', 'wisp': '', 'wisp_nether': '', 'wolf': 'rw', 'wolf_frost': 'rw', 'wolf_scar': 'rw'}
 
 # the stronger-kin variants use their base's field sprite
 VARIANT_OF = {'wolf_scar': 'wolf', 'wolf_frost': 'wolf', 'boar_iron': 'boar', 'skeleton_black': 'skeleton', 'lackey_spiked': 'lackey', 'bronze_jewel': 'bronze', 'monk_iron': 'roguemonk', 'dummy_iron': 'dummy', 'drowned_ice': 'drowned', 'wisp_nether': 'wisp', 'archer_nether': 'archer', 'daoist_black': 'sorcerer', 'hornet_ghost': 'hornet', 'jiangshi_bronze': 'littlejiangshi'}
@@ -72,6 +72,29 @@ COLOURS = {
     'roguemonk': ('roguemonk', dict(S=0x37, s=0x27, w=0x30, y=0x28, a=0x27, b=0x17, d=0x07, e=0x16, f=0x06, n=0x18, o=0x08)),
     'ironmonk': ('monk_iron', dict(S=0x10, s=0x00, w=0x30, y=0x38, a=0x30, b=0x10, d=0x00, e=0x12, f=0x02, n=0x00, o=0x0C)),
     'daoist': ('sorcerer', dict(S=0x37, s=0x27, w=0x30, y=0x38, r=0x16, a=0x21, b=0x12, d=0x02, e=0x30, f=0x10)),
+    'acolyte': ('sorcerer', dict(S=0x37, s=0x27, w=0x30, y=0x28, r=0x16, a=0x2A, b=0x1A, d=0x0A, e=0x10, f=0x00)),
+    'pirate': ('lackey', dict(S=0x37, s=0x27, H=0x37, w=0x30, a=0x21, b=0x11, d=0x01, e=0x30, f=0x10, n=0x17, o=0x07)),
+    'mudspirit': ('inkblot', dict(b=0x17, d=0x07, w=0x37)),
+    'glowcap': ('mushroom', dict(a=0x2C, b=0x1C, d=0x0C, e=0x3B, f=0x2B, y=0x38)),
+    'lotusghost': ('drowned', dict(w=0x30, a=0x35, b=0x25, d=0x15, e=0x2A)),
+    'redpaper': ('paperghost', dict(h=0x0C, a=0x26, b=0x06, d=0x16, r=0x28)),
+    'goldsnake': ('snake', dict(w=0x30, a=0x38, b=0x28, d=0x08, y=0x16, r=0x16)),
+    'bamboosprite': ('treesprite', dict(e=0x2A, f=0x1A, b=0x28, d=0x18, y=0x16)),
+    'firehornet': ('hornet', dict(w=0x30, a=0x38, b=0x16, d=0x06)),
+    'lavacrab': ('crab', dict(a=0x26, b=0x16, d=0x00, w=0x30)),
+    'lavawolf': ('wolf_scar', dict(w=0x30, a=0x27, b=0x07, d=0x08, r=0x38)),
+    'lavascorpion': ('scorpion', dict(w=0x30, a=0x27, b=0x16, d=0x06, r=0x38)),
+    'bellguard': ('assassin', dict(S=0x37, s=0x27, w=0x30, r=0x28, a=0x14, b=0x04, d=0x0C, e=0x28, f=0x18, o=0x07)),
+    'icebat': ('bat', dict(a=0x31, b=0x21, d=0x11, r=0x16, w=0x30)),
+    'snowmonkey': ('monkey', dict(w=0x30, a=0x30, b=0x10, d=0x00)),
+    'snowsprite': ('windsprite', dict(w=0x30, a=0x30, b=0x31)),
+    'iceboar': ('boar_iron', dict(a=0x30, b=0x31, d=0x21, w=0x10, r=0x16)),
+    'icejiangshi': ('jiangshi_bronze', dict(S=0x31, s=0x21, a=0x30, b=0x10, d=0x00, y=0x31, r=0x16, e=0x11, w=0x30)),
+    'bellfire': ('wisp_nether', dict(a=0x35, b=0x15, w=0x30)),
+    'bellpuppet': ('dummy_iron', dict(w=0x30, a=0x28, b=0x18, d=0x08, r=0x16)),
+    'goldbone': ('skeleton_black', dict(w=0x38, a=0x28, r=0x16, n=0x18, o=0x08, e=0x16)),
+    'jadetoad': ('stonetoad', dict(a=0x2A, b=0x1A, d=0x0A, w=0x30, y=0x38)),
+    'greatbell': ('greatbell', dict(a=0x38, b=0x28, d=0x18, e=0x21, r=0x16, w=0x30, y=0x27)),
     'blackdaoist': ('daoist_black', dict(S=0x36, s=0x26, w=0x30, y=0x28, r=0x16, a=0x14, b=0x04, d=0x0C, e=0x10, f=0x00)),
 }
 

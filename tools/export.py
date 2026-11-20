@@ -84,7 +84,7 @@ def export(cid):
             p = os.path.join(d, n)
             if os.path.isfile(p):
                 os.remove(p)
-            elif n not in STYLES:
+            elif n not in STYLES and n != 'doll':   # yirui/doll is made by Longmen Quest's js/doll.js
                 shutil.rmtree(p)
     if cid in ('family', 'longmen', 'beasts', 'foes', 'sango'):
         raise ValueError('family and longmen are reserved for group pictures')
@@ -143,6 +143,25 @@ def main():
                              'faction': 'longmen', 'members': MORE, 'style': 'nes',
                              'files': {k: 'chars/longmen/' + v for k, v in (('nes', 'group-nes-more.png'), ('nes4x', 'group-nes-more@4x.png'),
                                                                              ('nesTall', 'group-nes-more-4x2.png'), ('nesTall4x', 'group-nes-more-4x2@4x.png'))}}
+    # Longmen Quest II: its new people (longmen2) and its foes (longmen2Foes)
+    L2 = ['hubanxian', 'jiabafang', 'wudadan', 'wenduizhang', 'suxiaowan', 'chutiankuo', 'niubaobao', 'mojide', 'huotianxia', 'mowuya', 'aman']
+    for name, im in (('group-nes-l2', nes_group(L2, cols=6)), ('group-nes-l2-4col', nes_group(L2, cols=4))):
+        im.save(os.path.join(ld, name + '.png'))
+        scale(im, 4).save(os.path.join(ld, name + '@4x.png'))
+    groups['longmen2'] = {'name': {'zh': '龍門刀客傳 貳 登場人物', 'en': 'People of Longmen Quest II'},
+                          'faction': 'longmen', 'members': L2, 'style': 'nes',
+                          'files': {k: 'chars/longmen/' + v for k, v in (('nes', 'group-nes-l2.png'), ('nes4x', 'group-nes-l2@4x.png'),
+                                                                          ('nesTall', 'group-nes-l2-4col.png'), ('nesTall4x', 'group-nes-l2-4col@4x.png'))}}
+    from nes_foes import group as foe_group2
+    L2F = [c for c in ROSTER if getattr(importlib.import_module(c), 'GROUP', '') == 'longmen2Foes']
+    fd2 = os.path.join(ROOT, 'chars', 'foes')
+    os.makedirs(fd2, exist_ok=True)
+    for name, im in (('group-nes-l2', foe_group2(L2F, cols=8)), ('group-nes-l2-4col', foe_group2(L2F, cols=4))):
+        im.save(os.path.join(fd2, name + '.png'))
+        scale(im, 4).save(os.path.join(fd2, name + '@4x.png'))
+    groups['longmen2Foes'] = {'name': {'zh': '龍門刀客傳 貳 的妖物', 'en': 'Creatures of Longmen Quest II'}, 'faction': 'foe', 'members': L2F, 'style': 'nes',
+                              'files': {k: 'chars/foes/' + v for k, v in (('nes', 'group-nes-l2.png'), ('nes4x', 'group-nes-l2@4x.png'),
+                                                                           ('nesTall', 'group-nes-l2-4col.png'), ('nesTall4x', 'group-nes-l2-4col@4x.png'))}}
     # 奕叡's paper doll (made by Longmen Quest's js/doll.js, so the pictures are kept as they are, not redrawn here)
     groups['yiruiDoll'] = {'name': {'zh': '奕叡的紙娃娃', 'en': "Yi Rui's paper doll"}, 'faction': 'longmen', 'members': ['yirui'], 'style': 'nes', 'files': {'nes': 'chars/yirui/doll/group-nes-doll.png', 'nes4x': 'chars/yirui/doll/group-nes-doll@4x.png', 'nesTall': 'chars/yirui/doll/group-nes-doll-3x2.png', 'nesTall4x': 'chars/yirui/doll/group-nes-doll-3x2@4x.png', 'outfits': 'chars/yirui/doll/outfits.png', 'pieces': 'chars/yirui/doll/pieces.png', 'json': 'chars/yirui/doll/doll.json'}}
     # monsters & beasts as one NES encounter screen

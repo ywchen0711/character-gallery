@@ -272,8 +272,8 @@
   };
   function hero() {
     const box = $('#heroes'); if (!box || !DATA || !DATA.groups) return;
-    const ids = faction === 'all' ? ['family', 'sango', 'longmen', 'longmenFoes', 'longmenMore', 'yiruiDoll', 'beasts', 'foes']
-      : faction === 'sango' ? ['sango'] : faction === 'longmen' ? ['longmen', 'longmenFoes', 'longmenMore', 'yiruiDoll'] : faction === 'beast' ? ['beasts'] : faction === 'foe' ? ['foes']
+    const ids = faction === 'all' ? ['family', 'sango', 'longmen', 'longmenFoes', 'longmenMore', 'longmen2', 'yiruiDoll', 'beasts', 'foes', 'longmen2Foes']
+      : faction === 'sango' ? ['sango'] : faction === 'longmen' ? ['longmen', 'longmenFoes', 'longmenMore', 'longmen2', 'yiruiDoll'] : faction === 'beast' ? ['beasts'] : faction === 'foe' ? ['foes', 'longmen2Foes']
         : faction === 'west' ? ['family'] : [];
     box.textContent = '';
     const room = Math.max(120, (box.clientWidth || 600) - 32);

@@ -404,8 +404,12 @@ def frames(cid):
     fa, sd = d['front'], d['side']
     f2, s2 = nes_walk.legs_for(cid, d)
     assert nes_walk.check_same_body(fa, f2) and nes_walk.check_same_body(sd, s2), cid
-    return {
+    out = {
         'idle': [im(fa), im(fa)],
         'walk': [im(fa), im(f2)],
         'walk_side': [im(sd), im(s2)],
     }
+    if 'back' in d:     # Longmen Quest II's people also have a back view (the party's battle cards)
+        bk = d['back']
+        out['walk_up'] = [im(bk), im(nes_walk.front2(bk))]
+    return out

@@ -15,4 +15,7 @@ ROSTER = ['jeff', 'erin', 'josh', 'jasper', 'guanyu',
           'assassin', 'daoist', 'ironcrab', 'ghosthornet', 'goldcentipede', 'netherflame',
           'deadwood', 'thundersprite', 'irondummy', 'bloodthug', 'ironmonk', 'frostwolf',
           'inkscorpion', 'blackbone', 'coldpool', 'bronzejiangshi', 'vajraguardian', 'netherarcher',
-          'netherassassin', 'blackdaoist']
+          'netherassassin', 'blackdaoist',
+          # Longmen Quest II: people, then foes
+          'hubanxian', 'jiabafang', 'wudadan', 'wenduizhang', 'suxiaowan', 'chutiankuo', 'niubaobao', 'mojide', 'huotianxia', 'mowuya', 'aman',
+          'acolyte', 'pirate', 'mudspirit', 'glowcap', 'lotusghost', 'redpaper', 'goldsnake', 'bamboosprite', 'firehornet', 'lavacrab', 'lavawolf', 'lavascorpion', 'bellguard', 'icebat', 'snowmonkey', 'snowsprite', 'iceboar', 'icejiangshi', 'bellfire', 'bellpuppet', 'goldbone', 'jadetoad', 'greatbell']
