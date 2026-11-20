@@ -399,6 +399,89 @@
         "nesTall": "chars/sango/group-nes-5col.png",
         "nesTall4x": "chars/sango/group-nes-5col@4x.png"
       }
+    },
+    "sects": {
+      "name": {
+        "zh": "龍門江湖志・江湖兵卒",
+        "en": "Sects of Longmen: the troops"
+      },
+      "faction": "sects",
+      "members": [
+        "sx_founder",
+        "sx_scout",
+        "sx_disciple",
+        "sx_archer",
+        "sx_saber",
+        "sx_sword",
+        "sx_hidden",
+        "sx_spear",
+        "sx_inner",
+        "sx_swordform",
+        "sx_crossbow",
+        "sx_master",
+        "sx_starbow",
+        "sx_rider",
+        "sx_ironcav",
+        "sx_caravan",
+        "sx_ram",
+        "sx_catapult",
+        "sx_thunder",
+        "sx_boat",
+        "sx_warship"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/sects/group-nes-sects.png",
+        "nes4x": "chars/sects/group-nes-sects@4x.png",
+        "nesTall": "chars/sects/group-nes-sects-tall.png",
+        "nesTall4x": "chars/sects/group-nes-sects-tall@4x.png"
+      }
+    },
+    "sectsUnique": {
+      "name": {
+        "zh": "龍門江湖志・各派獨門弟子",
+        "en": "Sects of Longmen: each sect's own fighters"
+      },
+      "faction": "sects",
+      "members": [
+        "sx_lm_saber",
+        "sx_hj_sword",
+        "sx_qf_monk",
+        "sx_bl_palm",
+        "sx_ym_assassin",
+        "sx_yy_tiger",
+        "sx_qj_escort",
+        "sx_hf_club",
+        "sx_xd_blood",
+        "sx_zf_chain",
+        "sx_cy_nun"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/sects/group-nes-sectsUnique.png",
+        "nes4x": "chars/sects/group-nes-sectsUnique@4x.png",
+        "nesTall": "chars/sects/group-nes-sectsUnique-tall.png",
+        "nesTall4x": "chars/sects/group-nes-sectsUnique-tall@4x.png"
+      }
+    },
+    "sectsPeople": {
+      "name": {
+        "zh": "龍門江湖志・慈雲庵主與奇人",
+        "en": "Sects of Longmen: the abbess and great people"
+      },
+      "faction": "sects",
+      "members": [
+        "jingci",
+        "sx_grandmaster",
+        "sx_smith"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/sects/group-nes-sectsPeople.png",
+        "nes4x": "chars/sects/group-nes-sectsPeople@4x.png",
+        "nesTall": "chars/sects/group-nes-sectsPeople-tall.png",
+        "nesTall4x": "chars/sects/group-nes-sectsPeople-tall@4x.png"
+      }
     }
   },
   "characters": [
@@ -9410,6 +9493,2389 @@
           },
           "animations": [
             "move"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jingci",
+      "name": {
+        "zh": "靜慈師太",
+        "en": "Abbess Jingci"
+      },
+      "style_name": {
+        "zh": "慈雲庵主",
+        "en": "Abbess of Mercy Cloud"
+      },
+      "title": {
+        "zh": "慈雲庵住持",
+        "en": "Abbess of the Mercy Cloud Nunnery"
+      },
+      "bio": {
+        "zh": "慈雲庵的住持。白頭巾、灰色長袍、一串紅念珠和一柄拂塵。說話輕聲細語，出手卻從不留情面——對傷人的人。她說：「刀劍無眼，人心有情。」",
+        "en": "Abbess of the Mercy Cloud Nunnery: a white hood, a grey robe, red prayer beads and a horsetail whisk. She speaks softly and shows no mercy - to those who hurt others. \"Blades have no eyes; hearts have feeling.\""
+      },
+      "weapon": {
+        "zh": "拂塵",
+        "en": "Horsetail whisk"
+      },
+      "alsoIn": [
+        "sects"
+      ],
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/jingci/nes/portrait.png",
+            "portrait4x": "chars/jingci/nes/portrait@4x.png",
+            "body": "chars/jingci/nes/body.png",
+            "body4x": "chars/jingci/nes/body@4x.png",
+            "sheet": "chars/jingci/nes/sheet.png",
+            "sheet4x": "chars/jingci/nes/sheet@4x.png",
+            "sheetJson": "chars/jingci/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_grandmaster",
+      "name": {
+        "zh": "宗師",
+        "en": "Grandmaster"
+      },
+      "style_name": {
+        "zh": "白眉宗師",
+        "en": "The White-browed Grandmaster"
+      },
+      "title": {
+        "zh": "一代宗師",
+        "en": "A grandmaster of his age"
+      },
+      "bio": {
+        "zh": "白髮白眉、長鬚過胸，藍袍、金頂禪杖。他教過的弟子，後來都開了自己的門派。",
+        "en": "White hair and brows, a beard past his chest, a blue robe and a gold-topped staff. Every pupil he taught went on to found a sect."
+      },
+      "weapon": {
+        "zh": "金頂杖",
+        "en": "Gold-topped staff"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_grandmaster/nes/portrait.png",
+            "portrait4x": "chars/sx_grandmaster/nes/portrait@4x.png",
+            "body": "chars/sx_grandmaster/nes/body.png",
+            "body4x": "chars/sx_grandmaster/nes/body@4x.png",
+            "sheet": "chars/sx_grandmaster/nes/sheet.png",
+            "sheet4x": "chars/sx_grandmaster/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_grandmaster/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_smith",
+      "name": {
+        "zh": "名匠",
+        "en": "Master Smith"
+      },
+      "style_name": {
+        "zh": "鐵爐邊的人",
+        "en": "The One by the Forge"
+      },
+      "title": {
+        "zh": "鑄劍名匠",
+        "en": "A master swordsmith"
+      },
+      "bio": {
+        "zh": "赤膊、皮圍裙、一把大鐵鎚。江湖上叫得出名字的好劍，一半出自他的爐子。",
+        "en": "Bare arms, a leather apron and a great iron hammer. Half the named swords of the jianghu came out of his forge."
+      },
+      "weapon": {
+        "zh": "鐵鎚",
+        "en": "Iron hammer"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_smith/nes/portrait.png",
+            "portrait4x": "chars/sx_smith/nes/portrait@4x.png",
+            "body": "chars/sx_smith/nes/body.png",
+            "body4x": "chars/sx_smith/nes/body@4x.png",
+            "sheet": "chars/sx_smith/nes/sheet.png",
+            "sheet4x": "chars/sx_smith/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_smith/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_founder",
+      "name": {
+        "zh": "開山弟子",
+        "en": "Founder"
+      },
+      "style_name": {
+        "zh": "背著包袱的開山人",
+        "en": "The One with the Bundle"
+      },
+      "title": {
+        "zh": "開宗立派的先鋒",
+        "en": "Vanguard of a new sect"
+      },
+      "bio": {
+        "zh": "背著包袱、拄著竹杖，走到哪裡就在哪裡立起門派的旗子。包袱裡是師父給的半部秘笈和三天的乾糧。",
+        "en": "A bundle on his back and a bamboo stick in hand: wherever he stops, a new sect raises its banner. The bundle holds half a manual from his master and three days of dry rations."
+      },
+      "weapon": {
+        "zh": "竹杖",
+        "en": "Bamboo stick"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_founder/nes/portrait.png",
+            "portrait4x": "chars/sx_founder/nes/portrait@4x.png",
+            "body": "chars/sx_founder/nes/body.png",
+            "body4x": "chars/sx_founder/nes/body@4x.png",
+            "sheet": "chars/sx_founder/nes/sheet.png",
+            "sheet4x": "chars/sx_founder/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_founder/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_scout",
+      "name": {
+        "zh": "斥候",
+        "en": "Scout"
+      },
+      "style_name": {
+        "zh": "斗笠下的眼睛",
+        "en": "Eyes under the Straw Hat"
+      },
+      "title": {
+        "zh": "探路的人",
+        "en": "The pathfinder"
+      },
+      "bio": {
+        "zh": "戴著寬邊斗笠，腳程比馬快，看過的山路都記在心裡。一把短刀只用來砍藤蔓。",
+        "en": "Under a wide straw hat, faster on foot than a horse, he remembers every mountain path he has walked. His short knife is only for cutting vines."
+      },
+      "weapon": {
+        "zh": "短刀",
+        "en": "Short knife"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_scout/nes/portrait.png",
+            "portrait4x": "chars/sx_scout/nes/portrait@4x.png",
+            "body": "chars/sx_scout/nes/body.png",
+            "body4x": "chars/sx_scout/nes/body@4x.png",
+            "sheet": "chars/sx_scout/nes/sheet.png",
+            "sheet4x": "chars/sx_scout/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_scout/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_disciple",
+      "name": {
+        "zh": "弟子",
+        "en": "Disciple"
+      },
+      "style_name": {
+        "zh": "紮白頭帶的新弟子",
+        "en": "The New Disciple"
+      },
+      "title": {
+        "zh": "門派的根基",
+        "en": "The root of every sect"
+      },
+      "bio": {
+        "zh": "每天天沒亮就起來紮馬步、練棍法。白頭帶是入門那天師兄綁上的。",
+        "en": "Up before dawn every day for horse stance and staff drills. A senior brother tied the white headband on him the day he joined."
+      },
+      "weapon": {
+        "zh": "齊眉棍",
+        "en": "Brow-height staff"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_disciple/nes/portrait.png",
+            "portrait4x": "chars/sx_disciple/nes/portrait@4x.png",
+            "body": "chars/sx_disciple/nes/body.png",
+            "body4x": "chars/sx_disciple/nes/body@4x.png",
+            "sheet": "chars/sx_disciple/nes/sheet.png",
+            "sheet4x": "chars/sx_disciple/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_disciple/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_archer",
+      "name": {
+        "zh": "弓手",
+        "en": "Archer"
+      },
+      "style_name": {
+        "zh": "百步之外",
+        "en": "A Hundred Paces Away"
+      },
+      "title": {
+        "zh": "門派的弓手",
+        "en": "The sect's archer"
+      },
+      "bio": {
+        "zh": "紅頭帶、綠衣，背一壺箭。說話不多，開弓之前會先數三下風。",
+        "en": "Red headband, green robe and a full quiver. Says little; counts the wind three times before every draw."
+      },
+      "weapon": {
+        "zh": "長弓",
+        "en": "Longbow"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_archer/nes/portrait.png",
+            "portrait4x": "chars/sx_archer/nes/portrait@4x.png",
+            "body": "chars/sx_archer/nes/body.png",
+            "body4x": "chars/sx_archer/nes/body@4x.png",
+            "sheet": "chars/sx_archer/nes/sheet.png",
+            "sheet4x": "chars/sx_archer/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_archer/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_saber",
+      "name": {
+        "zh": "刀客",
+        "en": "Saber"
+      },
+      "style_name": {
+        "zh": "大刀在手",
+        "en": "Broadsword in Hand"
+      },
+      "title": {
+        "zh": "江湖刀客",
+        "en": "A saber of the jianghu"
+      },
+      "bio": {
+        "zh": "棕色短打，一把厚背大刀扛在肩上。刀法不花俏，只求一刀見效。",
+        "en": "A brown jacket and a thick-backed broadsword on the shoulder. No flourishes: one cut, one result."
+      },
+      "weapon": {
+        "zh": "厚背刀",
+        "en": "Thick-backed saber"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_saber/nes/portrait.png",
+            "portrait4x": "chars/sx_saber/nes/portrait@4x.png",
+            "body": "chars/sx_saber/nes/body.png",
+            "body4x": "chars/sx_saber/nes/body@4x.png",
+            "sheet": "chars/sx_saber/nes/sheet.png",
+            "sheet4x": "chars/sx_saber/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_saber/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_sword",
+      "name": {
+        "zh": "劍客",
+        "en": "Swordsman"
+      },
+      "style_name": {
+        "zh": "一劍霜寒",
+        "en": "One Sword, One Frost"
+      },
+      "title": {
+        "zh": "江湖劍客",
+        "en": "A swordsman of the jianghu"
+      },
+      "bio": {
+        "zh": "淺藍長衫、白頭帶，長劍出鞘時聲音清得像玉。練劍十年，只為一個「快」字。",
+        "en": "Pale blue robe and a white headband; his blade leaves the scabbard with a sound as clear as jade. Ten years of practice for one thing: speed."
+      },
+      "weapon": {
+        "zh": "長劍",
+        "en": "Long sword"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_sword/nes/portrait.png",
+            "portrait4x": "chars/sx_sword/nes/portrait@4x.png",
+            "body": "chars/sx_sword/nes/body.png",
+            "body4x": "chars/sx_sword/nes/body@4x.png",
+            "sheet": "chars/sx_sword/nes/sheet.png",
+            "sheet4x": "chars/sx_sword/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_sword/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_hidden",
+      "name": {
+        "zh": "暗器手",
+        "en": "Dart Thrower"
+      },
+      "style_name": {
+        "zh": "袖裡乾坤",
+        "en": "A World in the Sleeve"
+      },
+      "title": {
+        "zh": "暗器高手",
+        "en": "Master of hidden weapons"
+      },
+      "bio": {
+        "zh": "灰頭巾、紫衣，袖子裡藏著九枚飛鏢。出手之前，你連他抬手都看不見。",
+        "en": "Grey hood, violet clothes, nine darts hidden in the sleeves. You will not even see the hand move."
+      },
+      "weapon": {
+        "zh": "飛鏢",
+        "en": "Throwing darts"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_hidden/nes/portrait.png",
+            "portrait4x": "chars/sx_hidden/nes/portrait@4x.png",
+            "body": "chars/sx_hidden/nes/body.png",
+            "body4x": "chars/sx_hidden/nes/body@4x.png",
+            "sheet": "chars/sx_hidden/nes/sheet.png",
+            "sheet4x": "chars/sx_hidden/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_hidden/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_spear",
+      "name": {
+        "zh": "槍陣",
+        "en": "Spear Wall"
+      },
+      "style_name": {
+        "zh": "紅纓長槍",
+        "en": "Red-tasselled Spear"
+      },
+      "title": {
+        "zh": "列陣的槍手",
+        "en": "Spearman of the line"
+      },
+      "bio": {
+        "zh": "鐵盔紅甲，紅纓長槍一字排開，騎兵最怕這一排槍尖。",
+        "en": "Iron helmet, red armour; a row of red-tasselled spears is what horsemen fear most."
+      },
+      "weapon": {
+        "zh": "紅纓槍",
+        "en": "Red-tasselled spear"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_spear/nes/portrait.png",
+            "portrait4x": "chars/sx_spear/nes/portrait@4x.png",
+            "body": "chars/sx_spear/nes/body.png",
+            "body4x": "chars/sx_spear/nes/body@4x.png",
+            "sheet": "chars/sx_spear/nes/sheet.png",
+            "sheet4x": "chars/sx_spear/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_spear/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_inner",
+      "name": {
+        "zh": "內家高手",
+        "en": "Inner-art Adept"
+      },
+      "style_name": {
+        "zh": "掌心生光",
+        "en": "Light in the Palms"
+      },
+      "title": {
+        "zh": "內功深厚的高手",
+        "en": "An adept of the inner arts"
+      },
+      "bio": {
+        "zh": "白衣長髮，不帶兵器。運起內功時，掌心泛著淡淡的光。",
+        "en": "White robes, long hair, no weapon. When the inner strength rises, a faint light gathers in the palms."
+      },
+      "weapon": {
+        "zh": "雙掌",
+        "en": "Bare palms"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_inner/nes/portrait.png",
+            "portrait4x": "chars/sx_inner/nes/portrait@4x.png",
+            "body": "chars/sx_inner/nes/body.png",
+            "body4x": "chars/sx_inner/nes/body@4x.png",
+            "sheet": "chars/sx_inner/nes/sheet.png",
+            "sheet4x": "chars/sx_inner/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_inner/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_swordform",
+      "name": {
+        "zh": "劍陣",
+        "en": "Sword Formation"
+      },
+      "style_name": {
+        "zh": "舉劍成陣",
+        "en": "Swords Raised as One"
+      },
+      "title": {
+        "zh": "劍陣弟子",
+        "en": "A swordsman of the formation"
+      },
+      "bio": {
+        "zh": "藍甲白纓，長劍高舉。七人成陣，進退如一人。",
+        "en": "Blue armour, white plume, sword held high. Seven make a formation that moves like one."
+      },
+      "weapon": {
+        "zh": "長劍",
+        "en": "Long sword"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_swordform/nes/portrait.png",
+            "portrait4x": "chars/sx_swordform/nes/portrait@4x.png",
+            "body": "chars/sx_swordform/nes/body.png",
+            "body4x": "chars/sx_swordform/nes/body@4x.png",
+            "sheet": "chars/sx_swordform/nes/sheet.png",
+            "sheet4x": "chars/sx_swordform/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_swordform/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_crossbow",
+      "name": {
+        "zh": "連弩手",
+        "en": "Repeater Crossbows"
+      },
+      "style_name": {
+        "zh": "一弩十箭",
+        "en": "Ten Bolts a Breath"
+      },
+      "title": {
+        "zh": "連弩手",
+        "en": "A repeater crossbowman"
+      },
+      "bio": {
+        "zh": "青綠甲衣，端著連弩。機括一響，十箭連發。",
+        "en": "In teal armour with a repeating crossbow levelled: one click and ten bolts fly."
+      },
+      "weapon": {
+        "zh": "連弩",
+        "en": "Repeating crossbow"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_crossbow/nes/portrait.png",
+            "portrait4x": "chars/sx_crossbow/nes/portrait@4x.png",
+            "body": "chars/sx_crossbow/nes/body.png",
+            "body4x": "chars/sx_crossbow/nes/body@4x.png",
+            "sheet": "chars/sx_crossbow/nes/sheet.png",
+            "sheet4x": "chars/sx_crossbow/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_crossbow/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_master",
+      "name": {
+        "zh": "絕頂高手",
+        "en": "Peerless Master"
+      },
+      "style_name": {
+        "zh": "白髮青鋒",
+        "en": "White Hair, Blue Steel"
+      },
+      "title": {
+        "zh": "武功絕頂的高手",
+        "en": "A master at the summit"
+      },
+      "bio": {
+        "zh": "一頭白髮、灰黑長袍滾金邊，劍負在背上很少出鞘。據說他出鞘的那一劍，沒有人看清楚過。",
+        "en": "White hair and a dark robe edged in gold; the sword on his back rarely leaves its sheath. They say no one has ever seen the one stroke he draws it for."
+      },
+      "weapon": {
+        "zh": "背上的長劍",
+        "en": "The sword on his back"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_master/nes/portrait.png",
+            "portrait4x": "chars/sx_master/nes/portrait@4x.png",
+            "body": "chars/sx_master/nes/body.png",
+            "body4x": "chars/sx_master/nes/body@4x.png",
+            "sheet": "chars/sx_master/nes/sheet.png",
+            "sheet4x": "chars/sx_master/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_master/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_starbow",
+      "name": {
+        "zh": "落星弓手",
+        "en": "Star-felling Archer"
+      },
+      "style_name": {
+        "zh": "金弓落星",
+        "en": "A Golden Bow to Fell Stars"
+      },
+      "title": {
+        "zh": "神射手",
+        "en": "A peerless archer"
+      },
+      "bio": {
+        "zh": "紅甲金弓，箭能射落天上的流星——至少說書人是這麼說的。",
+        "en": "Red armour, golden bow; his arrows can bring down a falling star - or so the storytellers say."
+      },
+      "weapon": {
+        "zh": "金弓",
+        "en": "Golden bow"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_starbow/nes/portrait.png",
+            "portrait4x": "chars/sx_starbow/nes/portrait@4x.png",
+            "body": "chars/sx_starbow/nes/body.png",
+            "body4x": "chars/sx_starbow/nes/body@4x.png",
+            "sheet": "chars/sx_starbow/nes/sheet.png",
+            "sheet4x": "chars/sx_starbow/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_starbow/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_rider",
+      "name": {
+        "zh": "馬隊",
+        "en": "Riders"
+      },
+      "style_name": {
+        "zh": "馬上的刀",
+        "en": "A Blade on Horseback"
+      },
+      "title": {
+        "zh": "門派的騎手",
+        "en": "The sect's rider"
+      },
+      "bio": {
+        "zh": "騎一匹棕馬，紅衣皮盔，跑起來像一陣風。肖像是騎手本人，身邊是他的馬。",
+        "en": "On a brown horse in red with a leather helmet, gone like a gust of wind. The portrait shows the rider with his horse beside him."
+      },
+      "weapon": {
+        "zh": "馬刀與韁繩",
+        "en": "Saber and reins"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_rider/nes/portrait.png",
+            "portrait4x": "chars/sx_rider/nes/portrait@4x.png",
+            "body": "chars/sx_rider/nes/body.png",
+            "body4x": "chars/sx_rider/nes/body@4x.png",
+            "sheet": "chars/sx_rider/nes/sheet.png",
+            "sheet4x": "chars/sx_rider/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_rider/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_ironcav",
+      "name": {
+        "zh": "鐵騎",
+        "en": "Iron Cavalry"
+      },
+      "style_name": {
+        "zh": "鐵甲雷蹄",
+        "en": "Iron Hooves like Thunder"
+      },
+      "title": {
+        "zh": "重甲騎兵",
+        "en": "Heavy cavalry"
+      },
+      "bio": {
+        "zh": "人和馬都披著鐵甲，衝鋒時地面跟著震動。",
+        "en": "Rider and horse both clad in iron; the ground shakes when they charge."
+      },
+      "weapon": {
+        "zh": "長槍與鐵甲",
+        "en": "Lance and barding"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_ironcav/nes/portrait.png",
+            "portrait4x": "chars/sx_ironcav/nes/portrait@4x.png",
+            "body": "chars/sx_ironcav/nes/body.png",
+            "body4x": "chars/sx_ironcav/nes/body@4x.png",
+            "sheet": "chars/sx_ironcav/nes/sheet.png",
+            "sheet4x": "chars/sx_ironcav/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_ironcav/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_caravan",
+      "name": {
+        "zh": "鏢隊",
+        "en": "Escort Caravan"
+      },
+      "style_name": {
+        "zh": "鏢旗所到",
+        "en": "Where the Escort Flag Goes"
+      },
+      "title": {
+        "zh": "走鏢的鏢頭",
+        "en": "The escort master"
+      },
+      "bio": {
+        "zh": "一輛蓋著布的鏢車，車上插著紅色鏢旗。肖像是領隊的鏢頭，手裡握著鏢旗。",
+        "en": "A covered cart flying the red escort banner. The portrait is the escort master who leads it, banner in hand."
+      },
+      "weapon": {
+        "zh": "鏢旗",
+        "en": "Escort banner"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_caravan/nes/portrait.png",
+            "portrait4x": "chars/sx_caravan/nes/portrait@4x.png",
+            "body": "chars/sx_caravan/nes/body.png",
+            "body4x": "chars/sx_caravan/nes/body@4x.png",
+            "sheet": "chars/sx_caravan/nes/sheet.png",
+            "sheet4x": "chars/sx_caravan/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_caravan/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_ram",
+      "name": {
+        "zh": "攻城木",
+        "en": "Battering Ram"
+      },
+      "style_name": {
+        "zh": "一撞開城",
+        "en": "One Blow Opens the Gate"
+      },
+      "title": {
+        "zh": "扛攻城木的力士",
+        "en": "The ram-bearer"
+      },
+      "bio": {
+        "zh": "包鐵的巨木架在小屋頂下，推著輪子撞城門。肖像是扛木頭的光頭力士。",
+        "en": "An iron-capped log slung under a little roof, rolled up to the gate. The portrait is the bald strongman who carries it."
+      },
+      "weapon": {
+        "zh": "包鐵巨木",
+        "en": "Iron-capped log"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_ram/nes/portrait.png",
+            "portrait4x": "chars/sx_ram/nes/portrait@4x.png",
+            "body": "chars/sx_ram/nes/body.png",
+            "body4x": "chars/sx_ram/nes/body@4x.png",
+            "sheet": "chars/sx_ram/nes/sheet.png",
+            "sheet4x": "chars/sx_ram/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_ram/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_catapult",
+      "name": {
+        "zh": "投石車",
+        "en": "Catapult"
+      },
+      "style_name": {
+        "zh": "石落如雨",
+        "en": "Stones Fall like Rain"
+      },
+      "title": {
+        "zh": "投石車的匠師",
+        "en": "The catapult engineer"
+      },
+      "bio": {
+        "zh": "木架、拋臂和一塊大石頭。肖像是戴圓帽的匠師，手裡掂著下一顆石彈。",
+        "en": "A timber frame, a throwing arm and a big stone. The portrait is the engineer in a round cap, weighing the next shot."
+      },
+      "weapon": {
+        "zh": "石彈",
+        "en": "Stone shot"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_catapult/nes/portrait.png",
+            "portrait4x": "chars/sx_catapult/nes/portrait@4x.png",
+            "body": "chars/sx_catapult/nes/body.png",
+            "body4x": "chars/sx_catapult/nes/body@4x.png",
+            "sheet": "chars/sx_catapult/nes/sheet.png",
+            "sheet4x": "chars/sx_catapult/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_catapult/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 4
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_thunder",
+      "name": {
+        "zh": "霹靂車",
+        "en": "Thunder Cart"
+      },
+      "style_name": {
+        "zh": "雷火一聲",
+        "en": "One Clap of Thunder-fire"
+      },
+      "title": {
+        "zh": "火藥師",
+        "en": "The powder master"
+      },
+      "bio": {
+        "zh": "滿載火藥桶的車，車頭架著銅火筒。肖像是捧著霹靂彈的火藥師，引信還在冒火星。",
+        "en": "A cart full of powder kegs with a bronze fire-tube in front. The portrait is the powder master holding a thunder bomb, its fuse still sparking."
+      },
+      "weapon": {
+        "zh": "霹靂彈",
+        "en": "Thunder bomb"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_thunder/nes/portrait.png",
+            "portrait4x": "chars/sx_thunder/nes/portrait@4x.png",
+            "body": "chars/sx_thunder/nes/body.png",
+            "body4x": "chars/sx_thunder/nes/body@4x.png",
+            "sheet": "chars/sx_thunder/nes/sheet.png",
+            "sheet4x": "chars/sx_thunder/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_thunder/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_boat",
+      "name": {
+        "zh": "江船",
+        "en": "River Boat"
+      },
+      "style_name": {
+        "zh": "一葦渡江",
+        "en": "Crossing on a Reed"
+      },
+      "title": {
+        "zh": "船家",
+        "en": "The boatman"
+      },
+      "bio": {
+        "zh": "竹篷布帆的小船，在江上穿來穿去。肖像是戴斗笠、扶著槳的船家。",
+        "en": "A little boat with a matting sail that darts about the river. The portrait is the boatman in a straw hat, oar in hand."
+      },
+      "weapon": {
+        "zh": "船槳",
+        "en": "Oar"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_boat/nes/portrait.png",
+            "portrait4x": "chars/sx_boat/nes/portrait@4x.png",
+            "body": "chars/sx_boat/nes/body.png",
+            "body4x": "chars/sx_boat/nes/body@4x.png",
+            "sheet": "chars/sx_boat/nes/sheet.png",
+            "sheet4x": "chars/sx_boat/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_boat/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_warship",
+      "name": {
+        "zh": "樓船",
+        "en": "Tower Ship"
+      },
+      "style_name": {
+        "zh": "水上城樓",
+        "en": "A Fortress on the Water"
+      },
+      "title": {
+        "zh": "樓船將軍",
+        "en": "The tower-ship captain"
+      },
+      "bio": {
+        "zh": "兩層樓高的戰船，紅柱黑船身，桅頂飄著金旗。肖像是戴鐵盔的船將。",
+        "en": "A warship two storeys tall, red pillars on a dark hull, a gold banner at the masthead. The portrait is its captain in an iron helmet."
+      },
+      "weapon": {
+        "zh": "金旗",
+        "en": "Gold banner"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_warship/nes/portrait.png",
+            "portrait4x": "chars/sx_warship/nes/portrait@4x.png",
+            "body": "chars/sx_warship/nes/body.png",
+            "body4x": "chars/sx_warship/nes/body@4x.png",
+            "sheet": "chars/sx_warship/nes/sheet.png",
+            "sheet4x": "chars/sx_warship/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_warship/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_lm_saber",
+      "name": {
+        "zh": "啟程刀客",
+        "en": "Setting-out Saber"
+      },
+      "style_name": {
+        "zh": "龍門的刀",
+        "en": "The Blade of Longmen"
+      },
+      "title": {
+        "zh": "龍門刀莊的刀客",
+        "en": "Saber of the Longmen Saber Manor"
+      },
+      "bio": {
+        "zh": "深藍衣、藍頭帶，和奕叡一樣背著環首刀。龍門刀莊的弟子出門，總說「第一刀，從腳下開始」。",
+        "en": "Indigo robe, blue headband and a ring-pommel saber like Yi Rui. Disciples of the Longmen Saber Manor always say: the first cut starts at your feet."
+      },
+      "weapon": {
+        "zh": "環首刀",
+        "en": "Ring-pommel saber"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_lm_saber/nes/portrait.png",
+            "portrait4x": "chars/sx_lm_saber/nes/portrait@4x.png",
+            "body": "chars/sx_lm_saber/nes/body.png",
+            "body4x": "chars/sx_lm_saber/nes/body@4x.png",
+            "sheet": "chars/sx_lm_saber/nes/sheet.png",
+            "sheet4x": "chars/sx_lm_saber/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_lm_saber/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_hj_sword",
+      "name": {
+        "zh": "寒江劍姬",
+        "en": "Cold River Swordmaid"
+      },
+      "style_name": {
+        "zh": "霜劍",
+        "en": "Frost Sword"
+      },
+      "title": {
+        "zh": "寒江閣的女劍客",
+        "en": "Swordswoman of the Cold River Pavilion"
+      },
+      "bio": {
+        "zh": "高髻銀簪、淡藍衣裳，柳寒煙的門下。細劍一出，像江面上的寒煙。",
+        "en": "A high bun with a silver pin and pale blue robes: one of Liu Hanyan's pupils. Her slim sword moves like mist over a cold river."
+      },
+      "weapon": {
+        "zh": "細劍",
+        "en": "Slim sword"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_hj_sword/nes/portrait.png",
+            "portrait4x": "chars/sx_hj_sword/nes/portrait@4x.png",
+            "body": "chars/sx_hj_sword/nes/body.png",
+            "body4x": "chars/sx_hj_sword/nes/body@4x.png",
+            "sheet": "chars/sx_hj_sword/nes/sheet.png",
+            "sheet4x": "chars/sx_hj_sword/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_hj_sword/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_qf_monk",
+      "name": {
+        "zh": "羅漢僧",
+        "en": "Arhat Monk"
+      },
+      "style_name": {
+        "zh": "笑羅漢",
+        "en": "The Laughing Arhat"
+      },
+      "title": {
+        "zh": "千佛寺的武僧",
+        "en": "Fighting monk of the Thousand Buddha Temple"
+      },
+      "bio": {
+        "zh": "光頭、杏黃僧袍、紅袈裟、一串念珠和一根禪杖。站定了，誰也推不動。",
+        "en": "Shaved head, saffron robe, red kasaya, prayer beads and a ringed staff. Once he plants his feet, no one can move him."
+      },
+      "weapon": {
+        "zh": "禪杖",
+        "en": "Ringed staff"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_qf_monk/nes/portrait.png",
+            "portrait4x": "chars/sx_qf_monk/nes/portrait@4x.png",
+            "body": "chars/sx_qf_monk/nes/body.png",
+            "body4x": "chars/sx_qf_monk/nes/body@4x.png",
+            "sheet": "chars/sx_qf_monk/nes/sheet.png",
+            "sheet4x": "chars/sx_qf_monk/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_qf_monk/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_bl_palm",
+      "name": {
+        "zh": "暴龍掌客",
+        "en": "Dragon Palm Brawler"
+      },
+      "style_name": {
+        "zh": "一掌開碑",
+        "en": "A Palm that Splits Steles"
+      },
+      "title": {
+        "zh": "暴龍崖的掌客",
+        "en": "Brawler of Tyrant Dragon Cliff"
+      },
+      "bio": {
+        "zh": "赤膊、紅褲、金臂環，頭髮像刺蝟。冷笑天的手下，出掌前也學著先冷笑。",
+        "en": "Bare-chested in red trousers and gold armbands, hair like a hedgehog. One of Leng Xiaotian's men - he too sneers before he strikes."
+      },
+      "weapon": {
+        "zh": "雙掌",
+        "en": "Bare palms"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_bl_palm/nes/portrait.png",
+            "portrait4x": "chars/sx_bl_palm/nes/portrait@4x.png",
+            "body": "chars/sx_bl_palm/nes/body.png",
+            "body4x": "chars/sx_bl_palm/nes/body@4x.png",
+            "sheet": "chars/sx_bl_palm/nes/sheet.png",
+            "sheet4x": "chars/sx_bl_palm/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_bl_palm/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 4
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_ym_assassin",
+      "name": {
+        "zh": "幽冥刺客",
+        "en": "Netherworld Assassin"
+      },
+      "style_name": {
+        "zh": "白骨面",
+        "en": "The Bone Mask"
+      },
+      "title": {
+        "zh": "幽冥教的刺客",
+        "en": "Assassin of the Netherworld Sect"
+      },
+      "bio": {
+        "zh": "紫色兜帽、白骨半面具，眼洞透著紅光。屠千秋的影子。",
+        "en": "A violet hood and a white bone half-mask with red light in the eyeholes: Tu Qianqiu's shadow."
+      },
+      "weapon": {
+        "zh": "飛鏢",
+        "en": "Throwing darts"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_ym_assassin/nes/portrait.png",
+            "portrait4x": "chars/sx_ym_assassin/nes/portrait@4x.png",
+            "body": "chars/sx_ym_assassin/nes/body.png",
+            "body4x": "chars/sx_ym_assassin/nes/body@4x.png",
+            "sheet": "chars/sx_ym_assassin/nes/sheet.png",
+            "sheet4x": "chars/sx_ym_assassin/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_ym_assassin/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_yy_tiger",
+      "name": {
+        "zh": "妖虎騎",
+        "en": "Demon Tiger Rider"
+      },
+      "style_name": {
+        "zh": "騎虎",
+        "en": "Riding the Tiger"
+      },
+      "title": {
+        "zh": "馭妖宗的虎騎",
+        "en": "Tiger rider of the Beastbinder Sect"
+      },
+      "bio": {
+        "zh": "綠頭巾、綠衣，騎著一頭被萬妖鈴馴服的猛虎。肖像旁邊就是那頭虎。",
+        "en": "A green hood and green robes, astride a tiger tamed by the Bell of Ten Thousand Beasts. The tiger is right beside her in the portrait."
+      },
+      "weapon": {
+        "zh": "虎",
+        "en": "The tiger"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_yy_tiger/nes/portrait.png",
+            "portrait4x": "chars/sx_yy_tiger/nes/portrait@4x.png",
+            "body": "chars/sx_yy_tiger/nes/body.png",
+            "body4x": "chars/sx_yy_tiger/nes/body@4x.png",
+            "sheet": "chars/sx_yy_tiger/nes/sheet.png",
+            "sheet4x": "chars/sx_yy_tiger/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_yy_tiger/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_qj_escort",
+      "name": {
+        "zh": "金鏢隊",
+        "en": "Golden Escort"
+      },
+      "style_name": {
+        "zh": "金字招牌",
+        "en": "A Golden Signboard"
+      },
+      "title": {
+        "zh": "錢家商號的鏢頭",
+        "en": "Escort master of the House of Qian"
+      },
+      "bio": {
+        "zh": "金色鏢車、紅金鏢旗，鏢頭戴著和錢萬里一樣的瓜皮帽。車上的貨每一件都記在帳上。",
+        "en": "A golden cart and a red-and-gold banner; the escort master wears a melon-skin cap like Qian Wanli's. Every crate on the cart is in the ledger."
+      },
+      "weapon": {
+        "zh": "金鏢旗",
+        "en": "Golden banner"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_qj_escort/nes/portrait.png",
+            "portrait4x": "chars/sx_qj_escort/nes/portrait@4x.png",
+            "body": "chars/sx_qj_escort/nes/body.png",
+            "body4x": "chars/sx_qj_escort/nes/body@4x.png",
+            "sheet": "chars/sx_qj_escort/nes/sheet.png",
+            "sheet4x": "chars/sx_qj_escort/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_qj_escort/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_hf_club",
+      "name": {
+        "zh": "狼牙棒手",
+        "en": "Wolf-tooth Clubman"
+      },
+      "style_name": {
+        "zh": "黑風嘍囉頭",
+        "en": "Head of the Black Wind Boys"
+      },
+      "title": {
+        "zh": "黑風寨的棒手",
+        "en": "Clubman of the Black Wind Fort"
+      },
+      "bio": {
+        "zh": "刺蝟頭、一臉黑鬍子、棕色皮背心，扛著釘滿鐵釘的狼牙棒。黑熊說什麼他就做什麼。",
+        "en": "Spiky hair, a black beard and a brown leather vest, with a nail-studded wolf-tooth club on his shoulder. Whatever Black Bear says, he does."
+      },
+      "weapon": {
+        "zh": "狼牙棒",
+        "en": "Wolf-tooth club"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_hf_club/nes/portrait.png",
+            "portrait4x": "chars/sx_hf_club/nes/portrait@4x.png",
+            "body": "chars/sx_hf_club/nes/body.png",
+            "body4x": "chars/sx_hf_club/nes/body@4x.png",
+            "sheet": "chars/sx_hf_club/nes/sheet.png",
+            "sheet4x": "chars/sx_hf_club/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_hf_club/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 6,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_xd_blood",
+      "name": {
+        "zh": "血刀客",
+        "en": "Blood Saber"
+      },
+      "style_name": {
+        "zh": "九斬",
+        "en": "Nine Cuts"
+      },
+      "title": {
+        "zh": "血刀門的刀客",
+        "en": "Saber of the Blood Saber Sect"
+      },
+      "bio": {
+        "zh": "暗紅長袍，一把血紅的彎刀。厲寒山的門下，九斬之下不留人。",
+        "en": "A dark red robe and a blood-red curved blade. A pupil of Li Hanshan: nine cuts, none spared."
+      },
+      "weapon": {
+        "zh": "血紅彎刀",
+        "en": "Blood-red curved blade"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_xd_blood/nes/portrait.png",
+            "portrait4x": "chars/sx_xd_blood/nes/portrait@4x.png",
+            "body": "chars/sx_xd_blood/nes/body.png",
+            "body4x": "chars/sx_xd_blood/nes/body@4x.png",
+            "sheet": "chars/sx_xd_blood/nes/sheet.png",
+            "sheet4x": "chars/sx_xd_blood/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_xd_blood/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_zf_chain",
+      "name": {
+        "zh": "鐵鍊捕快",
+        "en": "Iron Chain Constable"
+      },
+      "style_name": {
+        "zh": "鐵鎖連環",
+        "en": "Iron Locks in a Chain"
+      },
+      "title": {
+        "zh": "執法堂的捕快",
+        "en": "Constable of the Hall of Law"
+      },
+      "bio": {
+        "zh": "烏紗帽、八字鬍、炭灰長袍，腰間一條鐵鍊。和鐵無私一樣不認交情。",
+        "en": "Black gauze cap, a stern moustache, a charcoal robe and an iron chain at the waist. Like Tie Wusi, he does not care whose friend you are."
+      },
+      "weapon": {
+        "zh": "鐵鍊",
+        "en": "Iron chain"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_zf_chain/nes/portrait.png",
+            "portrait4x": "chars/sx_zf_chain/nes/portrait@4x.png",
+            "body": "chars/sx_zf_chain/nes/body.png",
+            "body4x": "chars/sx_zf_chain/nes/body@4x.png",
+            "sheet": "chars/sx_zf_chain/nes/sheet.png",
+            "sheet4x": "chars/sx_zf_chain/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_zf_chain/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_cy_nun",
+      "name": {
+        "zh": "素衣劍尼",
+        "en": "White-robed Sword Nun"
+      },
+      "style_name": {
+        "zh": "慈雲一劍",
+        "en": "One Sword of Mercy Cloud"
+      },
+      "title": {
+        "zh": "慈雲庵的劍尼",
+        "en": "Sword nun of the Mercy Cloud Nunnery"
+      },
+      "bio": {
+        "zh": "白頭巾、淡粉衣，劍法柔中帶剛。打完仗，總是第一個替受傷的人包紮。",
+        "en": "A white hood and pale pink robes; her swordplay is soft with steel inside. After a fight she is always first to bind the wounded."
+      },
+      "weapon": {
+        "zh": "長劍",
+        "en": "Long sword"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_cy_nun/nes/portrait.png",
+            "portrait4x": "chars/sx_cy_nun/nes/portrait@4x.png",
+            "body": "chars/sx_cy_nun/nes/body.png",
+            "body4x": "chars/sx_cy_nun/nes/body@4x.png",
+            "sheet": "chars/sx_cy_nun/nes/sheet.png",
+            "sheet4x": "chars/sx_cy_nun/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_cy_nun/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
           ]
         }
       ]

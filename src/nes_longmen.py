@@ -1001,3 +1001,9 @@ import nes_longmen4  # noqa: E402
 PORTRAITS.update(nes_longmen4.PORTRAITS)
 SPRITES.update(nes_longmen4.SPRITES)
 HEIGHTS.update(nes_longmen4.HEIGHTS)
+
+# 龍門江湖志 (Sects of Longmen): its troops, crews, great people and the abbess of the Mercy Cloud Nunnery
+import nes_sects  # noqa: E402
+PORTRAITS.update(nes_sects.PORTRAITS)
+SPRITES.update(nes_sects.SPRITES)
+HEIGHTS.update(nes_sects.HEIGHTS)

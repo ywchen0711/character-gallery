@@ -23,14 +23,15 @@ from pixlib import count_colours, scale  # noqa: E402
 from roster import ROSTER  # noqa: E402
 from styles import STYLES  # noqa: E402
 
-FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8', 'longmen': '#5a6ab8', 'beast': '#6a8a3a', 'foe': '#8a6a3a', 'sango': '#a83a3a'}
+FACTION_COLOUR = {'wu': '#c8402e', 'shu': '#3f8f4e', 'wei': '#3b5ba8', 'qun': '#b08a3a', 'west': '#3a7ca8', 'longmen': '#5a6ab8', 'beast': '#6a8a3a', 'foe': '#8a6a3a', 'sango': '#a83a3a', 'sects': '#3b56a8'}
 FACTION_NAME = {'wu': {'zh': '吳', 'en': 'Wu'}, 'shu': {'zh': '蜀', 'en': 'Shu'},
                 'wei': {'zh': '魏', 'en': 'Wei'}, 'qun': {'zh': '群', 'en': 'Other'},
                 'west': {'zh': '旅人一家', 'en': 'The travelling family'},
                 'longmen': {'zh': '龍門武林', 'en': 'Longmen Wulin'},
                 'sango': {'zh': '霸王之路', 'en': 'Path of the Hegemon'},
                 'beast': {'zh': '怪物與野獸', 'en': 'Monsters & Beasts'},
-                'foe': {'zh': '小怪', 'en': 'Common Foes'}}
+                'foe': {'zh': '小怪', 'en': 'Common Foes'},
+                'sects': {'zh': '龍門江湖志', 'en': 'Sects of Longmen'}}
 
 
 def export_variant(cid, v):

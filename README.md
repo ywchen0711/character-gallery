@@ -51,6 +51,18 @@ Characters so far:
   - 獨臂漁翁 the One-Armed Fisherman: straw hat, long white beard, knotted empty sleeve, fishing rod
   - 鬼面護法 the Ghost-mask Warden: blood-red hood, white fanged ghost mask with red eye-light
   - 蒙面人 the Masked Man: purple hood, black face cloth, purple robe edged in gold
+- 龍門江湖志 (Sects of Longmen), drawn in `src/nes_sects.py` (sprites) and `src/nes_sects_busts.py` (portraits),
+  exported with `tools/export_sects.py` (which merges them into chars/index.json without touching anyone else):
+  - 靜慈師太 Abbess Jingci of the Mercy Cloud Nunnery (faction `longmen`): white hood, grey robe, red prayer beads,
+    a horsetail whisk; and two great people, 宗師 the white-browed Grandmaster and 名匠 the Master Smith.
+  - 江湖兵卒, the troops (faction `sects`): 開山弟子 Founder, 斥候 Scout, 弟子 Disciple, 弓手 Archer, 刀客 Saber,
+    劍客 Swordsman, 暗器手 Dart Thrower, 槍陣 Spear Wall, 內家高手 Inner-art Adept, 劍陣 Sword Formation, 連弩手
+    Repeater Crossbows, 絕頂高手 Peerless Master, 落星弓手 Star-felling Archer, 馬隊 Riders and 鐵騎 Iron Cavalry
+    (mounted sprites), 鏢隊 Escort Caravan, 攻城木 Battering Ram, 投石車 Catapult, 霹靂車 Thunder Cart, 江船 River
+    Boat and 樓船 Tower Ship (the sprite is the cart, engine or ship; the portrait is its crew).
+  - 各派獨門弟子, each sect's own fighter: 啟程刀客, 寒江劍姬, 羅漢僧, 暴龍掌客, 幽冥刺客, 妖虎騎, 金鏢隊, 狼牙棒手,
+    血刀客, 鐵鍊捕快, 素衣劍尼.
+  The field sprites are built from shared hand-typed parts (heads, bodies, held weapons) so an army reads as one family.
 - 怪物與野獸 (Monsters & Beasts), original creatures in `nes` only (faction `beast`, `kind: "monster"` in index.json):
   a front-view NES battle picture (64x64 or 64x56, transparent backdrop) and a 16x16 / 16x24 field sprite
   with one two-frame animation `move` (idle and move): 白猿 White Ape, 吊睛白額虎 White-Browed Tiger, 鎮宅石獅
