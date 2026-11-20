@@ -143,6 +143,8 @@ def main():
                              'faction': 'longmen', 'members': MORE, 'style': 'nes',
                              'files': {k: 'chars/longmen/' + v for k, v in (('nes', 'group-nes-more.png'), ('nes4x', 'group-nes-more@4x.png'),
                                                                              ('nesTall', 'group-nes-more-4x2.png'), ('nesTall4x', 'group-nes-more-4x2@4x.png'))}}
+    # 奕叡's paper doll (made by Longmen Quest's js/doll.js, so the pictures are kept as they are, not redrawn here)
+    groups['yiruiDoll'] = {'name': {'zh': '奕叡的紙娃娃', 'en': "Yi Rui's paper doll"}, 'faction': 'longmen', 'members': ['yirui'], 'style': 'nes', 'files': {'nes': 'chars/yirui/doll/group-nes-doll.png', 'nes4x': 'chars/yirui/doll/group-nes-doll@4x.png', 'nesTall': 'chars/yirui/doll/group-nes-doll-3x2.png', 'nesTall4x': 'chars/yirui/doll/group-nes-doll-3x2@4x.png', 'outfits': 'chars/yirui/doll/outfits.png', 'pieces': 'chars/yirui/doll/pieces.png', 'json': 'chars/yirui/doll/doll.json'}}
     # monsters & beasts as one NES encounter screen
     from nes_beasts import BEASTS, group as beast_group
     bd = os.path.join(ROOT, 'chars', 'beasts')

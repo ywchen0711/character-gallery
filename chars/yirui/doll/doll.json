@@ -1,0 +1,912 @@
+{
+ "note": "Yi Rui paper doll (Longmen Quest js/doll.js): pieces composited on his 16x24 nes sprite and 48x56 portrait at run time",
+ "outfits": [
+  {
+   "id": "plain",
+   "gear": {
+    "w": "w0",
+    "a": "a0"
+   },
+   "names": {
+    "w": "舊環首刀 / Old Ring Saber",
+    "a": "粗布衣 / Plain Robe"
+   }
+  },
+  {
+   "id": "traveller",
+   "gear": {
+    "w": "w7",
+    "a": "a1",
+    "hd": "hd2",
+    "ck": "ck1",
+    "bt": "bt1",
+    "pd": "pd1",
+    "c": "c1"
+   },
+   "names": {
+    "w": "白蠟槍 / Waxwood Spear",
+    "a": "皮甲 / Leather Vest",
+    "hd": "竹斗笠 / Bamboo Hat",
+    "ck": "麻布披風 / Hemp Cape",
+    "bt": "草鞋 / Straw Sandals",
+    "pd": "平安符 / Safe-travel Charm",
+    "c": "木護腕 / Wood Bracer"
+   }
+  },
+  {
+   "id": "swordsman",
+   "gear": {
+    "w": "w8",
+    "a": "a2",
+    "hd": "hd3",
+    "ck": "ck2",
+    "bt": "bt3",
+    "c": "c2",
+    "pd": "pd2"
+   },
+   "names": {
+    "w": "青鋼劍 / Blue Steel Sword",
+    "a": "鎖子甲 / Chain Shirt",
+    "hd": "鐵額護 / Iron Brow Guard",
+    "ck": "青布披風 / Green Cloth Cape",
+    "bt": "鹿皮靴 / Deerskin Boots",
+    "c": "銅護腕 / Bronze Bracer",
+    "pd": "青玉佩 / Green Jade Pendant"
+   }
+  },
+  {
+   "id": "general",
+   "gear": {
+    "w": "w3",
+    "a": "a3",
+    "hd": "hd_jiang",
+    "ck": "ck3",
+    "bt": "bt4",
+    "c": "c4",
+    "pd": "pd_beads"
+   },
+   "names": {
+    "w": "斬馬刀 / Horse-cutter",
+    "a": "鐵鱗甲 / Iron Scale",
+    "hd": "將軍盔 / General's Helm",
+    "ck": "錦緞披風 / Brocade Cape",
+    "bt": "鐵脛靴 / Iron Greaves",
+    "c": "金絲護腕 / Gold-thread Bracer",
+    "pd": "金剛念珠 / Vajra Prayer Beads"
+   }
+  },
+  {
+   "id": "coldriver",
+   "gear": {
+    "w": "w12",
+    "a": "a4",
+    "hd": "hd_veil",
+    "ck": "ck_fox",
+    "bt": "bt_tiger",
+    "c": "c_jiao",
+    "pd": "pd_moon"
+   },
+   "names": {
+    "w": "寒江劍 / Cold River Sword",
+    "a": "玄鐵甲 / Dark Iron Mail",
+    "hd": "黑紗斗笠 / Black-veil Hat",
+    "ck": "九尾狐裘 / Nine-tail Fox Cloak",
+    "bt": "虎紋靴 / Tiger-stripe Boots",
+    "c": "蛟鱗護腕 / Jiao-scale Bracer",
+    "pd": "冷月佩 / Cold Moon Pendant"
+   }
+  },
+  {
+   "id": "champion",
+   "gear": {
+    "w": "w5",
+    "a": "a5",
+    "hd": "hd5",
+    "ck": "ck_ghost",
+    "bt": "bt5",
+    "c": "c5",
+    "pd": "pd5"
+   },
+   "names": {
+    "w": "龍吟刀 / Dragon Song Dao",
+    "a": "天蠶衣 / Heaven Silk Robe",
+    "hd": "紫金冠 / Purple-gold Crown",
+    "ck": "鬼面披風 / Ghost-mask Mantle",
+    "bt": "踏雲靴 / Cloud-step Boots",
+    "c": "龍鱗護心鏡 / Dragon-scale Mirror",
+    "pd": "龍紋玉佩 / Dragon Jade"
+   }
+  }
+ ],
+ "outfitsSheet": {
+  "image": "outfits.png",
+  "frameWidth": 16,
+  "frameHeight": 24,
+  "columns": [
+   "down 1",
+   "down 2",
+   "side 1",
+   "side 2",
+   "up 1",
+   "up 2"
+  ],
+  "rows": [
+   "plain",
+   "traveller",
+   "swordsman",
+   "general",
+   "coldriver",
+   "champion"
+  ]
+ },
+ "pieces": {
+  "image": "pieces.png",
+  "cell": [
+   52,
+   26
+  ],
+  "perRow": 6,
+  "views": [
+   "down",
+   "side",
+   "up"
+  ],
+  "list": [
+   {
+    "id": "w0",
+    "slot": "w",
+    "name": {
+     "zh": "舊環首刀",
+     "en": "Old Ring Saber"
+    },
+    "look": {
+     "f": "dao"
+    }
+   },
+   {
+    "id": "w1",
+    "slot": "w",
+    "name": {
+     "zh": "精鋼刀",
+     "en": "Steel Dao"
+    },
+    "look": {
+     "f": "dao",
+     "c": 48
+    }
+   },
+   {
+    "id": "w14",
+    "slot": "w",
+    "name": {
+     "zh": "鐵棍",
+     "en": "Iron Cudgel"
+    },
+    "look": {
+     "f": "staff",
+     "a": 0,
+     "c": 7
+    }
+   },
+   {
+    "id": "w7",
+    "slot": "w",
+    "name": {
+     "zh": "白蠟槍",
+     "en": "Waxwood Spear"
+    },
+    "look": {
+     "f": "spear",
+     "a": 16,
+     "b": 48,
+     "c": 23
+    }
+   },
+   {
+    "id": "w_scar",
+    "slot": "w",
+    "name": {
+     "zh": "斷魂刀",
+     "en": "Soul-cutter"
+    },
+    "look": {
+     "f": "dao",
+     "c": 22
+    }
+   },
+   {
+    "id": "w2",
+    "slot": "w",
+    "name": {
+     "zh": "雁翎刀",
+     "en": "Goose-feather Dao"
+    },
+    "look": {
+     "f": "dao",
+     "c": 49
+    }
+   },
+   {
+    "id": "w8",
+    "slot": "w",
+    "name": {
+     "zh": "青鋼劍",
+     "en": "Blue Steel Sword"
+    },
+    "look": {
+     "f": "sword",
+     "a": 33,
+     "b": 49,
+     "c": 40
+    }
+   },
+   {
+    "id": "w6",
+    "slot": "w",
+    "name": {
+     "zh": "藏鋒刀",
+     "en": "Hidden-edge Dao"
+    },
+    "look": {
+     "f": "dao",
+     "c": 0
+    }
+   },
+   {
+    "id": "w9",
+    "slot": "w",
+    "name": {
+     "zh": "鐵禪杖",
+     "en": "Iron Monk Staff"
+    },
+    "look": {
+     "f": "staff",
+     "a": 40,
+     "c": 8
+    }
+   },
+   {
+    "id": "w3",
+    "slot": "w",
+    "name": {
+     "zh": "斬馬刀",
+     "en": "Horse-cutter"
+    },
+    "look": {
+     "f": "bigdao",
+     "b": 48,
+     "c": 22
+    }
+   },
+   {
+    "id": "w4",
+    "slot": "w",
+    "name": {
+     "zh": "寒鐵刀",
+     "en": "Cold Iron Dao"
+    },
+    "look": {
+     "f": "dao",
+     "c": 33
+    }
+   },
+   {
+    "id": "w12",
+    "slot": "w",
+    "name": {
+     "zh": "寒江劍",
+     "en": "Cold River Sword"
+    },
+    "look": {
+     "f": "sword",
+     "a": 49,
+     "b": 48,
+     "c": 33
+    }
+   },
+   {
+    "id": "w5",
+    "slot": "w",
+    "name": {
+     "zh": "龍吟刀",
+     "en": "Dragon Song Dao"
+    },
+    "look": {
+     "f": "dao",
+     "c": 40
+    }
+   },
+   {
+    "id": "w_fan",
+    "slot": "w",
+    "name": {
+     "zh": "千秋白骨扇",
+     "en": "Bone Fan of Ages"
+    },
+    "look": {
+     "f": "fan",
+     "a": 48,
+     "b": 54
+    }
+   },
+   {
+    "id": "a1",
+    "slot": "a",
+    "name": {
+     "zh": "皮甲",
+     "en": "Leather Vest"
+    },
+    "look": {
+     "a": 23,
+     "b": 39,
+     "p": "trim"
+    }
+   },
+   {
+    "id": "a2",
+    "slot": "a",
+    "name": {
+     "zh": "鎖子甲",
+     "en": "Chain Shirt"
+    },
+    "look": {
+     "a": 16,
+     "b": 0,
+     "p": "chain"
+    }
+   },
+   {
+    "id": "a3",
+    "slot": "a",
+    "name": {
+     "zh": "鐵鱗甲",
+     "en": "Iron Scale"
+    },
+    "look": {
+     "a": 0,
+     "b": 16,
+     "p": "scale",
+     "t": 12
+    }
+   },
+   {
+    "id": "a_blood",
+    "slot": "a",
+    "name": {
+     "zh": "血刀戰袍",
+     "en": "Blood Saber War Robe"
+    },
+    "look": {
+     "a": 6,
+     "b": 22,
+     "p": "trim",
+     "t": 15
+    }
+   },
+   {
+    "id": "a4",
+    "slot": "a",
+    "name": {
+     "zh": "玄鐵甲",
+     "en": "Dark Iron Mail"
+    },
+    "look": {
+     "a": 12,
+     "b": 28,
+     "p": "scale",
+     "t": 12
+    }
+   },
+   {
+    "id": "a5",
+    "slot": "a",
+    "name": {
+     "zh": "天蠶衣",
+     "en": "Heaven Silk Robe"
+    },
+    "look": {
+     "a": 48,
+     "b": 49,
+     "p": "trim",
+     "t": 48
+    }
+   },
+   {
+    "id": "c1",
+    "slot": "c",
+    "name": {
+     "zh": "木護腕",
+     "en": "Wood Bracer"
+    },
+    "look": {
+     "f": "bracer",
+     "a": 23
+    }
+   },
+   {
+    "id": "c2",
+    "slot": "c",
+    "name": {
+     "zh": "銅護腕",
+     "en": "Bronze Bracer"
+    },
+    "look": {
+     "f": "bracer",
+     "a": 24
+    }
+   },
+   {
+    "id": "c3",
+    "slot": "c",
+    "name": {
+     "zh": "鐵護腕",
+     "en": "Iron Bracer"
+    },
+    "look": {
+     "f": "bracer",
+     "a": 16
+    }
+   },
+   {
+    "id": "c_ape",
+    "slot": "c",
+    "name": {
+     "zh": "白猿臂環",
+     "en": "White Ape Armlet"
+    },
+    "look": {
+     "f": "bracer",
+     "a": 48
+    }
+   },
+   {
+    "id": "c_jiao",
+    "slot": "c",
+    "name": {
+     "zh": "蛟鱗護腕",
+     "en": "Jiao-scale Bracer"
+    },
+    "look": {
+     "f": "bracer",
+     "a": 44
+    }
+   },
+   {
+    "id": "c4",
+    "slot": "c",
+    "name": {
+     "zh": "金絲護腕",
+     "en": "Gold-thread Bracer"
+    },
+    "look": {
+     "f": "bracer",
+     "a": 40
+    }
+   },
+   {
+    "id": "c5",
+    "slot": "c",
+    "name": {
+     "zh": "龍鱗護心鏡",
+     "en": "Dragon-scale Mirror"
+    },
+    "look": {
+     "f": "mirror",
+     "a": 16,
+     "b": 49
+    }
+   },
+   {
+    "id": "hd1",
+    "slot": "hd",
+    "name": {
+     "zh": "紅頭巾",
+     "en": "Red Headband"
+    },
+    "look": {
+     "f": "band",
+     "a": 22
+    }
+   },
+   {
+    "id": "hd2",
+    "slot": "hd",
+    "name": {
+     "zh": "竹斗笠",
+     "en": "Bamboo Hat"
+    },
+    "look": {
+     "f": "hat",
+     "a": 39,
+     "b": 55,
+     "c": 23
+    }
+   },
+   {
+    "id": "hd3",
+    "slot": "hd",
+    "name": {
+     "zh": "鐵額護",
+     "en": "Iron Brow Guard"
+    },
+    "look": {
+     "f": "brow",
+     "a": 16,
+     "b": 48,
+     "c": 0
+    }
+   },
+   {
+    "id": "hd_veil",
+    "slot": "hd",
+    "name": {
+     "zh": "黑紗斗笠",
+     "en": "Black-veil Hat"
+    },
+    "look": {
+     "f": "hat",
+     "a": 0,
+     "b": 16,
+     "c": 15,
+     "veil": 1
+    }
+   },
+   {
+    "id": "hd4",
+    "slot": "hd",
+    "name": {
+     "zh": "鐵盔",
+     "en": "Iron Helm"
+    },
+    "look": {
+     "f": "helm",
+     "a": 16,
+     "b": 48,
+     "c": 0
+    }
+   },
+   {
+    "id": "hd_crow",
+    "slot": "hd",
+    "name": {
+     "zh": "金烏羽冠",
+     "en": "Golden-crow Crown"
+    },
+    "look": {
+     "f": "crown",
+     "a": 22,
+     "b": 39,
+     "c": 40
+    }
+   },
+   {
+    "id": "hd_jiang",
+    "slot": "hd",
+    "name": {
+     "zh": "將軍盔",
+     "en": "General's Helm"
+    },
+    "look": {
+     "f": "helm",
+     "a": 24,
+     "b": 40,
+     "c": 8
+    }
+   },
+   {
+    "id": "hd5",
+    "slot": "hd",
+    "name": {
+     "zh": "紫金冠",
+     "en": "Purple-gold Crown"
+    },
+    "look": {
+     "f": "crown",
+     "a": 40,
+     "b": 56,
+     "c": 20
+    }
+   },
+   {
+    "id": "hd_lion",
+    "slot": "hd",
+    "name": {
+     "zh": "獅頭盔",
+     "en": "Lion-head Helm"
+    },
+    "look": {
+     "f": "helm",
+     "a": 40,
+     "b": 56,
+     "c": 24
+    }
+   },
+   {
+    "id": "bt1",
+    "slot": "bt",
+    "name": {
+     "zh": "草鞋",
+     "en": "Straw Sandals"
+    },
+    "look": {
+     "f": "boots",
+     "a": 39
+    }
+   },
+   {
+    "id": "bt2",
+    "slot": "bt",
+    "name": {
+     "zh": "布靴",
+     "en": "Cloth Boots"
+    },
+    "look": {
+     "f": "boots",
+     "a": 0
+    }
+   },
+   {
+    "id": "bt_monkey",
+    "slot": "bt",
+    "name": {
+     "zh": "猴兒快靴",
+     "en": "Monkey's Quick Boots"
+    },
+    "look": {
+     "f": "boots",
+     "a": 22
+    }
+   },
+   {
+    "id": "bt3",
+    "slot": "bt",
+    "name": {
+     "zh": "鹿皮靴",
+     "en": "Deerskin Boots"
+    },
+    "look": {
+     "f": "boots",
+     "a": 23
+    }
+   },
+   {
+    "id": "bt4",
+    "slot": "bt",
+    "name": {
+     "zh": "鐵脛靴",
+     "en": "Iron Greaves"
+    },
+    "look": {
+     "f": "greaves",
+     "a": 16,
+     "b": 48
+    }
+   },
+   {
+    "id": "bt_tiger",
+    "slot": "bt",
+    "name": {
+     "zh": "虎紋靴",
+     "en": "Tiger-stripe Boots"
+    },
+    "look": {
+     "f": "boots",
+     "a": 40,
+     "b": 56
+    }
+   },
+   {
+    "id": "bt5",
+    "slot": "bt",
+    "name": {
+     "zh": "踏雲靴",
+     "en": "Cloud-step Boots"
+    },
+    "look": {
+     "f": "boots",
+     "a": 49,
+     "b": 48
+    }
+   },
+   {
+    "id": "ck1",
+    "slot": "ck",
+    "name": {
+     "zh": "麻布披風",
+     "en": "Hemp Cape"
+    },
+    "look": {
+     "a": 39,
+     "b": 55
+    }
+   },
+   {
+    "id": "ck_wolf",
+    "slot": "ck",
+    "name": {
+     "zh": "灰狼皮披風",
+     "en": "Wolf-pelt Cape"
+    },
+    "look": {
+     "a": 0,
+     "b": 16
+    }
+   },
+   {
+    "id": "ck2",
+    "slot": "ck",
+    "name": {
+     "zh": "青布披風",
+     "en": "Green Cloth Cape"
+    },
+    "look": {
+     "a": 27,
+     "b": 43
+    }
+   },
+   {
+    "id": "ck3",
+    "slot": "ck",
+    "name": {
+     "zh": "錦緞披風",
+     "en": "Brocade Cape"
+    },
+    "look": {
+     "a": 22,
+     "b": 38
+    }
+   },
+   {
+    "id": "ck_bear",
+    "slot": "ck",
+    "name": {
+     "zh": "黑熊皮氅",
+     "en": "Black Bear Mantle"
+    },
+    "look": {
+     "a": 7,
+     "b": 23
+    }
+   },
+   {
+    "id": "ck_tiger",
+    "slot": "ck",
+    "name": {
+     "zh": "虎皮披風",
+     "en": "Tiger-skin Cape"
+    },
+    "look": {
+     "a": 40,
+     "b": 56
+    }
+   },
+   {
+    "id": "ck_fox",
+    "slot": "ck",
+    "name": {
+     "zh": "九尾狐裘",
+     "en": "Nine-tail Fox Cloak"
+    },
+    "look": {
+     "a": 48,
+     "b": 49
+    }
+   },
+   {
+    "id": "ck4",
+    "slot": "ck",
+    "name": {
+     "zh": "玄狐裘",
+     "en": "Black Fox Cloak"
+    },
+    "look": {
+     "a": 0,
+     "b": 48
+    }
+   },
+   {
+    "id": "ck_ghost",
+    "slot": "ck",
+    "name": {
+     "zh": "鬼面披風",
+     "en": "Ghost-mask Mantle"
+    },
+    "look": {
+     "a": 5,
+     "b": 21
+    }
+   },
+   {
+    "id": "pd1",
+    "slot": "pd",
+    "name": {
+     "zh": "平安符",
+     "en": "Safe-travel Charm"
+    },
+    "look": {
+     "f": "charm",
+     "a": 22,
+     "b": 40
+    }
+   },
+   {
+    "id": "pd2",
+    "slot": "pd",
+    "name": {
+     "zh": "青玉佩",
+     "en": "Green Jade Pendant"
+    },
+    "look": {
+     "f": "jade",
+     "a": 42,
+     "b": 26
+    }
+   },
+   {
+    "id": "pd3",
+    "slot": "pd",
+    "name": {
+     "zh": "避毒珠",
+     "en": "Venom-ward Pearl"
+    },
+    "look": {
+     "f": "jade",
+     "a": 48,
+     "b": 52
+    }
+   },
+   {
+    "id": "pd_beads",
+    "slot": "pd",
+    "name": {
+     "zh": "金剛念珠",
+     "en": "Vajra Prayer Beads"
+    },
+    "look": {
+     "f": "beads",
+     "a": 24,
+     "b": 40
+    }
+   },
+   {
+    "id": "pd4",
+    "slot": "pd",
+    "name": {
+     "zh": "定神香囊",
+     "en": "Calm-mind Sachet"
+    },
+    "look": {
+     "f": "charm",
+     "a": 20,
+     "b": 36
+    }
+   },
+   {
+    "id": "pd_moon",
+    "slot": "pd",
+    "name": {
+     "zh": "冷月佩",
+     "en": "Cold Moon Pendant"
+    },
+    "look": {
+     "f": "jade",
+     "a": 49,
+     "b": 33
+    }
+   },
+   {
+    "id": "pd5",
+    "slot": "pd",
+    "name": {
+     "zh": "龍紋玉佩",
+     "en": "Dragon Jade"
+    },
+    "look": {
+     "f": "jade",
+     "a": 43,
+     "b": 40
+    }
+   }
+  ]
+ }
+}

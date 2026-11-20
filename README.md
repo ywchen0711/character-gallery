@@ -28,6 +28,12 @@ Characters so far:
   layer at most 3 colours + transparent (checked by `nes.sprite_image`).
 - 龍門武林 (Longmen Wulin), the cast of 龍門雙奕, in `nes` only (faction `longmen`):
   - 奕叡 Yi Rui, the elder brother: indigo robe, blue headband, ring-pommel saber on his back
+    - His paper doll (紙娃娃) from Longmen Quest, group `yiruiDoll`, in `chars/yirui/doll/`: the game dresses his
+      16x24 sprite and 48x56 portrait at run time from small NES-palette pieces (hats, helmets, crowns, headbands,
+      armour colours and patterns, cloaks, pendants, bracers, boots and weapons: dao, sword, spear, staff, fan).
+      `outfits.png` has six outfits (walk frames facing down, side and up), `pieces.png` each piece's own pixels
+      (front, side, back), `group-nes-doll.png` the six as an NES roster, `doll.json` the outfit and piece list.
+      They are made by the game's `js/doll.js`, so `tools/export.py` keeps these files as they are.
   - 奕碩 Yi Shuo, his little brother: red headband, vermilion jacket, a mole, his football (shorter sprite)
   - 冷笑天 Leng Xiaotian, the Tyrant Dragon: silver hair, gold dragon horns, black-and-gold robe, crimson cape
   - 白先生 Mr Bai, the storyteller: square scholar's cap, goatee, grey robe, clapper block

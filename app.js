@@ -263,6 +263,8 @@
       en: 'Black Wind Fort and the Netherworld Sect: Black Bear, Scar, Skinny Monkey, Tu Qianqiu · 8-bit Famicom style' },
     longmenMore: { zh: '龍門江湖眾生：鐵無私、錢萬里、溫如玉、小蓮、厲寒山、獨臂漁翁、鬼面護法、蒙面人 · 8-bit 紅白機畫風',
       en: 'More of the Longmen jianghu: Tie Wusi, Qian Wanli, Wen Ruyu, Xiaolian, Li Hanshan, the One-Armed Fisherman, the Ghost-mask Warden, the Masked Man · 8-bit Famicom style' },
+    yiruiDoll: { zh: '奕叡的紙娃娃（龍門刀客傳）：同一個 8-bit 奕叡換上不同的斗笠、頭盔、冠、衣甲、披風、佩飾、靴與兵器 · 頭像與正面、側面、背面小人',
+      en: 'Yi Rui\'s paper doll (Longmen Quest): the same 8-bit Yi Rui in different hats, helmets, crowns, armour, cloaks, pendants, boots and weapons · portraits and front, side and back sprites' },
     foes: { zh: '小怪：50 種一般敵人，依第 1～5 階排列（早期→後期區域），同一造型的換色版本越後面越強 · 紅白機戰鬥圖與地圖小圖',
       en: 'Common Foes: 50 regular enemies ordered by tier 1-5 (early to late areas); palette-swapped kin get stronger further on · NES battle pictures and field sprites' },
     beasts: { zh: '怪物與野獸：白猿、吊睛白額虎、鎮宅石獅、符咒殭屍、山魈、九尾狐、江蛟、三足火鴉、毒蟾 · 紅白機戰鬥圖與地圖小圖',
@@ -270,8 +272,8 @@
   };
   function hero() {
     const box = $('#heroes'); if (!box || !DATA || !DATA.groups) return;
-    const ids = faction === 'all' ? ['family', 'sango', 'longmen', 'longmenFoes', 'longmenMore', 'beasts', 'foes']
-      : faction === 'sango' ? ['sango'] : faction === 'longmen' ? ['longmen', 'longmenFoes', 'longmenMore'] : faction === 'beast' ? ['beasts'] : faction === 'foe' ? ['foes']
+    const ids = faction === 'all' ? ['family', 'sango', 'longmen', 'longmenFoes', 'longmenMore', 'yiruiDoll', 'beasts', 'foes']
+      : faction === 'sango' ? ['sango'] : faction === 'longmen' ? ['longmen', 'longmenFoes', 'longmenMore', 'yiruiDoll'] : faction === 'beast' ? ['beasts'] : faction === 'foe' ? ['foes']
         : faction === 'west' ? ['family'] : [];
     box.textContent = '';
     const room = Math.max(120, (box.clientWidth || 600) - 32);
