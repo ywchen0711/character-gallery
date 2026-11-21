@@ -482,6 +482,51 @@
         "nesTall": "chars/sects/group-nes-sectsPeople-tall.png",
         "nesTall4x": "chars/sects/group-nes-sectsPeople-tall@4x.png"
       }
+    },
+    "tactics": {
+      "name": {
+        "zh": "龍門戰記・登場人物",
+        "en": "Longmen Tactics: people of the story"
+      },
+      "faction": "longmen",
+      "members": [
+        "yichangfeng",
+        "xiaowuying"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/tactics/group-nes-tactics.png",
+        "nes4x": "chars/tactics/group-nes-tactics@4x.png",
+        "nesTall": "chars/tactics/group-nes-tactics-tall.png",
+        "nesTall4x": "chars/tactics/group-nes-tactics-tall@4x.png"
+      }
+    },
+    "tacticsJobs": {
+      "name": {
+        "zh": "龍門戰記・江湖百業",
+        "en": "Longmen Tactics: the jobs of the jianghu"
+      },
+      "faction": "sects",
+      "members": [
+        "sx_physician",
+        "sx_physician_f",
+        "sx_thief",
+        "sx_daoist",
+        "sx_qin",
+        "sx_qin_f",
+        "sx_poison",
+        "sx_strategist",
+        "sx_teller",
+        "sx_scholar",
+        "sx_phantom"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/tactics/group-nes-tacticsJobs.png",
+        "nes4x": "chars/tactics/group-nes-tacticsJobs@4x.png",
+        "nesTall": "chars/tactics/group-nes-tacticsJobs-tall.png",
+        "nesTall4x": "chars/tactics/group-nes-tacticsJobs-tall@4x.png"
+      }
     }
   },
   "characters": [
@@ -11870,6 +11915,890 @@
           },
           "colours": {
             "portrait": 8,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yichangfeng",
+      "name": {
+        "zh": "奕長風",
+        "en": "Yi Changfeng"
+      },
+      "style_name": {
+        "zh": "龍門刀莊莊主",
+        "en": "Master of the Longmen Manor"
+      },
+      "title": {
+        "zh": "龍門刀莊莊主・兩兄弟的父親",
+        "en": "Master of the Longmen Sabre Manor, father of the brothers"
+      },
+      "bio": {
+        "zh": "龍門刀莊的莊主，奕叡和奕碩的父親。灰髮長鬚，深藍長袍，腰間一柄環首刀。把戰旗交給兒子們時，只說了一句：「人在，旗在。」",
+        "en": "Master of the Longmen Sabre Manor and father of Yi Rui and Yi Shuo: grey hair, a long beard, a deep blue robe and a ring-pommel sabre at his side. When he handed his sons the banner he said only: \"While you stand, the banner stands.\""
+      },
+      "weapon": {
+        "zh": "環首刀",
+        "en": "Ring-pommel sabre"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/yichangfeng/nes/portrait.png",
+            "portrait4x": "chars/yichangfeng/nes/portrait@4x.png",
+            "body": "chars/yichangfeng/nes/body.png",
+            "body4x": "chars/yichangfeng/nes/body@4x.png",
+            "sheet": "chars/yichangfeng/nes/sheet.png",
+            "sheet4x": "chars/yichangfeng/nes/sheet@4x.png",
+            "sheetJson": "chars/yichangfeng/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xiaowuying",
+      "name": {
+        "zh": "蕭無影",
+        "en": "Xiao Wuying"
+      },
+      "style_name": {
+        "zh": "掌旗使",
+        "en": "The Banner Steward"
+      },
+      "title": {
+        "zh": "武林盟掌旗使",
+        "en": "Banner Steward of the Wulin Alliance"
+      },
+      "bio": {
+        "zh": "替武林盟管了十年戰旗的掌旗使。烏紗帽、深紫官服，袖裡藏著飛鏢。每一面旗的針腳他都數過，卻從來不是舉旗的那個人；到了夜裡，他戴上一張白色的鬼面。",
+        "en": "For ten years he kept the Wulin Alliance's banners: a black gauze cap, a deep violet official's robe, darts up his sleeve. He has counted every stitch of every banner yet was never the one to raise them; by night he wears a white ghost mask."
+      },
+      "weapon": {
+        "zh": "袖鏢",
+        "en": "Sleeve darts"
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/xiaowuying/nes/portrait.png",
+            "portrait4x": "chars/xiaowuying/nes/portrait@4x.png",
+            "body": "chars/xiaowuying/nes/body.png",
+            "body4x": "chars/xiaowuying/nes/body@4x.png",
+            "sheet": "chars/xiaowuying/nes/sheet.png",
+            "sheet4x": "chars/xiaowuying/nes/sheet@4x.png",
+            "sheetJson": "chars/xiaowuying/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_physician",
+      "name": {
+        "zh": "醫者",
+        "en": "Physician"
+      },
+      "style_name": {
+        "zh": "懸壺濟世",
+        "en": "A Gourd for the World"
+      },
+      "title": {
+        "zh": "走方郎中",
+        "en": "A travelling physician"
+      },
+      "bio": {
+        "zh": "綠袍郎中，腰間掛著一個藥葫蘆。金針、湯藥和一點內力，走到哪裡就醫到哪裡。",
+        "en": "A physician in green with a medicine gourd at the hip. Golden needles, herbs and a little inner strength, healing wherever the road goes."
+      },
+      "weapon": {
+        "zh": "藥葫蘆與金針",
+        "en": "Medicine gourd and golden needles"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_physician/nes/portrait.png",
+            "portrait4x": "chars/sx_physician/nes/portrait@4x.png",
+            "body": "chars/sx_physician/nes/body.png",
+            "body4x": "chars/sx_physician/nes/body@4x.png",
+            "sheet": "chars/sx_physician/nes/sheet.png",
+            "sheet4x": "chars/sx_physician/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_physician/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_physician_f",
+      "name": {
+        "zh": "女醫",
+        "en": "Woman Physician"
+      },
+      "style_name": {
+        "zh": "杏林春暖",
+        "en": "Spring in the Apricot Grove"
+      },
+      "title": {
+        "zh": "女郎中",
+        "en": "A woman physician"
+      },
+      "bio": {
+        "zh": "青衣高髻的女大夫，藥葫蘆不離身。說話溫和，下針卻又快又準。",
+        "en": "A woman doctor in teal with her hair in a high bun, never without her medicine gourd. Gentle words, and needles quick and sure."
+      },
+      "weapon": {
+        "zh": "藥葫蘆與金針",
+        "en": "Medicine gourd and golden needles"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_physician_f/nes/portrait.png",
+            "portrait4x": "chars/sx_physician_f/nes/portrait@4x.png",
+            "body": "chars/sx_physician_f/nes/body.png",
+            "body4x": "chars/sx_physician_f/nes/body@4x.png",
+            "sheet": "chars/sx_physician_f/nes/sheet.png",
+            "sheet4x": "chars/sx_physician_f/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_physician_f/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_thief",
+      "name": {
+        "zh": "神偷",
+        "en": "Thief"
+      },
+      "style_name": {
+        "zh": "妙手空空",
+        "en": "Empty Hands"
+      },
+      "title": {
+        "zh": "江湖神偷",
+        "en": "A thief of the jianghu"
+      },
+      "bio": {
+        "zh": "紅頭帶、黑短褂，腰裡一把小匕首。手比眼睛快，摸走你的錢袋時還會對你笑。",
+        "en": "Red headband, black jacket, a little dagger at the waist. Hands faster than eyes; he smiles at you as he lifts your purse."
+      },
+      "weapon": {
+        "zh": "匕首",
+        "en": "Dagger"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_thief/nes/portrait.png",
+            "portrait4x": "chars/sx_thief/nes/portrait@4x.png",
+            "body": "chars/sx_thief/nes/body.png",
+            "body4x": "chars/sx_thief/nes/body@4x.png",
+            "sheet": "chars/sx_thief/nes/sheet.png",
+            "sheet4x": "chars/sx_thief/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_thief/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_daoist",
+      "name": {
+        "zh": "道士",
+        "en": "Daoist"
+      },
+      "style_name": {
+        "zh": "符劍",
+        "en": "Talisman Sword"
+      },
+      "title": {
+        "zh": "畫符的道士",
+        "en": "A talisman-drawing Daoist"
+      },
+      "bio": {
+        "zh": "黃道袍、髮髻上頂著一頂小金冠，手中一把貼著黃符的桃木劍。火、雷、冰、風四符，蓄氣越久越厲害。",
+        "en": "A yellow Daoist robe, a little gold crown on the topknot and a peachwood sword with a yellow talisman. Fire, thunder, frost and gale talismans, stronger the longer they are charged."
+      },
+      "weapon": {
+        "zh": "桃木劍與符籙",
+        "en": "Peachwood sword and talismans"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_daoist/nes/portrait.png",
+            "portrait4x": "chars/sx_daoist/nes/portrait@4x.png",
+            "body": "chars/sx_daoist/nes/body.png",
+            "body4x": "chars/sx_daoist/nes/body@4x.png",
+            "sheet": "chars/sx_daoist/nes/sheet.png",
+            "sheet4x": "chars/sx_daoist/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_daoist/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_qin",
+      "name": {
+        "zh": "琴師",
+        "en": "Qin Player"
+      },
+      "style_name": {
+        "zh": "高山流水",
+        "en": "High Mountains, Flowing Water"
+      },
+      "title": {
+        "zh": "撫琴的樂師",
+        "en": "A player of the qin"
+      },
+      "bio": {
+        "zh": "藍袍長髮的琴師，懷裡橫抱一張古琴。一曲鼓舞同伴，一曲亂人心神。",
+        "en": "A long-haired musician in blue holding a qin across his chest. One tune lifts his friends, another scatters the foe's wits."
+      },
+      "weapon": {
+        "zh": "古琴",
+        "en": "Qin"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_qin/nes/portrait.png",
+            "portrait4x": "chars/sx_qin/nes/portrait@4x.png",
+            "body": "chars/sx_qin/nes/body.png",
+            "body4x": "chars/sx_qin/nes/body@4x.png",
+            "sheet": "chars/sx_qin/nes/sheet.png",
+            "sheet4x": "chars/sx_qin/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_qin/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_qin_f",
+      "name": {
+        "zh": "琴姬",
+        "en": "Qin Maid"
+      },
+      "style_name": {
+        "zh": "陽春白雪",
+        "en": "Spring Snow"
+      },
+      "title": {
+        "zh": "撫琴的女樂師",
+        "en": "A woman player of the qin"
+      },
+      "bio": {
+        "zh": "粉衣高髻的琴姬，金簪紅帶，懷抱古琴。",
+        "en": "A qin maid in pink with a high bun, a gold pin and a red ribbon, a qin in her arms."
+      },
+      "weapon": {
+        "zh": "古琴",
+        "en": "Qin"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_qin_f/nes/portrait.png",
+            "portrait4x": "chars/sx_qin_f/nes/portrait@4x.png",
+            "body": "chars/sx_qin_f/nes/body.png",
+            "body4x": "chars/sx_qin_f/nes/body@4x.png",
+            "sheet": "chars/sx_qin_f/nes/sheet.png",
+            "sheet4x": "chars/sx_qin_f/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_qin_f/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_poison",
+      "name": {
+        "zh": "毒師",
+        "en": "Poisoner"
+      },
+      "style_name": {
+        "zh": "斷腸",
+        "en": "Heartbreak"
+      },
+      "title": {
+        "zh": "用毒的人",
+        "en": "A master of poisons"
+      },
+      "bio": {
+        "zh": "紫色兜帽下一雙細眼，腰間的綠葫蘆裡裝的不是藥。懂醫，也懂毒。",
+        "en": "Narrow eyes under a purple hood; the green gourd at the waist holds no medicine. Knows healing, and its shadow."
+      },
+      "weapon": {
+        "zh": "毒葫蘆",
+        "en": "Poison gourd"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_poison/nes/portrait.png",
+            "portrait4x": "chars/sx_poison/nes/portrait@4x.png",
+            "body": "chars/sx_poison/nes/body.png",
+            "body4x": "chars/sx_poison/nes/body@4x.png",
+            "sheet": "chars/sx_poison/nes/sheet.png",
+            "sheet4x": "chars/sx_poison/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_poison/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_strategist",
+      "name": {
+        "zh": "陣法師",
+        "en": "Formation Master"
+      },
+      "style_name": {
+        "zh": "八卦陣",
+        "en": "Eight Trigrams"
+      },
+      "title": {
+        "zh": "布陣的人",
+        "en": "A layer of battle arrays"
+      },
+      "bio": {
+        "zh": "灰袍黑冠，手搖一把白羽扇。八卦陣守，北斗陣攻。",
+        "en": "A grey robe, a dark cap and a white feather fan. The Eight Trigrams to guard, the Big Dipper to strike."
+      },
+      "weapon": {
+        "zh": "羽扇",
+        "en": "Feather fan"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_strategist/nes/portrait.png",
+            "portrait4x": "chars/sx_strategist/nes/portrait@4x.png",
+            "body": "chars/sx_strategist/nes/body.png",
+            "body4x": "chars/sx_strategist/nes/body@4x.png",
+            "sheet": "chars/sx_strategist/nes/sheet.png",
+            "sheet4x": "chars/sx_strategist/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_strategist/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_teller",
+      "name": {
+        "zh": "說書人",
+        "en": "Storyteller"
+      },
+      "style_name": {
+        "zh": "且聽下回",
+        "en": "To Be Continued"
+      },
+      "title": {
+        "zh": "茶館的說書人",
+        "en": "A teahouse storyteller"
+      },
+      "bio": {
+        "zh": "棕袍方巾、山羊鬍，手裡一把紅摺扇。醒木一拍，說得全隊熱血沸騰。",
+        "en": "A brown robe, a scholar's cap, a goatee and a red folding fan. One clap of the block and the whole company's blood is up."
+      },
+      "weapon": {
+        "zh": "摺扇與醒木",
+        "en": "Folding fan and clapper"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_teller/nes/portrait.png",
+            "portrait4x": "chars/sx_teller/nes/portrait@4x.png",
+            "body": "chars/sx_teller/nes/body.png",
+            "body4x": "chars/sx_teller/nes/body@4x.png",
+            "sheet": "chars/sx_teller/nes/sheet.png",
+            "sheet4x": "chars/sx_teller/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_teller/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_scholar",
+      "name": {
+        "zh": "書生",
+        "en": "Scholar"
+      },
+      "style_name": {
+        "zh": "如椽大筆",
+        "en": "The Rafter Brush"
+      },
+      "title": {
+        "zh": "讀書人",
+        "en": "A man of letters"
+      },
+      "bio": {
+        "zh": "青衫白頭巾，肩上扛著一支比人還長的大毛筆。墨是水，字是風。",
+        "en": "A teal gown and a white headband, a brush taller than he is on his shoulder. Ink is water; characters are wind."
+      },
+      "weapon": {
+        "zh": "大毛筆",
+        "en": "Great brush"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_scholar/nes/portrait.png",
+            "portrait4x": "chars/sx_scholar/nes/portrait@4x.png",
+            "body": "chars/sx_scholar/nes/body.png",
+            "body4x": "chars/sx_scholar/nes/body@4x.png",
+            "sheet": "chars/sx_scholar/nes/sheet.png",
+            "sheet4x": "chars/sx_scholar/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_scholar/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx_phantom",
+      "name": {
+        "zh": "鬼手",
+        "en": "Phantom Hand"
+      },
+      "style_name": {
+        "zh": "來無影",
+        "en": "Here and Gone"
+      },
+      "title": {
+        "zh": "江湖最快的一雙手",
+        "en": "The quickest hands in the jianghu"
+      },
+      "bio": {
+        "zh": "黑兜帽、黑面巾，只露出一雙眼睛。偷東西，也偷武功。",
+        "en": "A black hood and a black face-cloth, only the eyes showing. Steals things, and steals techniques."
+      },
+      "weapon": {
+        "zh": "飛鏢",
+        "en": "Darts"
+      },
+      "kind": "person",
+      "faction": "sects",
+      "factionName": {
+        "zh": "龍門江湖志",
+        "en": "Sects of Longmen"
+      },
+      "colour": "#3b56a8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/sx_phantom/nes/portrait.png",
+            "portrait4x": "chars/sx_phantom/nes/portrait@4x.png",
+            "body": "chars/sx_phantom/nes/body.png",
+            "body4x": "chars/sx_phantom/nes/body@4x.png",
+            "sheet": "chars/sx_phantom/nes/sheet.png",
+            "sheet4x": "chars/sx_phantom/nes/sheet@4x.png",
+            "sheetJson": "chars/sx_phantom/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
             "sheet": 5
           },
           "animations": [

@@ -1007,3 +1007,9 @@ import nes_sects  # noqa: E402
 PORTRAITS.update(nes_sects.PORTRAITS)
 SPRITES.update(nes_sects.SPRITES)
 HEIGHTS.update(nes_sects.HEIGHTS)
+
+# 龍門戰記 (Longmen Tactics): Yi Changfeng, Xiao Wuying and the job figures the tactics game needed
+import nes_tactics  # noqa: E402
+PORTRAITS.update(nes_tactics.PORTRAITS)
+SPRITES.update(nes_tactics.SPRITES)
+HEIGHTS.update(nes_tactics.HEIGHTS)

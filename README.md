@@ -63,6 +63,16 @@ Characters so far:
   - 各派獨門弟子, each sect's own fighter: 啟程刀客, 寒江劍姬, 羅漢僧, 暴龍掌客, 幽冥刺客, 妖虎騎, 金鏢隊, 狼牙棒手,
     血刀客, 鐵鍊捕快, 素衣劍尼.
   The field sprites are built from shared hand-typed parts (heads, bodies, held weapons) so an army reads as one family.
+- 龍門戰記 (Longmen Tactics), made the same way in `src/nes_tactics.py` (sprites) and `src/nes_tactics_busts.py`
+  (portraits), exported with `tools/export_tactics.py` (merges into chars/index.json without touching anyone else):
+  - group `tactics` (faction `longmen`): 奕長風 Yi Changfeng, master of the Longmen Sabre Manor and the brothers'
+    father (grey hair and beard, deep blue robe, ring-pommel sabre), and 蕭無影 Xiao Wuying, the Alliance's Banner
+    Steward unmasked (black gauze cap with wings, violet robe, sleeve darts).
+  - group `tacticsJobs` (faction `sects`), the jobs of the jianghu the tactics game needed: 醫者 Physician and 女醫
+    Woman Physician (medicine gourd), 神偷 Thief (dagger), 道士 Daoist (gold crown, peachwood sword with a talisman),
+    琴師 Qin Player and 琴姬 Qin Maid (a qin across the chest), 毒師 Poisoner (purple hood, poison gourd), 陣法師
+    Formation Master (feather fan), 說書人 Storyteller (folding fan), 書生 Scholar (great brush) and 鬼手 Phantom Hand.
+  New shared held things: gourd, qin, feather fan, folding fan, brush, dagger; and a Daoist crown overlay.
 - 怪物與野獸 (Monsters & Beasts), original creatures in `nes` only (faction `beast`, `kind: "monster"` in index.json):
   a front-view NES battle picture (64x64 or 64x56, transparent backdrop) and a 16x16 / 16x24 field sprite
   with one two-frame animation `move` (idle and move): 白猿 White Ape, 吊睛白額虎 White-Browed Tiger, 鎮宅石獅
