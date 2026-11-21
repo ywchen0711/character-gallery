@@ -75,10 +75,10 @@ def face(c, hair='k', eyes='stern', y0=16, nose=True, mouth='flat'):
     rows_ = [r.replace('h', hair) for r in FACE]
     head(c, '\n'.join(rows_), y0)
     put(c, '\n'.join(EYES[eyes]), 12, y0 + 2, mirror=True)
-    if nose:
+    if nose:                 # a soft side stroke, no dark nostrils
         put(c, '''
-.ss.
-kssk
+..s.
+..s.
 ''', 22, y0 + 8)
     M = {'flat': '''
 .kkkkkk.

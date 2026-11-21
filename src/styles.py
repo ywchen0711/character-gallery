@@ -2,7 +2,7 @@
 
 STYLES = {
     'nes2': {
-        'name': {'zh': '8-bit 紅白機・龍門新版（試作）', 'en': '8-bit Famicom, Longmen redraw (trial)'},
+        'name': {'zh': '8-bit 紅白機・龍門新版', 'en': '8-bit Famicom, Longmen redraw'},
         'blurb': {'zh': '龍門人物照《霸王之路》的水準重畫：頭像有臉、髮、衣、兵器的明暗層次，深色漸層背景，小黑眼；'
                         '16×24 小人用兩層精靈、頭髮與帽子和頭像一致，加上背面行走。',
                   'en': 'The Longmen cast redrawn to the Path of the Hegemon bar: portraits with shading on face, hair, cloth and '

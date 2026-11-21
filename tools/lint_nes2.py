@@ -1,4 +1,4 @@
-"""Lint the round-1 `nes2` Longmen art with the gallery's pixel rules (tools/lint.py check_rows):
+"""Lint the `nes2` Longmen art (the whole cast) with the gallery's pixel rules (tools/lint.py check_rows):
 portraits (the figure before the panel motif; busts are cut by the panel, so edge=True) must have no orphan pixels,
 broken or doubled outlines or jaggies; the Famicom fit is proved by nes.Pic.check() inside nes2.fit().
 Field sprites follow the rule tools/lint.py uses for 16x16 fields: 1-px props may stay open (broken outline is a
@@ -17,6 +17,7 @@ import lint  # noqa: E402
 import nes2  # noqa: E402
 import nes2_longmen as P  # noqa: E402
 import nes2_longmen_sprites as SP  # noqa: E402
+import nes2_cast_lq, nes2_cast_lq2, nes2_cast_sects, nes2_cast_sprites  # noqa: E402,F401,E401
 
 
 def main():
@@ -32,7 +33,9 @@ def main():
         nes2.NOTES.clear()
     names = ['front', 'front2', 'side', 'side2', 'back', 'back2']
     for cid in SP.SPRITES:
-        SP.frames(cid)                        # raises if a sprite layer has more than 3 colours
+        SP.frames(cid)
+        if SP.SPRITES[cid].get('old'):       # vehicles keep their old (already linted) field sprite
+            continue                        # raises if a sprite layer has more than 3 colours
         for n, rows in zip(names, SP.views(cid)):
             for m in lint.check_rows(rows, accent=set('rywkpeSbhdgwqcH')):
                 if 'lone' in m or 'info' in m:

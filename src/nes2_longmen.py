@@ -87,7 +87,7 @@ def jaw_shadow(c, y0=27, y1=38):
 # ---------------------------------------------------------------- the shared face (left half, rows y=16..35)
 # '#' marks the temple / sideburn pixels each character fills with its hair slot.
 FACE = T("""
-.........k#kSSSSSSSSSSSS
+........kk#kSSSSSSSSSSSS
 .........k#kSSSSSSSSSSSS
 .........k#kSSSSSSSSSSSS
 ........kkkkSSSSSSSSSSSS
@@ -116,6 +116,38 @@ EYES = {
 ...............kkk......
 ................kk......
 ................kk......
+"""),
+    'glare': T("""
+.............kk.........
+..............kkkkk.....
+................kkk.....
+..............kkkk......
+...............kkk......
+................k.......
+"""),
+    'sly': T("""
+..............kkkk......
+........................
+........................
+..............kkkkk.....
+...............kkk......
+........................
+"""),
+    'calm': T("""
+..............kkkk......
+........................
+........................
+...............kkk......
+...............kkk......
+........................
+"""),
+    'round': T("""
+..............kkkk......
+........................
+........................
+...............kk.......
+..............kkkk......
+...............kk.......
 """),
     'bright': T("""
 ...............kkk......
@@ -152,22 +184,109 @@ EYES = {
 }
 
 
-def face(c, hair='i', eyes='keen', nose=True, mouth='flat', top=None):
-    rows = [r.replace('#', hair) for r in FACE]
+FACE_KID = T("""
+........kk#kSSSSSSSSSSSS
+.........k#kSSSSSSSSSSSS
+.........k#kSSSSSSSSSSSS
+........kkkkSSSSSSSSSSSS
+........kSSkSSSSSSSSSSSS
+........kSskSSSSSSSSSSSS
+........kSskSSSSSSSSSSSS
+.........kSkSSSSSSSSSSSS
+..........kkSSSSSSSSSSSS
+...........kSSSSSSSSSSSS
+...........kSSSSSSSSSSSS
+...........kSSSSSSSSSSSS
+............kSSSSSSSSSSS
+.............kSSSSSSSSSS
+..............kkSSSSSSSS
+................kkkSSSSS
+...................kkkkk
+""")
+
+# wide, fleshy face (the treasurer, the fat monk, big brawlers): cheeks reach further and the jaw is heavy
+FACE_WIDE = T("""
+........k##kSSSSSSSSSSSS
+........k#kSSSSSSSSSSSSS
+.......kk#kSSSSSSSSSSSSS
+......kkkkSSSSSSSSSSSSSS
+......kSSkSSSSSSSSSSSSSS
+......kSskSSSSSSSSSSSSSS
+......kSskSSSSSSSSSSSSSS
+.......kSkSSSSSSSSSSSSSS
+.......kkSSSSSSSSSSSSSSS
+.......kSSSSSSSSSSSSSSSS
+.......kSSSSSSSSSSSSSSSS
+........kSSSSSSSSSSSSSSS
+........kSSSSSSSSSSSSSSS
+.........kSSSSSSSSSSSSSS
+..........kkSSSSSSSSSSSS
+............kkkSSSSSSSSS
+...............kkkkkkkkk
+""")
+
+# a thin, long face (the skinny lackey): narrow cheeks and a pointed chin
+FACE_THIN = T("""
+........kkk#kSSSSSSSSSSS
+.........k#kSSSSSSSSSSSS
+.........k#kSSSSSSSSSSSS
+.........kkkSSSSSSSSSSSS
+.........kSkSSSSSSSSSSSS
+.........kSkSSSSSSSSSSSS
+.........kkSSSSSSSSSSSSS
+..........kSSSSSSSSSSSSS
+..........kSSSSSSSSSSSSS
+...........kSSSSSSSSSSSS
+...........kSSSSSSSSSSSS
+............kSSSSSSSSSSS
+.............kSSSSSSSSSS
+..............kSSSSSSSSS
+...............kSSSSSSSS
+................kkSSSSSS
+..................kkSSSS
+....................kkkk
+""")
+
+# a round, fat face (the treasurer, the bun-loving camp master): full cheeks and a double chin
+FACE_FAT = T("""
+........kk#kSSSSSSSSSSSS
+.......kk#kSSSSSSSSSSSSS
+......kk#kSSSSSSSSSSSSSS
+.....kkkkSSSSSSSSSSSSSSS
+.....kSSkSSSSSSSSSSSSSSS
+.....kSskSSSSSSSSSSSSSSS
+.....kSskSSSSSSSSSSSSSSS
+.....kSSkSSSSSSSSSSSSSSS
+.....kkkSSSSSSSSSSSSSSSS
+......kSSSSSSSSSSSSSSSSS
+......kSSSSSSSSSSSSSSSSS
+......kSSSSSSSSSSSSSSSSS
+.......kSSSSSSSSSSSSSSSS
+........kSSSSSSSSSSSSSSS
+.........kkSSSSSSSSSSSSS
+...........kkkssssssssss
+..............kkkkkkkkkk
+""")
+
+MOUTHS = {'flat': 'kkkkkk', 'smile': 'k....k|.kkkk.', 'grin': 'kkkkkk|kwwwwk|.kkkk.', 'firm': '.kkkk.',
+          'smirk': '...kkk|kkk...', 'beam': 'k......k|.kkkkkk.', 'frown': '.kkkk.|k....k', 'small': '..kk..',
+          'fang': 'kkkkkk|.w..w.', 'open': '.kkkk.|kkkkkk|.kkkk.', 'grit': 'kkkkkk|kwkwwk|kkkkkk', 'none': '', 'buck': 'kkkkkk|.kwwk.|..kk..'}
+
+
+def face(c, hair='i', eyes='keen', nose=True, mouth='flat', top=None, shape='adult', mouth_y=30, eyes_dy=0):
+    """The shared face. The nose is only a soft skin-shadow side stroke (no dark nostril pixels)."""
+    base = {'adult': FACE, 'kid': FACE_KID, 'wide': FACE_WIDE, 'thin': FACE_THIN, 'fat': FACE_FAT}[shape]
+    rows = [r.replace('#', hair) for r in base]
     if top:
         rows = top + rows[len(top):]
-    half(c, '\n'.join(rows), 16)
-    put(c, '\n'.join(EYES[eyes]), 0, 19, mirror=True)
+    half(c, chr(10).join(rows), 16)
+    put(c, EYES[eyes], 0, 19 + eyes_dy, mirror=True)
     if nose:
-        put(c, """
-s
-s
-.s
-""", 24, 24)
-        put(c, 'ks..sk', 21, 27)
-    M = {'flat': ('kkkkkk', ''), 'smile': ('k....k\n.kkkk.', ''), 'grin': ('kkkkkk\nkwwwwk\n.kkkk.', ''),
-         'firm': ('.kkkk.', ''), 'smirk': ('...kkk\nkkk...', '')}[mouth]
-    put(c, M[0], 21, 30)
+        put(c, ['s', 's'], 24, 25 + (1 if shape in ('adult', 'thin') else 0))
+    m = MOUTHS[mouth]
+    if m:
+        rows_m = m.split('|')
+        put(c, rows_m, 24 - len(rows_m[0]) // 2, mouth_y)
 
 
 def skin_shade(c, y0=16, y1=40):

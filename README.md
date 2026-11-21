@@ -113,21 +113,34 @@ Longmen group pictures in `chars/longmen/`: `group-nes.png` (the six heroes in a
 
 **Style note:** all art is original, drawn *in the style of* those games. Nothing is traced, copied or downloaded from them. The main style is 8-bit: the Famicom portraits are hand-typed palette-indexed grids (`src/nes_portraits.py`), and `src/nes.py` checks the Famicom colour rules on every export.
 
-## Longmen redraw, round 1 (`nes2`, trial)
+## Longmen redraw (`nes2`)
 
-The six Longmen heroes (奕叡, 奕碩, 柳寒煙, 白先生, 苦禪, 冷笑天) redrawn toward the 霸王之路 quality bar, kept beside
-the old art in `chars/<id>/nes2/` (the games still read `nes`). Compare them in `compare-longmen.html` (self-contained,
-old vs new at 4x with a walking preview) and `chars/longmen/compare-nes2.png` / `town-nes2.png`.
+The whole Longmen cast (77 people: the six heroes, the Longmen Quest I and II casts, the Tactics story people,
+the Mercy Cloud abbess, every Sects of Longmen troop and leader and the Tactics jobs) redrawn to the 霸王之路
+quality bar, kept beside the old art in `chars/<id>/nes2/` until rollout (the games still read `nes`). Compare old and
+new in `compare-longmen.html` (grouped tabs, only one group's pictures load at a time) and in
+`chars/longmen/compare-nes2-<group>.png` (heroes, lq, lq2, sects, jobs) and `town-nes2.png`.
 
-- Portraits (`src/nes2.py`, `src/nes2_longmen.py`, `src/nes2_longmen_more.py`): 48x56 busts drawn with mondraw shapes
-  (robe, crossed collar, cape, props) and hand-typed mirrored heads; tiny dark eyes without whites; right-cheek and
-  jaw shading; a dithered dark backdrop in a colour the figure already uses near the top (a moon for 柳寒煙, a halo
-  for 苦禪). `nes2.fit()` picks the 4 background sub-palettes, lifts the rest onto sprites and proves the Famicom
-  rules with `nes.Pic.check()`.
-- Field sprites (`src/nes2_longmen_sprites.py`): same 16x24 cells and rows (idle, walk, walk_side) plus a new
-  `walk_up` back view; two sprite layers (6 colours) so hair, headgear, cloth shade and weapon match the portrait.
-- `python -P tools/export_nes2.py` writes the files and merges the `nes2` variants into `chars/index.json`;
-  `python -P tools/lint_nes2.py` lints them; `python -P tools/compare_longmen.py` rebuilds the comparison.
+- Portraits: 48x56 busts with shading on face, hair, cloth and gear over a dithered dark backdrop in a colour the
+  figure already uses near the top; tiny dark eyes without whites; the nose is only a soft skin-shadow stroke (no
+  dark nostril pixels). The six heroes are drawn one by one (`src/nes2_longmen.py`, `src/nes2_longmen_more.py`);
+  everyone else from a short spec per character (`src/nes2_cast_lq.py`, `nes2_cast_lq2.py`, `nes2_cast_sects.py`)
+  using the shared parts in `src/nes2_kit.py`: 20 hand-typed head tops (topknot, headband, shaved, wild, spiky, long,
+  bun, twin buns, bald, official cap, melon cap, scholar cap, straw hat, hood, helmet, kerchief, crown, flat hat,
+  feather crown, tiger hood), five face shapes (adult, kid, wide, thin, fat), eyes and mouths, beards and masks,
+  robe / armour / vest / fur bodies with a crossed collar, and props drawn with mondraw shapes (dao, jian, spear,
+  staff, club, fans, gourd, ledger, abacus, brush, whisk, chain, bow, hammer, banner, qin, bell staff ...).
+  `nes2.fit()` picks the 4 background sub-palettes, lifts the rest onto sprites and proves the Famicom rules.
+- Field sprites: the same 16x24 cells and rows (idle, walk, walk_side) plus a `walk_up` back view; two sprite
+  layers (k, skin, cloth + cloth shade, hair, headgear/accent). The heroes' are hand-typed
+  (`src/nes2_longmen_sprites.py`), the rest come from the kit's sprite heads and body templates
+  (`src/nes2_cast_sprites.py`). Carts, engines, ships and mounted troops keep their old field sprite (the vehicle);
+  their new portrait is the crew.
+- The 2026-11-20 nose fix also reached the human common-foe busts (`src/foe_busts_people.py`); re-export them with
+  `python -P tools/export_foes.py`.
+- Tools: `python -P tools/export_nes2.py` (writes nes2 and merges the variants into `chars/index.json`),
+  `python -P tools/lint_nes2.py` (pixel lint + Famicom proof), `python -P tools/compare_longmen.py` (comparison page
+  and pictures), `python -P tools/promote_nes2.py` (at rollout: nes -> nes_old, nes2 -> nes, index.json updated).
 
 ## Using the assets in a game
 

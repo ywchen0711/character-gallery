@@ -28,7 +28,7 @@ YISHUO_HAIR = """
 
 @bust('yishuo', dict(S=0x37, s=0x27, t=0x35, h=0x1C, i=0x0C, a=0x27, b=0x17, d=0x07, m=0x16, n=0x06,
                      w=0x30, v=0x10, z=0x0C),
-      near={'h': 'i', 't': 'S', 'v': 'w'}, backdrop=backdrop_sky(solid_to=6, check_to=26, fade=10))
+      spr='t', near={'h': 'i', 'v': 'w'}, backdrop=backdrop_sky(solid_to=6, check_to=26, fade=10))
 def yishuo(c):
     neck(c, 20, 27, 30, 42)
     body = robe(c, Mat('a', 'b', 'd'), top=40, wide=1)
@@ -53,8 +53,7 @@ k...k...k
             if c.part[y][x] == body and c.tone[y][x] != 'k':
                 c.tone[y][x] = 'k' if y == 54 else 'd'
     half(c, YISHUO_HAIR)
-    face(c, 'i', 'bright', mouth='flat')
-    put(c, ['k......k', '.kkkkkk.'], 20, 30)
+    face(c, 'i', 'bright', mouth='beam', shape='kid', mouth_y=28)
     put(c, """
 ....kiik.kiik.kiik
 .....kk...kk...kk.
@@ -63,9 +62,9 @@ k...k...k
 ....kiik.kiik.kiik
 .....kk...kk...kk.
 """, 24, 16)
-    put(c, 'tt', 14, 27)
-    put(c, 'tt', 32, 27)
-    put(c, 'k', 31, 29)                   # the mole
+    put(c, 'tt', 14, 26)
+    put(c, 'tt', 32, 26)
+    put(c, 'k', 31, 28)                   # the mole
     # headband ties streaming out to our right
     put(c, """
 kkkk.......

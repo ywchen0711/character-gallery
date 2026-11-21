@@ -1,0 +1,39 @@
+{
+  "image": "sheet.png",
+  "frameWidth": 16,
+  "frameHeight": 24,
+  "anchor": {
+    "x": 8,
+    "y": 23,
+    "note": "feet centre in each cell"
+  },
+  "animations": {
+    "idle": {
+      "row": 0,
+      "frames": 2,
+      "fps": 2,
+      "loop": true
+    },
+    "walk": {
+      "row": 1,
+      "frames": 2,
+      "fps": 4,
+      "loop": true,
+      "note": "front; frame 2 has the same body as frame 1, only the legs step (the bottom rows)"
+    },
+    "walk_side": {
+      "row": 2,
+      "frames": 2,
+      "fps": 4,
+      "loop": true,
+      "note": "faces right (stride, then legs together; same body); mirror horizontally for left"
+    },
+    "walk_up": {
+      "row": 3,
+      "frames": 2,
+      "fps": 4,
+      "loop": true,
+      "note": "back view; frame 2 has the same body, only the legs step"
+    }
+  }
+}

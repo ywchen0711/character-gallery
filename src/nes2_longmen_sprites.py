@@ -552,7 +552,40 @@ def views(cid):
 
 def frames(cid):
     d = SPRITES[cid]
+    if d.get('old'):                 # carts, engines, ships and mounted troops keep their old field sprite
+        return old_frames(cid)
     im = lambda rows: nes.sprite_image(rows, d['pal'], d['pal2'])
     fr, f2, sd, s2, bk, b2 = views(cid)
     return {'idle': [im(fr), im(fr)], 'walk': [im(fr), im(f2)], 'walk_side': [im(sd), im(s2)],
             'walk_up': [im(bk), im(b2)]}
+
+
+def old_frames(cid):
+    """The character's `nes` sheet as frames, with walk_up added (the walk frames) when it has no back view."""
+    import json
+    import os
+    from PIL import Image
+    d = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'chars', cid, 'nes')
+    sheet = Image.open(os.path.join(d, 'sheet.png')).convert('RGBA')
+    meta = json.load(open(os.path.join(d, 'sheet.json'), encoding='utf-8'))
+    fw, fh = meta['frameWidth'], meta['frameHeight']
+    out = {}
+    for n, a in meta['animations'].items():
+        fr = [sheet.crop((i * fw, a['row'] * fh, (i + 1) * fw, (a['row'] + 1) * fh)) for i in range(a['frames'])]
+        if (fw, fh) != (16, 24):     # 16x16 vehicles stand on the floor of a 16x24 cell
+            pad = []
+            for f in fr:
+                cell = Image.new('RGBA', (16, 24), (0, 0, 0, 0))
+                cell.alpha_composite(f, ((16 - fw) // 2, 24 - fh))
+                pad.append(cell)
+            fr = pad
+        out[n] = fr
+    if 'idle' not in out:
+        out['idle'] = out.get('walk') or out.get('move') or list(out.values())[0]
+    base = out.get('walk') or out.get('move') or out['idle']
+    res = {'idle': out['idle'][:2], 'walk': base[:2], 'walk_side': out.get('walk_side', base)[:2],
+           'walk_up': out.get('walk_up', base)[:2]}
+    for k, v in res.items():
+        if len(v) == 1:
+            res[k] = [v[0], v[0]]
+    return res

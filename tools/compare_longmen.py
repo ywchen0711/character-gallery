@@ -1,21 +1,29 @@
-"""Build compare-longmen.html (old `nes` vs new `nes2` Longmen heroes; self-contained: every picture is inlined as a
-data URI) and two review pictures in chars/longmen/:
-  compare-nes2.png   old and new portraits and sprite frames side by side at 4x
-  town-nes2.png      old and new sprites walking on an LQ-like town tile floor at the in-game 3x scale
+"""Build compare-longmen.html (old `nes` vs new `nes2` for the whole Longmen cast, grouped in tabs so a phone only
+loads one group's pictures) and review pictures in chars/longmen/:
+  compare-nes2-<group>.png   old and new portraits plus the new walk frames, per group, at 3x
+  compare-nes2.png           the six heroes at 4x
+  town-nes2.png              old and new sprites on an LQ-like town floor at the in-game 3x scale
 
     python -P tools/compare_longmen.py        (after tools/export_nes2.py)
 """
-import base64
-import io
 import json
 import os
 
 from PIL import Image, ImageDraw
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-IDS = ['yirui', 'yishuo', 'liuhanyan', 'baixian', 'kuchan', 'xiaotian']
-NAMES = {'yirui': ('奕叡', 'Yi Rui'), 'yishuo': ('奕碩', 'Yi Shuo'), 'liuhanyan': ('柳寒煙', 'Liu Hanyan'),
-         'baixian': ('白先生', 'Mr Bai'), 'kuchan': ('苦禪', 'Kuchan'), 'xiaotian': ('冷笑天', 'Leng Xiaotian')}
+IDX = json.load(open(os.path.join(ROOT, 'chars', 'index.json'), encoding='utf-8'))
+BY = {c['id']: c for c in IDX['characters']}
+HEROES = ['yirui', 'yishuo', 'liuhanyan', 'baixian', 'kuchan', 'xiaotian']
+JOBS = IDX['groups']['tacticsJobs']['members']
+NES2 = [c['id'] for c in IDX['characters'] if any(v['style'] == 'nes2' for v in c['variants'])]
+LQ = [c for c in ['heixiong', 'daoba', 'shouhou', 'tuqianqiu', 'tiewusi', 'qianwanli', 'wenruyu', 'xiaolian',
+                  'lihanshan', 'yuweng', 'guimian', 'masked'] if c in NES2]
+LQ2 = [c for c in NES2 if BY[c]['faction'] == 'longmen' and c not in HEROES + LQ]
+SECTS = [c for c in NES2 if BY[c]['faction'] == 'sects' and c not in JOBS]
+GROUPS = [('heroes', '六位主角', 'The six heroes', HEROES), ('lq', '龍門刀客傳', 'Longmen Quest', LQ),
+          ('lq2', '刀客傳貳・戰記・慈雲庵', 'LQ II, Tactics, Mercy Cloud', LQ2),
+          ('sects', '江湖志 各派', 'Sects of Longmen', SECTS), ('jobs', '戰記 江湖百業', 'Tactics jobs', JOBS)]
 
 
 def load(cid, style):
@@ -23,90 +31,71 @@ def load(cid, style):
     por = Image.open(os.path.join(d, 'portrait.png')).convert('RGBA')
     sheet = Image.open(os.path.join(d, 'sheet.png')).convert('RGBA')
     meta = json.load(open(os.path.join(d, 'sheet.json'), encoding='utf-8'))
+    fw, fh = meta['frameWidth'], meta['frameHeight']
     fr = {}
     for n, a in meta['animations'].items():
-        fr[n] = [sheet.crop((i * 16, a['row'] * 24, i * 16 + 16, a['row'] * 24 + 24)) for i in range(a['frames'])]
-    return por, sheet, fr
-
-
-def uri(im):
-    b = io.BytesIO()
-    im.save(b, 'PNG')
-    return 'data:image/png;base64,' + base64.b64encode(b.getvalue()).decode()
+        fr[n] = [sheet.crop((i * fw, a['row'] * fh, i * fw + fw, a['row'] * fh + fh)) for i in range(a['frames'])]
+    return por, fr, meta
 
 
 def window(img):
     w, h = img.width + 4, img.height + 4
     out = Image.new('RGBA', (w, h), (0, 0, 0, 255))
-    d = ImageDraw.Draw(out)
-    d.rectangle((0, 0, w - 1, h - 1), outline=(252, 252, 252, 255))
+    ImageDraw.Draw(out).rectangle((0, 0, w - 1, h - 1), outline=(252, 252, 252, 255))
     out.alpha_composite(img, (2, 2))
     return out
 
 
-def compare_png():
-    K, G = 4, 6
-    cellw = 52 + 4 * 18
-    rows = []
-    for cid in IDS:
-        r = []
-        for st in ('nes', 'nes2'):
-            por, _, fr = load(cid, st)
-            seq = fr['walk'] + fr['walk_side'] + fr.get('walk_up', [])
-            r.append((window(por), seq))
-        rows.append(r)
-    SW = 56 + 3 * 17 + 8
-    W = (2 * SW + 2 * G) * K
-    H = len(rows) * (64 * K + G * K) + G * K
-    out = Image.new('RGBA', (W, H), (52, 60, 56, 255))
-    for j, r in enumerate(rows):
-        y = G * K + j * (64 * K + G * K)
-        x = G * K
-        for por, seq in r:
-            out.alpha_composite(por.resize((por.width * K, por.height * K), 0), (x, y))
-            sx = x + 56 * K
-            for i, f in enumerate(seq):
-                fx = sx + (i % 3) * 17 * K
-                fy = y + (i // 3) * 26 * K + 4
-                out.alpha_composite(f.resize((16 * K, 24 * K), 0), (fx, fy))
-            x += SW * K
-    out.save(os.path.join(ROOT, 'chars', 'longmen', 'compare-nes2.png'))
-    return out
+def group_png(ids, path, K=3, cols=4):
+    cw, ch = (52 * 2 + 3 * 17 + 10) * K, (60 + 30) * K
+    rows = (len(ids) + cols - 1) // cols
+    out = Image.new('RGBA', (cols * cw, rows * ch), (52, 60, 56, 255))
+    d = ImageDraw.Draw(out)
+    for i, cid in enumerate(ids):
+        x, y = (i % cols) * cw + 4 * K, (i // cols) * ch + 4 * K
+        old, ofr, _ = load(cid, 'nes')
+        new, nfr, _ = load(cid, 'nes2')
+        out.alpha_composite(window(old).resize((52 * K, 60 * K), 0), (x, y))
+        out.alpha_composite(window(new).resize((52 * K, 60 * K), 0), (x + 53 * K, y))
+        seq = [nfr['walk'][0], nfr['walk_side'][0], nfr['walk_up'][0]]
+        for j, f in enumerate(seq):
+            out.alpha_composite(f.resize((f.width * K, f.height * K), 0), (x + (107 + j * 17) * K, y + 2 * K))
+        of = ofr.get('walk', list(ofr.values())[0])[0]
+        out.alpha_composite(of.resize((of.width * K, of.height * K), 0), (x + 107 * K, y + 30 * K))
+        d.text((x, y + 61 * K), cid, fill=(230, 230, 220, 255))
+    out.save(path)
 
 
 def town_floor(w, h):
-    """An LQ-like town floor: a stone road across grass, a wooden house wall at the top (NES colours)."""
     im = Image.new('RGBA', (w, h), (0, 168, 0, 255))
     P = im.load()
     for y in range(h):
         for x in range(w):
-            if 14 <= y < 30:                 # wall
+            if 14 <= y < 30:
                 P[x, y] = (172, 124, 0, 255) if (x // 8 + (y // 4) % 2) % 2 else (136, 20, 0, 255)
                 if y % 4 == 0:
                     P[x, y] = (80, 48, 0, 255)
-            elif y < 14:                     # roof
+            elif y < 14:
                 P[x, y] = (0, 64, 88, 255) if (x + y // 3) % 6 else (0, 0, 0, 255)
-            elif 40 <= y < 72:               # road
+            elif 40 <= y < 72:
                 t = ((x // 8) + (y // 8)) % 2
                 P[x, y] = (188, 188, 188, 255) if t else (124, 124, 124, 255)
                 if x % 8 == 0 or y % 8 == 0:
                     P[x, y] = (120, 120, 120, 255)
-            else:                            # grass tufts
-                if (x * 7 + y * 13) % 23 == 0:
-                    P[x, y] = (88, 216, 84, 255)
+            elif (x * 7 + y * 13) % 23 == 0:
+                P[x, y] = (88, 216, 84, 255)
     return im
 
 
-def town_png():
+def town_png(ids):
     S = 3
-    w, h = 6 * 28 + 8, 96
+    w, h = len(ids) * 22 + 8, 96
     out = Image.new('RGBA', (w * S, h * 2 * S + 8), (0, 0, 0, 255))
     for k, st in enumerate(('nes', 'nes2')):
         im = town_floor(w, h)
-        for i, cid in enumerate(IDS):
-            _, _, fr = load(cid, st)
-            f = fr['walk'][0]
-            im.alpha_composite(f, (8 + i * 28, 38 if i % 2 else 50))
+        for i, cid in enumerate(ids):
+            _, fr, _ = load(cid, st)
+            im.alpha_composite(fr.get('walk', list(fr.values())[0])[0], (6 + i * 22, 38 if i % 2 else 50))
         out.alpha_composite(im.resize((w * S, h * S), 0), (0, k * (h * S + 8)))
     out.save(os.path.join(ROOT, 'chars', 'longmen', 'town-nes2.png'))
 
@@ -122,90 +111,99 @@ HTML = '''<!doctype html>
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
        padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 32px max(16px, env(safe-area-inset-left)); }
-header { max-width: 1100px; margin: 0 auto 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; justify-content: space-between; }
-h1 { margin: 0; font-size: 22px; overflow-wrap: anywhere; }
+header, main, nav { max-width: 1100px; margin: 0 auto; }
+header { margin-bottom: 12px; }
 header > div { min-width: 0; }
-.sub { color: var(--dim); margin: 4px 0 0; max-width: 60ch; }
+h1 { margin: 0; font-size: 22px; overflow-wrap: anywhere; }
+.sub { color: var(--dim); margin: 4px 0 0; max-width: 70ch; }
 a { color: var(--accent); }
-.bar { display: flex; gap: 8px; flex-wrap: wrap; }
+nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 auto 14px; max-width: 1100px; }
 button { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
 button.on { background: var(--accent); color: #1a1a1a; border-color: var(--accent); }
-main { max-width: 1100px; margin: 0 auto; display: grid; gap: 16px; }
-.row { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
-.row h2 { margin: 0 0 8px; font-size: 17px; }
-.row h2 span { color: var(--dim); font-weight: 400; font-size: 14px; margin-left: 6px; }
-.pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
-.side { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; }
-.tag { font-size: 13px; color: var(--dim); }
+main { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 12px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px; min-width: 0; }
+.card h2 { margin: 0 0 6px; font-size: 16px; }
+.card h2 span { color: var(--dim); font-weight: 400; font-size: 13px; margin-left: 6px; }
+.pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+.side { display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 0; }
+.tag { font-size: 12px; color: var(--dim); }
 .tag.new { color: var(--accent); }
 img, canvas { image-rendering: pixelated; image-rendering: crisp-edges; }
-.por { width: 100%; max-width: 208px; height: auto; border: 2px solid #fcfcfc; background: #000; }
-.walk { width: 128px; height: 192px; background: #00a800; border-radius: 6px; }
-.frames { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
-.frames img { width: 32px; height: 48px; background: #5a6e58; }
+.por { width: 100%; max-width: 192px; height: auto; border: 2px solid #fcfcfc; background: #000; }
+.walk { width: 64px; height: 96px; background: #00a800; border-radius: 6px; }
 .town { width: 100%; height: auto; border-radius: 8px; display: block; }
-.note { color: var(--dim); font-size: 14px; max-width: 70ch; }
-@media (max-width: 560px) { .walk { width: 96px; height: 144px; } .frames img { width: 24px; height: 36px; } }
+.note { color: var(--dim); font-size: 14px; max-width: 75ch; }
+footer { max-width: 1100px; margin: 18px auto 0; }
 </style>
 </head>
 <body>
-<header>
-  <div>
-    <h1>龍門人物 新舊對照 <span style="font-size:15px;color:var(--dim)">Longmen heroes, old vs new</span></h1>
-    <p class="sub">左：目前的 <b>nes</b> 版；右：照《霸王之路》水準重畫的 <b>nes2</b> 試作（頭像有明暗與背景、小黑眼；小人兩層精靈、加背面）。頭像與小人都放大 4 倍。</p>
-  </div>
-  <div class="bar" role="group" aria-label="walk direction">
-    <button data-d="walk" class="on">正面</button><button data-d="walk_side">側面</button><button data-d="walk_left">左</button><button data-d="walk_up">背面</button>
-  </div>
-</header>
-<main id="rows"></main>
-<main style="margin-top:16px">
-  <section class="row"><h2>小鎮上的實際大小 <span>in-game scale (3x) on a town floor: top old, bottom new</span></h2>
-  <img class="town" alt="old and new sprites on a town floor" src="__TOWN__"></section>
-  <section class="row"><h2>尺寸說明 <span>sprite size</span></h2>
-  <p class="note">新版仍是 16×24 格、同樣的列（idle、walk、walk_side）並加一列 walk_up（背面），遊戲可直接換檔。16×24 已足夠做出臉、髮型、頭飾與兵器；若想要更細的臉，可考慮 16×32（頭不變、身體加高）作為下一步選項，但這一輪先不改格子大小。</p>
-  <p><a href="index.html">← 回人物圖庫 Back to the gallery</a></p></section>
-</main>
+<header><div>
+  <h1>龍門人物 新舊對照 <span style="font-size:15px;color:var(--dim)">Longmen cast, old vs new</span></h1>
+  <p class="sub">左：舊版 <b>nes</b>；右：新版 <b>nes2</b>（頭像有明暗與背景、小黑眼、鼻子只留一筆淡陰影；小人兩層精靈並有背面）。分組顯示，只載入目前這一組。</p>
+</div></header>
+<nav id="tabs" aria-label="groups"></nav>
+<div class="bar" role="group" aria-label="walk direction">
+  <button data-d="walk" class="on">正面</button><button data-d="walk_side">側面</button><button data-d="walk_left">左</button><button data-d="walk_up">背面</button>
+</div>
+<main id="cards"></main>
+<footer>
+  <section class="card"><h2>小鎮上的實際大小 <span>in-game 3x on a town floor: top old, bottom new</span></h2>
+  <img class="town" alt="old and new sprites on a town floor" src="chars/longmen/town-nes2.png" loading="lazy"></section>
+  <p class="note">小人仍是 16×24 格，列序 idle、walk、walk_side 不變，另加 walk_up（背面）。車、器械、船與騎兵沿用原本的小人圖（新頭像是乘員）。</p>
+  <p><a href="index.html">← 回人物圖庫 Back to the gallery</a></p>
+</footer>
 <script>
-const DATA = __DATA__;
-const rows = document.getElementById('rows');
-const anims = [];
-function img(src, cls, alt) { const i = new Image(); i.src = src; if (cls) i.className = cls; i.alt = alt || ''; return i; }
-for (const c of DATA) {
-  const sec = document.createElement('section'); sec.className = 'row';
-  sec.innerHTML = `<h2>${c.zh}<span>${c.en}</span></h2>`;
-  const pair = document.createElement('div'); pair.className = 'pair';
-  for (const st of ['nes', 'nes2']) {
-    const v = c[st]; const side = document.createElement('div'); side.className = 'side';
-    const tag = document.createElement('div'); tag.className = 'tag' + (st === 'nes2' ? ' new' : ''); tag.textContent = st === 'nes' ? '舊 old (nes)' : '新 new (nes2)';
-    side.append(tag, img(v.portrait, 'por', c.en + ' portrait ' + st));
-    const cv = document.createElement('canvas'); cv.width = 16; cv.height = 24; cv.className = 'walk'; side.appendChild(cv);
-    const fr = document.createElement('div'); fr.className = 'frames';
-    for (const k of Object.keys(v.frames)) for (const s of v.frames[k]) fr.appendChild(img(s, '', k));
-    side.appendChild(fr);
-    pair.appendChild(side);
-    const frames = {}; for (const k of Object.keys(v.frames)) frames[k] = v.frames[k].map((s) => img(s));
-    anims.push({ cv, frames });
+const GROUPS = __GROUPS__;
+const tabs = document.getElementById('tabs'), cards = document.getElementById('cards');
+let anims = [], dir = 'walk', tick = 0;
+function img(src, cls, alt) { const i = new Image(); i.src = src; i.decoding = 'async'; if (cls) i.className = cls; i.alt = alt || ''; return i; }
+function show(g) {
+  anims = []; cards.textContent = '';
+  tabs.querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.g === g.id));
+  try { localStorage.setItem('lm-cmp-tab', g.id); } catch (e) {}
+  for (const c of g.chars) {
+    const card = document.createElement('section'); card.className = 'card';
+    const h = document.createElement('h2'); h.textContent = c.zh; const s = document.createElement('span'); s.textContent = c.en; h.appendChild(s);
+    const pair = document.createElement('div'); pair.className = 'pair';
+    for (const st of ['nes', 'nes2']) {
+      const v = c[st]; const side = document.createElement('div'); side.className = 'side';
+      const tag = document.createElement('div'); tag.className = 'tag' + (st === 'nes2' ? ' new' : ''); tag.textContent = st === 'nes' ? '舊 old' : '新 new';
+      const cv = document.createElement('canvas'); cv.width = 16; cv.height = 24; cv.className = 'walk';
+      side.append(tag, img('chars/' + c.id + '/' + st + '/portrait.png', 'por', c.en + ' ' + st), cv);
+      pair.appendChild(side);
+      const sheet = img('chars/' + c.id + '/' + st + '/sheet.png');
+      sheet.addEventListener('load', draw);
+      anims.push({ cv, sheet, v });
+    }
+    card.append(h, pair); cards.appendChild(card);
   }
-  sec.appendChild(pair); rows.appendChild(sec);
+  draw();
 }
-let dir = 'walk', tick = 0;
+function draw() {
+  for (const a of anims) {
+    if (!a.sheet.complete || !a.sheet.naturalWidth) continue;
+    const g = a.cv.getContext('2d'); g.imageSmoothingEnabled = false; g.clearRect(0, 0, 16, 24);
+    const key = dir === 'walk_left' ? 'walk_side' : dir;
+    const r = a.v.rows[key] || a.v.rows.walk || a.v.rows.move || a.v.rows.idle || [0, 1];
+    const f = tick % r[1], fw = a.v.fw, fh = a.v.fh;
+    const dx = (16 - fw) >> 1, dy = 24 - fh;
+    if (dir === 'walk_left') { g.save(); g.translate(16, 0); g.scale(-1, 1); }
+    g.drawImage(a.sheet, f * fw, r[0] * fh, fw, fh, dx, dy, fw, fh);
+    if (dir === 'walk_left') g.restore();
+  }
+}
+for (const g of GROUPS) {
+  const b = document.createElement('button'); b.dataset.g = g.id; b.textContent = g.zh + ' (' + g.chars.length + ')'; b.title = g.en;
+  b.addEventListener('click', () => show(g)); tabs.appendChild(b);
+}
 document.querySelectorAll('[data-d]').forEach((b) => b.addEventListener('click', () => {
   dir = b.dataset.d; document.querySelectorAll('[data-d]').forEach((x) => x.classList.toggle('on', x === b)); draw();
 }));
-function draw() {
-  for (const a of anims) {
-    const g = a.cv.getContext('2d'); g.imageSmoothingEnabled = false; g.clearRect(0, 0, 16, 24);
-    const key = dir === 'walk_left' ? 'walk_side' : dir;
-    const list = a.frames[key] || a.frames.walk;
-    const f = list[tick % list.length];
-    if (!f.complete) continue;
-    if (dir === 'walk_left') { g.save(); g.translate(16, 0); g.scale(-1, 1); g.drawImage(f, 0, 0); g.restore(); }
-    else g.drawImage(f, 0, 0);
-  }
-}
+let start = GROUPS[0];
+try { const s = localStorage.getItem('lm-cmp-tab'); start = GROUPS.find((g) => g.id === s) || start; } catch (e) {}
+show(start);
 setInterval(() => { tick++; draw(); }, 260);
-window.addEventListener('load', draw);
 </script>
 </body>
 </html>
@@ -213,19 +211,24 @@ window.addEventListener('load', draw);
 
 
 def main():
-    compare_png()
-    town_png()
-    data = []
-    for cid in IDS:
-        e = {'id': cid, 'zh': NAMES[cid][0], 'en': NAMES[cid][1]}
-        for st in ('nes', 'nes2'):
-            por, _, fr = load(cid, st)
-            e[st] = {'portrait': uri(por), 'frames': {k: [uri(f) for f in v] for k, v in fr.items() if k != 'idle'}}
-        data.append(e)
-    town = uri(Image.open(os.path.join(ROOT, 'chars', 'longmen', 'town-nes2.png')))
-    html = HTML.replace('__DATA__', json.dumps(data)).replace('__TOWN__', town)
+    os.makedirs(os.path.join(ROOT, 'chars', 'longmen'), exist_ok=True)
+    groups = []
+    for gid, zh, en, ids in GROUPS:
+        chars = []
+        for cid in ids:
+            e = {'id': cid, 'zh': BY[cid]['name']['zh'], 'en': BY[cid]['name']['en']}
+            for st in ('nes', 'nes2'):
+                meta = json.load(open(os.path.join(ROOT, 'chars', cid, st, 'sheet.json'), encoding='utf-8'))
+                e[st] = {'fw': meta['frameWidth'], 'fh': meta['frameHeight'],
+                         'rows': {k: [a['row'], a['frames']] for k, a in meta['animations'].items()}}
+            chars.append(e)
+        groups.append({'id': gid, 'zh': zh, 'en': en, 'chars': chars})
+        group_png(ids, os.path.join(ROOT, 'chars', 'longmen', 'compare-nes2-%s.png' % gid))
+    group_png(HEROES, os.path.join(ROOT, 'chars', 'longmen', 'compare-nes2.png'), K=4, cols=2)
+    town_png(HEROES + ['heixiong', 'tuqianqiu', 'qianwanli', 'xiaolian', 'chutiankuo', 'jingci'])
+    html = HTML.replace('__GROUPS__', json.dumps(groups, ensure_ascii=False))
     open(os.path.join(ROOT, 'compare-longmen.html'), 'w', encoding='utf-8').write(html)
-    print('compare-longmen.html', len(html) // 1024, 'KB')
+    print('compare-longmen.html', len(html) // 1024, 'KB;', sum(len(g[3]) for g in GROUPS), 'characters')
 
 
 if __name__ == '__main__':

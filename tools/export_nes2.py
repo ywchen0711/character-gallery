@@ -1,4 +1,4 @@
-"""Export the round-1 `nes2` redraws of the Longmen heroes (src/nes2_longmen.py portraits, src/nes2_longmen_sprites.py
+"""Export the `nes2` redraws of the whole Longmen cast (src/nes2_longmen.py portraits, src/nes2_longmen_sprites.py
 field sprites) to chars/<id>/nes2/ and merge them into chars/index.json as an extra variant. The old `nes` art and
 every other character are left untouched, so the games keep pulling the `nes` files until nes2 is approved.
 
@@ -17,9 +17,13 @@ from PIL import Image  # noqa: E402
 from pixlib import count_colours, scale  # noqa: E402
 import nes2_longmen as P  # noqa: E402
 import nes2_longmen_sprites as SP  # noqa: E402
+import nes2_cast_lq  # noqa: E402,F401
+import nes2_cast_lq2  # noqa: E402,F401
+import nes2_cast_sects  # noqa: E402,F401
+import nes2_cast_sprites  # noqa: E402,F401
 from styles import STYLES  # noqa: E402
 
-IDS = ['yirui', 'yishuo', 'liuhanyan', 'baixian', 'kuchan', 'xiaotian']
+IDS = list(P.BUSTS)
 FPS = {'idle': 2, 'walk': 4, 'walk_side': 4, 'walk_up': 4}
 NOTES = {'walk': 'front; frame 2 has the same body as frame 1, only the legs step (the bottom rows)',
          'walk_side': 'faces right (stride, then legs together; same body); mirror horizontally for left',
