@@ -6,7 +6,7 @@ META = dict(
     name={'zh': '奕碩', 'en': 'Yi Shuo'},
     style_name={'zh': '弟弟', 'en': 'Little brother'},
     title={'zh': '旋風少俠', 'en': 'The Whirlwind Kid'},
-    bio={'zh': '奕叡的弟弟，從小不愛拿刀，只愛踢球。紅頭帶、朱紅短褂，右嘴角上方有一顆痣，球從不離腳。看到不公平的事，總是先衝再想。', 'en': 'Yi Rui’s little brother, who never cared for blades, only for kicking a ball. Red headband, vermilion jacket, a mole above the right corner of his mouth, and the ball never far from his feet. When he sees something unfair he charges first and thinks later.'},
+    bio={'zh': '奕叡的弟弟，從小不愛拿刀，只愛踢球。紅頭帶、朱紅短褂，人中右邊有一顆痣，球從不離腳。看到不公平的事，總是先衝再想。', 'en': 'Yi Rui’s little brother, who never cared for blades, only for kicking a ball. Red headband, vermilion jacket, a mole just right of the groove under his nose (his own right), and the ball never far from his feet. When he sees something unfair he charges first and thinks later.'},
     weapon={'zh': '足球', 'en': 'Football'},
 )
 

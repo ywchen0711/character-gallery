@@ -5,7 +5,7 @@ from nes2_longmen import bust, robe, neck, collar, robe_folds, face, skin_shade,
 
 # ================================================================ 奕碩 Yi Shuo
 # the little brother: spiky hair over a red headband with long flying ties, an orange jacket with a dark-red
-# collar, a black sash, a mole on his cheek, his football under his arm
+# collar, a black sash, a mole just to his right of the philtrum, his football under his arm
 YISHUO_HAIR = """
 ...........k......k.....
 ..........kik....kik...k
@@ -53,7 +53,7 @@ k...k...k
             if c.part[y][x] == body and c.tone[y][x] != 'k':
                 c.tone[y][x] = 'k' if y == 54 else 'd'
     half(c, YISHUO_HAIR)
-    face(c, 'i', 'bright', mouth='beam', shape='kid', mouth_y=28)
+    face(c, 'i', 'bright', mouth='beam', shape='kid', mouth_y=29)
     put(c, """
 ....kiik.kiik.kiik
 .....kk...kk...kk.
@@ -64,7 +64,7 @@ k...k...k
 """, 24, 16)
     put(c, 'tt', 14, 26)
     put(c, 'tt', 32, 26)
-    put(c, 'k', 31, 28)                   # the mole
+    put(c, 'k', 21, 27)                   # the mole: just to his right of the philtrum (viewer's left)
     # headband ties streaming out to our right
     put(c, """
 kkkk.......

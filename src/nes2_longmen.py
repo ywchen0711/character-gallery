@@ -300,7 +300,12 @@ def skin_shade(c, y0=16, y1=40):
         for x in (e, e - 1):
             if c.tone[y][x] == 'S':
                 c.tone[y][x] = 's'
-    shade_under(c, {'S': 's'}, band=1, x0=14, x1=34, y0=29, y1=34)
+    # the jaw line: skin right above the outline under the chin falls into shadow (not above a mouth line, whose
+    # next pixel down is skin again)
+    for y in range(29, 34):
+        for x in range(14, 34):
+            if c.tone[y][x] == 'S' and c.tone[y + 1][x] == 'k' and c.tone[y + 2][x] not in 'Ss':
+                c.tone[y][x] = 's'
 
 
 def backdrop_sky(z='z', solid_to=0, check_to=24, fade=10, moon=None, Z='Z'):

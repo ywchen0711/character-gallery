@@ -17,7 +17,7 @@ import lint  # noqa: E402
 import nes2  # noqa: E402
 import nes2_longmen as P  # noqa: E402
 import nes2_longmen_sprites as SP  # noqa: E402
-import nes2_cast_lq, nes2_cast_lq2, nes2_cast_sects, nes2_cast_sprites  # noqa: E402,F401,E401
+import nes2_cast_lq, nes2_cast_lq2, nes2_cast_sects, nes2_cast_sprites, nes2_cast_town  # noqa: E402,F401,E401
 
 
 def main():

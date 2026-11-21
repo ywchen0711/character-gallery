@@ -1,5 +1,5 @@
 """nes2 portraits for the Longmen Quest II cast, the Tactics story people and the Mercy Cloud abbess (nes2 kit)."""
-from nes2_kit import person
+from nes2_kit import person, HAIR
 from nes2 import put  # noqa: F401
 from nes2_cast_lq import SK, BLACK, C
 
@@ -7,8 +7,9 @@ TAN = dict(S=0x27, s=0x17)
 
 # 胡半仙 Hu Banxian: flat grey hat, round black glasses, thin moustache, grey robe, his fortune banner
 person('hubanxian', dict(
-    colours=C(SK, BLACK, m=0x10, n=0x00, a=0x10, b=0x00, d=0x0C, e=0x1C, f=0x0C, p=0x07, q=0x08, r=0x30, z=0x0C),
-    hair='flat', eyes='calm', mouth='smirk', beard='thin', mask='glasses', body='robe', collar='ef',
+    colours=C(SK, BLACK, m=0x10, n=0x00, a=0x10, b=0x00, d=0x0C, e=0x1C, f=0x0C, g=0x0C, p=0x07, q=0x08, r=0x30,
+              w=0x30, z=0x0C),
+    hair='flat', eyes='calm', mouth='smirk', beard='thin', mask='glasses', mask_slot2='g', body='robe', collar='ef',
     behind=[('banner', dict(x=44.5, y0=4, y1=56))],
     post=[lambda c: [put(c, ['k'], 39, y) for y in (7, 10, 13)]]))
 
@@ -58,7 +59,7 @@ person('mojide', dict(
 # 霍天下 Huo Tianxia: gold headband, a boastful grin, red pauldrons
 person('huotianxia', dict(
     colours=C(SK, BLACK, m=0x28, n=0x18, a=0x27, b=0x17, d=0x07, e=0x26, f=0x16, g=0x06, y=0x16, z=0x06),
-    hair='band', eyes='proud', mouth='beam', body='armour', collar='',
+    hair='band', eyes='proud', mouth='beam', body='armour', collar='', behind=[('redcape', {})],
     after=[(['.kk', 'kyk', 'kyk', '.k.'], 22, 9, False)]))
 
 # 莫無涯 Mo Wuya: dark hair, pale, violet robe, the Bell of Ten Thousand Beasts on his staff
@@ -70,8 +71,10 @@ person('mowuya', dict(
 
 # 阿蠻 A-Man: a Miao girl raised among wolves: silver headdress with white feathers, tanned, grey fur over blue
 person('aman', dict(
-    colours=C(TAN, BLACK, m=0x10, n=0x00, w=0x30, a=0x12, b=0x02, d=0x0C, e=0x10, f=0x00, g=0x2D, z=0x0C),
-    hair='feather', face='kid', eyes='bright', mouth='small', body='armour', collar='', spr='w'))
+    colours=C(TAN, BLACK, m=0x10, n=0x00, w=0x30, v=0x30, a=0x12, b=0x02, d=0x0C, e=0x10, f=0x00, g=0x2D, z=0x0C),
+    hair=[r.replace('w', 'm') for r in HAIR['feather'].strip().split(chr(10))], face='kid', eyes='bright', mouth='small', body='armour', collar='',
+    # two tall white feathers curving out of the silver headdress, as in her old portrait
+    after=[(['kk......', 'kvk.....', 'kvvk....', '.kvvk...', '..kvvk..', '...kvvk.', '....kvk.'], 3, 0, True)]))
 
 # 靜慈師太 Abbess Jingci: white hood with a red band, grey robe, red prayer beads, horsetail whisk
 person('jingci', dict(

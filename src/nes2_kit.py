@@ -441,6 +441,35 @@ def beard(c, kind, slot='i', shade='k'):
         shade_right(c, {slot: shade}, band=2, x0=27, y0=y0, y1=34 + n)
         put(c, ['k' + slot * 8 + 'k', '..kkkk..'][0:1], 19, y0)
         put(c, ['.kkkk.'], 21, y0 + 3)
+    elif kind == 'bushy':
+        # a real beard: cheeks stay bare, the beard grows along the jaw from below the cheekbones, a drooping
+        # moustache over a visible mouth, and a full beard hanging below the chin with a ragged edge and strands
+        reg = set()
+        for y in range(27, 34):
+            for x in range(c.w):
+                if c.tone[y][x] in 'Ss' and 9 < x < 39 and (abs(x + 0.5 - 24) > 8.5 - (y - 27) * 1.4 or y >= 31):
+                    reg.add((x, y))
+        rag = [0, 1, 0, 2, 1, 0, 1, 2, 0, 1, 0, 2, 1, 0, 1, 2, 0, 1, 0, 2, 1, 0, 1, 2]
+        for y in range(34, 46):
+            w = 11.5 - (y - 34) * 0.55
+            for x in range(c.w):
+                if abs(x + 0.5 - 24) < w and y < 46 - rag[abs(x - 24) % len(rag)]:
+                    reg.add((x, y))
+        for (x, y) in reg:
+            c.paint(x, y, slot)
+        for (x, y) in reg:
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                q = (x + dx, y + dy)
+                if q not in reg and 0 <= q[0] < c.w and 0 <= q[1] < c.h and c.tone[q[1]][q[0]] not in 'Ssk':
+                    c.paint(x, y, 'k')
+                    break
+        for (x, y) in reg:                       # strands
+            if c.tone[y][x] == slot and y > 33 and (x * 2 + y) % 5 == 0:
+                c.tone[y][x] = 'h'
+        shade_right(c, {slot: shade}, band=2, x0=28, y0=27, y1=46)
+        put(c, ['..kkkkkkkk..', '.k' + slot * 8 + 'k.', 'k' + slot * 3 + 'kkkk' + slot * 3 + 'k',
+                'k' + slot * 2 + 'k....k' + slot * 2 + 'k'], 18, 28)
+        put(c, ['.kkkk.', 'kSSSSk', '.kkkk.'], 21, 31)
     elif kind == 'stubble':
         for y in range(27, 34):
             for x in range(14, 34):
@@ -469,9 +498,10 @@ def mask(c, kind, slot='m', slot2='n'):
                     c.tone[y][x] = 'w' if x < 31 else 'v'
         put(c, ['kkkkk', 'krrrk', '.kkk.'], 14, 21, True)
         put(c, ['kkkkkkkkkkkk', 'kwkwkwwkwkwk', 'kkkkkkkkkkkk'], 18, 28)
-    elif kind == 'glasses':
-        put(c, ['.kkkkk..', 'kkkkkkkk', 'kkkkkkkk', '.kkkkk..'], 13, 21, True)
-        put(c, ['kkkk'], 22, 22)
+    elif kind == 'glasses':                # dark round lenses with a glint (the fortune teller)
+        put(c, ['..kkkk..', '.k' + slot2 * 4 + 'k.', 'k' + slot2 + 'w' + slot2 * 3 + 'k', 'k' + slot2 * 5 + 'k',
+                '.k' + slot2 * 4 + 'k.', '..kkkk..'], 13, 20, True)
+        put(c, ['kkkk'], 21, 22)
     elif kind == 'roundglasses':
         put(c, ['.kkkk.', 'k....k', 'k....k', '.kkkk.'], 13, 21, True)
         put(c, ['kkkk'], 22, 22)
@@ -594,6 +624,11 @@ def prop(c, name, x=42.5, y0=8, y1=56, **kw):
     elif name == 'hoodcape':                # the hood falling onto the shoulders
         c.poly2([(16, 14), (11, 18), (8, 23), (6, 30), (4, 38), (1, 46), (0, 56), (14, 56), (16, 44), (16, 30)],
                 Mat('m', 'm', 'n'), P)
+    elif name == 'redcape':                 # a cape on the shoulders with a high collar, in the pauldron colours
+        c.poly2([(24, 33), (13, 31), (9, 36), (2, 41), (0, 45), (0, 56), (24, 56)], Mat('f', 'f', 'g'), P)
+    elif name == 'log':                     # the ram's iron-capped log on his shoulder
+        c.capsule(-2, 47, 30, 41, 3.6, Mat('p', 'p', 'q'), P)
+        c.ellipse(30, 41, 3.8, 3.8, Mat('w', 'v', 'v'), c.new_part())
     elif name == 'pack':                    # a peddler's big pack behind the shoulders
         c.rect(2, 24, 45, 50, Mat('p', 'p', 'q'), P, dw=2)
     elif name == 'bell':                    # a staff with a gold bell hanging at the top

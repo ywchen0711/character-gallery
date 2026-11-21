@@ -89,7 +89,12 @@ def export(cid):
                 shutil.rmtree(p)
     if cid in ('family', 'longmen', 'beasts', 'foes', 'sango'):
         raise ValueError('family and longmen are reserved for group pictures')
-    vs = [export_variant(cid, v) for v in ch.variants()]
+    variants = list(ch.variants())
+    from nes_variant import nes2_ids, NESOldVariant
+    import nes_portraits
+    if cid in nes2_ids() and cid in nes_portraits.PORTRAITS and not any(v.style == 'nes_old' for v in variants):
+        variants.append(NESOldVariant(cid))       # the redrawn Longmen cast keeps its previous art as nes_old
+    vs = [export_variant(cid, v) for v in variants]
     M = ch.META
     return dict(M, kind=getattr(ch, 'KIND', 'person'), faction=ch.FACTION, factionName=FACTION_NAME[ch.FACTION],
                 colour=FACTION_COLOUR[ch.FACTION], variants=vs)
@@ -153,6 +158,15 @@ def main():
                           'faction': 'longmen', 'members': L2, 'style': 'nes',
                           'files': {k: 'chars/longmen/' + v for k, v in (('nes', 'group-nes-l2.png'), ('nes4x', 'group-nes-l2@4x.png'),
                                                                           ('nesTall', 'group-nes-l2-4col.png'), ('nesTall4x', 'group-nes-l2-4col@4x.png'))}}
+    # the Longmen townsfolk (Longmen Quest's unnamed people)
+    TOWN = [c for c in ROSTER if getattr(importlib.import_module(c), 'GROUP', '') == 'longmenTown']
+    for name, im in (('group-nes-town', nes_group(TOWN, cols=9)), ('group-nes-town-6col', nes_group(TOWN, cols=6))):
+        im.save(os.path.join(ld, name + '.png'))
+        scale(im, 4).save(os.path.join(ld, name + '@4x.png'))
+    groups['longmenTown'] = {'name': {'zh': '龍門鎮民', 'en': 'Longmen townsfolk'}, 'faction': 'longmen',
+                             'members': TOWN, 'style': 'nes',
+                             'files': {k: 'chars/longmen/' + v for k, v in (('nes', 'group-nes-town.png'), ('nes4x', 'group-nes-town@4x.png'),
+                                                                             ('nesTall', 'group-nes-town-6col.png'), ('nesTall4x', 'group-nes-town-6col@4x.png'))}}
     from nes_foes import group as foe_group2
     L2F = [c for c in ROSTER if getattr(importlib.import_module(c), 'GROUP', '') == 'longmen2Foes']
     fd2 = os.path.join(ROOT, 'chars', 'foes')

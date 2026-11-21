@@ -45,11 +45,11 @@ SHEADS['scholar'] = _heads('cap', (['....kkkkkkkk....', '....kbbbbbbk....', '...
                              '...kkkkkkkkkk...', '..kbbbbbbbbbbk..', '..kkkkkkkkkkkk..'], 0),
                            (['....kkkkkkkk....', '....kbbbbbbk....', '....kbbbbbbk....', '....kbbbbbbk....',
                              '...kkkkkkkkkk...', '..kbbbbbbbbbbk..', '..kkkkkkkkkkkk..'], 0))
-SHEADS['feather'] = _heads('cap', (['.k.k.k.k.k.k.k..', 'kSkSkSkSkSkSkSk.', 'kSkSkSkSkSkSkSk.', '.kkkkkkkkkkkkk..',
+SHEADS['feather'] = _heads('cap', (['.k.k.k.k.k.k.k..', 'kbkbkbkbkbkbkbk.', 'kbkbkbkbkbkbkbk.', '.kkkkkkkkkkkkk..',
                                     '..kbbbbbbbbbbk..', '..kbxbbxbbxbbk..', '..kkkkkkkkkkkk..'], 0),
-                           (['k.k.k.k.k.k.k...', 'SkSkSkSkSkSkSk..', 'SkSkSkSkSkSkSk..', 'kkkkkkkkkkkkk...',
+                           (['k.k.k.k.k.k.k...', 'bkbkbkbkbkbkbk..', 'bkbkbkbkbkbkbk..', 'kkkkkkkkkkkkk...',
                              '.kbbbbbbbbbbbk..', '.kbxbbxbbxbbbk..', '.kkkkkkkkkkkkk..'], 0),
-                           (['.k.k.k.k.k.k.k..', 'kSkSkSkSkSkSkSk.', 'kSkSkSkSkSkSkSk.', '.kkkkkkkkkkkkk..',
+                           (['.k.k.k.k.k.k.k..', 'kbkbkbkbkbkbkbk.', 'kbkbkbkbkbkbkbk.', '.kkkkkkkkkkkkk..',
                              '..kbbbbbbbbbbk..', '..kbxbbxbbxbbk..', '..kkkkkkkkkkkk..'], 0))
 SHEADS['tiger'] = _heads('hood', (['..kkk....kkk....', '.kbbbk..kbbbk...', '.kbxbkkkkbxbk...'], 0),
                          (['..kkk...........', '.kbbbk..........', '.kbxbkkkkk......'], 0),
@@ -161,7 +161,7 @@ sp('heixiong', 'wild', 0x10, 0x07, BK, 0x17, body='robe', w='d', props=prop('clu
 sp('daoba', 'shaved', 0x16, 0x06, BK, 0x30, w='S', props=prop('blade', 'b'))
 sp('shouhou', 'spiky', 0x18, 0x08, BK, 0x30, w='S', props=prop('blade', 'b'))
 sp('tuqianqiu', 'long', 0x14, 0x04, BK, 0x30, S=0x36, w='b', props=prop('fan', 'b'), face=beard_rows('half', 'b'))
-sp('tiewusi', 'official', 0x00, 0x0C, BK, 0x2D, w='S', props=prop('staff', 'S'), face=beard_rows('moustache'))
+sp('tiewusi', 'official', 0x00, 0x0C, BK, 0x0C, w='S', props=prop('staff', 'S'), face=beard_rows('moustache'))
 sp('qianwanli', 'melon', 0x16, 0x06, BK, 0x28, w='b', hm={'b': 'c', 'x': 'b'}, props=prop('book', 'b'))
 sp('wenruyu', 'topknot', 0x3A, 0x2A, BK, 0x30, w='b', props=prop('book', 'd'))
 sp('xiaolian', 'twinbuns', 0x25, 0x15, BK, 0x16, body='boy', w='S', x='b', short=True)
@@ -179,9 +179,11 @@ sp('suxiaowan', 'bun_f', 0x2A, 0x1A, BK, 0x30, S=0x31, body='gown', w='b', hairf
 sp('chutiankuo', 'band', 0x1C, 0x0C, 0x0F, 0x30, w='b', props=prop('blade', 'b'))
 sp('niubaobao', 'bald', 0x27, 0x17, BK, 0x30, w='b', props=prop('gourd', 'b'))
 sp('mojide', 'cap', 0x1A, 0x0A, BK, 0x10, w='b', x='k', props=prop('book', 'd'), face=beard_rows('glasses'))
-sp('huotianxia', 'band', 0x27, 0x17, BK, 0x28, w='b')
+sp('huotianxia', 'band', 0x27, 0x16, BK, 0x28, w='b',
+   props=dict(front=[(['d'] * 8, 1, 14), (['d'] * 8, 14, 14)], side=[(['dd'] * 8, 1, 14)],
+              back=[(['dddddddddddd'] * 8, 2, 14)]))
 sp('mowuya', 'topknot', 0x13, 0x03, 0x02, 0x28, S=0x36, w='b', props=prop('staff', 'b'))
-sp('aman', 'feather', 0x12, 0x02, BK, 0x10, S=TAN, body='boy', w='b', x='k', short=True)
+sp('aman', 'feather', 0x12, 0x02, BK, 0x30, S=TAN, body='boy', w='b', x='k', short=True)
 sp('jingci', 'hood', 0x00, 0x2D, 0x16, 0x30, w='h', props=prop('staff', 'b'))
 sp('yichangfeng', 'topknot', 0x12, 0x02, 0x10, 0x30, w='b', props=prop('blade', 'b'), face=beard_rows('long', 'h'))
 sp('xiaowuying', 'official', 0x14, 0x04, BK, 0x00, w='S', props=prop('blade', 'S'))

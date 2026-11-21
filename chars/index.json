@@ -2,6 +2,16 @@
   "version": 3,
   "mainStyle": "nes",
   "styles": {
+    "nes_old": {
+      "name": {
+        "zh": "8-bit 紅白機（龍門舊版）",
+        "en": "8-bit Famicom (Longmen, previous art)"
+      },
+      "blurb": {
+        "zh": "2026-11-20 重畫之前的龍門人物圖，留作參考。新版（主畫風 nes）照《霸王之路》的水準重畫：頭像有明暗層次與深色漸層背景、小黑眼、鼻子只留一筆淡陰影；16×24 小人用兩層精靈，並有背面行走。",
+        "en": "The Longmen cast as drawn before the 2026-11-20 redraw, kept for reference. The redraw (now the main nes style) follows the Path of the Hegemon bar: shaded portraits over a dark dithered backdrop, tiny dark eyes, a soft one-stroke nose; 16×24 sprites in two sprite layers with a back-view walk."
+      }
+    },
     "sango": {
       "name": {
         "zh": "8-bit 紅白機・霸王之路主將",
@@ -80,16 +90,6 @@
       "blurb": {
         "zh": "每個角色 3 色加透明的 16×16 小人與兩格步行，配簡單的頭像視窗。",
         "en": "16×16 sprites in 3 colours plus transparency with a two-frame walk, and a simple portrait window."
-      }
-    },
-    "nes2": {
-      "name": {
-        "zh": "8-bit 紅白機・龍門新版",
-        "en": "8-bit Famicom, Longmen redraw"
-      },
-      "blurb": {
-        "zh": "龍門人物照《霸王之路》的水準重畫：頭像有臉、髮、衣、兵器的明暗層次，深色漸層背景，小黑眼；16×24 小人用兩層精靈、頭髮與帽子和頭像一致，加上背面行走。",
-        "en": "The Longmen cast redrawn to the Path of the Hegemon bar: portraits with shading on face, hair, cloth and gear over a dark dithered backdrop, tiny dark eyes; 16×24 sprites in two sprite layers whose hair and headgear match the portrait, now with a back-view walk."
       }
     }
   },
@@ -209,6 +209,40 @@
         "nes4x": "chars/longmen/group-nes-l2@4x.png",
         "nesTall": "chars/longmen/group-nes-l2-4col.png",
         "nesTall4x": "chars/longmen/group-nes-l2-4col@4x.png"
+      }
+    },
+    "longmenTown": {
+      "name": {
+        "zh": "龍門鎮民",
+        "en": "Longmen townsfolk"
+      },
+      "faction": "longmen",
+      "members": [
+        "tf_man",
+        "tf_woman",
+        "tf_oldman",
+        "tf_oldwoman",
+        "tf_child",
+        "tf_guard",
+        "tf_merchant",
+        "tf_innkeeper",
+        "tf_monk",
+        "tf_nun",
+        "tf_boatman",
+        "tf_bandit",
+        "tf_cultist",
+        "tf_scholar",
+        "tf_blacksmith",
+        "tf_fisherman",
+        "tf_dancer",
+        "tf_beggar"
+      ],
+      "style": "nes",
+      "files": {
+        "nes": "chars/longmen/group-nes-town.png",
+        "nes4x": "chars/longmen/group-nes-town@4x.png",
+        "nesTall": "chars/longmen/group-nes-town-6col.png",
+        "nesTall4x": "chars/longmen/group-nes-town-6col@4x.png"
       }
     },
     "longmen2Foes": {
@@ -1205,7 +1239,7 @@
             ]
           },
           "colours": {
-            "portrait": 191,
+            "portrait": 192,
             "sheet": 34
           },
           "animations": [
@@ -1282,7 +1316,7 @@
             ]
           },
           "colours": {
-            "portrait": 28,
+            "portrait": 29,
             "sheet": 20
           },
           "animations": [
@@ -2068,30 +2102,31 @@
             ]
           },
           "colours": {
-            "portrait": 9,
-            "sheet": 3
+            "portrait": 14,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/yirui/nes2/portrait.png",
-            "portrait4x": "chars/yirui/nes2/portrait@4x.png",
-            "body": "chars/yirui/nes2/body.png",
-            "body4x": "chars/yirui/nes2/body@4x.png",
-            "sheet": "chars/yirui/nes2/sheet.png",
-            "sheet4x": "chars/yirui/nes2/sheet@4x.png",
-            "sheetJson": "chars/yirui/nes2/sheet.json"
+            "portrait": "chars/yirui/nes_old/portrait.png",
+            "portrait4x": "chars/yirui/nes_old/portrait@4x.png",
+            "body": "chars/yirui/nes_old/body.png",
+            "body4x": "chars/yirui/nes_old/body@4x.png",
+            "sheet": "chars/yirui/nes_old/sheet.png",
+            "sheet4x": "chars/yirui/nes_old/sheet@4x.png",
+            "sheetJson": "chars/yirui/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -2104,14 +2139,13 @@
             ]
           },
           "colours": {
-            "portrait": 14,
-            "sheet": 6
+            "portrait": 9,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -2131,8 +2165,8 @@
         "en": "The Whirlwind Kid"
       },
       "bio": {
-        "zh": "奕叡的弟弟，從小不愛拿刀，只愛踢球。紅頭帶、朱紅短褂，右嘴角上方有一顆痣，球從不離腳。看到不公平的事，總是先衝再想。",
-        "en": "Yi Rui’s little brother, who never cared for blades, only for kicking a ball. Red headband, vermilion jacket, a mole above the right corner of his mouth, and the ball never far from his feet. When he sees something unfair he charges first and thinks later."
+        "zh": "奕叡的弟弟，從小不愛拿刀，只愛踢球。紅頭帶、朱紅短褂，人中右邊有一顆痣，球從不離腳。看到不公平的事，總是先衝再想。",
+        "en": "Yi Rui’s little brother, who never cared for blades, only for kicking a ball. Red headband, vermilion jacket, a mole just right of the groove under his nose (his own right), and the ball never far from his feet. When he sees something unfair he charges first and thinks later."
       },
       "weapon": {
         "zh": "足球",
@@ -2173,30 +2207,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
-            "sheet": 3
+            "portrait": 12,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/yishuo/nes2/portrait.png",
-            "portrait4x": "chars/yishuo/nes2/portrait@4x.png",
-            "body": "chars/yishuo/nes2/body.png",
-            "body4x": "chars/yishuo/nes2/body@4x.png",
-            "sheet": "chars/yishuo/nes2/sheet.png",
-            "sheet4x": "chars/yishuo/nes2/sheet@4x.png",
-            "sheetJson": "chars/yishuo/nes2/sheet.json"
+            "portrait": "chars/yishuo/nes_old/portrait.png",
+            "portrait4x": "chars/yishuo/nes_old/portrait@4x.png",
+            "body": "chars/yishuo/nes_old/body.png",
+            "body4x": "chars/yishuo/nes_old/body@4x.png",
+            "sheet": "chars/yishuo/nes_old/sheet.png",
+            "sheet4x": "chars/yishuo/nes_old/sheet@4x.png",
+            "sheetJson": "chars/yishuo/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -2209,14 +2244,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
-            "sheet": 6
+            "portrait": 8,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -2278,30 +2312,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
-            "sheet": 3
+            "portrait": 10,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/xiaotian/nes2/portrait.png",
-            "portrait4x": "chars/xiaotian/nes2/portrait@4x.png",
-            "body": "chars/xiaotian/nes2/body.png",
-            "body4x": "chars/xiaotian/nes2/body@4x.png",
-            "sheet": "chars/xiaotian/nes2/sheet.png",
-            "sheet4x": "chars/xiaotian/nes2/sheet@4x.png",
-            "sheetJson": "chars/xiaotian/nes2/sheet.json"
+            "portrait": "chars/xiaotian/nes_old/portrait.png",
+            "portrait4x": "chars/xiaotian/nes_old/portrait@4x.png",
+            "body": "chars/xiaotian/nes_old/body.png",
+            "body4x": "chars/xiaotian/nes_old/body@4x.png",
+            "sheet": "chars/xiaotian/nes_old/sheet.png",
+            "sheet4x": "chars/xiaotian/nes_old/sheet@4x.png",
+            "sheetJson": "chars/xiaotian/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -2314,14 +2349,13 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 6
+            "portrait": 7,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -2383,30 +2417,31 @@
             ]
           },
           "colours": {
-            "portrait": 6,
-            "sheet": 3
+            "portrait": 10,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/baixian/nes2/portrait.png",
-            "portrait4x": "chars/baixian/nes2/portrait@4x.png",
-            "body": "chars/baixian/nes2/body.png",
-            "body4x": "chars/baixian/nes2/body@4x.png",
-            "sheet": "chars/baixian/nes2/sheet.png",
-            "sheet4x": "chars/baixian/nes2/sheet@4x.png",
-            "sheetJson": "chars/baixian/nes2/sheet.json"
+            "portrait": "chars/baixian/nes_old/portrait.png",
+            "portrait4x": "chars/baixian/nes_old/portrait@4x.png",
+            "body": "chars/baixian/nes_old/body.png",
+            "body4x": "chars/baixian/nes_old/body@4x.png",
+            "sheet": "chars/baixian/nes_old/sheet.png",
+            "sheet4x": "chars/baixian/nes_old/sheet@4x.png",
+            "sheetJson": "chars/baixian/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -2419,14 +2454,13 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 6
+            "portrait": 6,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -2488,30 +2522,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
-            "sheet": 3
+            "portrait": 12,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/liuhanyan/nes2/portrait.png",
-            "portrait4x": "chars/liuhanyan/nes2/portrait@4x.png",
-            "body": "chars/liuhanyan/nes2/body.png",
-            "body4x": "chars/liuhanyan/nes2/body@4x.png",
-            "sheet": "chars/liuhanyan/nes2/sheet.png",
-            "sheet4x": "chars/liuhanyan/nes2/sheet@4x.png",
-            "sheetJson": "chars/liuhanyan/nes2/sheet.json"
+            "portrait": "chars/liuhanyan/nes_old/portrait.png",
+            "portrait4x": "chars/liuhanyan/nes_old/portrait@4x.png",
+            "body": "chars/liuhanyan/nes_old/body.png",
+            "body4x": "chars/liuhanyan/nes_old/body@4x.png",
+            "sheet": "chars/liuhanyan/nes_old/sheet.png",
+            "sheet4x": "chars/liuhanyan/nes_old/sheet@4x.png",
+            "sheetJson": "chars/liuhanyan/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -2524,14 +2559,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
-            "sheet": 6
+            "portrait": 8,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -2593,30 +2627,31 @@
             ]
           },
           "colours": {
-            "portrait": 6,
-            "sheet": 3
+            "portrait": 11,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/kuchan/nes2/portrait.png",
-            "portrait4x": "chars/kuchan/nes2/portrait@4x.png",
-            "body": "chars/kuchan/nes2/body.png",
-            "body4x": "chars/kuchan/nes2/body@4x.png",
-            "sheet": "chars/kuchan/nes2/sheet.png",
-            "sheet4x": "chars/kuchan/nes2/sheet@4x.png",
-            "sheetJson": "chars/kuchan/nes2/sheet.json"
+            "portrait": "chars/kuchan/nes_old/portrait.png",
+            "portrait4x": "chars/kuchan/nes_old/portrait@4x.png",
+            "body": "chars/kuchan/nes_old/body.png",
+            "body4x": "chars/kuchan/nes_old/body@4x.png",
+            "sheet": "chars/kuchan/nes_old/sheet.png",
+            "sheet4x": "chars/kuchan/nes_old/sheet@4x.png",
+            "sheetJson": "chars/kuchan/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -2629,14 +2664,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
-            "sheet": 6
+            "portrait": 6,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -2698,30 +2732,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
-            "sheet": 3
+            "portrait": 11,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/heixiong/nes2/portrait.png",
-            "portrait4x": "chars/heixiong/nes2/portrait@4x.png",
-            "body": "chars/heixiong/nes2/body.png",
-            "body4x": "chars/heixiong/nes2/body@4x.png",
-            "sheet": "chars/heixiong/nes2/sheet.png",
-            "sheet4x": "chars/heixiong/nes2/sheet@4x.png",
-            "sheetJson": "chars/heixiong/nes2/sheet.json"
+            "portrait": "chars/heixiong/nes_old/portrait.png",
+            "portrait4x": "chars/heixiong/nes_old/portrait@4x.png",
+            "body": "chars/heixiong/nes_old/body.png",
+            "body4x": "chars/heixiong/nes_old/body@4x.png",
+            "sheet": "chars/heixiong/nes_old/sheet.png",
+            "sheet4x": "chars/heixiong/nes_old/sheet@4x.png",
+            "sheetJson": "chars/heixiong/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -2734,14 +2769,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
-            "sheet": 6
+            "portrait": 8,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -2803,30 +2837,31 @@
             ]
           },
           "colours": {
-            "portrait": 9,
-            "sheet": 3
+            "portrait": 13,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/daoba/nes2/portrait.png",
-            "portrait4x": "chars/daoba/nes2/portrait@4x.png",
-            "body": "chars/daoba/nes2/body.png",
-            "body4x": "chars/daoba/nes2/body@4x.png",
-            "sheet": "chars/daoba/nes2/sheet.png",
-            "sheet4x": "chars/daoba/nes2/sheet@4x.png",
-            "sheetJson": "chars/daoba/nes2/sheet.json"
+            "portrait": "chars/daoba/nes_old/portrait.png",
+            "portrait4x": "chars/daoba/nes_old/portrait@4x.png",
+            "body": "chars/daoba/nes_old/body.png",
+            "body4x": "chars/daoba/nes_old/body@4x.png",
+            "sheet": "chars/daoba/nes_old/sheet.png",
+            "sheet4x": "chars/daoba/nes_old/sheet@4x.png",
+            "sheetJson": "chars/daoba/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -2839,14 +2874,13 @@
             ]
           },
           "colours": {
-            "portrait": 13,
-            "sheet": 6
+            "portrait": 9,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -2908,30 +2942,31 @@
             ]
           },
           "colours": {
-            "portrait": 9,
-            "sheet": 3
+            "portrait": 11,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/shouhou/nes2/portrait.png",
-            "portrait4x": "chars/shouhou/nes2/portrait@4x.png",
-            "body": "chars/shouhou/nes2/body.png",
-            "body4x": "chars/shouhou/nes2/body@4x.png",
-            "sheet": "chars/shouhou/nes2/sheet.png",
-            "sheet4x": "chars/shouhou/nes2/sheet@4x.png",
-            "sheetJson": "chars/shouhou/nes2/sheet.json"
+            "portrait": "chars/shouhou/nes_old/portrait.png",
+            "portrait4x": "chars/shouhou/nes_old/portrait@4x.png",
+            "body": "chars/shouhou/nes_old/body.png",
+            "body4x": "chars/shouhou/nes_old/body@4x.png",
+            "sheet": "chars/shouhou/nes_old/sheet.png",
+            "sheet4x": "chars/shouhou/nes_old/sheet@4x.png",
+            "sheetJson": "chars/shouhou/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -2944,14 +2979,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
-            "sheet": 6
+            "portrait": 9,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -3013,30 +3047,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
-            "sheet": 3
+            "portrait": 10,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/tuqianqiu/nes2/portrait.png",
-            "portrait4x": "chars/tuqianqiu/nes2/portrait@4x.png",
-            "body": "chars/tuqianqiu/nes2/body.png",
-            "body4x": "chars/tuqianqiu/nes2/body@4x.png",
-            "sheet": "chars/tuqianqiu/nes2/sheet.png",
-            "sheet4x": "chars/tuqianqiu/nes2/sheet@4x.png",
-            "sheetJson": "chars/tuqianqiu/nes2/sheet.json"
+            "portrait": "chars/tuqianqiu/nes_old/portrait.png",
+            "portrait4x": "chars/tuqianqiu/nes_old/portrait@4x.png",
+            "body": "chars/tuqianqiu/nes_old/body.png",
+            "body4x": "chars/tuqianqiu/nes_old/body@4x.png",
+            "sheet": "chars/tuqianqiu/nes_old/sheet.png",
+            "sheet4x": "chars/tuqianqiu/nes_old/sheet@4x.png",
+            "sheetJson": "chars/tuqianqiu/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -3049,14 +3084,13 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 6
+            "portrait": 7,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -3119,29 +3153,30 @@
           },
           "colours": {
             "portrait": 9,
-            "sheet": 3
+            "sheet": 4
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/tiewusi/nes2/portrait.png",
-            "portrait4x": "chars/tiewusi/nes2/portrait@4x.png",
-            "body": "chars/tiewusi/nes2/body.png",
-            "body4x": "chars/tiewusi/nes2/body@4x.png",
-            "sheet": "chars/tiewusi/nes2/sheet.png",
-            "sheet4x": "chars/tiewusi/nes2/sheet@4x.png",
-            "sheetJson": "chars/tiewusi/nes2/sheet.json"
+            "portrait": "chars/tiewusi/nes_old/portrait.png",
+            "portrait4x": "chars/tiewusi/nes_old/portrait@4x.png",
+            "body": "chars/tiewusi/nes_old/body.png",
+            "body4x": "chars/tiewusi/nes_old/body@4x.png",
+            "sheet": "chars/tiewusi/nes_old/sheet.png",
+            "sheet4x": "chars/tiewusi/nes_old/sheet@4x.png",
+            "sheetJson": "chars/tiewusi/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -3154,14 +3189,13 @@
             ]
           },
           "colours": {
-            "portrait": 8,
-            "sheet": 5
+            "portrait": 9,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -3223,30 +3257,31 @@
             ]
           },
           "colours": {
-            "portrait": 6,
-            "sheet": 3
+            "portrait": 10,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/qianwanli/nes2/portrait.png",
-            "portrait4x": "chars/qianwanli/nes2/portrait@4x.png",
-            "body": "chars/qianwanli/nes2/body.png",
-            "body4x": "chars/qianwanli/nes2/body@4x.png",
-            "sheet": "chars/qianwanli/nes2/sheet.png",
-            "sheet4x": "chars/qianwanli/nes2/sheet@4x.png",
-            "sheetJson": "chars/qianwanli/nes2/sheet.json"
+            "portrait": "chars/qianwanli/nes_old/portrait.png",
+            "portrait4x": "chars/qianwanli/nes_old/portrait@4x.png",
+            "body": "chars/qianwanli/nes_old/body.png",
+            "body4x": "chars/qianwanli/nes_old/body@4x.png",
+            "sheet": "chars/qianwanli/nes_old/sheet.png",
+            "sheet4x": "chars/qianwanli/nes_old/sheet@4x.png",
+            "sheetJson": "chars/qianwanli/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -3259,14 +3294,13 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 6
+            "portrait": 6,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -3328,30 +3362,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
-            "sheet": 3
+            "portrait": 11,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/wenruyu/nes2/portrait.png",
-            "portrait4x": "chars/wenruyu/nes2/portrait@4x.png",
-            "body": "chars/wenruyu/nes2/body.png",
-            "body4x": "chars/wenruyu/nes2/body@4x.png",
-            "sheet": "chars/wenruyu/nes2/sheet.png",
-            "sheet4x": "chars/wenruyu/nes2/sheet@4x.png",
-            "sheetJson": "chars/wenruyu/nes2/sheet.json"
+            "portrait": "chars/wenruyu/nes_old/portrait.png",
+            "portrait4x": "chars/wenruyu/nes_old/portrait@4x.png",
+            "body": "chars/wenruyu/nes_old/body.png",
+            "body4x": "chars/wenruyu/nes_old/body@4x.png",
+            "sheet": "chars/wenruyu/nes_old/sheet.png",
+            "sheet4x": "chars/wenruyu/nes_old/sheet@4x.png",
+            "sheetJson": "chars/wenruyu/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -3364,14 +3399,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
-            "sheet": 6
+            "portrait": 7,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -3433,30 +3467,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
-            "sheet": 3
+            "portrait": 11,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/xiaolian/nes2/portrait.png",
-            "portrait4x": "chars/xiaolian/nes2/portrait@4x.png",
-            "body": "chars/xiaolian/nes2/body.png",
-            "body4x": "chars/xiaolian/nes2/body@4x.png",
-            "sheet": "chars/xiaolian/nes2/sheet.png",
-            "sheet4x": "chars/xiaolian/nes2/sheet@4x.png",
-            "sheetJson": "chars/xiaolian/nes2/sheet.json"
+            "portrait": "chars/xiaolian/nes_old/portrait.png",
+            "portrait4x": "chars/xiaolian/nes_old/portrait@4x.png",
+            "body": "chars/xiaolian/nes_old/body.png",
+            "body4x": "chars/xiaolian/nes_old/body@4x.png",
+            "sheet": "chars/xiaolian/nes_old/sheet.png",
+            "sheet4x": "chars/xiaolian/nes_old/sheet@4x.png",
+            "sheetJson": "chars/xiaolian/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -3469,14 +3504,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
-            "sheet": 6
+            "portrait": 8,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -3538,30 +3572,31 @@
             ]
           },
           "colours": {
-            "portrait": 6,
-            "sheet": 3
+            "portrait": 12,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/lihanshan/nes2/portrait.png",
-            "portrait4x": "chars/lihanshan/nes2/portrait@4x.png",
-            "body": "chars/lihanshan/nes2/body.png",
-            "body4x": "chars/lihanshan/nes2/body@4x.png",
-            "sheet": "chars/lihanshan/nes2/sheet.png",
-            "sheet4x": "chars/lihanshan/nes2/sheet@4x.png",
-            "sheetJson": "chars/lihanshan/nes2/sheet.json"
+            "portrait": "chars/lihanshan/nes_old/portrait.png",
+            "portrait4x": "chars/lihanshan/nes_old/portrait@4x.png",
+            "body": "chars/lihanshan/nes_old/body.png",
+            "body4x": "chars/lihanshan/nes_old/body@4x.png",
+            "sheet": "chars/lihanshan/nes_old/sheet.png",
+            "sheet4x": "chars/lihanshan/nes_old/sheet@4x.png",
+            "sheetJson": "chars/lihanshan/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -3574,14 +3609,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
-            "sheet": 6
+            "portrait": 6,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -3643,30 +3677,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
-            "sheet": 3
+            "portrait": 12,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/yuweng/nes2/portrait.png",
-            "portrait4x": "chars/yuweng/nes2/portrait@4x.png",
-            "body": "chars/yuweng/nes2/body.png",
-            "body4x": "chars/yuweng/nes2/body@4x.png",
-            "sheet": "chars/yuweng/nes2/sheet.png",
-            "sheet4x": "chars/yuweng/nes2/sheet@4x.png",
-            "sheetJson": "chars/yuweng/nes2/sheet.json"
+            "portrait": "chars/yuweng/nes_old/portrait.png",
+            "portrait4x": "chars/yuweng/nes_old/portrait@4x.png",
+            "body": "chars/yuweng/nes_old/body.png",
+            "body4x": "chars/yuweng/nes_old/body@4x.png",
+            "sheet": "chars/yuweng/nes_old/sheet.png",
+            "sheet4x": "chars/yuweng/nes_old/sheet@4x.png",
+            "sheetJson": "chars/yuweng/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -3679,14 +3714,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
-            "sheet": 6
+            "portrait": 7,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -3749,29 +3783,30 @@
           },
           "colours": {
             "portrait": 7,
-            "sheet": 3
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/guimian/nes2/portrait.png",
-            "portrait4x": "chars/guimian/nes2/portrait@4x.png",
-            "body": "chars/guimian/nes2/body.png",
-            "body4x": "chars/guimian/nes2/body@4x.png",
-            "sheet": "chars/guimian/nes2/sheet.png",
-            "sheet4x": "chars/guimian/nes2/sheet@4x.png",
-            "sheetJson": "chars/guimian/nes2/sheet.json"
+            "portrait": "chars/guimian/nes_old/portrait.png",
+            "portrait4x": "chars/guimian/nes_old/portrait@4x.png",
+            "body": "chars/guimian/nes_old/body.png",
+            "body4x": "chars/guimian/nes_old/body@4x.png",
+            "sheet": "chars/guimian/nes_old/sheet.png",
+            "sheet4x": "chars/guimian/nes_old/sheet@4x.png",
+            "sheetJson": "chars/guimian/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -3785,13 +3820,12 @@
           },
           "colours": {
             "portrait": 7,
-            "sheet": 5
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -3853,30 +3887,31 @@
             ]
           },
           "colours": {
-            "portrait": 6,
-            "sheet": 3
+            "portrait": 7,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/masked/nes2/portrait.png",
-            "portrait4x": "chars/masked/nes2/portrait@4x.png",
-            "body": "chars/masked/nes2/body.png",
-            "body4x": "chars/masked/nes2/body@4x.png",
-            "sheet": "chars/masked/nes2/sheet.png",
-            "sheet4x": "chars/masked/nes2/sheet@4x.png",
-            "sheetJson": "chars/masked/nes2/sheet.json"
+            "portrait": "chars/masked/nes_old/portrait.png",
+            "portrait4x": "chars/masked/nes_old/portrait@4x.png",
+            "body": "chars/masked/nes_old/body.png",
+            "body4x": "chars/masked/nes_old/body@4x.png",
+            "sheet": "chars/masked/nes_old/sheet.png",
+            "sheet4x": "chars/masked/nes_old/sheet@4x.png",
+            "sheetJson": "chars/masked/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -3889,14 +3924,13 @@
             ]
           },
           "colours": {
-            "portrait": 7,
-            "sheet": 5
+            "portrait": 6,
+            "sheet": 3
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -7952,8 +7986,8 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 6
+            "portrait": 9,
+            "sheet": 5
           },
           "animations": [
             "idle",
@@ -7963,20 +7997,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/hubanxian/nes2/portrait.png",
-            "portrait4x": "chars/hubanxian/nes2/portrait@4x.png",
-            "body": "chars/hubanxian/nes2/body.png",
-            "body4x": "chars/hubanxian/nes2/body@4x.png",
-            "sheet": "chars/hubanxian/nes2/sheet.png",
-            "sheet4x": "chars/hubanxian/nes2/sheet@4x.png",
-            "sheetJson": "chars/hubanxian/nes2/sheet.json"
+            "portrait": "chars/hubanxian/nes_old/portrait.png",
+            "portrait4x": "chars/hubanxian/nes_old/portrait@4x.png",
+            "body": "chars/hubanxian/nes_old/body.png",
+            "body4x": "chars/hubanxian/nes_old/body@4x.png",
+            "sheet": "chars/hubanxian/nes_old/sheet.png",
+            "sheet4x": "chars/hubanxian/nes_old/sheet@4x.png",
+            "sheetJson": "chars/hubanxian/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -7989,8 +8023,8 @@
             ]
           },
           "colours": {
-            "portrait": 9,
-            "sheet": 5
+            "portrait": 10,
+            "sheet": 6
           },
           "animations": [
             "idle",
@@ -8058,7 +8092,7 @@
             ]
           },
           "colours": {
-            "portrait": 12,
+            "portrait": 10,
             "sheet": 6
           },
           "animations": [
@@ -8069,20 +8103,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/jiabafang/nes2/portrait.png",
-            "portrait4x": "chars/jiabafang/nes2/portrait@4x.png",
-            "body": "chars/jiabafang/nes2/body.png",
-            "body4x": "chars/jiabafang/nes2/body@4x.png",
-            "sheet": "chars/jiabafang/nes2/sheet.png",
-            "sheet4x": "chars/jiabafang/nes2/sheet@4x.png",
-            "sheetJson": "chars/jiabafang/nes2/sheet.json"
+            "portrait": "chars/jiabafang/nes_old/portrait.png",
+            "portrait4x": "chars/jiabafang/nes_old/portrait@4x.png",
+            "body": "chars/jiabafang/nes_old/body.png",
+            "body4x": "chars/jiabafang/nes_old/body@4x.png",
+            "sheet": "chars/jiabafang/nes_old/sheet.png",
+            "sheet4x": "chars/jiabafang/nes_old/sheet@4x.png",
+            "sheetJson": "chars/jiabafang/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -8095,7 +8129,7 @@
             ]
           },
           "colours": {
-            "portrait": 10,
+            "portrait": 12,
             "sheet": 6
           },
           "animations": [
@@ -8164,8 +8198,8 @@
             ]
           },
           "colours": {
-            "portrait": 7,
-            "sheet": 6
+            "portrait": 9,
+            "sheet": 5
           },
           "animations": [
             "idle",
@@ -8175,20 +8209,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/wudadan/nes2/portrait.png",
-            "portrait4x": "chars/wudadan/nes2/portrait@4x.png",
-            "body": "chars/wudadan/nes2/body.png",
-            "body4x": "chars/wudadan/nes2/body@4x.png",
-            "sheet": "chars/wudadan/nes2/sheet.png",
-            "sheet4x": "chars/wudadan/nes2/sheet@4x.png",
-            "sheetJson": "chars/wudadan/nes2/sheet.json"
+            "portrait": "chars/wudadan/nes_old/portrait.png",
+            "portrait4x": "chars/wudadan/nes_old/portrait@4x.png",
+            "body": "chars/wudadan/nes_old/body.png",
+            "body4x": "chars/wudadan/nes_old/body@4x.png",
+            "sheet": "chars/wudadan/nes_old/sheet.png",
+            "sheet4x": "chars/wudadan/nes_old/sheet@4x.png",
+            "sheetJson": "chars/wudadan/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -8201,8 +8235,8 @@
             ]
           },
           "colours": {
-            "portrait": 9,
-            "sheet": 5
+            "portrait": 7,
+            "sheet": 6
           },
           "animations": [
             "idle",
@@ -8281,20 +8315,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/wenduizhang/nes2/portrait.png",
-            "portrait4x": "chars/wenduizhang/nes2/portrait@4x.png",
-            "body": "chars/wenduizhang/nes2/body.png",
-            "body4x": "chars/wenduizhang/nes2/body@4x.png",
-            "sheet": "chars/wenduizhang/nes2/sheet.png",
-            "sheet4x": "chars/wenduizhang/nes2/sheet@4x.png",
-            "sheetJson": "chars/wenduizhang/nes2/sheet.json"
+            "portrait": "chars/wenduizhang/nes_old/portrait.png",
+            "portrait4x": "chars/wenduizhang/nes_old/portrait@4x.png",
+            "body": "chars/wenduizhang/nes_old/body.png",
+            "body4x": "chars/wenduizhang/nes_old/body@4x.png",
+            "sheet": "chars/wenduizhang/nes_old/sheet.png",
+            "sheet4x": "chars/wenduizhang/nes_old/sheet@4x.png",
+            "sheetJson": "chars/wenduizhang/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -8376,7 +8410,7 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 11,
             "sheet": 6
           },
           "animations": [
@@ -8387,20 +8421,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/suxiaowan/nes2/portrait.png",
-            "portrait4x": "chars/suxiaowan/nes2/portrait@4x.png",
-            "body": "chars/suxiaowan/nes2/body.png",
-            "body4x": "chars/suxiaowan/nes2/body@4x.png",
-            "sheet": "chars/suxiaowan/nes2/sheet.png",
-            "sheet4x": "chars/suxiaowan/nes2/sheet@4x.png",
-            "sheetJson": "chars/suxiaowan/nes2/sheet.json"
+            "portrait": "chars/suxiaowan/nes_old/portrait.png",
+            "portrait4x": "chars/suxiaowan/nes_old/portrait@4x.png",
+            "body": "chars/suxiaowan/nes_old/body.png",
+            "body4x": "chars/suxiaowan/nes_old/body@4x.png",
+            "sheet": "chars/suxiaowan/nes_old/sheet.png",
+            "sheet4x": "chars/suxiaowan/nes_old/sheet@4x.png",
+            "sheetJson": "chars/suxiaowan/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -8413,7 +8447,7 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 7,
             "sheet": 6
           },
           "animations": [
@@ -8482,8 +8516,8 @@
             ]
           },
           "colours": {
-            "portrait": 9,
-            "sheet": 6
+            "portrait": 11,
+            "sheet": 5
           },
           "animations": [
             "idle",
@@ -8493,20 +8527,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/chutiankuo/nes2/portrait.png",
-            "portrait4x": "chars/chutiankuo/nes2/portrait@4x.png",
-            "body": "chars/chutiankuo/nes2/body.png",
-            "body4x": "chars/chutiankuo/nes2/body@4x.png",
-            "sheet": "chars/chutiankuo/nes2/sheet.png",
-            "sheet4x": "chars/chutiankuo/nes2/sheet@4x.png",
-            "sheetJson": "chars/chutiankuo/nes2/sheet.json"
+            "portrait": "chars/chutiankuo/nes_old/portrait.png",
+            "portrait4x": "chars/chutiankuo/nes_old/portrait@4x.png",
+            "body": "chars/chutiankuo/nes_old/body.png",
+            "body4x": "chars/chutiankuo/nes_old/body@4x.png",
+            "sheet": "chars/chutiankuo/nes_old/sheet.png",
+            "sheet4x": "chars/chutiankuo/nes_old/sheet@4x.png",
+            "sheetJson": "chars/chutiankuo/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -8519,8 +8553,8 @@
             ]
           },
           "colours": {
-            "portrait": 11,
-            "sheet": 5
+            "portrait": 9,
+            "sheet": 6
           },
           "animations": [
             "idle",
@@ -8588,8 +8622,8 @@
             ]
           },
           "colours": {
-            "portrait": 8,
-            "sheet": 6
+            "portrait": 7,
+            "sheet": 5
           },
           "animations": [
             "idle",
@@ -8599,20 +8633,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/niubaobao/nes2/portrait.png",
-            "portrait4x": "chars/niubaobao/nes2/portrait@4x.png",
-            "body": "chars/niubaobao/nes2/body.png",
-            "body4x": "chars/niubaobao/nes2/body@4x.png",
-            "sheet": "chars/niubaobao/nes2/sheet.png",
-            "sheet4x": "chars/niubaobao/nes2/sheet@4x.png",
-            "sheetJson": "chars/niubaobao/nes2/sheet.json"
+            "portrait": "chars/niubaobao/nes_old/portrait.png",
+            "portrait4x": "chars/niubaobao/nes_old/portrait@4x.png",
+            "body": "chars/niubaobao/nes_old/body.png",
+            "body4x": "chars/niubaobao/nes_old/body@4x.png",
+            "sheet": "chars/niubaobao/nes_old/sheet.png",
+            "sheet4x": "chars/niubaobao/nes_old/sheet@4x.png",
+            "sheetJson": "chars/niubaobao/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -8625,8 +8659,8 @@
             ]
           },
           "colours": {
-            "portrait": 7,
-            "sheet": 5
+            "portrait": 8,
+            "sheet": 6
           },
           "animations": [
             "idle",
@@ -8694,7 +8728,7 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 13,
             "sheet": 6
           },
           "animations": [
@@ -8705,20 +8739,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/mojide/nes2/portrait.png",
-            "portrait4x": "chars/mojide/nes2/portrait@4x.png",
-            "body": "chars/mojide/nes2/body.png",
-            "body4x": "chars/mojide/nes2/body@4x.png",
-            "sheet": "chars/mojide/nes2/sheet.png",
-            "sheet4x": "chars/mojide/nes2/sheet@4x.png",
-            "sheetJson": "chars/mojide/nes2/sheet.json"
+            "portrait": "chars/mojide/nes_old/portrait.png",
+            "portrait4x": "chars/mojide/nes_old/portrait@4x.png",
+            "body": "chars/mojide/nes_old/body.png",
+            "body4x": "chars/mojide/nes_old/body@4x.png",
+            "sheet": "chars/mojide/nes_old/sheet.png",
+            "sheet4x": "chars/mojide/nes_old/sheet@4x.png",
+            "sheetJson": "chars/mojide/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -8731,7 +8765,7 @@
             ]
           },
           "colours": {
-            "portrait": 13,
+            "portrait": 11,
             "sheet": 6
           },
           "animations": [
@@ -8800,7 +8834,7 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 12,
             "sheet": 6
           },
           "animations": [
@@ -8811,20 +8845,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/huotianxia/nes2/portrait.png",
-            "portrait4x": "chars/huotianxia/nes2/portrait@4x.png",
-            "body": "chars/huotianxia/nes2/body.png",
-            "body4x": "chars/huotianxia/nes2/body@4x.png",
-            "sheet": "chars/huotianxia/nes2/sheet.png",
-            "sheet4x": "chars/huotianxia/nes2/sheet@4x.png",
-            "sheetJson": "chars/huotianxia/nes2/sheet.json"
+            "portrait": "chars/huotianxia/nes_old/portrait.png",
+            "portrait4x": "chars/huotianxia/nes_old/portrait@4x.png",
+            "body": "chars/huotianxia/nes_old/body.png",
+            "body4x": "chars/huotianxia/nes_old/body@4x.png",
+            "sheet": "chars/huotianxia/nes_old/sheet.png",
+            "sheet4x": "chars/huotianxia/nes_old/sheet@4x.png",
+            "sheetJson": "chars/huotianxia/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -8837,7 +8871,7 @@
             ]
           },
           "colours": {
-            "portrait": 12,
+            "portrait": 8,
             "sheet": 6
           },
           "animations": [
@@ -8906,7 +8940,7 @@
             ]
           },
           "colours": {
-            "portrait": 10,
+            "portrait": 11,
             "sheet": 6
           },
           "animations": [
@@ -8917,20 +8951,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/mowuya/nes2/portrait.png",
-            "portrait4x": "chars/mowuya/nes2/portrait@4x.png",
-            "body": "chars/mowuya/nes2/body.png",
-            "body4x": "chars/mowuya/nes2/body@4x.png",
-            "sheet": "chars/mowuya/nes2/sheet.png",
-            "sheet4x": "chars/mowuya/nes2/sheet@4x.png",
-            "sheetJson": "chars/mowuya/nes2/sheet.json"
+            "portrait": "chars/mowuya/nes_old/portrait.png",
+            "portrait4x": "chars/mowuya/nes_old/portrait@4x.png",
+            "body": "chars/mowuya/nes_old/body.png",
+            "body4x": "chars/mowuya/nes_old/body@4x.png",
+            "sheet": "chars/mowuya/nes_old/sheet.png",
+            "sheet4x": "chars/mowuya/nes_old/sheet@4x.png",
+            "sheetJson": "chars/mowuya/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -8943,7 +8977,7 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 10,
             "sheet": 6
           },
           "animations": [
@@ -9012,7 +9046,7 @@
             ]
           },
           "colours": {
-            "portrait": 10,
+            "portrait": 9,
             "sheet": 6
           },
           "animations": [
@@ -9023,20 +9057,20 @@
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/aman/nes2/portrait.png",
-            "portrait4x": "chars/aman/nes2/portrait@4x.png",
-            "body": "chars/aman/nes2/body.png",
-            "body4x": "chars/aman/nes2/body@4x.png",
-            "sheet": "chars/aman/nes2/sheet.png",
-            "sheet4x": "chars/aman/nes2/sheet@4x.png",
-            "sheetJson": "chars/aman/nes2/sheet.json"
+            "portrait": "chars/aman/nes_old/portrait.png",
+            "portrait4x": "chars/aman/nes_old/portrait@4x.png",
+            "body": "chars/aman/nes_old/body.png",
+            "body4x": "chars/aman/nes_old/body@4x.png",
+            "sheet": "chars/aman/nes_old/sheet.png",
+            "sheet4x": "chars/aman/nes_old/sheet@4x.png",
+            "sheetJson": "chars/aman/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -9049,7 +9083,7 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 10,
             "sheet": 6
           },
           "animations": [
@@ -10691,24 +10725,25 @@
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/jingci/nes2/portrait.png",
-            "portrait4x": "chars/jingci/nes2/portrait@4x.png",
-            "body": "chars/jingci/nes2/body.png",
-            "body4x": "chars/jingci/nes2/body@4x.png",
-            "sheet": "chars/jingci/nes2/sheet.png",
-            "sheet4x": "chars/jingci/nes2/sheet@4x.png",
-            "sheetJson": "chars/jingci/nes2/sheet.json"
+            "portrait": "chars/jingci/nes_old/portrait.png",
+            "portrait4x": "chars/jingci/nes_old/portrait@4x.png",
+            "body": "chars/jingci/nes_old/body.png",
+            "body4x": "chars/jingci/nes_old/body@4x.png",
+            "sheet": "chars/jingci/nes_old/sheet.png",
+            "sheet4x": "chars/jingci/nes_old/sheet@4x.png",
+            "sheetJson": "chars/jingci/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -10727,8 +10762,7 @@
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -10790,30 +10824,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 12,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_grandmaster/nes2/portrait.png",
-            "portrait4x": "chars/sx_grandmaster/nes2/portrait@4x.png",
-            "body": "chars/sx_grandmaster/nes2/body.png",
-            "body4x": "chars/sx_grandmaster/nes2/body@4x.png",
-            "sheet": "chars/sx_grandmaster/nes2/sheet.png",
-            "sheet4x": "chars/sx_grandmaster/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_grandmaster/nes2/sheet.json"
+            "portrait": "chars/sx_grandmaster/nes_old/portrait.png",
+            "portrait4x": "chars/sx_grandmaster/nes_old/portrait@4x.png",
+            "body": "chars/sx_grandmaster/nes_old/body.png",
+            "body4x": "chars/sx_grandmaster/nes_old/body@4x.png",
+            "sheet": "chars/sx_grandmaster/nes_old/sheet.png",
+            "sheet4x": "chars/sx_grandmaster/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_grandmaster/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -10826,14 +10861,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
+            "portrait": 8,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -10895,30 +10929,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 8,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_smith/nes2/portrait.png",
-            "portrait4x": "chars/sx_smith/nes2/portrait@4x.png",
-            "body": "chars/sx_smith/nes2/body.png",
-            "body4x": "chars/sx_smith/nes2/body@4x.png",
-            "sheet": "chars/sx_smith/nes2/sheet.png",
-            "sheet4x": "chars/sx_smith/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_smith/nes2/sheet.json"
+            "portrait": "chars/sx_smith/nes_old/portrait.png",
+            "portrait4x": "chars/sx_smith/nes_old/portrait@4x.png",
+            "body": "chars/sx_smith/nes_old/body.png",
+            "body4x": "chars/sx_smith/nes_old/body@4x.png",
+            "sheet": "chars/sx_smith/nes_old/sheet.png",
+            "sheet4x": "chars/sx_smith/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_smith/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -10931,14 +10966,13 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 7,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -11000,30 +11034,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 11,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_founder/nes2/portrait.png",
-            "portrait4x": "chars/sx_founder/nes2/portrait@4x.png",
-            "body": "chars/sx_founder/nes2/body.png",
-            "body4x": "chars/sx_founder/nes2/body@4x.png",
-            "sheet": "chars/sx_founder/nes2/sheet.png",
-            "sheet4x": "chars/sx_founder/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_founder/nes2/sheet.json"
+            "portrait": "chars/sx_founder/nes_old/portrait.png",
+            "portrait4x": "chars/sx_founder/nes_old/portrait@4x.png",
+            "body": "chars/sx_founder/nes_old/body.png",
+            "body4x": "chars/sx_founder/nes_old/body@4x.png",
+            "sheet": "chars/sx_founder/nes_old/sheet.png",
+            "sheet4x": "chars/sx_founder/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_founder/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -11036,14 +11071,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 8,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -11105,30 +11139,31 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 14,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_scout/nes2/portrait.png",
-            "portrait4x": "chars/sx_scout/nes2/portrait@4x.png",
-            "body": "chars/sx_scout/nes2/body.png",
-            "body4x": "chars/sx_scout/nes2/body@4x.png",
-            "sheet": "chars/sx_scout/nes2/sheet.png",
-            "sheet4x": "chars/sx_scout/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_scout/nes2/sheet.json"
+            "portrait": "chars/sx_scout/nes_old/portrait.png",
+            "portrait4x": "chars/sx_scout/nes_old/portrait@4x.png",
+            "body": "chars/sx_scout/nes_old/body.png",
+            "body4x": "chars/sx_scout/nes_old/body@4x.png",
+            "sheet": "chars/sx_scout/nes_old/sheet.png",
+            "sheet4x": "chars/sx_scout/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_scout/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -11141,14 +11176,13 @@
             ]
           },
           "colours": {
-            "portrait": 14,
+            "portrait": 9,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -11210,30 +11244,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 11,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_disciple/nes2/portrait.png",
-            "portrait4x": "chars/sx_disciple/nes2/portrait@4x.png",
-            "body": "chars/sx_disciple/nes2/body.png",
-            "body4x": "chars/sx_disciple/nes2/body@4x.png",
-            "sheet": "chars/sx_disciple/nes2/sheet.png",
-            "sheet4x": "chars/sx_disciple/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_disciple/nes2/sheet.json"
+            "portrait": "chars/sx_disciple/nes_old/portrait.png",
+            "portrait4x": "chars/sx_disciple/nes_old/portrait@4x.png",
+            "body": "chars/sx_disciple/nes_old/body.png",
+            "body4x": "chars/sx_disciple/nes_old/body@4x.png",
+            "sheet": "chars/sx_disciple/nes_old/sheet.png",
+            "sheet4x": "chars/sx_disciple/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_disciple/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -11246,14 +11281,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 8,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -11315,30 +11349,31 @@
             ]
           },
           "colours": {
-            "portrait": 10,
+            "portrait": 12,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_archer/nes2/portrait.png",
-            "portrait4x": "chars/sx_archer/nes2/portrait@4x.png",
-            "body": "chars/sx_archer/nes2/body.png",
-            "body4x": "chars/sx_archer/nes2/body@4x.png",
-            "sheet": "chars/sx_archer/nes2/sheet.png",
-            "sheet4x": "chars/sx_archer/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_archer/nes2/sheet.json"
+            "portrait": "chars/sx_archer/nes_old/portrait.png",
+            "portrait4x": "chars/sx_archer/nes_old/portrait@4x.png",
+            "body": "chars/sx_archer/nes_old/body.png",
+            "body4x": "chars/sx_archer/nes_old/body@4x.png",
+            "sheet": "chars/sx_archer/nes_old/sheet.png",
+            "sheet4x": "chars/sx_archer/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_archer/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -11351,14 +11386,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
+            "portrait": 10,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -11420,30 +11454,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 11,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_saber/nes2/portrait.png",
-            "portrait4x": "chars/sx_saber/nes2/portrait@4x.png",
-            "body": "chars/sx_saber/nes2/body.png",
-            "body4x": "chars/sx_saber/nes2/body@4x.png",
-            "sheet": "chars/sx_saber/nes2/sheet.png",
-            "sheet4x": "chars/sx_saber/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_saber/nes2/sheet.json"
+            "portrait": "chars/sx_saber/nes_old/portrait.png",
+            "portrait4x": "chars/sx_saber/nes_old/portrait@4x.png",
+            "body": "chars/sx_saber/nes_old/body.png",
+            "body4x": "chars/sx_saber/nes_old/body@4x.png",
+            "sheet": "chars/sx_saber/nes_old/sheet.png",
+            "sheet4x": "chars/sx_saber/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_saber/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -11456,14 +11491,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 7,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -11525,30 +11559,31 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 5
+            "portrait": 13,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_sword/nes2/portrait.png",
-            "portrait4x": "chars/sx_sword/nes2/portrait@4x.png",
-            "body": "chars/sx_sword/nes2/body.png",
-            "body4x": "chars/sx_sword/nes2/body@4x.png",
-            "sheet": "chars/sx_sword/nes2/sheet.png",
-            "sheet4x": "chars/sx_sword/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_sword/nes2/sheet.json"
+            "portrait": "chars/sx_sword/nes_old/portrait.png",
+            "portrait4x": "chars/sx_sword/nes_old/portrait@4x.png",
+            "body": "chars/sx_sword/nes_old/body.png",
+            "body4x": "chars/sx_sword/nes_old/body@4x.png",
+            "sheet": "chars/sx_sword/nes_old/sheet.png",
+            "sheet4x": "chars/sx_sword/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_sword/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -11561,14 +11596,13 @@
             ]
           },
           "colours": {
-            "portrait": 13,
-            "sheet": 6
+            "portrait": 10,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -11630,30 +11664,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
-            "sheet": 6
+            "portrait": 11,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_hidden/nes2/portrait.png",
-            "portrait4x": "chars/sx_hidden/nes2/portrait@4x.png",
-            "body": "chars/sx_hidden/nes2/body.png",
-            "body4x": "chars/sx_hidden/nes2/body@4x.png",
-            "sheet": "chars/sx_hidden/nes2/sheet.png",
-            "sheet4x": "chars/sx_hidden/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_hidden/nes2/sheet.json"
+            "portrait": "chars/sx_hidden/nes_old/portrait.png",
+            "portrait4x": "chars/sx_hidden/nes_old/portrait@4x.png",
+            "body": "chars/sx_hidden/nes_old/body.png",
+            "body4x": "chars/sx_hidden/nes_old/body@4x.png",
+            "sheet": "chars/sx_hidden/nes_old/sheet.png",
+            "sheet4x": "chars/sx_hidden/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_hidden/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -11666,14 +11701,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
-            "sheet": 5
+            "portrait": 8,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -11735,30 +11769,31 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 5
+            "portrait": 12,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_spear/nes2/portrait.png",
-            "portrait4x": "chars/sx_spear/nes2/portrait@4x.png",
-            "body": "chars/sx_spear/nes2/body.png",
-            "body4x": "chars/sx_spear/nes2/body@4x.png",
-            "sheet": "chars/sx_spear/nes2/sheet.png",
-            "sheet4x": "chars/sx_spear/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_spear/nes2/sheet.json"
+            "portrait": "chars/sx_spear/nes_old/portrait.png",
+            "portrait4x": "chars/sx_spear/nes_old/portrait@4x.png",
+            "body": "chars/sx_spear/nes_old/body.png",
+            "body4x": "chars/sx_spear/nes_old/body@4x.png",
+            "sheet": "chars/sx_spear/nes_old/sheet.png",
+            "sheet4x": "chars/sx_spear/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_spear/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -11771,14 +11806,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
-            "sheet": 6
+            "portrait": 10,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -11840,30 +11874,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
-            "sheet": 5
+            "portrait": 10,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_inner/nes2/portrait.png",
-            "portrait4x": "chars/sx_inner/nes2/portrait@4x.png",
-            "body": "chars/sx_inner/nes2/body.png",
-            "body4x": "chars/sx_inner/nes2/body@4x.png",
-            "sheet": "chars/sx_inner/nes2/sheet.png",
-            "sheet4x": "chars/sx_inner/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_inner/nes2/sheet.json"
+            "portrait": "chars/sx_inner/nes_old/portrait.png",
+            "portrait4x": "chars/sx_inner/nes_old/portrait@4x.png",
+            "body": "chars/sx_inner/nes_old/body.png",
+            "body4x": "chars/sx_inner/nes_old/body@4x.png",
+            "sheet": "chars/sx_inner/nes_old/sheet.png",
+            "sheet4x": "chars/sx_inner/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_inner/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -11876,14 +11911,13 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 6
+            "portrait": 7,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -11945,30 +11979,31 @@
             ]
           },
           "colours": {
-            "portrait": 10,
+            "portrait": 12,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_swordform/nes2/portrait.png",
-            "portrait4x": "chars/sx_swordform/nes2/portrait@4x.png",
-            "body": "chars/sx_swordform/nes2/body.png",
-            "body4x": "chars/sx_swordform/nes2/body@4x.png",
-            "sheet": "chars/sx_swordform/nes2/sheet.png",
-            "sheet4x": "chars/sx_swordform/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_swordform/nes2/sheet.json"
+            "portrait": "chars/sx_swordform/nes_old/portrait.png",
+            "portrait4x": "chars/sx_swordform/nes_old/portrait@4x.png",
+            "body": "chars/sx_swordform/nes_old/body.png",
+            "body4x": "chars/sx_swordform/nes_old/body@4x.png",
+            "sheet": "chars/sx_swordform/nes_old/sheet.png",
+            "sheet4x": "chars/sx_swordform/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_swordform/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -11981,14 +12016,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
+            "portrait": 10,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -12051,29 +12085,30 @@
           },
           "colours": {
             "portrait": 8,
-            "sheet": 6
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_crossbow/nes2/portrait.png",
-            "portrait4x": "chars/sx_crossbow/nes2/portrait@4x.png",
-            "body": "chars/sx_crossbow/nes2/body.png",
-            "body4x": "chars/sx_crossbow/nes2/body@4x.png",
-            "sheet": "chars/sx_crossbow/nes2/sheet.png",
-            "sheet4x": "chars/sx_crossbow/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_crossbow/nes2/sheet.json"
+            "portrait": "chars/sx_crossbow/nes_old/portrait.png",
+            "portrait4x": "chars/sx_crossbow/nes_old/portrait@4x.png",
+            "body": "chars/sx_crossbow/nes_old/body.png",
+            "body4x": "chars/sx_crossbow/nes_old/body@4x.png",
+            "sheet": "chars/sx_crossbow/nes_old/sheet.png",
+            "sheet4x": "chars/sx_crossbow/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_crossbow/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -12087,13 +12122,12 @@
           },
           "colours": {
             "portrait": 8,
-            "sheet": 5
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -12155,30 +12189,31 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 12,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_master/nes2/portrait.png",
-            "portrait4x": "chars/sx_master/nes2/portrait@4x.png",
-            "body": "chars/sx_master/nes2/body.png",
-            "body4x": "chars/sx_master/nes2/body@4x.png",
-            "sheet": "chars/sx_master/nes2/sheet.png",
-            "sheet4x": "chars/sx_master/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_master/nes2/sheet.json"
+            "portrait": "chars/sx_master/nes_old/portrait.png",
+            "portrait4x": "chars/sx_master/nes_old/portrait@4x.png",
+            "body": "chars/sx_master/nes_old/body.png",
+            "body4x": "chars/sx_master/nes_old/body@4x.png",
+            "sheet": "chars/sx_master/nes_old/sheet.png",
+            "sheet4x": "chars/sx_master/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_master/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -12191,14 +12226,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
+            "portrait": 9,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -12260,30 +12294,31 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 5
+            "portrait": 9,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_starbow/nes2/portrait.png",
-            "portrait4x": "chars/sx_starbow/nes2/portrait@4x.png",
-            "body": "chars/sx_starbow/nes2/body.png",
-            "body4x": "chars/sx_starbow/nes2/body@4x.png",
-            "sheet": "chars/sx_starbow/nes2/sheet.png",
-            "sheet4x": "chars/sx_starbow/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_starbow/nes2/sheet.json"
+            "portrait": "chars/sx_starbow/nes_old/portrait.png",
+            "portrait4x": "chars/sx_starbow/nes_old/portrait@4x.png",
+            "body": "chars/sx_starbow/nes_old/body.png",
+            "body4x": "chars/sx_starbow/nes_old/body@4x.png",
+            "sheet": "chars/sx_starbow/nes_old/sheet.png",
+            "sheet4x": "chars/sx_starbow/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_starbow/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -12296,14 +12331,13 @@
             ]
           },
           "colours": {
-            "portrait": 9,
-            "sheet": 6
+            "portrait": 10,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -12365,30 +12399,31 @@
             ]
           },
           "colours": {
-            "portrait": 10,
+            "portrait": 9,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_rider/nes2/portrait.png",
-            "portrait4x": "chars/sx_rider/nes2/portrait@4x.png",
-            "body": "chars/sx_rider/nes2/body.png",
-            "body4x": "chars/sx_rider/nes2/body@4x.png",
-            "sheet": "chars/sx_rider/nes2/sheet.png",
-            "sheet4x": "chars/sx_rider/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_rider/nes2/sheet.json"
+            "portrait": "chars/sx_rider/nes_old/portrait.png",
+            "portrait4x": "chars/sx_rider/nes_old/portrait@4x.png",
+            "body": "chars/sx_rider/nes_old/body.png",
+            "body4x": "chars/sx_rider/nes_old/body@4x.png",
+            "sheet": "chars/sx_rider/nes_old/sheet.png",
+            "sheet4x": "chars/sx_rider/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_rider/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -12401,14 +12436,13 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 10,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -12470,30 +12504,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 10,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_ironcav/nes2/portrait.png",
-            "portrait4x": "chars/sx_ironcav/nes2/portrait@4x.png",
-            "body": "chars/sx_ironcav/nes2/body.png",
-            "body4x": "chars/sx_ironcav/nes2/body@4x.png",
-            "sheet": "chars/sx_ironcav/nes2/sheet.png",
-            "sheet4x": "chars/sx_ironcav/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_ironcav/nes2/sheet.json"
+            "portrait": "chars/sx_ironcav/nes_old/portrait.png",
+            "portrait4x": "chars/sx_ironcav/nes_old/portrait@4x.png",
+            "body": "chars/sx_ironcav/nes_old/body.png",
+            "body4x": "chars/sx_ironcav/nes_old/body@4x.png",
+            "sheet": "chars/sx_ironcav/nes_old/sheet.png",
+            "sheet4x": "chars/sx_ironcav/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_ironcav/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -12506,14 +12541,13 @@
             ]
           },
           "colours": {
-            "portrait": 10,
+            "portrait": 8,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -12581,24 +12615,25 @@
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_caravan/nes2/portrait.png",
-            "portrait4x": "chars/sx_caravan/nes2/portrait@4x.png",
-            "body": "chars/sx_caravan/nes2/body.png",
-            "body4x": "chars/sx_caravan/nes2/body@4x.png",
-            "sheet": "chars/sx_caravan/nes2/sheet.png",
-            "sheet4x": "chars/sx_caravan/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_caravan/nes2/sheet.json"
+            "portrait": "chars/sx_caravan/nes_old/portrait.png",
+            "portrait4x": "chars/sx_caravan/nes_old/portrait@4x.png",
+            "body": "chars/sx_caravan/nes_old/body.png",
+            "body4x": "chars/sx_caravan/nes_old/body@4x.png",
+            "sheet": "chars/sx_caravan/nes_old/sheet.png",
+            "sheet4x": "chars/sx_caravan/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_caravan/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -12617,8 +12652,7 @@
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -12680,30 +12714,31 @@
             ]
           },
           "colours": {
-            "portrait": 6,
+            "portrait": 7,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_ram/nes2/portrait.png",
-            "portrait4x": "chars/sx_ram/nes2/portrait@4x.png",
-            "body": "chars/sx_ram/nes2/body.png",
-            "body4x": "chars/sx_ram/nes2/body@4x.png",
-            "sheet": "chars/sx_ram/nes2/sheet.png",
-            "sheet4x": "chars/sx_ram/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_ram/nes2/sheet.json"
+            "portrait": "chars/sx_ram/nes_old/portrait.png",
+            "portrait4x": "chars/sx_ram/nes_old/portrait@4x.png",
+            "body": "chars/sx_ram/nes_old/body.png",
+            "body4x": "chars/sx_ram/nes_old/body@4x.png",
+            "sheet": "chars/sx_ram/nes_old/sheet.png",
+            "sheet4x": "chars/sx_ram/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_ram/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -12722,8 +12757,7 @@
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -12785,30 +12819,31 @@
             ]
           },
           "colours": {
-            "portrait": 10,
+            "portrait": 9,
             "sheet": 4
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_catapult/nes2/portrait.png",
-            "portrait4x": "chars/sx_catapult/nes2/portrait@4x.png",
-            "body": "chars/sx_catapult/nes2/body.png",
-            "body4x": "chars/sx_catapult/nes2/body@4x.png",
-            "sheet": "chars/sx_catapult/nes2/sheet.png",
-            "sheet4x": "chars/sx_catapult/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_catapult/nes2/sheet.json"
+            "portrait": "chars/sx_catapult/nes_old/portrait.png",
+            "portrait4x": "chars/sx_catapult/nes_old/portrait@4x.png",
+            "body": "chars/sx_catapult/nes_old/body.png",
+            "body4x": "chars/sx_catapult/nes_old/body@4x.png",
+            "sheet": "chars/sx_catapult/nes_old/sheet.png",
+            "sheet4x": "chars/sx_catapult/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_catapult/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -12821,14 +12856,13 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 10,
             "sheet": 4
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -12890,30 +12924,31 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 9,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_thunder/nes2/portrait.png",
-            "portrait4x": "chars/sx_thunder/nes2/portrait@4x.png",
-            "body": "chars/sx_thunder/nes2/body.png",
-            "body4x": "chars/sx_thunder/nes2/body@4x.png",
-            "sheet": "chars/sx_thunder/nes2/sheet.png",
-            "sheet4x": "chars/sx_thunder/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_thunder/nes2/sheet.json"
+            "portrait": "chars/sx_thunder/nes_old/portrait.png",
+            "portrait4x": "chars/sx_thunder/nes_old/portrait@4x.png",
+            "body": "chars/sx_thunder/nes_old/body.png",
+            "body4x": "chars/sx_thunder/nes_old/body@4x.png",
+            "sheet": "chars/sx_thunder/nes_old/sheet.png",
+            "sheet4x": "chars/sx_thunder/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_thunder/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -12926,14 +12961,13 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 11,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -12995,30 +13029,31 @@
             ]
           },
           "colours": {
-            "portrait": 10,
+            "portrait": 13,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_boat/nes2/portrait.png",
-            "portrait4x": "chars/sx_boat/nes2/portrait@4x.png",
-            "body": "chars/sx_boat/nes2/body.png",
-            "body4x": "chars/sx_boat/nes2/body@4x.png",
-            "sheet": "chars/sx_boat/nes2/sheet.png",
-            "sheet4x": "chars/sx_boat/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_boat/nes2/sheet.json"
+            "portrait": "chars/sx_boat/nes_old/portrait.png",
+            "portrait4x": "chars/sx_boat/nes_old/portrait@4x.png",
+            "body": "chars/sx_boat/nes_old/body.png",
+            "body4x": "chars/sx_boat/nes_old/body@4x.png",
+            "sheet": "chars/sx_boat/nes_old/sheet.png",
+            "sheet4x": "chars/sx_boat/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_boat/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -13031,14 +13066,13 @@
             ]
           },
           "colours": {
-            "portrait": 13,
+            "portrait": 10,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -13106,24 +13140,25 @@
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_warship/nes2/portrait.png",
-            "portrait4x": "chars/sx_warship/nes2/portrait@4x.png",
-            "body": "chars/sx_warship/nes2/body.png",
-            "body4x": "chars/sx_warship/nes2/body@4x.png",
-            "sheet": "chars/sx_warship/nes2/sheet.png",
-            "sheet4x": "chars/sx_warship/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_warship/nes2/sheet.json"
+            "portrait": "chars/sx_warship/nes_old/portrait.png",
+            "portrait4x": "chars/sx_warship/nes_old/portrait@4x.png",
+            "body": "chars/sx_warship/nes_old/body.png",
+            "body4x": "chars/sx_warship/nes_old/body@4x.png",
+            "sheet": "chars/sx_warship/nes_old/sheet.png",
+            "sheet4x": "chars/sx_warship/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_warship/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -13142,8 +13177,7 @@
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -13205,30 +13239,31 @@
             ]
           },
           "colours": {
-            "portrait": 10,
+            "portrait": 13,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_lm_saber/nes2/portrait.png",
-            "portrait4x": "chars/sx_lm_saber/nes2/portrait@4x.png",
-            "body": "chars/sx_lm_saber/nes2/body.png",
-            "body4x": "chars/sx_lm_saber/nes2/body@4x.png",
-            "sheet": "chars/sx_lm_saber/nes2/sheet.png",
-            "sheet4x": "chars/sx_lm_saber/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_lm_saber/nes2/sheet.json"
+            "portrait": "chars/sx_lm_saber/nes_old/portrait.png",
+            "portrait4x": "chars/sx_lm_saber/nes_old/portrait@4x.png",
+            "body": "chars/sx_lm_saber/nes_old/body.png",
+            "body4x": "chars/sx_lm_saber/nes_old/body@4x.png",
+            "sheet": "chars/sx_lm_saber/nes_old/sheet.png",
+            "sheet4x": "chars/sx_lm_saber/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_lm_saber/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -13241,14 +13276,13 @@
             ]
           },
           "colours": {
-            "portrait": 13,
+            "portrait": 10,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -13310,30 +13344,31 @@
             ]
           },
           "colours": {
-            "portrait": 9,
-            "sheet": 5
+            "portrait": 14,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_hj_sword/nes2/portrait.png",
-            "portrait4x": "chars/sx_hj_sword/nes2/portrait@4x.png",
-            "body": "chars/sx_hj_sword/nes2/body.png",
-            "body4x": "chars/sx_hj_sword/nes2/body@4x.png",
-            "sheet": "chars/sx_hj_sword/nes2/sheet.png",
-            "sheet4x": "chars/sx_hj_sword/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_hj_sword/nes2/sheet.json"
+            "portrait": "chars/sx_hj_sword/nes_old/portrait.png",
+            "portrait4x": "chars/sx_hj_sword/nes_old/portrait@4x.png",
+            "body": "chars/sx_hj_sword/nes_old/body.png",
+            "body4x": "chars/sx_hj_sword/nes_old/body@4x.png",
+            "sheet": "chars/sx_hj_sword/nes_old/sheet.png",
+            "sheet4x": "chars/sx_hj_sword/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_hj_sword/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -13346,14 +13381,13 @@
             ]
           },
           "colours": {
-            "portrait": 14,
-            "sheet": 6
+            "portrait": 9,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -13415,30 +13449,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 9,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_qf_monk/nes2/portrait.png",
-            "portrait4x": "chars/sx_qf_monk/nes2/portrait@4x.png",
-            "body": "chars/sx_qf_monk/nes2/body.png",
-            "body4x": "chars/sx_qf_monk/nes2/body@4x.png",
-            "sheet": "chars/sx_qf_monk/nes2/sheet.png",
-            "sheet4x": "chars/sx_qf_monk/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_qf_monk/nes2/sheet.json"
+            "portrait": "chars/sx_qf_monk/nes_old/portrait.png",
+            "portrait4x": "chars/sx_qf_monk/nes_old/portrait@4x.png",
+            "body": "chars/sx_qf_monk/nes_old/body.png",
+            "body4x": "chars/sx_qf_monk/nes_old/body@4x.png",
+            "sheet": "chars/sx_qf_monk/nes_old/sheet.png",
+            "sheet4x": "chars/sx_qf_monk/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_qf_monk/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -13451,14 +13486,13 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 8,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -13520,30 +13554,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
-            "sheet": 4
+            "portrait": 10,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_bl_palm/nes2/portrait.png",
-            "portrait4x": "chars/sx_bl_palm/nes2/portrait@4x.png",
-            "body": "chars/sx_bl_palm/nes2/body.png",
-            "body4x": "chars/sx_bl_palm/nes2/body@4x.png",
-            "sheet": "chars/sx_bl_palm/nes2/sheet.png",
-            "sheet4x": "chars/sx_bl_palm/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_bl_palm/nes2/sheet.json"
+            "portrait": "chars/sx_bl_palm/nes_old/portrait.png",
+            "portrait4x": "chars/sx_bl_palm/nes_old/portrait@4x.png",
+            "body": "chars/sx_bl_palm/nes_old/body.png",
+            "body4x": "chars/sx_bl_palm/nes_old/body@4x.png",
+            "sheet": "chars/sx_bl_palm/nes_old/sheet.png",
+            "sheet4x": "chars/sx_bl_palm/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_bl_palm/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -13556,14 +13591,13 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 5
+            "portrait": 8,
+            "sheet": 4
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -13625,30 +13659,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 9,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_ym_assassin/nes2/portrait.png",
-            "portrait4x": "chars/sx_ym_assassin/nes2/portrait@4x.png",
-            "body": "chars/sx_ym_assassin/nes2/body.png",
-            "body4x": "chars/sx_ym_assassin/nes2/body@4x.png",
-            "sheet": "chars/sx_ym_assassin/nes2/sheet.png",
-            "sheet4x": "chars/sx_ym_assassin/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_ym_assassin/nes2/sheet.json"
+            "portrait": "chars/sx_ym_assassin/nes_old/portrait.png",
+            "portrait4x": "chars/sx_ym_assassin/nes_old/portrait@4x.png",
+            "body": "chars/sx_ym_assassin/nes_old/body.png",
+            "body4x": "chars/sx_ym_assassin/nes_old/body@4x.png",
+            "sheet": "chars/sx_ym_assassin/nes_old/sheet.png",
+            "sheet4x": "chars/sx_ym_assassin/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_ym_assassin/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -13661,14 +13696,13 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 7,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -13730,30 +13764,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 8,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_yy_tiger/nes2/portrait.png",
-            "portrait4x": "chars/sx_yy_tiger/nes2/portrait@4x.png",
-            "body": "chars/sx_yy_tiger/nes2/body.png",
-            "body4x": "chars/sx_yy_tiger/nes2/body@4x.png",
-            "sheet": "chars/sx_yy_tiger/nes2/sheet.png",
-            "sheet4x": "chars/sx_yy_tiger/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_yy_tiger/nes2/sheet.json"
+            "portrait": "chars/sx_yy_tiger/nes_old/portrait.png",
+            "portrait4x": "chars/sx_yy_tiger/nes_old/portrait@4x.png",
+            "body": "chars/sx_yy_tiger/nes_old/body.png",
+            "body4x": "chars/sx_yy_tiger/nes_old/body@4x.png",
+            "sheet": "chars/sx_yy_tiger/nes_old/sheet.png",
+            "sheet4x": "chars/sx_yy_tiger/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_yy_tiger/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -13766,14 +13801,13 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 7,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -13836,29 +13870,30 @@
           },
           "colours": {
             "portrait": 10,
-            "sheet": 5
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_qj_escort/nes2/portrait.png",
-            "portrait4x": "chars/sx_qj_escort/nes2/portrait@4x.png",
-            "body": "chars/sx_qj_escort/nes2/body.png",
-            "body4x": "chars/sx_qj_escort/nes2/body@4x.png",
-            "sheet": "chars/sx_qj_escort/nes2/sheet.png",
-            "sheet4x": "chars/sx_qj_escort/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_qj_escort/nes2/sheet.json"
+            "portrait": "chars/sx_qj_escort/nes_old/portrait.png",
+            "portrait4x": "chars/sx_qj_escort/nes_old/portrait@4x.png",
+            "body": "chars/sx_qj_escort/nes_old/body.png",
+            "body4x": "chars/sx_qj_escort/nes_old/body@4x.png",
+            "sheet": "chars/sx_qj_escort/nes_old/sheet.png",
+            "sheet4x": "chars/sx_qj_escort/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_qj_escort/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -13872,13 +13907,12 @@
           },
           "colours": {
             "portrait": 10,
-            "sheet": 6
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -13940,30 +13974,31 @@
             ]
           },
           "colours": {
-            "portrait": 6,
+            "portrait": 8,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_hf_club/nes2/portrait.png",
-            "portrait4x": "chars/sx_hf_club/nes2/portrait@4x.png",
-            "body": "chars/sx_hf_club/nes2/body.png",
-            "body4x": "chars/sx_hf_club/nes2/body@4x.png",
-            "sheet": "chars/sx_hf_club/nes2/sheet.png",
-            "sheet4x": "chars/sx_hf_club/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_hf_club/nes2/sheet.json"
+            "portrait": "chars/sx_hf_club/nes_old/portrait.png",
+            "portrait4x": "chars/sx_hf_club/nes_old/portrait@4x.png",
+            "body": "chars/sx_hf_club/nes_old/body.png",
+            "body4x": "chars/sx_hf_club/nes_old/body@4x.png",
+            "sheet": "chars/sx_hf_club/nes_old/sheet.png",
+            "sheet4x": "chars/sx_hf_club/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_hf_club/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -13976,14 +14011,13 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 6,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -14045,30 +14079,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
-            "sheet": 5
+            "portrait": 11,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_xd_blood/nes2/portrait.png",
-            "portrait4x": "chars/sx_xd_blood/nes2/portrait@4x.png",
-            "body": "chars/sx_xd_blood/nes2/body.png",
-            "body4x": "chars/sx_xd_blood/nes2/body@4x.png",
-            "sheet": "chars/sx_xd_blood/nes2/sheet.png",
-            "sheet4x": "chars/sx_xd_blood/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_xd_blood/nes2/sheet.json"
+            "portrait": "chars/sx_xd_blood/nes_old/portrait.png",
+            "portrait4x": "chars/sx_xd_blood/nes_old/portrait@4x.png",
+            "body": "chars/sx_xd_blood/nes_old/body.png",
+            "body4x": "chars/sx_xd_blood/nes_old/body@4x.png",
+            "sheet": "chars/sx_xd_blood/nes_old/sheet.png",
+            "sheet4x": "chars/sx_xd_blood/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_xd_blood/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -14081,14 +14116,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
-            "sheet": 6
+            "portrait": 8,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -14150,30 +14184,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 8,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_zf_chain/nes2/portrait.png",
-            "portrait4x": "chars/sx_zf_chain/nes2/portrait@4x.png",
-            "body": "chars/sx_zf_chain/nes2/body.png",
-            "body4x": "chars/sx_zf_chain/nes2/body@4x.png",
-            "sheet": "chars/sx_zf_chain/nes2/sheet.png",
-            "sheet4x": "chars/sx_zf_chain/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_zf_chain/nes2/sheet.json"
+            "portrait": "chars/sx_zf_chain/nes_old/portrait.png",
+            "portrait4x": "chars/sx_zf_chain/nes_old/portrait@4x.png",
+            "body": "chars/sx_zf_chain/nes_old/body.png",
+            "body4x": "chars/sx_zf_chain/nes_old/body@4x.png",
+            "sheet": "chars/sx_zf_chain/nes_old/sheet.png",
+            "sheet4x": "chars/sx_zf_chain/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_zf_chain/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -14186,14 +14221,13 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 7,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -14255,6 +14289,43 @@
             ]
           },
           "colours": {
+            "portrait": 12,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        },
+        {
+          "style": "nes_old",
+          "styleName": {
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
+          },
+          "primary": false,
+          "files": {
+            "portrait": "chars/sx_cy_nun/nes_old/portrait.png",
+            "portrait4x": "chars/sx_cy_nun/nes_old/portrait@4x.png",
+            "body": "chars/sx_cy_nun/nes_old/body.png",
+            "body4x": "chars/sx_cy_nun/nes_old/body@4x.png",
+            "sheet": "chars/sx_cy_nun/nes_old/sheet.png",
+            "sheet4x": "chars/sx_cy_nun/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_cy_nun/nes_old/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
             "portrait": 8,
             "sheet": 5
           },
@@ -14263,22 +14334,399 @@
             "walk",
             "walk_side"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "tf_man",
+      "name": {
+        "zh": "鎮上的男子",
+        "en": "Townsman"
+      },
+      "style_name": {
+        "zh": "布衣百姓",
+        "en": "Commoner"
+      },
+      "title": {
+        "zh": "布衣百姓",
+        "en": "Commoner"
+      },
+      "bio": {
+        "zh": "戴髮髻、穿土黃布衣的鎮上男子，見了誰都先笑三分。",
+        "en": "A townsman with a topknot and a khaki cotton robe who smiles at everyone first."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
         {
-          "style": "nes2",
+          "style": "nes",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
           },
-          "primary": false,
+          "primary": true,
           "files": {
-            "portrait": "chars/sx_cy_nun/nes2/portrait.png",
-            "portrait4x": "chars/sx_cy_nun/nes2/portrait@4x.png",
-            "body": "chars/sx_cy_nun/nes2/body.png",
-            "body4x": "chars/sx_cy_nun/nes2/body@4x.png",
-            "sheet": "chars/sx_cy_nun/nes2/sheet.png",
-            "sheet4x": "chars/sx_cy_nun/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_cy_nun/nes2/sheet.json"
+            "portrait": "chars/tf_man/nes/portrait.png",
+            "portrait4x": "chars/tf_man/nes/portrait@4x.png",
+            "body": "chars/tf_man/nes/body.png",
+            "body4x": "chars/tf_man/nes/body@4x.png",
+            "sheet": "chars/tf_man/nes/sheet.png",
+            "sheet4x": "chars/tf_man/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_man/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_woman",
+      "name": {
+        "zh": "鎮上的女子",
+        "en": "Townswoman"
+      },
+      "style_name": {
+        "zh": "布衣百姓",
+        "en": "Commoner"
+      },
+      "title": {
+        "zh": "布衣百姓",
+        "en": "Commoner"
+      },
+      "bio": {
+        "zh": "高髻插紅簪、一身綠衣的鎮上女子，消息總比衙門快。",
+        "en": "A townswoman with a red-pinned bun and a green dress; she hears the news before the magistrate does."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_woman/nes/portrait.png",
+            "portrait4x": "chars/tf_woman/nes/portrait@4x.png",
+            "body": "chars/tf_woman/nes/body.png",
+            "body4x": "chars/tf_woman/nes/body@4x.png",
+            "sheet": "chars/tf_woman/nes/sheet.png",
+            "sheet4x": "chars/tf_woman/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_woman/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_oldman",
+      "name": {
+        "zh": "老翁",
+        "en": "Old man"
+      },
+      "style_name": {
+        "zh": "長者",
+        "en": "Elder"
+      },
+      "title": {
+        "zh": "長者",
+        "en": "Elder"
+      },
+      "bio": {
+        "zh": "白髮白鬚、拄著木杖的老人家，龍門鎮的舊事都記在他心裡。",
+        "en": "A white-haired, white-bearded old man with a walking stick who remembers every old story of Longmen."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_oldman/nes/portrait.png",
+            "portrait4x": "chars/tf_oldman/nes/portrait@4x.png",
+            "body": "chars/tf_oldman/nes/body.png",
+            "body4x": "chars/tf_oldman/nes/body@4x.png",
+            "sheet": "chars/tf_oldman/nes/sheet.png",
+            "sheet4x": "chars/tf_oldman/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_oldman/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_oldwoman",
+      "name": {
+        "zh": "老婆婆",
+        "en": "Old woman"
+      },
+      "style_name": {
+        "zh": "長者",
+        "en": "Elder"
+      },
+      "title": {
+        "zh": "長者",
+        "en": "Elder"
+      },
+      "bio": {
+        "zh": "灰髻黑衣、拄杖慢慢走的老婆婆，最會說天快要下雨。",
+        "en": "A grey-haired grandmother in black with a cane, always the first to say rain is coming."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_oldwoman/nes/portrait.png",
+            "portrait4x": "chars/tf_oldwoman/nes/portrait@4x.png",
+            "body": "chars/tf_oldwoman/nes/body.png",
+            "body4x": "chars/tf_oldwoman/nes/body@4x.png",
+            "sheet": "chars/tf_oldwoman/nes/sheet.png",
+            "sheet4x": "chars/tf_oldwoman/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_oldwoman/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_child",
+      "name": {
+        "zh": "小孩",
+        "en": "Child"
+      },
+      "style_name": {
+        "zh": "鎮上的孩子",
+        "en": "Town child"
+      },
+      "title": {
+        "zh": "鎮上的孩子",
+        "en": "Town child"
+      },
+      "bio": {
+        "zh": "綁著小髻、臉頰紅紅的孩子，到處跟著俠客跑。",
+        "en": "A rosy-cheeked child with a little topknot who follows every hero around town."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_child/nes/portrait.png",
+            "portrait4x": "chars/tf_child/nes/portrait@4x.png",
+            "body": "chars/tf_child/nes/body.png",
+            "body4x": "chars/tf_child/nes/body@4x.png",
+            "sheet": "chars/tf_child/nes/sheet.png",
+            "sheet4x": "chars/tf_child/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_child/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_guard",
+      "name": {
+        "zh": "衙役",
+        "en": "Guard"
+      },
+      "style_name": {
+        "zh": "守衛",
+        "en": "Guard"
+      },
+      "title": {
+        "zh": "守衛",
+        "en": "Guard"
+      },
+      "bio": {
+        "zh": "紅盔紅甲、手持長槍的衙役，守著城門與官道。",
+        "en": "A guard in a red helmet and red armour with a spear, watching the gate and the high road."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_guard/nes/portrait.png",
+            "portrait4x": "chars/tf_guard/nes/portrait@4x.png",
+            "body": "chars/tf_guard/nes/body.png",
+            "body4x": "chars/tf_guard/nes/body@4x.png",
+            "sheet": "chars/tf_guard/nes/sheet.png",
+            "sheet4x": "chars/tf_guard/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_guard/nes/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -14292,6 +14740,834 @@
           },
           "colours": {
             "portrait": 12,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_merchant",
+      "name": {
+        "zh": "商人",
+        "en": "Merchant"
+      },
+      "style_name": {
+        "zh": "掌櫃",
+        "en": "Merchant"
+      },
+      "title": {
+        "zh": "掌櫃",
+        "en": "Merchant"
+      },
+      "bio": {
+        "zh": "頭戴紅瓜皮帽、一身金黃的胖商人，算盤打得比誰都響。",
+        "en": "A round merchant in a red melon cap and golden robe whose abacus clicks loudest of all."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_merchant/nes/portrait.png",
+            "portrait4x": "chars/tf_merchant/nes/portrait@4x.png",
+            "body": "chars/tf_merchant/nes/body.png",
+            "body4x": "chars/tf_merchant/nes/body@4x.png",
+            "sheet": "chars/tf_merchant/nes/sheet.png",
+            "sheet4x": "chars/tf_merchant/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_merchant/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_innkeeper",
+      "name": {
+        "zh": "客棧掌櫃",
+        "en": "Innkeeper"
+      },
+      "style_name": {
+        "zh": "店家",
+        "en": "Innkeeper"
+      },
+      "title": {
+        "zh": "店家",
+        "en": "Innkeeper"
+      },
+      "bio": {
+        "zh": "白頭巾、白圍裙的客棧掌櫃，一碗熱湯就能讓人說出心事。",
+        "en": "An innkeeper in a white kerchief and apron; one bowl of hot soup and travellers tell him everything."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_innkeeper/nes/portrait.png",
+            "portrait4x": "chars/tf_innkeeper/nes/portrait@4x.png",
+            "body": "chars/tf_innkeeper/nes/body.png",
+            "body4x": "chars/tf_innkeeper/nes/body@4x.png",
+            "sheet": "chars/tf_innkeeper/nes/sheet.png",
+            "sheet4x": "chars/tf_innkeeper/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_innkeeper/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_monk",
+      "name": {
+        "zh": "和尚",
+        "en": "Monk"
+      },
+      "style_name": {
+        "zh": "出家人",
+        "en": "Monk"
+      },
+      "title": {
+        "zh": "出家人",
+        "en": "Monk"
+      },
+      "bio": {
+        "zh": "光頭、橘色僧衣的小和尚，下山化緣，總是笑瞇瞇的。",
+        "en": "A shaven monk in an orange robe, down from the mountain for alms and always smiling."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_monk/nes/portrait.png",
+            "portrait4x": "chars/tf_monk/nes/portrait@4x.png",
+            "body": "chars/tf_monk/nes/body.png",
+            "body4x": "chars/tf_monk/nes/body@4x.png",
+            "sheet": "chars/tf_monk/nes/sheet.png",
+            "sheet4x": "chars/tf_monk/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_monk/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_nun",
+      "name": {
+        "zh": "女冠",
+        "en": "Daoist nun"
+      },
+      "style_name": {
+        "zh": "出家人",
+        "en": "Nun"
+      },
+      "title": {
+        "zh": "出家人",
+        "en": "Nun"
+      },
+      "bio": {
+        "zh": "長髮淡藍袍的女冠，在路邊替人解籤。",
+        "en": "A long-haired Daoist nun in pale blue who reads fortune sticks by the road."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_nun/nes/portrait.png",
+            "portrait4x": "chars/tf_nun/nes/portrait@4x.png",
+            "body": "chars/tf_nun/nes/body.png",
+            "body4x": "chars/tf_nun/nes/body@4x.png",
+            "sheet": "chars/tf_nun/nes/sheet.png",
+            "sheet4x": "chars/tf_nun/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_nun/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_boatman",
+      "name": {
+        "zh": "船夫",
+        "en": "Boatman"
+      },
+      "style_name": {
+        "zh": "渡口船家",
+        "en": "Boatman"
+      },
+      "title": {
+        "zh": "渡口船家",
+        "en": "Boatman"
+      },
+      "bio": {
+        "zh": "斗笠、曬黑的手臂和格紋背心，渡口上最快的船就是他的。",
+        "en": "A straw hat, sun-browned arms and a checked vest: the fastest boat at the ferry is his."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_boatman/nes/portrait.png",
+            "portrait4x": "chars/tf_boatman/nes/portrait@4x.png",
+            "body": "chars/tf_boatman/nes/body.png",
+            "body4x": "chars/tf_boatman/nes/body@4x.png",
+            "sheet": "chars/tf_boatman/nes/sheet.png",
+            "sheet4x": "chars/tf_boatman/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_boatman/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_bandit",
+      "name": {
+        "zh": "山賊",
+        "en": "Bandit"
+      },
+      "style_name": {
+        "zh": "綠林",
+        "en": "Bandit"
+      },
+      "title": {
+        "zh": "綠林",
+        "en": "Bandit"
+      },
+      "bio": {
+        "zh": "灰頭巾、灰面巾，只露出一雙兇眼的山賊。",
+        "en": "A bandit in a grey kerchief and grey face cloth, only his fierce eyes showing."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_bandit/nes/portrait.png",
+            "portrait4x": "chars/tf_bandit/nes/portrait@4x.png",
+            "body": "chars/tf_bandit/nes/body.png",
+            "body4x": "chars/tf_bandit/nes/body@4x.png",
+            "sheet": "chars/tf_bandit/nes/sheet.png",
+            "sheet4x": "chars/tf_bandit/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_bandit/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 7,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_cultist",
+      "name": {
+        "zh": "邪教徒",
+        "en": "Cultist"
+      },
+      "style_name": {
+        "zh": "幽冥教眾",
+        "en": "Netherworld cultist"
+      },
+      "title": {
+        "zh": "幽冥教眾",
+        "en": "Netherworld cultist"
+      },
+      "bio": {
+        "zh": "紫色兜帽、白色鬼面的幽冥教徒，在鎮外的破廟聚會。",
+        "en": "A Netherworld cultist in a purple hood and white ghost mask who gathers in the ruined shrine outside town."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_cultist/nes/portrait.png",
+            "portrait4x": "chars/tf_cultist/nes/portrait@4x.png",
+            "body": "chars/tf_cultist/nes/body.png",
+            "body4x": "chars/tf_cultist/nes/body@4x.png",
+            "sheet": "chars/tf_cultist/nes/sheet.png",
+            "sheet4x": "chars/tf_cultist/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_cultist/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 8,
+            "sheet": 5
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_scholar",
+      "name": {
+        "zh": "書生",
+        "en": "Scholar"
+      },
+      "style_name": {
+        "zh": "讀書人",
+        "en": "Scholar"
+      },
+      "title": {
+        "zh": "讀書人",
+        "en": "Scholar"
+      },
+      "bio": {
+        "zh": "藍衫書生，懷裡抱著書，進京趕考的路上。",
+        "en": "A scholar in blue with a book at his chest, on his way to the capital exams."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_scholar/nes/portrait.png",
+            "portrait4x": "chars/tf_scholar/nes/portrait@4x.png",
+            "body": "chars/tf_scholar/nes/body.png",
+            "body4x": "chars/tf_scholar/nes/body@4x.png",
+            "sheet": "chars/tf_scholar/nes/sheet.png",
+            "sheet4x": "chars/tf_scholar/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_scholar/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 11,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_blacksmith",
+      "name": {
+        "zh": "鐵匠",
+        "en": "Blacksmith"
+      },
+      "style_name": {
+        "zh": "打鐵的",
+        "en": "Smith"
+      },
+      "title": {
+        "zh": "打鐵的",
+        "en": "Smith"
+      },
+      "bio": {
+        "zh": "赤膊繫皮圍裙、掄著鐵鎚的鐵匠，鎮上的刀都出自他手。",
+        "en": "A bare-armed smith in a leather apron swinging his hammer; every blade in town came from his forge."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_blacksmith/nes/portrait.png",
+            "portrait4x": "chars/tf_blacksmith/nes/portrait@4x.png",
+            "body": "chars/tf_blacksmith/nes/body.png",
+            "body4x": "chars/tf_blacksmith/nes/body@4x.png",
+            "sheet": "chars/tf_blacksmith/nes/sheet.png",
+            "sheet4x": "chars/tf_blacksmith/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_blacksmith/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_fisherman",
+      "name": {
+        "zh": "漁夫",
+        "en": "Fisherman"
+      },
+      "style_name": {
+        "zh": "打魚的",
+        "en": "Fisherman"
+      },
+      "title": {
+        "zh": "打魚的",
+        "en": "Fisherman"
+      },
+      "bio": {
+        "zh": "青頭巾、青衣，扛著釣竿的漁夫，最懂河裡的動靜。",
+        "en": "A fisherman in a teal headband and teal clothes with a rod on his shoulder; he knows every stir of the river."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_fisherman/nes/portrait.png",
+            "portrait4x": "chars/tf_fisherman/nes/portrait@4x.png",
+            "body": "chars/tf_fisherman/nes/body.png",
+            "body4x": "chars/tf_fisherman/nes/body@4x.png",
+            "sheet": "chars/tf_fisherman/nes/sheet.png",
+            "sheet4x": "chars/tf_fisherman/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_fisherman/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_dancer",
+      "name": {
+        "zh": "舞孃",
+        "en": "Dancer"
+      },
+      "style_name": {
+        "zh": "戲班子",
+        "en": "Troupe dancer"
+      },
+      "title": {
+        "zh": "戲班子",
+        "en": "Troupe dancer"
+      },
+      "bio": {
+        "zh": "雙髻粉紅衣的舞孃，戲班子到哪裡，她就跳到哪裡。",
+        "en": "A dancer with two buns and a pink gown who dances wherever the troupe stops."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_dancer/nes/portrait.png",
+            "portrait4x": "chars/tf_dancer/nes/portrait@4x.png",
+            "body": "chars/tf_dancer/nes/body.png",
+            "body4x": "chars/tf_dancer/nes/body@4x.png",
+            "sheet": "chars/tf_dancer/nes/sheet.png",
+            "sheet4x": "chars/tf_dancer/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_dancer/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 9,
+            "sheet": 6
+          },
+          "animations": [
+            "idle",
+            "walk",
+            "walk_side",
+            "walk_up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tf_beggar",
+      "name": {
+        "zh": "乞丐",
+        "en": "Beggar"
+      },
+      "style_name": {
+        "zh": "叫化子",
+        "en": "Beggar"
+      },
+      "title": {
+        "zh": "叫化子",
+        "en": "Beggar"
+      },
+      "bio": {
+        "zh": "亂髮、補丁衣、捧著破碗的乞丐，江湖消息他最靈通。",
+        "en": "A beggar with wild hair, patched clothes and a cracked bowl, the best-informed man in the jianghu."
+      },
+      "weapon": {
+        "zh": "",
+        "en": ""
+      },
+      "kind": "person",
+      "faction": "longmen",
+      "factionName": {
+        "zh": "龍門武林",
+        "en": "Longmen Wulin"
+      },
+      "colour": "#5a6ab8",
+      "variants": [
+        {
+          "style": "nes",
+          "styleName": {
+            "zh": "8-bit 紅白機（三國志 霸王の大陸風）",
+            "en": "8-bit Famicom (霸王の大陸-like)"
+          },
+          "primary": true,
+          "files": {
+            "portrait": "chars/tf_beggar/nes/portrait.png",
+            "portrait4x": "chars/tf_beggar/nes/portrait@4x.png",
+            "body": "chars/tf_beggar/nes/body.png",
+            "body4x": "chars/tf_beggar/nes/body@4x.png",
+            "sheet": "chars/tf_beggar/nes/sheet.png",
+            "sheet4x": "chars/tf_beggar/nes/sheet@4x.png",
+            "sheetJson": "chars/tf_beggar/nes/sheet.json"
+          },
+          "sizes": {
+            "portrait": [
+              48,
+              56
+            ],
+            "frame": [
+              16,
+              24
+            ]
+          },
+          "colours": {
+            "portrait": 10,
             "sheet": 5
           },
           "animations": [
@@ -14360,30 +15636,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 11,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/yichangfeng/nes2/portrait.png",
-            "portrait4x": "chars/yichangfeng/nes2/portrait@4x.png",
-            "body": "chars/yichangfeng/nes2/body.png",
-            "body4x": "chars/yichangfeng/nes2/body@4x.png",
-            "sheet": "chars/yichangfeng/nes2/sheet.png",
-            "sheet4x": "chars/yichangfeng/nes2/sheet@4x.png",
-            "sheetJson": "chars/yichangfeng/nes2/sheet.json"
+            "portrait": "chars/yichangfeng/nes_old/portrait.png",
+            "portrait4x": "chars/yichangfeng/nes_old/portrait@4x.png",
+            "body": "chars/yichangfeng/nes_old/body.png",
+            "body4x": "chars/yichangfeng/nes_old/body@4x.png",
+            "sheet": "chars/yichangfeng/nes_old/sheet.png",
+            "sheet4x": "chars/yichangfeng/nes_old/sheet@4x.png",
+            "sheetJson": "chars/yichangfeng/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -14396,14 +15673,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 8,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -14465,30 +15741,31 @@
             ]
           },
           "colours": {
-            "portrait": 7,
+            "portrait": 13,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/xiaowuying/nes2/portrait.png",
-            "portrait4x": "chars/xiaowuying/nes2/portrait@4x.png",
-            "body": "chars/xiaowuying/nes2/body.png",
-            "body4x": "chars/xiaowuying/nes2/body@4x.png",
-            "sheet": "chars/xiaowuying/nes2/sheet.png",
-            "sheet4x": "chars/xiaowuying/nes2/sheet@4x.png",
-            "sheetJson": "chars/xiaowuying/nes2/sheet.json"
+            "portrait": "chars/xiaowuying/nes_old/portrait.png",
+            "portrait4x": "chars/xiaowuying/nes_old/portrait@4x.png",
+            "body": "chars/xiaowuying/nes_old/body.png",
+            "body4x": "chars/xiaowuying/nes_old/body@4x.png",
+            "sheet": "chars/xiaowuying/nes_old/sheet.png",
+            "sheet4x": "chars/xiaowuying/nes_old/sheet@4x.png",
+            "sheetJson": "chars/xiaowuying/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -14501,14 +15778,13 @@
             ]
           },
           "colours": {
-            "portrait": 13,
+            "portrait": 7,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -14570,30 +15846,31 @@
             ]
           },
           "colours": {
-            "portrait": 9,
-            "sheet": 5
+            "portrait": 11,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_physician/nes2/portrait.png",
-            "portrait4x": "chars/sx_physician/nes2/portrait@4x.png",
-            "body": "chars/sx_physician/nes2/body.png",
-            "body4x": "chars/sx_physician/nes2/body@4x.png",
-            "sheet": "chars/sx_physician/nes2/sheet.png",
-            "sheet4x": "chars/sx_physician/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_physician/nes2/sheet.json"
+            "portrait": "chars/sx_physician/nes_old/portrait.png",
+            "portrait4x": "chars/sx_physician/nes_old/portrait@4x.png",
+            "body": "chars/sx_physician/nes_old/body.png",
+            "body4x": "chars/sx_physician/nes_old/body@4x.png",
+            "sheet": "chars/sx_physician/nes_old/sheet.png",
+            "sheet4x": "chars/sx_physician/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_physician/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -14606,14 +15883,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
-            "sheet": 6
+            "portrait": 9,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -14675,30 +15951,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 9,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_physician_f/nes2/portrait.png",
-            "portrait4x": "chars/sx_physician_f/nes2/portrait@4x.png",
-            "body": "chars/sx_physician_f/nes2/body.png",
-            "body4x": "chars/sx_physician_f/nes2/body@4x.png",
-            "sheet": "chars/sx_physician_f/nes2/sheet.png",
-            "sheet4x": "chars/sx_physician_f/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_physician_f/nes2/sheet.json"
+            "portrait": "chars/sx_physician_f/nes_old/portrait.png",
+            "portrait4x": "chars/sx_physician_f/nes_old/portrait@4x.png",
+            "body": "chars/sx_physician_f/nes_old/body.png",
+            "body4x": "chars/sx_physician_f/nes_old/body@4x.png",
+            "sheet": "chars/sx_physician_f/nes_old/sheet.png",
+            "sheet4x": "chars/sx_physician_f/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_physician_f/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -14711,14 +15988,13 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 8,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -14780,30 +16056,31 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 12,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_thief/nes2/portrait.png",
-            "portrait4x": "chars/sx_thief/nes2/portrait@4x.png",
-            "body": "chars/sx_thief/nes2/body.png",
-            "body4x": "chars/sx_thief/nes2/body@4x.png",
-            "sheet": "chars/sx_thief/nes2/sheet.png",
-            "sheet4x": "chars/sx_thief/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_thief/nes2/sheet.json"
+            "portrait": "chars/sx_thief/nes_old/portrait.png",
+            "portrait4x": "chars/sx_thief/nes_old/portrait@4x.png",
+            "body": "chars/sx_thief/nes_old/body.png",
+            "body4x": "chars/sx_thief/nes_old/body@4x.png",
+            "sheet": "chars/sx_thief/nes_old/sheet.png",
+            "sheet4x": "chars/sx_thief/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_thief/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -14816,14 +16093,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
+            "portrait": 9,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -14885,30 +16161,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 12,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_daoist/nes2/portrait.png",
-            "portrait4x": "chars/sx_daoist/nes2/portrait@4x.png",
-            "body": "chars/sx_daoist/nes2/body.png",
-            "body4x": "chars/sx_daoist/nes2/body@4x.png",
-            "sheet": "chars/sx_daoist/nes2/sheet.png",
-            "sheet4x": "chars/sx_daoist/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_daoist/nes2/sheet.json"
+            "portrait": "chars/sx_daoist/nes_old/portrait.png",
+            "portrait4x": "chars/sx_daoist/nes_old/portrait@4x.png",
+            "body": "chars/sx_daoist/nes_old/body.png",
+            "body4x": "chars/sx_daoist/nes_old/body@4x.png",
+            "sheet": "chars/sx_daoist/nes_old/sheet.png",
+            "sheet4x": "chars/sx_daoist/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_daoist/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -14921,14 +16198,13 @@
             ]
           },
           "colours": {
-            "portrait": 12,
+            "portrait": 8,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -14990,30 +16266,31 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 11,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_qin/nes2/portrait.png",
-            "portrait4x": "chars/sx_qin/nes2/portrait@4x.png",
-            "body": "chars/sx_qin/nes2/body.png",
-            "body4x": "chars/sx_qin/nes2/body@4x.png",
-            "sheet": "chars/sx_qin/nes2/sheet.png",
-            "sheet4x": "chars/sx_qin/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_qin/nes2/sheet.json"
+            "portrait": "chars/sx_qin/nes_old/portrait.png",
+            "portrait4x": "chars/sx_qin/nes_old/portrait@4x.png",
+            "body": "chars/sx_qin/nes_old/body.png",
+            "body4x": "chars/sx_qin/nes_old/body@4x.png",
+            "sheet": "chars/sx_qin/nes_old/sheet.png",
+            "sheet4x": "chars/sx_qin/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_qin/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -15026,14 +16303,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 9,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -15095,30 +16371,31 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 13,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_qin_f/nes2/portrait.png",
-            "portrait4x": "chars/sx_qin_f/nes2/portrait@4x.png",
-            "body": "chars/sx_qin_f/nes2/body.png",
-            "body4x": "chars/sx_qin_f/nes2/body@4x.png",
-            "sheet": "chars/sx_qin_f/nes2/sheet.png",
-            "sheet4x": "chars/sx_qin_f/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_qin_f/nes2/sheet.json"
+            "portrait": "chars/sx_qin_f/nes_old/portrait.png",
+            "portrait4x": "chars/sx_qin_f/nes_old/portrait@4x.png",
+            "body": "chars/sx_qin_f/nes_old/body.png",
+            "body4x": "chars/sx_qin_f/nes_old/body@4x.png",
+            "sheet": "chars/sx_qin_f/nes_old/sheet.png",
+            "sheet4x": "chars/sx_qin_f/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_qin_f/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -15131,14 +16408,13 @@
             ]
           },
           "colours": {
-            "portrait": 13,
+            "portrait": 11,
             "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -15200,30 +16476,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 11,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_poison/nes2/portrait.png",
-            "portrait4x": "chars/sx_poison/nes2/portrait@4x.png",
-            "body": "chars/sx_poison/nes2/body.png",
-            "body4x": "chars/sx_poison/nes2/body@4x.png",
-            "sheet": "chars/sx_poison/nes2/sheet.png",
-            "sheet4x": "chars/sx_poison/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_poison/nes2/sheet.json"
+            "portrait": "chars/sx_poison/nes_old/portrait.png",
+            "portrait4x": "chars/sx_poison/nes_old/portrait@4x.png",
+            "body": "chars/sx_poison/nes_old/body.png",
+            "body4x": "chars/sx_poison/nes_old/body@4x.png",
+            "sheet": "chars/sx_poison/nes_old/sheet.png",
+            "sheet4x": "chars/sx_poison/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_poison/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -15236,14 +16513,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
+            "portrait": 8,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -15305,30 +16581,31 @@
             ]
           },
           "colours": {
-            "portrait": 9,
-            "sheet": 5
+            "portrait": 10,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_strategist/nes2/portrait.png",
-            "portrait4x": "chars/sx_strategist/nes2/portrait@4x.png",
-            "body": "chars/sx_strategist/nes2/body.png",
-            "body4x": "chars/sx_strategist/nes2/body@4x.png",
-            "sheet": "chars/sx_strategist/nes2/sheet.png",
-            "sheet4x": "chars/sx_strategist/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_strategist/nes2/sheet.json"
+            "portrait": "chars/sx_strategist/nes_old/portrait.png",
+            "portrait4x": "chars/sx_strategist/nes_old/portrait@4x.png",
+            "body": "chars/sx_strategist/nes_old/body.png",
+            "body4x": "chars/sx_strategist/nes_old/body@4x.png",
+            "sheet": "chars/sx_strategist/nes_old/sheet.png",
+            "sheet4x": "chars/sx_strategist/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_strategist/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -15341,14 +16618,13 @@
             ]
           },
           "colours": {
-            "portrait": 10,
-            "sheet": 6
+            "portrait": 9,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -15410,30 +16686,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
-            "sheet": 5
+            "portrait": 11,
+            "sheet": 6
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_teller/nes2/portrait.png",
-            "portrait4x": "chars/sx_teller/nes2/portrait@4x.png",
-            "body": "chars/sx_teller/nes2/body.png",
-            "body4x": "chars/sx_teller/nes2/body@4x.png",
-            "sheet": "chars/sx_teller/nes2/sheet.png",
-            "sheet4x": "chars/sx_teller/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_teller/nes2/sheet.json"
+            "portrait": "chars/sx_teller/nes_old/portrait.png",
+            "portrait4x": "chars/sx_teller/nes_old/portrait@4x.png",
+            "body": "chars/sx_teller/nes_old/body.png",
+            "body4x": "chars/sx_teller/nes_old/body@4x.png",
+            "sheet": "chars/sx_teller/nes_old/sheet.png",
+            "sheet4x": "chars/sx_teller/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_teller/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -15446,14 +16723,13 @@
             ]
           },
           "colours": {
-            "portrait": 11,
-            "sheet": 6
+            "portrait": 8,
+            "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -15515,30 +16791,31 @@
             ]
           },
           "colours": {
-            "portrait": 8,
+            "portrait": 9,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_scholar/nes2/portrait.png",
-            "portrait4x": "chars/sx_scholar/nes2/portrait@4x.png",
-            "body": "chars/sx_scholar/nes2/body.png",
-            "body4x": "chars/sx_scholar/nes2/body@4x.png",
-            "sheet": "chars/sx_scholar/nes2/sheet.png",
-            "sheet4x": "chars/sx_scholar/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_scholar/nes2/sheet.json"
+            "portrait": "chars/sx_scholar/nes_old/portrait.png",
+            "portrait4x": "chars/sx_scholar/nes_old/portrait@4x.png",
+            "body": "chars/sx_scholar/nes_old/body.png",
+            "body4x": "chars/sx_scholar/nes_old/body@4x.png",
+            "sheet": "chars/sx_scholar/nes_old/sheet.png",
+            "sheet4x": "chars/sx_scholar/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_scholar/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -15551,14 +16828,13 @@
             ]
           },
           "colours": {
-            "portrait": 9,
+            "portrait": 8,
             "sheet": 5
           },
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]
@@ -15626,24 +16902,25 @@
           "animations": [
             "idle",
             "walk",
-            "walk_side"
+            "walk_side",
+            "walk_up"
           ]
         },
         {
-          "style": "nes2",
+          "style": "nes_old",
           "styleName": {
-            "zh": "8-bit 紅白機・龍門新版",
-            "en": "8-bit Famicom, Longmen redraw"
+            "zh": "8-bit 紅白機（龍門舊版）",
+            "en": "8-bit Famicom (Longmen, previous art)"
           },
           "primary": false,
           "files": {
-            "portrait": "chars/sx_phantom/nes2/portrait.png",
-            "portrait4x": "chars/sx_phantom/nes2/portrait@4x.png",
-            "body": "chars/sx_phantom/nes2/body.png",
-            "body4x": "chars/sx_phantom/nes2/body@4x.png",
-            "sheet": "chars/sx_phantom/nes2/sheet.png",
-            "sheet4x": "chars/sx_phantom/nes2/sheet@4x.png",
-            "sheetJson": "chars/sx_phantom/nes2/sheet.json"
+            "portrait": "chars/sx_phantom/nes_old/portrait.png",
+            "portrait4x": "chars/sx_phantom/nes_old/portrait@4x.png",
+            "body": "chars/sx_phantom/nes_old/body.png",
+            "body4x": "chars/sx_phantom/nes_old/body@4x.png",
+            "sheet": "chars/sx_phantom/nes_old/sheet.png",
+            "sheet4x": "chars/sx_phantom/nes_old/sheet@4x.png",
+            "sheetJson": "chars/sx_phantom/nes_old/sheet.json"
           },
           "sizes": {
             "portrait": [
@@ -15662,8 +16939,7 @@
           "animations": [
             "idle",
             "walk",
-            "walk_side",
-            "walk_up"
+            "walk_side"
           ]
         }
       ]

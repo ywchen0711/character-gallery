@@ -334,4 +334,24 @@ def variants():
     from nes_variant import NESVariant as FamicomVariant
     fam = FamilyVariant('jasper')
     fam.primary = False
-    return [FamicomVariant('jasper'), fam, v, KoeiVariant(koei_ns(), full=False)]
+    return [with_mole(x) for x in (FamicomVariant('jasper'), fam, v, KoeiVariant(koei_ns(), full=False))]
+
+
+# Jasper's mole: one small dark pixel just to HIS right of the philtrum (the groove between nose and upper lip), so
+# on the viewer's left, touching neither nose nor mouth. Per style: (x, y) in the portrait, RGBA. The nes portrait has
+# it in its grid (src/nes_portraits.py), so the roster pictures show it too.
+MOLE = {'koei': ((19, 34), (74, 42, 26, 255)), 'family': ((31, 45), (90, 48, 32, 255)), 'dq': ((22, 26), (0, 0, 0, 255))}
+
+
+def with_mole(v):
+    if v.style not in MOLE:
+        return v
+    base = v.portrait
+
+    def portrait():
+        im = base()
+        xy, col = MOLE[v.style]
+        im.putpixel(xy, col)
+        return im
+    v.portrait = portrait
+    return v

@@ -50,7 +50,8 @@ P('sx_ironcav', dict(colours=C(SK, BLACK, m=0x10, n=0x00, y=0x30, a=0x21, b=0x11
   hair='helmet', eyes='glare', mouth='firm', body='armour', collar='', near={'y': 'm'}))
 P('sx_caravan', dict(colours=C(SK, BLACK, m=0x16, n=0x06, a=0x27, b=0x17, d=0x07, e=0x30, f=0x10, r=0x16, z=0x0C, **WOOD),
   hair='band', eyes='keen', mouth='smile', behind=[('banner', dict(x=44.5, y0=4))]))
-P('sx_ram', dict(colours=C(TAN, w=0x30, a=0x17, b=0x07, d=0x08, e=0x27, f=0x17, z=0x08),
+P('sx_ram', dict(colours=C(TAN, w=0x30, v=0x10, p=0x17, q=0x07, a=0x17, b=0x07, d=0x08, e=0x27, f=0x17, z=0x08),
+  front=[('log', {})],
   hair='bald', hair_slot='S', face='wide', eyes='glare', mouth='grit', body='vest', wide=3, hair_shade={'S': 's'}))
 P('sx_catapult', dict(colours=C(SK, BLACK, m=0x17, n=0x07, a=0x1A, b=0x0A, d=0x0C, e=0x30, f=0x10, z=0x0C),
   hair='kerchief', eyes='calm', mouth='firm'))

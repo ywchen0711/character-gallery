@@ -27,6 +27,13 @@
       "fps": 4,
       "loop": true,
       "note": "faces right (stride, then legs together; same body); mirror horizontally for left"
+    },
+    "walk_up": {
+      "row": 3,
+      "frames": 2,
+      "fps": 4,
+      "loop": true,
+      "note": "back view; frame 2 has the same body, only the legs step"
     }
   }
 }

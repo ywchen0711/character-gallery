@@ -409,7 +409,7 @@ JASPER = '''
 ..........SSsSSSSSSSSSSSSSSSSSSSssssSS..........|
 ...........SSSSSSSSSSSSSsSSSSSSSsssSS.kk...kk...|
 .............SSSSSSSSSSssSSSSSSSsss..ksSk.ksSk..|
-..............SSSSSSSSSSSSSSSSSsss...ksSk.ksSk..|
+..............SSSSSSSkSSSSSSSSSsss...ksSk.ksSk..|
 ...............SSSSSSSSSSSkSSSsss....ksSk.ksSk..|
 ................SSSSSSkkkkSSSsss......ksSkSsk...|
 .................SSSSSSSSSSSsss.......kssSssk...|

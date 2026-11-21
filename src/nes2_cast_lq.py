@@ -18,7 +18,7 @@ def C(*ds, **kw):
 # 黑熊 Black Bear: wild hair, full black beard, bear hide over a grey shirt, spiked club
 person('heixiong', dict(
     colours=C(SK, BLACK, a=0x17, b=0x07, d=0x08, e=0x10, f=0x00, p=0x17, q=0x07, w=0x30, v=0x10, z=0x08),
-    hair='wild', face='wide', eyes='glare', mouth='none', beard='full', beard_slot='i', beard_shade='k', body='fur',
+    hair='wild', face='wide', eyes='glare', mouth='none', beard='bushy', beard_slot='i', beard_shade='k', body='fur',
     collar='ef', inner2='e',
     behind=[('club', dict(x=6.5, y0=4, y1=50))],
     post=[lambda c: [put(c, ['w'], x, y) for x, y in ((4, 8), (9, 12), (4, 16), (9, 20), (5, 24))]],
@@ -50,9 +50,13 @@ person('tuqianqiu', dict(
 
 # 鐵無私 Tie Wusi: black official cap with side wings, heavy black moustache, charcoal robe, iron chain
 person('tiewusi', dict(
-    colours=C(SK, BLACK, m=0x00, n=0x2D, a=0x10, b=0x00, d=0x0C, e=0x30, f=0x10, w=0x30, v=0x10, y=0x28, z=0x0C),
-    hair='official', eyes='glare', mouth='frown', beard='moustache', beard_slot='k', body='robe', collar='eaa',
-    front=[('chain', dict(x=41.5, y0=36, y1=56))]))
+    colours=C(SK, BLACK, m=0x0C, n=0x0F, a=0x10, b=0x00, d=0x0C, e=0x30, f=0x10, w=0x30, v=0x10, y=0x28, r=0x16,
+              z=0x0C),
+    hair='official', face='wide', eyes='glare', mouth='frown', beard='moustache', beard_slot='k', body='robe',
+    collar='eaa', front=[('chain', dict(x=41.5, y0=36, y1=56))],
+    # the iron judge: brows knit hard over the eyes, a frown crease between them, the Law Hall badge on his chest
+    after=[(['kkkkkk', '...kkkk'], 13, 18, True),
+           (['kkkkkk', 'kyyyyk', 'kyrryk', 'kyrryk', 'kyyyyk', 'kkkkkk'], 21, 47, False)]))
 
 # 錢萬里 Qian Wanli: round face, red melon-skin cap with a gold knob, maroon robe, gold-beaded abacus
 person('qianwanli', dict(
@@ -87,7 +91,9 @@ person('yuweng', dict(
     colours=C(SK, BLACK, m=0x38, n=0x28, a=0x10, b=0x00, d=0x2D, e=0x30, f=0x10, w=0x30, v=0x10, p=0x18, q=0x08,
               z=0x08),
     hair='straw', eyes='shut', mouth='none', beard='long', beard_slot='w', beard_shade='v', body='robe',
-    collar='ea', behind=[('staff', dict(x=43.5, y0=6, y1=56))]))
+    collar='ea', behind=[('staff', dict(x=43.5, y0=6, y1=56))],
+    # the empty left sleeve tied in a knot (our right)
+    post=[lambda c: put(c, ['.kkk.', 'kbbbk', 'kbdbk', '.kbk.', '.kbk.', '..k..'], 33, 46)]))
 
 # 鬼面護法 the Ghost-mask Warden: pointed blood-red hood and cloak, white fanged ghost mask, red eye light
 person('guimian', dict(
