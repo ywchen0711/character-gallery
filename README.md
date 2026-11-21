@@ -113,6 +113,22 @@ Longmen group pictures in `chars/longmen/`: `group-nes.png` (the six heroes in a
 
 **Style note:** all art is original, drawn *in the style of* those games. Nothing is traced, copied or downloaded from them. The main style is 8-bit: the Famicom portraits are hand-typed palette-indexed grids (`src/nes_portraits.py`), and `src/nes.py` checks the Famicom colour rules on every export.
 
+## Longmen redraw, round 1 (`nes2`, trial)
+
+The six Longmen heroes (奕叡, 奕碩, 柳寒煙, 白先生, 苦禪, 冷笑天) redrawn toward the 霸王之路 quality bar, kept beside
+the old art in `chars/<id>/nes2/` (the games still read `nes`). Compare them in `compare-longmen.html` (self-contained,
+old vs new at 4x with a walking preview) and `chars/longmen/compare-nes2.png` / `town-nes2.png`.
+
+- Portraits (`src/nes2.py`, `src/nes2_longmen.py`, `src/nes2_longmen_more.py`): 48x56 busts drawn with mondraw shapes
+  (robe, crossed collar, cape, props) and hand-typed mirrored heads; tiny dark eyes without whites; right-cheek and
+  jaw shading; a dithered dark backdrop in a colour the figure already uses near the top (a moon for 柳寒煙, a halo
+  for 苦禪). `nes2.fit()` picks the 4 background sub-palettes, lifts the rest onto sprites and proves the Famicom
+  rules with `nes.Pic.check()`.
+- Field sprites (`src/nes2_longmen_sprites.py`): same 16x24 cells and rows (idle, walk, walk_side) plus a new
+  `walk_up` back view; two sprite layers (6 colours) so hair, headgear, cloth shade and weapon match the portrait.
+- `python -P tools/export_nes2.py` writes the files and merges the `nes2` variants into `chars/index.json`;
+  `python -P tools/lint_nes2.py` lints them; `python -P tools/compare_longmen.py` rebuilds the comparison.
+
 ## Using the assets in a game
 
 ```

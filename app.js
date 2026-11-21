@@ -104,7 +104,7 @@
       b.setAttribute('aria-label', `${t(c.name)} · ${styleName(v.style)}`);
       const art = el('div', 'art');
       const pc = el('canvas'), bc = el('canvas');
-      pc.classList.toggle('nesframe', v.style === 'nes' || v.style === 'sango');
+      pc.classList.toggle('nesframe', v.style === 'nes' || v.style === 'sango' || v.style === 'nes2');
       art.append(pc, bc); b.appendChild(art);
       const nm = el('div', 'nm');
       nm.append(el('b', null, t(c.name)), el('span', null, lang === 'zh' ? c.name.en : c.name.zh), el('em', 'fac', t(c.factionName)));
@@ -156,8 +156,8 @@
     $('#detail').hidden = false; document.body.classList.add('locked');
     fillDetail();
     const room = window.innerWidth < 600 ? Math.min(300, window.innerWidth - 90) : 300;
-    $('#d-por').classList.toggle('nesframe', v.style === 'nes' || v.style === 'sango');
-    still($('#d-por'), v._por, fitDown(v._por.height + (v.style === 'nes' || v.style === 'sango' ? 8 : 0), room));
+    $('#d-por').classList.toggle('nesframe', v.style === 'nes' || v.style === 'sango' || v.style === 'nes2');
+    still($('#d-por'), v._por, fitDown(v._por.height + (v.style === 'nes' || v.style === 'sango' || v.style === 'nes2' ? 8 : 0), room));
     players.forEach((p) => { if (p.canvas.id === 'd-chi') players.delete(p); });
     open.player = player($('#d-chi'), v, open.anim, fitDown(v._meta.frameHeight, room));
     $('#close').focus();

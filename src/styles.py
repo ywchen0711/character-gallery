@@ -1,6 +1,14 @@
 """Art styles in the gallery. Every variant of a character names one of these."""
 
 STYLES = {
+    'nes2': {
+        'name': {'zh': '8-bit 紅白機・龍門新版（試作）', 'en': '8-bit Famicom, Longmen redraw (trial)'},
+        'blurb': {'zh': '龍門人物照《霸王之路》的水準重畫：頭像有臉、髮、衣、兵器的明暗層次，深色漸層背景，小黑眼；'
+                        '16×24 小人用兩層精靈、頭髮與帽子和頭像一致，加上背面行走。',
+                  'en': 'The Longmen cast redrawn to the Path of the Hegemon bar: portraits with shading on face, hair, cloth and '
+                        'gear over a dark dithered backdrop, tiny dark eyes; 16×24 sprites in two sprite layers whose hair and '
+                        'headgear match the portrait, now with a back-view walk.'},
+    },
     'sango': {
         'name': {'zh': '8-bit 紅白機・霸王之路主將', 'en': '8-bit Famicom, Path of the Hegemon general'},
         'blurb': {'zh': '《三國志 霸王之路》裡的主將造型：同一張 8-bit 臉，換上漢代將軍的冠、明光鎧與披風。',
